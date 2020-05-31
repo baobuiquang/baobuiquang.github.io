@@ -453,7 +453,7 @@ a {
         letter-spacing: 1px; }
         #my-aside #my-main-menu ul li a {
           /* font-family: 'Comic Neue', sans-serif; */
-          color: rgba(0, 0, 0, 0.7);
+          color: black;
           position: relative;
           padding: 0px 0px; }
           #my-aside #my-main-menu ul li a:after {

@@ -58,7 +58,8 @@
 			<nav id="my-main-menu">
 				<div id="navbar" class="collapse">
 					<ul>
-						<li class="active"><a href="#" data-nav-section="paragraph1">paragraph 1</a></li>
+						<li class="active"><a href="#" data-nav-section="title">Title</a></li>
+						<li><a href="#" data-nav-section="paragraph1">paragraph 1</a></li>
 						<li><a href="#" data-nav-section="paragraph2">paragraph 2</a></li>
 						<li><a href="#" data-nav-section="paragraph3">paragraph 3</a></li>
 						<li><a href="#" data-nav-section="paragraph4">paragraph 4</a></li>
@@ -69,7 +70,12 @@
 			</nav>
 			<!-- Footer -->
 			<nav id="my-footer">
-
+				<!-- Dark Mode Button -->
+				<a onclick="darkModeFunc()">
+					<div class="button-black col-md-5 col-md-offset-7">
+						Dark Mode
+					</div>
+				</a>
 			</nav>
 		</aside>
 
@@ -78,13 +84,26 @@
 		<!-- MAIN CONTENT -->
 		<div id="my-main">
 
+			<!-- HEAD -->
+			<section class="my-section" data-section="title">
+				<a href="/blog.html" class="animate-box" data-animate-effect="fadeInUp">
+					<!-- To change the width of button, change the col-md-? below -->
+					<div class="button col-md-6 col-md-offset-3">
+						BUI QUANG BAO - BLOGS
+					</div>
+				</a>
+				<h1 class="animate-box" style="text-align: center; margin: 150px 0px 100px 0px;"
+					data-animate-effect="fadeInUp">
+					BLOG TITLE WILL BE PUT HERE <br> THIS LINE MAKE THE TITLE LONGER
+				</h1>
+			</section>
+
 			<!-- SECTION: PARAGRAPH -->
 			<section class="my-section" data-section="paragraph1">
-				<h1 class="animate-box" style="text-align: center; padding-bottom: 50px;"
-					data-animate-effect="fadeInUp">
-					blogs
-				</h1>
-				<p>
+				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInUp">
+					paragraph
+				</h2>
+				<p class="animate-box" data-animate-effect="fadeInUp">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et
 					dolore magna aliqua. Neque laoreet suspendisse interdum consectetur. Eu nisl nunc mi ipsum faucibus
@@ -116,11 +135,10 @@
 
 			<!-- SECTION: PARAGRAPH -->
 			<section class="my-section" data-section="paragraph2">
-				<h1 class="animate-box" style="text-align: center; padding-bottom: 50px;"
-					data-animate-effect="fadeInUp">
-					blogs
-				</h1>
-				<p>
+				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInUp">
+					paragraph
+				</h2>
+				<p class="animate-box" data-animate-effect="fadeInUp">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et
 					dolore magna aliqua. Neque laoreet suspendisse interdum consectetur. Eu nisl nunc mi ipsum faucibus
@@ -151,11 +169,10 @@
 			</section>
 			<!-- SECTION: PARAGRAPH -->
 			<section class="my-section" data-section="paragraph3">
-				<h1 class="animate-box" style="text-align: center; padding-bottom: 50px;"
-					data-animate-effect="fadeInUp">
-					blogs
-				</h1>
-				<p>
+				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInUp">
+					paragraph
+				</h2>
+				<p class="animate-box" data-animate-effect="fadeInUp">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et
 					dolore magna aliqua. Neque laoreet suspendisse interdum consectetur. Eu nisl nunc mi ipsum faucibus
@@ -187,11 +204,10 @@
 
 			<!-- SECTION: PARAGRAPH -->
 			<section class="my-section" data-section="paragraph4">
-				<h1 class="animate-box" style="text-align: center; padding-bottom: 50px;"
-					data-animate-effect="fadeInUp">
-					blogs
-				</h1>
-				<p>
+				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInUp">
+					paragraph
+				</h2>
+				<p class="animate-box" data-animate-effect="fadeInUp">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 					incididunt ut labore et
 					dolore magna aliqua. Neque laoreet suspendisse interdum consectetur. Eu nisl nunc mi ipsum faucibus
@@ -224,8 +240,7 @@
 			<!-- SECTION: FOOTER -->
 			<section class="my-section" data-section="footer">
 				<h1>
-					<p class="animate-box" style="text-align: center; padding-bottom: 50px;"
-						data-animate-effect="fadeInUp">footer</p>
+					<p class="animate-box" style="text-align: center;" data-animate-effect="fadeInUp">footer</p>
 				</h1>
 				<p>footer</p>
 				<p>footer</p>

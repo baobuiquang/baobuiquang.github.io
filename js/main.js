@@ -305,7 +305,7 @@
 
 
 
-//--------------------------------------The Scroll Progress Bar Function----------------------------------------
+//-----------------------The Scroll Progress Bar Function------------------------
 window.onscroll = function () { myScrollFunction() };
 
 function myScrollFunction() {
@@ -314,6 +314,16 @@ function myScrollFunction() {
 	var scrolled = (winScroll / height) * 100;
 	document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+//----------------------------- Dark Mode Funtion -------------------------------
+function darkModeFunc() {
+	document.body.classList.toggle("dark-mode");
+	document.a.classList.toggle("dark-mode");
+}
+
+
+
+
 //--------------------------------------------------------------------------------------------------------------
 
 
