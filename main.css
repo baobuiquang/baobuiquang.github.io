@@ -338,10 +338,8 @@ a {
     z-index: -1;}
 
 /* ------------------------------------------------BUTTON----------------------------------------------- */
+/* White */
 .button {
-  /* -webkit-box-flex: 1;
-          flex: 1 1 auto; */
-  /* margin: 10px; */
   padding: 8px;
   border: 1.5px solid white;
   text-align: center;
@@ -362,25 +360,9 @@ a {
     height: 4px;
     background: white;
   }
-  .button:nth-of-type(2):after {
-    left: 0;
-  }
-  .button:nth-of-type(1):after {
+  .button:after {
     right: 0;
     left: auto;
-  }
-  .button:nth-of-type(4):after {
-    left: 0;
-    bottom: auto;
-    top: -5px;
-    width: 100%;
-  }
-  .button:nth-of-type(5):after {
-    height: 120%;
-    left: -10%;
-    -webkit-transform: skewX(15deg);
-            transform: skewX(15deg);
-    z-index: -1;
   }
   .button:hover {
     cursor: pointer;
@@ -389,40 +371,39 @@ a {
     width: 100%;
     left: 0;
   }
-  .button:hover:nth-of-type(4):after {
-    top: calc(100% - 3px);
+
+  /* Black */
+.button-black {
+  padding: 8px;
+  border: 1.5px solid black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: black;
+}
+  .button-black:after {
+    position: absolute;
+    -webkit-transition: .3s;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 4px;
+    background: black;
   }
-  .button:hover:nth-of-type(5) {
-    color: #5bcaff;
+  .button-black:after {
+    right: 0;
+    left: auto;
   }
-  .button:hover:nth-of-type(5):after {
-    left: -10%;
-    width: 120%;
+  .button-black:hover {
+    cursor: pointer;
   }
-  .button:hover:nth-of-type(6) {
-    border-radius: 30px;
-  }
-  .button:hover:nth-of-type(6):after {
-    width: 0%;
-  }
-  .button:hover:nth-of-type(7) {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .button:hover:nth-of-type(7):after {
-    width: 0%;
-  }
-  .button:hover:nth-of-type(8) {
-    box-shadow: inset 0px 0px 0px 3px #f7f7f7;
-  }
-  .button:hover:nth-of-type(8):after {
-    width: 0%;
-  }
-  .button:hover:nth-of-type(9) {
-    box-shadow: 0px 0px 0px 3px #f7f7f7;
-  }
-  .button:hover:nth-of-type(9):after {
-    width: 0%;
+  .button-black:hover:after {
+    width: 100%;
+    left: 0;
   }
 /* ----------------------------------------------------------------------------------------------- */
 
@@ -539,7 +520,7 @@ a {
     #my-hero .flexslider .flex-control-nav {
       bottom: 20px;
       z-index: 1000;
-      left: 20px;
+      right: 20px; /* Adjust the position of the dot indicators */
       float: left;
       width: auto; }
       @media screen and (max-width: 768px) {
@@ -550,16 +531,16 @@ a {
         display: block;
         margin-bottom: 10px; }
         #my-hero .flexslider .flex-control-nav li a {
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(80, 80, 80, 0.8);
           -webkit-box-shadow: none;
           box-shadow: none;
-          width: 12px;
-          height: 12px;
+          width: 16px;
+          height: 16px;
           cursor: pointer; }
           #my-hero .flexslider .flex-control-nav li a.flex-active {
             cursor: pointer;
             background: transparent;
-            border: 2px solid #2c98f0; }
+            border: 2px solid rgba(80, 80, 80, 0.8); }
     #my-hero .flexslider .flex-direction-nav {
       display: none; }
     #my-hero .flexslider .slider-text {
@@ -582,14 +563,14 @@ a {
           color: black; }
         #my-hero .flexslider .slider-text > .slider-text-inner h1 {
           margin-bottom: 20px;
-          font-size: 60px;
+          font-size: 50px;
           line-height: 1.3;
           font-weight: 700; }
           @media screen and (max-width: 768px) {
             #my-hero .flexslider .slider-text > .slider-text-inner h1 {
               font-size: 28px; } }
         #my-hero .flexslider .slider-text > .slider-text-inner h2 {
-          font-size: 18px;
+          font-size: 30px;
           line-height: 1.5;
           margin-bottom: 30px;
           font-weight: 300; }
