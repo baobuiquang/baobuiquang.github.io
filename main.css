@@ -279,7 +279,7 @@ a {
   object-position: center;
   overflow: hidden;}
 
-.my-image-preview-blog {
+.my-image-preview-200 {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -580,7 +580,7 @@ a {
         #my-hero .flexslider .slider-text > .slider-text-inner h2 {
           font-size: 30px;
           line-height: 1.5;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           font-weight: 300; }
           #my-hero .flexslider .slider-text > .slider-text-inner h2 a {
             color: rgba(44, 152, 240, 0.8);
