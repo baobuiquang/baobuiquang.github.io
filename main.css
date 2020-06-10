@@ -16,12 +16,12 @@ body {
       font-size: 20px; } }
 
 a {
-  color: #2cf0e0;
+  color: #b97979;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover, a:active, a:focus {
-    color: #2c98f0;
+    color: #61dacf;
     text-decoration: none !important; }
 
 /* ------------------------ Custom Scroll Bar ------------------------- */
@@ -92,6 +92,17 @@ a {
   text-align: center;
   font-family: 'Bad Script';
   padding: 8%;
+}
+
+.my-social-icon {
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-social-text {
+  text-align: center;
+  margin-top: 8px;
 }
 
 /* -------------------------------------------TIMELINE---------------------------------------------- */
