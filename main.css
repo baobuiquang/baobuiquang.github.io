@@ -71,7 +71,18 @@ a {
     #my-main {
       width: 100%;
       padding: 0 1em; } }
-  
+
+#my-main-without-aside {
+  width: 100%;
+  float: right;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  @media screen and (max-width: 768px) {
+    #my-main-without-aside {
+      width: 100%;
+      padding: 0 1em; } }
+
 .my-section {
   text-align: justify;
   width: 100%;
@@ -104,6 +115,44 @@ a {
   text-align: center;
   margin-top: 8px;
 }
+
+.my-price-table {
+  list-style-type: none;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.04);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 60px 0px;
+  padding: 0;
+}
+  .my-price-table:hover {
+    box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.3)
+  }
+  .my-price-table li {
+    padding: 8px 8px;
+    text-align: center;
+    font-size: 17px;
+  }
+  .my-price-table .header {
+    padding: 20px 0px;
+    font-size: 22px;
+  }
+  .my-price-table .none{
+    color: rgb(201, 201, 201);
+    padding: 8px 0px;
+    text-align: center;
+  }
+  .my-price-table .price {
+    padding: 16px 0px;
+    background-color: rgb(255, 231, 122);
+    font-size: 22px;
+  }
+  .price-table-note {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
 
 /* -------------------------------------------TIMELINE---------------------------------------------- */
 /* The actual timeline (the vertical ruler) */
@@ -421,6 +470,41 @@ a {
     cursor: pointer;
   }
   .button-black:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+/* button-price-table */
+.button-price-table {
+  padding: 8px;
+  border: 1.5px solid black;
+  border-radius: 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: black;
+}
+  .button-price-table:after {
+    position: absolute;
+    -webkit-transition: .3s;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 4px;
+    background: black;
+  }
+  .button-price-table:after {
+    right: 0;
+    left: auto;
+  }
+  .button-price-table:hover {
+    cursor: pointer;
+  }
+  .button-price-table:hover:after {
     width: 100%;
     left: 0;
   }
