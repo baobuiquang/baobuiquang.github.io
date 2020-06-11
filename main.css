@@ -10,7 +10,7 @@ padding-bottom: 11px;}
 
 body {
   font-size: 18px;
-  background-color: rgb(243, 242, 242);}
+  background-color: rgb(245, 245, 245);}
   @media screen and (max-width: 1000px) {
     body {
       font-size: 20px; } }
@@ -120,7 +120,7 @@ a {
   list-style-type: none;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.04);
+  /* box-shadow: 0 8px 8px 0 rgba(0,0,0,0.04); */
   -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 60px 0px;
@@ -306,6 +306,7 @@ a {
     visibility: visible;
     opacity: 1;
   }
+
 
 /* ---------------------------------card-effect-container (my-photo)------------------------------------ */
 
