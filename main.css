@@ -164,7 +164,7 @@ a {
     background-color: rgb(133, 133, 133);
     content: '';
     position: absolute;
-    width: 5px;
+    width: 4px;
     top: 0; bottom: 0;
     left: 50%;}
   /* Container around content */
@@ -186,7 +186,7 @@ a {
     height: 22px;
     right: -14px;
     background-color: rgb(243, 242, 242);
-    border: 4px solid rgb(95, 95, 95);
+    border: 4px solid rgb(133, 133, 133);
     top: 20px;
     border-radius: 50%;
     z-index: 1;}
@@ -227,21 +227,21 @@ a {
   .timeline-content {
     width: 100%;
     font-size: 16px;
-    padding: 16px 16px;
+    padding: 14px 16px;
     background-color:#505050;
     color: #fff;
     border-radius: 6px;}
   .timeline-content .timeline-title {
-    font-size: larger;}
+    font-size: 18px;}
   .timeline-content p {
     color: rgb(221, 221, 221);}
   .timeline-content .timeline-content-box {
-    font-size: 14px;
+    font-size: 13px;
     padding: 4px 8px;
     background: rgb(66, 66, 66);
     box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    margin: 10px 0px;}
+    margin: 8px 0px;}
   .timeline-content .timeline-tag {
     font-size: 14px;
     background: rgb(110, 110, 110);
@@ -307,6 +307,29 @@ a {
     opacity: 1;
   }
 
+.my-tooltip-2 {
+  position: relative;
+  display: inline-block;
+}
+  .my-tooltip-2 .my-tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    transform: translate(100%, -50%);
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: #505050;
+    color: #fff;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .my-tooltip-2:hover .my-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 
 /* ---------------------------------card-effect-container (my-photo)------------------------------------ */
 
