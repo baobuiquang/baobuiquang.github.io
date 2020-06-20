@@ -16,12 +16,12 @@ body {
       font-size: 20px; } }
 
 a {
-  color: #b97979;
+  color: #946262;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover, a:active, a:focus {
-    color: #61dacf;
+    color: #58b3ab;
     text-decoration: none !important; }
 
 /* ------------------------ Custom Scroll Bar ------------------------- */
@@ -644,7 +644,8 @@ a {
         background-position: bottom center;
         min-height: 400px;
         position: relative; }
-    #my-hero .flexslider .flex-control-nav {
+      /* Adjust the position of the dot indicators */
+      #my-hero .flexslider .flex-control-nav {
       bottom: 20px;
       z-index: 1000;
       right: 20px; /* Adjust the position of the dot indicators */
@@ -657,17 +658,22 @@ a {
       #my-hero .flexslider .flex-control-nav li {
         display: block;
         margin-bottom: 10px; }
+        /* The dots */
         #my-hero .flexslider .flex-control-nav li a {
-          background: rgba(80, 80, 80, 0.8);
+          border: 1.8px solid rgba(80, 80, 80, 0.8);
+          background: transparent;
           -webkit-box-shadow: none;
           box-shadow: none;
-          width: 16px;
-          height: 16px;
+          width: 18px;
+          height: 18px;
           cursor: pointer; }
+          #my-hero .flexslider .flex-control-nav li a:hover {
+            border: 1.8px solid rgb(255, 255, 255);
+          }
           #my-hero .flexslider .flex-control-nav li a.flex-active {
             cursor: pointer;
-            background: transparent;
-            border: 2px solid rgba(80, 80, 80, 0.8); }
+            background: rgba(80, 80, 80, 1);
+          }
     #my-hero .flexslider .flex-direction-nav {
       display: none; }
     #my-hero .flexslider .slider-text {
