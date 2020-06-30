@@ -7,12 +7,9 @@
 .anti-copy {
   z-index: 100;
   position: absolute;
-  /* transform: translate(0%, 0%); */
-  /* top: 0px; */
-  /* right: 25%; */
   width: 50%;
   height: 500px;
-  background-color: rgba(255, 0, 0, 0);
+  background-color: rgba(255, 0, 0, 0.0);
 }
 
 /* ================================================================================== */
