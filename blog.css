@@ -17,7 +17,7 @@
 p {
   font-size: 20px;
   font-family: 'Lora', serif;
-  line-height: 180%;
+  line-height: 170%;
   margin-top: 30px;
   margin-bottom: 30px;
   pointer-events: none;
@@ -62,7 +62,7 @@ hr {
 br {
   display: block; /* makes it have a width */
   content: ""; /* clears default height */
-  margin-top: 16px; /* change this to whatever height you want it */
+  margin-top: 18px; /* change this to whatever height you want it */
 }
 
 /* ------------------------ Custom Scroll Bar ------------------------- */
@@ -168,7 +168,7 @@ br {
 .my-section {
   text-align: justify;
   width: 100%;
-  padding: 10px 35% 10px 2%;
+  padding: 10px 37% 10px 4%;
   clear: both;
   display: block;
 } @media screen and (max-width: 768px) {

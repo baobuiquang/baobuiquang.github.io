@@ -16,7 +16,7 @@ body {
       font-size: 20px; } }
 
 a {
-  color: #946262;
+  color: #976d6d;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -410,7 +410,7 @@ a {
       transition: 0.5s ease;
       opacity: 0;}
     .card .card-main:hover .card--hover {
-      opacity: 0.6;}
+      opacity: 0.9;}
       .card .card-main .card--hover .card--hover--content{
         color: white;
         position: absolute;
@@ -850,5 +850,5 @@ body.offcanvas {
       opacity: 1;
       visibility: visible; } }
 
-.animate-boxx {
+.animate-box {
   opacity: 0; }
