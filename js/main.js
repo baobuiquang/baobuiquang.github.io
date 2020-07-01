@@ -321,9 +321,6 @@ function darkModeFunc() {
 	document.a.classList.toggle("dark-mode");
 }
 
-//-------------------------------------------------------------------------------
-
-
 //----------------------------- Smooth scrolling when clicking an anchor link -------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
@@ -334,8 +331,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		});
 	});
 });
-//------------------------------------------------------------------------------------------------------------
 
+//----------------------------- Anti Copy Content -------------------------------
+document.addEventListener('copy', function (e) {
+	e.preventDefault();
+	e.clipboardData.setData("text/plain", "Please repect me! Do not copy my content! If you actually need this for the right purpose, feel free to mail me directly. Thanks!");
+})
 
 
 // // ---------------------------------- AOS Library ----------------------------------------------

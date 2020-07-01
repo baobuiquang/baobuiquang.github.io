@@ -37,6 +37,62 @@
 	<!-- Google Icons -->
 	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
 
+	<script language="javascript">
+		function clearData() {
+			window.clipboardData.setData('text', '')
+		}
+		function cldata() {
+			if (clipboardData) {
+				clipboardData.clearData();
+			}
+		}
+		setInterval("cldata();", 1000);
+	</script>
+
+	<script type="text/JavaScript">
+		function killCopy(e){
+			return false
+		}
+		function reEnable(){
+			return true
+		}
+		document.onselectstart=new Function ("return false")
+		if (window.sidebar){
+			document.onmousedown=killCopy
+			document.onclick=reEnable
+		}
+	</script>
+
+	<script type="text/javascript" language="javascript">
+		$(function () {
+			$(this).bind("contextmenu", function (e) {
+				e.preventDefault();
+			});
+		}); 
+	</script>
+	<script type="text/JavaScript">
+		function killCopy(e){ return false } 
+		function reEnable(){ return true } 
+		document.onselectstart=new Function ("return false"); 
+		if (window.sidebar)
+		{ document.onmousedown=killCopy; 
+		document.onclick=reEnable; } 
+	</script>
+
+	<script type="text/javascript">
+		// Disable right click on web page
+		$("html").on("contextmenu", function (e) {
+			return false;
+		});
+		// Disable cut, copy and paste on web page
+		$('html').bind('cut copy paste', function (e) {
+			e.preventDefault();
+		});
+	</script>
+
+<body ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;" onload="clearData();"
+	onblur="clearData();" oncopy="return false;"></body>
+
 </head>
 
 <body>
@@ -48,7 +104,8 @@
 				style="padding: 12px 16px;">
 				<img alt="buiquangbao" src="/assets/logo.png" width="36" height="36">
 			</a>
-			<a href="https://buiquangbao.github.io/blog.html" target="_blank" rel="noopener noreferrer">All Blogs</a>
+			<a href="https://buiquangbao.github.io/blog.html" target="_blank" rel="noopener noreferrer">All
+				Blogs</a>
 		</div>
 		<!-- Centered link -->
 		<div class="topnav-centered">
@@ -87,7 +144,7 @@
 						<li><a href="#" data-nav-section="paragraph3">Characters Properties</a></li>
 						<li><a href="#" data-nav-section="paragraph4">Paragraph Alignment</a></li>
 						<li><a href="#" data-nav-section="paragraph5">Font Classification</a></li>
-						<!-- <li><a href="#" data-nav-section="paragraph6">Alignment</a></li> -->
+						<li><a href="#" data-nav-section="author">Written by</a></li>
 						<!-- <li><a href="#" data-nav-section="paragraph7">Alignment</a></li> -->
 					</ul>
 				</div>
@@ -129,12 +186,14 @@
 				<p class="animate-box" data-animate-effect="fadeInUp"
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 					Let’s have a search on the internet...<br>
-					Wikipedia: Typography is the art and technique of arranging type to make written language legible,
+					Wikipedia: Typography is the art and technique of arranging type to make written language
+					legible,
 					readable, and appealing when displayed.<br>
 					Etymology: The word "typography" in English comes from the Greek roots - τύπος - typos =
 					"impression"
 					and - γραφία - graphia = "writing".<br>
-					Simply understand, typography is the way you working with text, choosing and arranging the position,
+					Simply understand, typography is the way you working with text, choosing and arranging the
+					position,
 					spacing and style of letters.
 					Visual performance and readability of text in digital products have a great impact on user
 					experience. That’s why typography plays an important role in the design industry.
@@ -148,9 +207,11 @@
 					Visual Hierarchy is used to guide the reader’s eyes to which content is most important. In other
 					words, it shows them where to start, where to go next, step by step, using different levels of
 					emphasis. <br>
-					Designers will decide which elements they want the reader to notice first, then make them stand out.
+					Designers will decide which elements they want the reader to notice first, then make them stand
+					out.
 					High-level contents usually have larger size, be bold, italic or different in some ways. <br>
-					Clear typographic hierarchy makes the contents well organized and clear to navigate, the text will
+					Clear typographic hierarchy makes the contents well organized and clear to navigate, the text
+					will
 					be legible and easy to scan.
 				</p>
 				<img alt="buiquangbao" src="hierarchy.png" width="100%"
@@ -193,7 +254,8 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 					Cap height refers to the height of a flat capital letter measured from the baseline (such as H
 					capital letter).
-					Round capital letters (such as B, O) and pointed capital letters (such as A) are drawn with a slight
+					Round capital letters (such as B, O) and pointed capital letters (such as A) are drawn with a
+					slight
 					overshoot above the cap-height to achieve the effect of being the same size with flat capital
 					letters.
 				</p>
@@ -218,7 +280,8 @@
 				<div class="anti-copy"></div>
 				<p class="animate-box" data-animate-effect="fadeInRight"
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
-					Leading, also known as line-height, line spacing, is the distance between two baselines in a block
+					Leading, also known as line-height, line spacing, is the distance between two baselines in a
+					block
 					of text.
 					Too much or too little spacing can make things unpleasant for the reader.
 				</p>
@@ -251,7 +314,8 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 					Kerning is the specific space between pairs of letters. <br>
 					Kerning is different from tracking, it’s diverse because each letter fits together differently.
-					Kerning adjusts the space between individual letters, while tracking adjusts spacing uniformly over
+					Kerning adjusts the space between individual letters, while tracking adjusts spacing uniformly
+					over
 					a range of characters.
 				</p>
 				<img alt="buiquangbao" src="kerning.png" width="100%" style="border-radius: 16px; pointer-events: none;"
@@ -284,7 +348,8 @@
 					definition, or some specific purposes. <br>
 					Justify-aligned text is my favorite type of alignment. It’s balanced and there is no redundant
 					space. <br>
-					Center-aligned text is best used for short content such as heading, title, quotes, testimonials, CTA
+					Center-aligned text is best used for short content such as heading, title, quotes, testimonials,
+					CTA
 					(Call to action), etc.
 				</p>
 			</section>
@@ -299,7 +364,8 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 					Serif is a small line or stroke regularly attached to the main part of the letter.
 					Typefaces with serifs are called serif typefaces. <br>
-					Because of their classic look, Serif fonts are good choices for traditional projects. They are also
+					Because of their classic look, Serif fonts are good choices for traditional projects. They are
+					also
 					common in print publications, like magazines and newspapers.
 				</p>
 				<h2 class="animate-box" style="text-align: left;" data-animate-effect="fadeInRight">
@@ -310,7 +376,8 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 					In French, the word “sans” means "without".
 					Typefaces without serifs, don’t have the extra stroke are called sans serif typefaces. <br>
-					Sans Serif fonts are considered more clean and modern than Serif. It tends to be easier to read on
+					Sans Serif fonts are considered more clean and modern than Serif. It tends to be easier to read
+					on
 					computers and phones screen.
 				</p>
 				<img alt="buiquangbao" src="serif&sans.png" width="100%"
@@ -322,7 +389,8 @@
 				<div class="anti-copy"></div>
 				<p class="animate-box" data-animate-effect="fadeInRight"
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
-					A Monospace font, also called a fixed-pitch, fixed-width, or non-proportional font, is a font whose
+					A Monospace font, also called a fixed-pitch, fixed-width, or non-proportional font, is a font
+					whose
 					letters and characters each occupy the same amount of horizontal space. <br>
 					Monospace typefaces display all characters with the same width.
 				</p>
@@ -339,7 +407,8 @@
 					width.<br>
 					“Lining” means the figures align horizontally with each other, usually around the height of the
 					capitals.<br>
-					Tabular lining figures (also known as monospaced numbers) keep values optically aligned for better
+					Tabular lining figures (also known as monospaced numbers) keep values optically aligned for
+					better
 					scanning.
 				</p>
 				<img alt="buiquangbao" src="tabular.png" width="100%" style="border-radius: 16px; pointer-events: none;"
@@ -350,7 +419,8 @@
 				<div class="anti-copy"></div>
 				<p class="animate-box" data-animate-effect="fadeInRight"
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
-					Typefaces that looks like it's been written by hand with a natural feeling are called Handwriting
+					Typefaces that looks like it's been written by hand with a natural feeling are called
+					Handwriting
 					typefaces.<br>
 					Handwriting fonts typically are used for personal diary, journals, blogs, etc.
 				</p>
@@ -360,7 +430,8 @@
 				<div class="anti-copy"></div>
 				<p class="animate-box" data-animate-effect="fadeInRight"
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
-					A display typeface is a typeface that is intended for use at large sizes for headings, rather than
+					A display typeface is a typeface that is intended for use at large sizes for headings, rather
+					than
 					for extended passages of body text.<br>
 					Because of its decorative nature, Display fonts are best for small amounts of text: title and
 					header, or graphic-heavy designs.
@@ -371,7 +442,7 @@
 			</section>
 
 			<!-- SECTION: PARAGRAPH -->
-			<section class="my-section" data-section="paragraph6">
+			<!-- <section class="my-section" data-section="paragraph6">
 				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInRight">
 
 				</h2>
@@ -380,10 +451,10 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 
 				</p>
-			</section>
+			</section> -->
 
 			<!-- SECTION: PARAGRAPH -->
-			<section class="my-section" data-section="paragraph7">
+			<!-- <section class="my-section" data-section="paragraph7">
 				<h2 class="animate-box" style="text-align: center;" data-animate-effect="fadeInRight">
 
 				</h2>
@@ -392,7 +463,7 @@
 					style="pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 
 				</p>
-			</section>
+			</section> -->
 
 
 			<section class="my-section" data-section="author">
@@ -405,7 +476,8 @@
 					<div class="col-md-9">
 						<p style="margin: 0px; color: rgb(131, 131, 131);">Written by</p>
 						<p style="margin: 0px; font-size: 24px;"><a href="http://buiquangbao.github.io/" target="_blank"
-								rel="noopener noreferrer">Bui Quang Bao</a></p>
+								rel="noopener noreferrer" style="pointer-events: all;">Bui Quang
+								Bao</a></p>
 						<p style="margin: 0px;">Web & App Developer, UI/UX Designer</p>
 					</div>
 				</div>
