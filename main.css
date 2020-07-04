@@ -69,8 +69,7 @@ a {
   transition: 0.5s; }
   @media screen and (max-width: 768px) {
     #my-main {
-      width: 100%;
-      padding: 0 1em; } }
+      width: 100%;} }
 
 #my-main-without-aside {
   width: 100%;
@@ -86,12 +85,12 @@ a {
 .my-section {
   text-align: justify;
   width: 100%;
-  padding: 50px 20% 50px 0%;
+  padding: 80px 20% 80px 0%;
   clear: both;
   display: block;
 } @media screen and (max-width: 768px) {
   .my-section {
-    padding: 150px 8% 150px 8%; } }
+    padding: 50px 12% 50px 12%; } }
 
 .my-photo-wrap {
   background-color: rgb(255, 255, 255);
@@ -623,18 +622,32 @@ a {
     bottom: 16px;
     right: 16px; }
 
+ /* This is used to notify user should not use mobile */
+.mobileDetect {
+  display: none;}
+  @media screen and (max-width: 768px) {
+    .mobileDetect  {
+      margin-top: 100px;
+      display: block;
+      text-align: center;
+    } }
+
 /* The Slider */
 #my-hero {
   min-height: 500px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  /* background: #fff url(/assets/logo.png) no-repeat center center; */
   width: 100%;
   margin-bottom: 200px;
   float: left;
   clear: both; }
+  @media screen and (max-width: 768px) {
+    #my-hero {
+      display: none;
+    } }
   #my-hero .flexslider {
     border: none;
     z-index: 1;
-    margin-bottom: 0; }
+    margin-bottom: 0;}
     #my-hero .flexslider .slides {
       position: relative;
       overflow: visible; }
@@ -651,10 +664,6 @@ a {
       right: 20px; /* Adjust the position of the dot indicators */
       float: left;
       width: auto; }
-      @media screen and (max-width: 768px) {
-        #my-hero .flexslider .flex-control-nav {
-          right: 20px;
-          top: 100px; } }
       #my-hero .flexslider .flex-control-nav li {
         display: block;
         margin-bottom: 10px; }
@@ -685,11 +694,8 @@ a {
         display: table-cell;
         vertical-align: middle;
         min-height: 700px;
-        padding: 2.5em;
+        padding: 0 3.5em 36px 3.5em ;
         position: relative; }
-        @media screen and (max-width: 768px) {
-          #my-hero .flexslider .slider-text > .slider-text-inner {
-            text-align: center; } }
         #my-hero .flexslider .slider-text > .slider-text-inner h1, #my-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;
@@ -699,9 +705,6 @@ a {
           font-size: 50px;
           line-height: 1.3;
           font-weight: 700; }
-          @media screen and (max-width: 768px) {
-            #my-hero .flexslider .slider-text > .slider-text-inner h1 {
-              font-size: 28px; } }
         #my-hero .flexslider .slider-text > .slider-text-inner h2 {
           font-size: 30px;
           line-height: 1.5;
@@ -710,13 +713,8 @@ a {
           #my-hero .flexslider .slider-text > .slider-text-inner h2 a {
             color: rgba(44, 152, 240, 0.8);
             border-bottom: 1px solid rgba(44, 152, 240, 0.7); }
-        #my-hero .flexslider .slider-text > .slider-text-inner .heading-section {
-          font-size: 50px; }
-          @media screen and (max-width: 768px) {
-            #my-hero .flexslider .slider-text > .slider-text-inner .heading-section {
-              font-size: 30px; } }
         #my-hero .flexslider .slider-text > .slider-text-inner s
-.my-lead {
+      .my-lead {
           font-size: 20px;
           color: #fff; }
         #my-hero .flexslider .slider-text > .slider-text-inner p {
@@ -736,9 +734,6 @@ a {
             #my-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
               background: transparent !important;
               border: 1px solid #000 !important; }
-          @media screen and (max-width: 768px) {
-            #my-hero .flexslider .slider-text > .slider-text-inner .btn {
-              width: 100%; } }
 
 /* This is the navbar in mobile */
 body.offcanvas {
@@ -765,9 +760,9 @@ body.offcanvas {
   cursor: pointer;
   text-decoration: none; }
   .my-nav-toggle.active i::before, .my-nav-toggle.active i::after {
-    background: #000; }
+    background: rgb(131, 131, 131); }
   .my-nav-toggle.dark.active i::before, .my-nav-toggle.dark.active i::after {
-    background: #000; }
+    background: rgb(131, 131, 131); }
   .my-nav-toggle:hover, .my-nav-toggle:focus, .my-nav-toggle:active {
     outline: none;
     border-bottom: none !important; }
@@ -778,20 +773,20 @@ body.offcanvas {
     zoom: 1;
     *display: inline;
     width: 30px;
-    height: 12px;
-    color: #000;
+    height: 3px;
+    color: rgb(131, 131, 131);
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
     text-indent: -55px;
-    background: #000;
+    background: rgb(131, 131, 131);
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out; }
     .my-nav-toggle i::before, .my-nav-toggle i::after {
       content: '';
       width: 30px;
-      height: 2px;
-      background: #000;
+      height: 3px;
+      background: rgb(131, 131, 131);
       position: absolute;
       left: 0;
       -webkit-transition: 0.2s;
@@ -810,13 +805,13 @@ body.offcanvas {
       -o-transition: 0.2s;
       transition: 0.2s; }
 .my-nav-toggle i::before {
-  top: -7px; }
+  top: -10px; }
 .my-nav-toggle i::after {
-  bottom: -7px; }
-.my-nav-toggle:hover i::before {
+  bottom: -10px; }
+/* .my-nav-toggle:hover i::before {
   top: -15px; }
 .my-nav-toggle:hover i::after {
-  bottom: -15px; }
+  bottom: -15px; } */
 .my-nav-toggle.active i {
   background: transparent; }
 .my-nav-toggle.active i::before {
@@ -850,5 +845,5 @@ body.offcanvas {
       opacity: 1;
       visibility: visible; } }
 
-.animate-box {
+      .animate-box {
   opacity: 0; }
