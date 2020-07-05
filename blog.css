@@ -483,9 +483,9 @@ body.offcanvas {
   cursor: pointer;
   text-decoration: none; }
   .my-nav-toggle.active i::before, .my-nav-toggle.active i::after {
-    background: rgb(134, 134, 134); }
+    background: rgb(131, 131, 131); }
   .my-nav-toggle.dark.active i::before, .my-nav-toggle.dark.active i::after {
-    background: rgb(143, 143, 143); }
+    background: rgb(131, 131, 131); }
   .my-nav-toggle:hover, .my-nav-toggle:focus, .my-nav-toggle:active {
     outline: none;
     border-bottom: none !important; }
@@ -496,20 +496,20 @@ body.offcanvas {
     zoom: 1;
     *display: inline;
     width: 30px;
-    height: 12px;
+    height: 3px;
     color: rgb(131, 131, 131);
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
     text-indent: -55px;
-    background: rgb(128, 128, 128);
+    background: rgb(131, 131, 131);
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out; }
     .my-nav-toggle i::before, .my-nav-toggle i::after {
       content: '';
       width: 30px;
-      height: 2px;
-      background: rgb(133, 133, 133);
+      height: 3px;
+      background: rgb(131, 131, 131);
       position: absolute;
       left: 0;
       -webkit-transition: 0.2s;
@@ -528,13 +528,13 @@ body.offcanvas {
       -o-transition: 0.2s;
       transition: 0.2s; }
 .my-nav-toggle i::before {
-  top: -7px; }
+  top: -10px; }
 .my-nav-toggle i::after {
-  bottom: -7px; }
-.my-nav-toggle:hover i::before {
+  bottom: -10px; }
+/* .my-nav-toggle:hover i::before {
   top: -15px; }
 .my-nav-toggle:hover i::after {
-  bottom: -15px; }
+  bottom: -15px; } */
 .my-nav-toggle.active i {
   background: transparent; }
 .my-nav-toggle.active i::before {

@@ -235,6 +235,7 @@ a {
   .timeline-content p {
     color: rgb(221, 221, 221);}
   .timeline-content .timeline-content-box {
+    text-align: left;
     font-size: 13px;
     padding: 4px 8px;
     background: rgb(66, 66, 66);
