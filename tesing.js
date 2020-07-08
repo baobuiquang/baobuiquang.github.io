@@ -3,7 +3,10 @@ function textFormat() {
     var x = document.getElementById("frm");
     var str = "";
     var i = 0;
-    str += x.elements[0].value;
+    for (i = 0; i < x.length; i++) {
+        str += x.elements[i].value;
+        str += "<br>";
+    }
 
     //Removes "_" from both sides of str
     str = str.trim();
@@ -102,15 +105,11 @@ function textFormat() {
 function getFormInput() {
     //Initiate
     var x = document.getElementById("frm");
-    var elm0 = "", elm1 = "";
+    var elm0, elm1, numOfExp;
     elm0 += x.elements[0].value;
     elm1 += x.elements[1].value;
+    numOfExp = parseInt(x.elements[2].value);
     var doc = new jsPDF();
-
-
-
-
-
 
     //Processing
     doc.setLineHeightFactor(1.4);
@@ -120,7 +119,8 @@ function getFormInput() {
     var maxWidthSide = 55;
     var leftMain = 78;
     var leftMain2 = 120;
-    var maxWidthMain = 40;
+    var maxWidthMain = 125;
+    var maxWidthMain1 = 40;
     var maxWidthMain2 = 80;
 
     //Side
@@ -147,7 +147,7 @@ function getFormInput() {
     var shiftSkill = 120;
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(16);
-    doc.text("TOP SKILL", leftSide, shiftSkill);
+    doc.text("TOP SKILLS", leftSide, shiftSkill);
     doc.setFontSize(14);
     doc.setTextColor(255, 255, 255);
     doc.text("Web Development", leftSide, shiftSkill + 2 * leading);
@@ -181,20 +181,35 @@ function getFormInput() {
     doc.setFontSize(16);
     doc.setTextColor(0, 0, 0);
     doc.text("EXPERIENCE", leftMain, shiftExperience);
+    //Exp1
+    var shiftExp1 = 0;
     doc.setFontSize(14);
-    doc.text("Design ITUS", leftMain, shiftExperience + 2 * leading, { maxWidth: maxWidthMain });
+    doc.text("Freelance", leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain1 });
     doc.setFontSize(12);
-    doc.text("(Academic Club)", leftMain, shiftExperience + 3 * leading, { maxWidth: maxWidthMain });
+    doc.text("(Working for clients)", leftMain, shiftExperience + shiftExp1 + 3 * leading, { maxWidth: maxWidthMain1 });
     doc.setTextColor(100, 100, 100);
-    doc.text("Sep 2019 - Present", leftMain, shiftExperience + 4 * leading, { maxWidth: maxWidthMain });
+    doc.text("Jul 2020 - Present", leftMain, shiftExperience + shiftExp1 + 4 * leading, { maxWidth: maxWidthMain1 });
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
-    doc.text("Graphic Designer", leftMain2, shiftExperience + 2 * leading);
+    doc.text("Front-end Web Developer", leftMain2, shiftExperience + shiftExp1 + 2 * leading);
     doc.setFontSize(12);
-    doc.text("Responsible for graphic design content (logos, posters, backdrops, etc) for some events in university, work regularly on Adobe Illustrator, have a little experience in video editing using Adobe Premiere and Davinci Resolve.", leftMain2, shiftExperience + 3 * leading, { maxWidth: maxWidthMain2 });
+    doc.text("Discussing and turning client's ideas into visual problems, designing and developing their website. Worked mainly with HTML, CSS, Javascript and Bootstrap.", leftMain2, shiftExperience + shiftExp1 + 3 * leading, { maxWidth: maxWidthMain2 });
+    //Exp2
+    var shiftExp2 = 0;
+    doc.setFontSize(14);
+    doc.text("Design ITUS", leftMain, shiftExperience + shiftExp2 + 8 * leading, { maxWidth: maxWidthMain1 });
+    doc.setFontSize(12);
+    doc.text("(Academic Club)", leftMain, shiftExperience + shiftExp2 + 9 * leading, { maxWidth: maxWidthMain1 });
+    doc.setTextColor(100, 100, 100);
+    doc.text("Sep 2019 - Present", leftMain, shiftExperience + shiftExp2 + 10 * leading, { maxWidth: maxWidthMain1 });
+    doc.setFontSize(14);
+    doc.setTextColor(0, 0, 0);
+    doc.text("Graphic Designer", leftMain2, shiftExperience + shiftExp2 + 8 * leading);
+    doc.setFontSize(12);
+    doc.text("Responsible for graphic design content (logos, posters, backdrops, etc) for some events in university, work regularly on Adobe Illustrator.", leftMain2, shiftExperience + shiftExp2 + 9 * leading, { maxWidth: maxWidthMain2 });
 
     //Education
-    var shiftEducation = 105;
+    var shiftEducation = 135;
     doc.setTextColor(0, 0, 0);
     doc.setFontSize(16);
     doc.text("EDUCATION", leftMain, shiftEducation);
@@ -205,10 +220,26 @@ function getFormInput() {
     doc.text("Bachelor's degree, Information Technology", leftMain, shiftEducation + 3 * leading);
     doc.setTextColor(100, 100, 100);
     doc.text("2019 - 2023", leftMain, shiftEducation + 4 * leading);
+    doc.setTextColor(0, 0, 0);
+    doc.text("Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.", leftMain, shiftEducation + 5 * leading, { maxWidth: maxWidthMain });
 
-
-
-
+    //Award
+    var shiftAward = 200;
+    doc.setFontSize(16);
+    doc.setTextColor(0, 0, 0);
+    doc.text("AWARDS", leftMain, shiftAward);
+    doc.setFontSize(14);
+    doc.text("IT Talent 2019", leftMain, shiftAward + 2 * leading, { maxWidth: maxWidthMain1 });
+    doc.text("Competition", leftMain, shiftAward + 3 * leading, { maxWidth: maxWidthMain1 });
+    doc.setFontSize(12);
+    doc.text("Role: Team Leader", leftMain, shiftAward + 4 * leading, { maxWidth: maxWidthMain1 });
+    doc.setTextColor(100, 100, 100);
+    doc.text("Sep 2019", leftMain, shiftAward + 5 * leading, { maxWidth: maxWidthMain1 });
+    doc.setFontSize(14);
+    doc.setTextColor(0, 0, 0);
+    doc.text("Consolation Prize", leftMain2, shiftAward + 2 * leading);
+    doc.setFontSize(12);
+    doc.text("A five-round competition, round 4 focused on teamworking, applying IT knowledge into a theme issue (2019 - environmental issue). Our solution: Green Life System - Plastic waste Management System with mobile app technology.", leftMain2, shiftAward + 3 * leading, { maxWidth: maxWidthMain2 });
 
 
 
