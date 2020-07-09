@@ -120,66 +120,67 @@ function getFormInput() {
     var exp1_2 = "(Working for clients)";
     var exp1_3 = "Jul 2020 - Present";
     var exp1_4 = "Front-end Web Developer";
-    var exp1_5 = "Blah blah blah blah blah blah blah blah blah Discussing and turning client's ideas into visual problems, designing and developing their website. Worked mainly with HTML, CSS, Javascript and Bootstrap.";
+    var exp1_5 = "098776656747923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var exp2_1 = "Freelance";
     var exp2_2 = "(Working for clients)";
     var exp2_3 = "Jul 2020 - Present";
     var exp2_4 = "Front-end Web Developer";
-    var exp2_5 = "Blah blah blah blah blah blah blah blah blah Discussing and turning client's ideas into visual problems, designing and developing their website. Worked mainly with HTML, CSS, Javascript and Bootstrap.";
+    var exp2_5 = "232147615427164572364572816347162345781263458172634625348127634512786345127364512346534248273482374982374928347298347293847239482398479322";
     var exp3_1 = "Freelance";
     var exp3_2 = "(Working for clients)";
     var exp3_3 = "Jul 2020 - Present";
     var exp3_4 = "Front-end Web Developer";
-    var exp3_5 = "Blah blah blah blah blah blah blah blah blah Discussing and turning client's ideas into visual problems, designing and developing their website. Worked mainly with HTML, CSS, Javascript and Bootstrap.";
+    var exp3_5 = "232147615427164572364572816347162345781263458172634625348127634";
 
     var edu1_1 = "Information Technology, Bachelor's Degree";
     var edu1_2 = "Vietnam National University - University of Science";
     var edu1_3 = "2019 - 2023";
-    var edu1_4 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var edu1_4 = "999932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var edu2_1 = "Information Technology, Bachelor's Degree";
     var edu2_2 = "Vietnam National University - University of Science";
     var edu2_3 = "2019 - 2023";
-    var edu2_4 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var edu2_4 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var edu3_1 = "Information Technology, Bachelor's Degree";
     var edu3_2 = "Vietnam National University - University of Science";
     var edu3_3 = "2019 - 2023";
-    var edu3_4 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var edu3_4 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
 
     var awa1_1 = "IT Talent 2019";
     var awa1_2 = "Competition";
     var awa1_3 = "Sep 2019";
     var awa1_4 = "Role: Team Leader";
     var awa1_5 = "Consolation Prize";
-    var awa1_6 = "Teamworking, applying technology knowledge into environmental issue. Our solution: Plastic waste Management System with mobile app technology.";
+    var awa1_6 = "323932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var awa2_1 = "IT Talent 2019";
     var awa2_2 = "Competition";
     var awa2_3 = "Sep 2019";
     var awa2_4 = "Role: Team Leader";
     var awa2_5 = "Consolation Prize";
-    var awa2_6 = "Teamworking, applying technology knowledge into environmental issue. Our solution: Plastic waste Management System with mobile app technology.";
+    var awa2_6 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var awa3_1 = "IT Talent 2019";
     var awa3_2 = "Competition";
     var awa3_3 = "Sep 2019";
     var awa3_4 = "Role: Team Leader";
     var awa3_5 = "Consolation Prize";
-    var awa3_6 = "Teamworking, applying technology knowledge into environmental issue. Our solution: Plastic waste Management System with mobile app technology.";
+    var awa3_6 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
 
+    var add_title = "ADDITIONAL";
     var add1_1 = "Information Technology, Bachelor's Degree";
     var add1_2 = "2019 - 2023";
-    var add1_3 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var add1_3 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var add2_1 = "Information Technology, Bachelor's Degree";
     var add2_2 = "2019 - 2023";
-    var add2_3 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var add2_3 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
     var add3_1 = "Information Technology, Bachelor's Degree";
     var add3_2 = "2019 - 2023";
-    var add3_3 = "Coursework includes one of the majors: computer science, software engineering, data science, computer network. Enthusiastically lead group projects in subjects including mathematics, programming technique.";
+    var add3_3 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
 
     //--------------------------------------- Processing --------------------------------------
 
     //Temp value
     var numOfExp = 2;
     var numOfEdu = 1;
-    var numOfAwa = 1;
+    var numOfAwa = 2;
     var numOfAdd = 1;
 
     //Color Theme
@@ -203,10 +204,98 @@ function getFormInput() {
     var maxWidthMain = 130;
     var maxWidthMain1 = 36;
     var maxWidthMain2 = 92;
+    //Length
+    var charInLine1 = 43;
+    var charInLine2 = 60;
+    var extra_length = 0;
+    var exp1_length = Math.ceil(exp1_5.length / charInLine1) + 2; //2,4,2,3 means the height from title to content
+    var exp2_length = Math.ceil(exp2_5.length / charInLine1) + 2;
+    var exp3_length = Math.ceil(exp3_5.length / charInLine1) + 2;
+    var edu1_length = Math.ceil(edu1_4.length / charInLine2) + 4;
+    var edu2_length = Math.ceil(edu2_4.length / charInLine2) + 4;
+    var edu3_length = Math.ceil(edu3_4.length / charInLine2) + 4;
+    var awa1_length = Math.ceil(awa1_6.length / charInLine1) + 2;
+    var awa2_length = Math.ceil(awa2_6.length / charInLine1) + 2;
+    var awa3_length = Math.ceil(awa3_6.length / charInLine1) + 2;
+    var add1_length = Math.ceil(add1_3.length / charInLine2) + 3;
+    var add2_length = Math.ceil(add2_3.length / charInLine2) + 3;
+    var add3_length = Math.ceil(add3_3.length / charInLine2) + 3;
     //Shift
     var shiftContact = 20;
     var shiftSkill = 110;
     var shiftHeader = 20;
+
+    //shiftExperience 
+    var shiftExperience = 45;
+    if (numOfExp == 0) {
+        shiftExperience -= 2 * leading;
+    }
+    var shiftExp1 = extra_length + 2 * leading;
+    if (numOfExp >= 1) {
+        extra_length += exp1_length * leading;
+    }
+    var shiftExp2 = extra_length + 2 * leading;
+    if (numOfExp >= 2) {
+        extra_length += exp2_length * leading;
+    }
+    var shiftExp3 = extra_length + 2 * leading;
+    if (numOfExp >= 3) {
+        extra_length += exp3_length * leading;
+    }
+    //shiftEducation
+    var shiftEducation = shiftExperience + extra_length + 2 * leading;
+    extra_length = 0;
+    if (numOfEdu == 0) {
+        shiftEducation -= 2 * leading;
+    }
+    var shiftEdu1 = extra_length + 2 * leading;
+    if (numOfEdu >= 1) {
+        extra_length += edu1_length * leading;
+    }
+    var shiftEdu2 = extra_length + 2 * leading;
+    if (numOfEdu >= 2) {
+        extra_length += edu2_length * leading;
+    }
+    var shiftEdu3 = extra_length + 2 * leading;
+    if (numOfEdu >= 3) {
+        extra_length += edu3_length * leading;
+    }
+    //shiftAward
+    var shiftAward = shiftEducation + extra_length + 2 * leading;
+    extra_length = 0;
+    if (numOfAwa == 0) {
+        shiftAward -= 2 * leading;
+    }
+    var shiftAwa1 = extra_length + 2 * leading;
+    if (numOfAwa >= 1) {
+        extra_length += awa1_length * leading;
+    }
+    var shiftAwa2 = extra_length + 2 * leading;
+    if (numOfAwa >= 2) {
+        extra_length += awa2_length * leading;
+    }
+    var shiftAwa3 = extra_length + 2 * leading;
+    if (numOfAwa >= 3) {
+        extra_length += awa3_length * leading;
+    }
+    //shiftAdditional
+    var shiftAdditional = shiftAward + extra_length + 2 * leading;
+    extra_length = 0;
+    if (numOfAdd == 0) {
+        shiftAdditional -= 2 * leading;
+    }
+    var shiftAdd1 = extra_length + 2 * leading;
+    if (numOfAdd >= 1) {
+        extra_length += add1_length * leading;
+    }
+    var shiftAdd2 = extra_length + 2 * leading;
+    if (numOfAdd >= 2) {
+        extra_length += add2_length * leading;
+    }
+    var shiftAdd3 = extra_length + 2 * leading;
+    if (numOfAdd >= 3) {
+        extra_length += add3_length * leading;
+    }
 
     //Side
     doc.setFillColor(rgb_r, rgb_g, rgb_b);
@@ -237,7 +326,7 @@ function getFormInput() {
         doc.text("buiquangbao.github.io", leftSide, shiftContact + 12 * leading, { maxWidth: maxWidthSide });
     }
 
-    //Skill
+    //Skill 
     if (true) {
         doc.setFontSize(16);
         doc.setFontStyle("bold");
@@ -276,8 +365,6 @@ function getFormInput() {
     }
 
     //Experience
-    var shiftExperience = 45;
-    //Exp1
     if (numOfExp >= 1) {
         doc.line(leftMain, shiftExperience - yTransLine, leftMain + 25, shiftExperience - yTransLine);
         doc.setFontSize(16);
@@ -285,71 +372,59 @@ function getFormInput() {
         doc.setFontStyle("bold");
         doc.text("EXPERIENCE", leftMain, shiftExperience + yTransTitle);
         doc.setFontStyle("normal");
-        var shiftExp1 = 0;
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp1_1, leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp1_1, leftMain, shiftExperience + shiftExp1 + 0 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp1_2, leftMain, shiftExperience + shiftExp1 + 3 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp1_2, leftMain, shiftExperience + shiftExp1 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp1_3, leftMain, shiftExperience + shiftExp1 + 4 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp1_3, leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp1_4, leftMain2, shiftExperience + shiftExp1 + 2 * leading);
+        doc.text(exp1_4, leftMain2, shiftExperience + shiftExp1 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp1_5, leftMain2, shiftExperience + shiftExp1 + 3 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp1_5, leftMain2, shiftExperience + shiftExp1 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
-    doc.text("error error error error error error error error error error error", 1000, 1000, { maxWidth: maxWidthMain2, align: alignment });
-    //Exp2
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfExp >= 2) {
-        var shiftExp2 = 0;
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp2_1, leftMain, shiftExperience + shiftExp2 + 8 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp2_1, leftMain, shiftExperience + shiftExp2 + 0 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp2_2, leftMain, shiftExperience + shiftExp2 + 9 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp2_2, leftMain, shiftExperience + shiftExp2 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp2_3, leftMain, shiftExperience + shiftExp2 + 10 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp2_3, leftMain, shiftExperience + shiftExp2 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp2_4, leftMain2, shiftExperience + shiftExp2 + 8 * leading);
+        doc.text(exp2_4, leftMain2, shiftExperience + shiftExp2 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp2_5, leftMain2, shiftExperience + shiftExp2 + 9 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp2_5, leftMain2, shiftExperience + shiftExp2 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
-    //Exp3
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfExp >= 3) {
-        var shiftExp2 = 0;
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp3_1, leftMain, shiftExperience + shiftExp2 + 14 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp3_1, leftMain, shiftExperience + shiftExp3 + 0 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp3_2, leftMain, shiftExperience + shiftExp2 + 15 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp3_2, leftMain, shiftExperience + shiftExp3 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp3_3, leftMain, shiftExperience + shiftExp2 + 16 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp3_3, leftMain, shiftExperience + shiftExp3 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp3_4, leftMain2, shiftExperience + shiftExp2 + 14 * leading);
+        doc.text(exp3_4, leftMain2, shiftExperience + shiftExp3 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp3_5, leftMain2, shiftExperience + shiftExp2 + 15 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp3_5, leftMain2, shiftExperience + shiftExp3 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
 
 
     //Education
-    var shiftEducation = shiftExperience;
-    if (numOfExp == 1) {
-        shiftEducation += 55;
-    } else if (numOfExp == 2) {
-        shiftEducation += 91;
-    } else if (numOfExp == 3) {
-        shiftEducation += 126;
-    }
     if (numOfEdu >= 1) {
         doc.line(leftMain, shiftEducation - yTransLine, leftMain + 25, shiftEducation - yTransLine);
         doc.setTextColor(0, 0, 0);
@@ -360,49 +435,43 @@ function getFormInput() {
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(edu1_1, leftMain, shiftEducation + 2 * leading);
-        doc.text(edu1_2, leftMain, shiftEducation + 3 * leading);
+        doc.text(edu1_1, leftMain, shiftEducation + shiftEdu1 + 0 * leading);
+        doc.text(edu1_2, leftMain, shiftEducation + shiftEdu1 + 1 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(edu1_3, leftMain, shiftEducation + 4 * leading);
+        doc.text(edu1_3, leftMain, shiftEducation + shiftEdu1 + 2 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(edu1_4, leftMain, shiftEducation + 5 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(edu1_4, leftMain, shiftEducation + shiftEdu1 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfEdu >= 2) {
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(edu2_1, leftMain, shiftEducation + 9 * leading);
-        doc.text(edu2_2, leftMain, shiftEducation + 10 * leading);
+        doc.text(edu2_1, leftMain, shiftEducation + shiftEdu2 + 0 * leading);
+        doc.text(edu2_2, leftMain, shiftEducation + shiftEdu2 + 1 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(edu2_3, leftMain, shiftEducation + 11 * leading);
+        doc.text(edu2_3, leftMain, shiftEducation + shiftEdu2 + 2 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(edu2_4, leftMain, shiftEducation + 12 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(edu2_4, leftMain, shiftEducation + shiftEdu2 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfEdu >= 3) {
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(edu3_1, leftMain, shiftEducation + 16 * leading);
-        doc.text(edu3_2, leftMain, shiftEducation + 17 * leading);
+        doc.text(edu3_1, leftMain, shiftEducation + shiftEdu3 + 0 * leading);
+        doc.text(edu3_2, leftMain, shiftEducation + shiftEdu3 + 1 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(edu3_3, leftMain, shiftEducation + 18 * leading);
+        doc.text(edu3_3, leftMain, shiftEducation + shiftEdu3 + 2 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(edu3_4, leftMain, shiftEducation + 19 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(edu3_4, leftMain, shiftEducation + shiftEdu3 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
 
 
     //Award
-    var shiftAward = shiftEducation;
-    if (numOfEdu == 1) {
-        shiftAward += 57;
-    } else if (numOfEdu == 2) {
-        shiftAward += 97;
-    } else if (numOfEdu == 3) {
-        shiftAward += 137;
-    }
     if (numOfAwa >= 1) {
         doc.line(leftMain, shiftAward - yTransLine, leftMain + 25, shiftAward - yTransLine);
         doc.setFontSize(16);
@@ -412,105 +481,99 @@ function getFormInput() {
         doc.setFontStyle("normal");
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa1_1, leftMain, shiftAward + 2 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa1_2, leftMain, shiftAward + 3 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_1, leftMain, shiftAward + shiftAwa1 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_2, leftMain, shiftAward + shiftAwa1 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa1_3, leftMain, shiftAward + 4 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_3, leftMain, shiftAward + shiftAwa1 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa1_4, leftMain, shiftAward + 5 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_4, leftMain, shiftAward + shiftAwa1 + 3 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa1_5, leftMain2, shiftAward + 2 * leading);
+        doc.text(awa1_5, leftMain2, shiftAward + shiftAwa1 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa1_6, leftMain2, shiftAward + 3 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa1_6, leftMain2, shiftAward + shiftAwa1 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
-    doc.text("error error error error error error error error error error error", 1000, 1000, { maxWidth: maxWidthMain2, align: alignment });
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfAwa >= 2) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa2_1, leftMain, shiftAward + 7 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa2_2, leftMain, shiftAward + 8 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_1, leftMain, shiftAward + shiftAwa2 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_2, leftMain, shiftAward + shiftAwa2 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa2_3, leftMain, shiftAward + 9 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_3, leftMain, shiftAward + shiftAwa2 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa2_4, leftMain, shiftAward + 10 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_4, leftMain, shiftAward + shiftAwa2 + 3 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa2_5, leftMain2, shiftAward + 7 * leading);
+        doc.text(awa2_5, leftMain2, shiftAward + shiftAwa2 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa2_6, leftMain2, shiftAward + 8 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa2_6, leftMain2, shiftAward + shiftAwa2 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
-    doc.text("error error error error error error error error error error error", 1000, 1000, { maxWidth: maxWidthMain2, align: alignment });
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfAwa >= 3) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa3_1, leftMain, shiftAward + 12 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa3_2, leftMain, shiftAward + 13 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_1, leftMain, shiftAward + shiftAwa3 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_2, leftMain, shiftAward + shiftAwa3 + 1 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa3_3, leftMain, shiftAward + 14 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_3, leftMain, shiftAward + shiftAwa3 + 2 * leading, { maxWidth: maxWidthMain1 });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa3_4, leftMain, shiftAward + 15 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_4, leftMain, shiftAward + shiftAwa3 + 3 * leading, { maxWidth: maxWidthMain1 });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa3_5, leftMain2, shiftAward + 12 * leading);
+        doc.text(awa3_5, leftMain2, shiftAward + shiftAwa3 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa3_6, leftMain2, shiftAward + 13 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa3_6, leftMain2, shiftAward + shiftAwa3 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
     }
 
 
     //Additional
-    var shiftAdditional = shiftAward;
-    if (numOfAwa == 1) {
-        shiftAdditional += 45;
-    } else if (numOfAwa == 2) {
-        shiftAdditional += 75;
-    } else if (numOfAwa == 3) {
-        shiftAdditional += 104;
-    }
     if (numOfAdd >= 1) {
         doc.line(leftMain, shiftAdditional - yTransLine, leftMain + 25, shiftAdditional - yTransLine);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(16);
         doc.setFontStyle("bold");
-        doc.text("ADDITIONAL", leftMain, shiftAdditional + yTransTitle);
+        doc.text(add_title, leftMain, shiftAdditional + yTransTitle);
         doc.setFontStyle("normal");
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(add1_1, leftMain, shiftAdditional + 2 * leading);
+        doc.text(add1_1, leftMain, shiftAdditional + shiftAdd1 + 0 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(add1_2, leftMain, shiftAdditional + 3 * leading);
+        doc.text(add1_2, leftMain, shiftAdditional + shiftAdd1 + 1 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(add1_3, leftMain, shiftAdditional + 4 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(add1_3, leftMain, shiftAdditional + shiftAdd1 + 2 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfAdd >= 2) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(add2_1, leftMain, shiftAdditional + 8 * leading);
+        doc.text(add2_1, leftMain, shiftAdditional + shiftAdd2 + 0 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(add2_2, leftMain, shiftAdditional + 9 * leading);
+        doc.text(add2_2, leftMain, shiftAdditional + shiftAdd2 + 1 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(add2_3, leftMain, shiftAdditional + 10 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(add2_3, leftMain, shiftAdditional + shiftAdd2 + 2 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfAdd >= 3) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(add3_1, leftMain, shiftAdditional + 14 * leading);
+        doc.text(add3_1, leftMain, shiftAdditional + shiftAdd3 + 0 * leading);
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(add3_2, leftMain, shiftAdditional + 15 * leading);
+        doc.text(add3_2, leftMain, shiftAdditional + shiftAdd3 + 1 * leading);
         doc.setTextColor(0, 0, 0);
-        doc.text(add3_3, leftMain, shiftAdditional + 16 * leading, { maxWidth: maxWidthMain, align: alignment });
+        doc.text(add3_3, leftMain, shiftAdditional + shiftAdd3 + 2 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
 
 
@@ -521,4 +584,3 @@ function getFormInput() {
     //Save file
     doc.save('Test.pdf');
 }
-
