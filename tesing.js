@@ -105,16 +105,29 @@ function textFormat() {
 function getFormInput() {
     //Initiate
     var x = document.getElementById("frm");
-    var elm0, elm1;
-    elm0 += x.elements[0].value;
-    elm1 += x.elements[1].value;
-    //var numOfExp = parseInt(x.elements[0].value);
-    //var numOfEdu = parseInt(x.elements[0].value);
-    //var numOfAwa = parseInt(x.elements[0].value);
-    //var numOfAdd = parseInt(x.elements[0].value);
+    var shiftIndex = 0;
+    // var elm0 = "", elm1 = "";
+    // elm0 += x.elements[0].value;
+    // elm1 += x.elements[1].value;
     var doc = new jsPDF();
 
     //--------------------------------------- User Data --------------------------------------
+
+    var name = "Bui Quang Bao";
+    var head1 = "App & Web Developer, UI/UX Designer";
+    var head2 = "Ho Chi Minh City, Vietnam";
+
+    var cont1 = "(+84)849283959";
+    var cont2 = "quangbao.co@gmail.com";
+    var cont3 = "linkedin.com/in/buiquangbao";
+    var cont4 = "buiquangbao.github.io";
+
+    var skl1_1 = "Web Development";
+    var skl1_2 = "HTML, CSS, Javascript, Bootstrap";
+    var skl2_1 = "App Development";
+    var skl2_2 = "Dartlang, Flutter SDK, Firebase";
+    var skl3_1 = "Graphic Design";
+    var skl3_2 = "Adobe Illustrator, Davinci Resolve";
 
     var exp1_1 = "Freelance";
     var exp1_2 = "(Working for clients)";
@@ -174,6 +187,82 @@ function getFormInput() {
     var add3_1 = "Information Technology, Bachelor's Degree";
     var add3_2 = "2019 - 2023";
     var add3_3 = "932847293847923847923847923847923847923847293832147615427164572364572816347162345781263458172634625348127634";
+    //
+    name = x.elements[shiftIndex + 0].value;
+    head1 = x.elements[shiftIndex + 1].value;
+    head2 = x.elements[shiftIndex + 2].value;
+
+    cont1 = x.elements[shiftIndex + 3].value;
+    cont2 = x.elements[shiftIndex + 4].value;
+    cont3 = x.elements[shiftIndex + 5].value;
+    cont4 = x.elements[shiftIndex + 6].value;
+
+    skl1_1 = x.elements[shiftIndex + 7].value;
+    skl1_2 = x.elements[shiftIndex + 8].value;
+    skl2_1 = x.elements[shiftIndex + 9].value;
+    skl2_2 = x.elements[shiftIndex + 10].value;
+    skl3_1 = x.elements[shiftIndex + 11].value;
+    skl3_2 = x.elements[shiftIndex + 12].value;
+
+    exp1_1 = x.elements[shiftIndex + 13].value;
+    exp1_2 = x.elements[shiftIndex + 14].value;
+    exp1_3 = x.elements[shiftIndex + 15].value;
+    exp1_4 = x.elements[shiftIndex + 16].value;
+    exp1_5 = x.elements[shiftIndex + 17].value;
+    exp2_1 = x.elements[shiftIndex + 18].value;
+    exp2_2 = x.elements[shiftIndex + 19].value;;
+    exp2_3 = x.elements[shiftIndex + 20].value;
+    exp2_4 = x.elements[shiftIndex + 21].value;
+    exp2_5 = x.elements[shiftIndex + 22].value;
+    exp3_1 = x.elements[shiftIndex + 23].value;
+    exp3_2 = x.elements[shiftIndex + 24].value;
+    exp3_3 = x.elements[shiftIndex + 25].value;
+    exp3_4 = x.elements[shiftIndex + 26].value;
+    exp3_5 = x.elements[shiftIndex + 27].value;
+
+    edu1_1 = x.elements[shiftIndex + 28].value;
+    edu1_2 = x.elements[shiftIndex + 29].value;
+    edu1_3 = x.elements[shiftIndex + 30].value;
+    edu1_4 = x.elements[shiftIndex + 31].value;
+    edu2_1 = x.elements[shiftIndex + 32].value;
+    edu2_2 = x.elements[shiftIndex + 33].value;
+    edu2_3 = x.elements[shiftIndex + 34].value;
+    edu2_4 = x.elements[shiftIndex + 35].value;
+    edu3_1 = x.elements[shiftIndex + 36].value;
+    edu3_2 = x.elements[shiftIndex + 37].value;
+    edu3_3 = x.elements[shiftIndex + 38].value;
+    edu3_4 = x.elements[shiftIndex + 39].value;
+
+    awa1_1 = x.elements[shiftIndex + 40].value;
+    awa1_2 = x.elements[shiftIndex + 41].value;
+    awa1_3 = x.elements[shiftIndex + 42].value;
+    awa1_4 = x.elements[shiftIndex + 43].value;
+    awa1_5 = x.elements[shiftIndex + 44].value;
+    awa1_6 = x.elements[shiftIndex + 45].value;
+    awa2_1 = x.elements[shiftIndex + 46].value;
+    awa2_2 = x.elements[shiftIndex + 47].value;
+    awa2_3 = x.elements[shiftIndex + 48].value;
+    awa2_4 = x.elements[shiftIndex + 49].value;
+    awa2_5 = x.elements[shiftIndex + 50].value;
+    awa2_6 = x.elements[shiftIndex + 51].value;
+    awa3_1 = x.elements[shiftIndex + 52].value;
+    awa3_2 = x.elements[shiftIndex + 53].value;
+    awa3_3 = x.elements[shiftIndex + 54].value;
+    awa3_4 = x.elements[shiftIndex + 55].value;
+    awa3_5 = x.elements[shiftIndex + 56].value;
+    awa3_6 = x.elements[shiftIndex + 57].value;
+
+    add_title = x.elements[shiftIndex + 58].value;
+    add1_1 = x.elements[shiftIndex + 59].value;
+    add1_2 = x.elements[shiftIndex + 60].value;
+    add1_3 = x.elements[shiftIndex + 61].value;
+    add2_1 = x.elements[shiftIndex + 62].value;
+    add2_2 = x.elements[shiftIndex + 63].value;
+    add2_3 = x.elements[shiftIndex + 64].value;
+    add3_1 = x.elements[shiftIndex + 65].value;
+    add3_2 = x.elements[shiftIndex + 66].value;
+    add3_3 = x.elements[shiftIndex + 67].value;
+
 
     //--------------------------------------- Processing --------------------------------------
 
@@ -301,6 +390,18 @@ function getFormInput() {
     doc.setFillColor(rgb_r, rgb_g, rgb_b);
     doc.rect(0, 0, 60, 300, "F");
 
+    //Header
+    if (true) {
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(24);
+        doc.setFontStyle("bold");
+        doc.text(name, leftMain, shiftHeader);
+        doc.setFontStyle("normal");
+        doc.setFontSize(12);
+        doc.text(head1, leftMain, shiftHeader + 1 * leading);
+        doc.text(head2, leftMain, shiftHeader + 2 * leading);
+    }
+
     //Contact
     if (true) {
         doc.setTextColor(255, 255, 255);
@@ -311,19 +412,19 @@ function getFormInput() {
         doc.setFontSize(12);
         doc.text("Phone", leftSide, shiftContact + 2 * leading);
         doc.setFontSize(11);
-        doc.text("(+84)849283959", leftSide, shiftContact + 3 * leading);
+        doc.text(cont1, leftSide, shiftContact + 3 * leading);
         doc.setFontSize(12);
         doc.text("Mail", leftSide, shiftContact + 5 * leading);
         doc.setFontSize(11);
-        doc.text("quangbao.co@gmail.com", leftSide, shiftContact + 6 * leading, { maxWidth: maxWidthSide });
+        doc.text(cont2, leftSide, shiftContact + 6 * leading, { maxWidth: maxWidthSide });
         doc.setFontSize(12);
-        doc.text("LinkedIn: ", leftSide, shiftContact + 8 * leading);
+        doc.text("LinkedIn ", leftSide, shiftContact + 8 * leading);
         doc.setFontSize(11);
-        doc.text("linkedin.com/in/buiquangbao", leftSide, shiftContact + 9 * leading, { maxWidth: maxWidthSide });
+        doc.text(cont3, leftSide, shiftContact + 9 * leading, { maxWidth: maxWidthSide });
         doc.setFontSize(12);
         doc.text("Personal Website", leftSide, shiftContact + 11 * leading);
         doc.setFontSize(11);
-        doc.text("buiquangbao.github.io", leftSide, shiftContact + 12 * leading, { maxWidth: maxWidthSide });
+        doc.text(cont4, leftSide, shiftContact + 12 * leading, { maxWidth: maxWidthSide });
     }
 
     //Skill 
@@ -334,34 +435,22 @@ function getFormInput() {
         doc.setFontStyle("normal");
         doc.setFontSize(14);
         doc.setTextColor(255, 255, 255);
-        doc.text("Web Development", leftSide, shiftSkill + 2 * leading);
+        doc.text(skl1_1, leftSide, shiftSkill + 2 * leading);
         doc.setFontSize(11);
         doc.setTextColor(160, 160, 160);
-        doc.text("HTML, CSS, Javascript, Bootstrap", leftSide, shiftSkill + 3 * leading, { maxWidth: maxWidthSide });
+        doc.text(skl1_2, leftSide, shiftSkill + 3 * leading, { maxWidth: maxWidthSide });
         doc.setFontSize(14);
         doc.setTextColor(255, 255, 255);
-        doc.text("App Development", leftSide, shiftSkill + 6 * leading);
+        doc.text(skl2_1, leftSide, shiftSkill + 6 * leading);
         doc.setFontSize(11);
         doc.setTextColor(160, 160, 160);
-        doc.text("Dartlang, Flutter SDK, Firebase", leftSide, shiftSkill + 7 * leading, { maxWidth: maxWidthSide });
+        doc.text(skl2_2, leftSide, shiftSkill + 7 * leading, { maxWidth: maxWidthSide });
         doc.setFontSize(14);
         doc.setTextColor(255, 255, 255);
-        doc.text("Graphic Design", leftSide, shiftSkill + 10 * leading);
+        doc.text(skl3_1, leftSide, shiftSkill + 10 * leading);
         doc.setFontSize(11);
         doc.setTextColor(160, 160, 160);
-        doc.text("Adobe Illustrator, Davinci Resolve", leftSide, shiftSkill + 11 * leading, { maxWidth: maxWidthSide });
-    }
-
-    //Header
-    if (true) {
-        doc.setTextColor(0, 0, 0);
-        doc.setFontSize(24);
-        doc.setFontStyle("bold");
-        doc.text("Bui Quang Bao", leftMain, shiftHeader);
-        doc.setFontStyle("normal");
-        doc.setFontSize(12);
-        doc.text("App & Web Developer, UI/UX Designer ", leftMain, shiftHeader + 1 * leading);
-        doc.text("Ho Chi Minh City, Vietnam", leftMain, shiftHeader + 2 * leading);
+        doc.text(skl3_2, leftSide, shiftSkill + 11 * leading, { maxWidth: maxWidthSide });
     }
 
     //Experience
@@ -575,8 +664,6 @@ function getFormInput() {
         doc.setTextColor(0, 0, 0);
         doc.text(add3_3, leftMain, shiftAdditional + shiftAdd3 + 2 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
-
-
 
 
 
