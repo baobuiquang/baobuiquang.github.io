@@ -1,62 +1,207 @@
 * {
-    font-family: 'Quicksand', sans-serif;
-  }
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
 
-.form__group {
-    position: relative;
-    padding: 15px 0 0;
-    margin-top: 10px;
-    width: 50%;
+.section {
+  background-color: white;
+  z-index: 1000;
+  padding: 6px 44px 36px 44px;
+  margin: 52px 35% 52px 10%;
+  border-radius: 8px;
+  box-shadow: 8px 12px 32px #00000056;
+} @media screen and (max-width: 1000px) {
+  .section {
+    margin: 52px 36px 52px 36px; } }
+
+h1 {
+  padding-top: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none;
+          user-select: none;
+}
+h2 {
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none;
+          user-select: none;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+select {
+  width: 50px;
+  padding-left: 18px;
+  font-size: 18px;
+  border: 1px solid rgba(204, 204, 204, 0);
+  height: 36px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* ------------------------ Fixed-div ---------------------------- */
+.fixed-div {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+
+
+
+
+
+/* Create two equal columns that floats next to each other */
+.column-4 {
+  float: left;
+  width: 32%;
+  padding: 0 1% 0 0;
+}
+.column-8 {
+  float: left;
+  width: 66%;
+  padding: 0 1% 0 0;
+}
+.column-6 {
+  float: left;
+  width: 49%;
+  padding: 0 1% 0 0;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 1000px) {
+  .column-4 {
+    width: 100%;
+  }
+  .column-8 {
+    width: 100%;
+  }
+  .column-6 {
+    width: 100%;
+  }
+}
+
+
+
+/* --------------------------- Form ------------------------------ */
+.form_group {
+  position: relative;
+  padding: 18px 0 18px 0;
   }
   
-  .form__field {
-    font-family: inherit;
+  .form_field {
+    background-color: transparent;
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 1px solid #9b9b9b;
     outline: 0;
-    font-size: 1.3rem;
-    color: #fff;
-    padding: 7px 0;
-    background: transparent;
+    color: rgb(80, 80, 80);
+    font-weight: 700;
+    padding: 8px 0;
     transition: border-color 0.2s;
+    cursor: pointer;
   }
-  .form__field::placeholder {
+  .form_field::placeholder {
     color: transparent;
   }
-  .form__field:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
-    cursor: text;
+  .form_field:placeholder-shown ~ .form_label {
+    cursor: pointer;
     top: 20px;
   }
   
-  .form__label {
+  .form_label {
     position: absolute;
     top: 0;
     display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #9b9b9b;
+    transition: 0.3s;
+    color: #838383;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;
+            user-select: none;
   }
   
-  .form__field:focus {
-    padding-bottom: 6px;
+  .form_field:focus {
+    padding-bottom: 8px;
     font-weight: 700;
     border-width: 3px;
     border-image: linear-gradient(to right, #11998e, #38ef7d);
     border-image-slice: 1;
   }
-  .form__field:focus ~ .form__label {
+  .form_field:focus ~ .form_label {
     position: absolute;
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
     color: #11998e;
     font-weight: 700;
   }
   
   /* reset input */
-  .form__field:required, .form__field:invalid {
+  .form_field:required, .form_field:invalid {
     box-shadow: none;
+  }
+
+
+
+  /* ----------------------------- Button -------------------------------------- */
+  .example_f {
+    border-radius: 4px;
+    background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 12px;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  .example_f span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .example_f span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .example_f:hover span {
+    padding-right: 25px;
+  }
+  .example_f:hover span:after {
+    opacity: 1;
+    right: 0;
   }

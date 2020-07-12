@@ -106,9 +106,6 @@ function getFormInput() {
     //Initiate
     var x = document.getElementById("frm");
     var shiftIndex = 0;
-    // var elm0 = "", elm1 = "";
-    // elm0 += x.elements[0].value;
-    // elm1 += x.elements[1].value;
     var doc = new jsPDF();
 
     //--------------------------------------- User Data --------------------------------------
@@ -263,16 +260,21 @@ function getFormInput() {
     add3_2 = x.elements[shiftIndex + 66].value;
     add3_3 = x.elements[shiftIndex + 67].value;
 
-
     //--------------------------------------- Processing --------------------------------------
 
     //Temp value
-    var numOfExp = 2;
-    var numOfEdu = 1;
-    var numOfAwa = 2;
-    var numOfAdd = 1;
+    var numOfExp = parseInt(x.elements[shiftIndex + 68].value);
+    var numOfEdu = parseInt(x.elements[shiftIndex + 69].value);
+    var numOfAwa = parseInt(x.elements[shiftIndex + 70].value);
+    var numOfAdd = parseInt(x.elements[shiftIndex + 71].value);
 
-    //Color Theme
+    // //Temp value
+    // var numOfExp = 3;
+    // var numOfEdu = 1;
+    // var numOfAwa = 1;
+    // var numOfAdd = 1;
+
+    //Color Theme  
     var rgb_r = 0;
     var rgb_g = 25;
     var rgb_b = 35;
@@ -297,15 +299,15 @@ function getFormInput() {
     var charInLine1 = 43;
     var charInLine2 = 60;
     var extra_length = 0;
-    var exp1_length = Math.ceil(exp1_5.length / charInLine1) + 2; //2,4,2,3 means the height from title to content
-    var exp2_length = Math.ceil(exp2_5.length / charInLine1) + 2;
-    var exp3_length = Math.ceil(exp3_5.length / charInLine1) + 2;
+    var exp1_length = Math.ceil(exp1_5.length / charInLine2) + 4; //2,4,2,3 means the height from title to content
+    var exp2_length = Math.ceil(exp2_5.length / charInLine2) + 4;
+    var exp3_length = Math.ceil(exp3_5.length / charInLine2) + 4;
     var edu1_length = Math.ceil(edu1_4.length / charInLine2) + 4;
     var edu2_length = Math.ceil(edu2_4.length / charInLine2) + 4;
     var edu3_length = Math.ceil(edu3_4.length / charInLine2) + 4;
-    var awa1_length = Math.ceil(awa1_6.length / charInLine1) + 2;
-    var awa2_length = Math.ceil(awa2_6.length / charInLine1) + 2;
-    var awa3_length = Math.ceil(awa3_6.length / charInLine1) + 2;
+    var awa1_length = Math.ceil(awa1_6.length / charInLine2) + 4;
+    var awa2_length = Math.ceil(awa2_6.length / charInLine2) + 4;
+    var awa3_length = Math.ceil(awa3_6.length / charInLine2) + 4;
     var add1_length = Math.ceil(add1_3.length / charInLine2) + 3;
     var add2_length = Math.ceil(add2_3.length / charInLine2) + 3;
     var add3_length = Math.ceil(add3_3.length / charInLine2) + 3;
@@ -461,55 +463,58 @@ function getFormInput() {
         doc.setFontStyle("bold");
         doc.text("EXPERIENCE", leftMain, shiftExperience + yTransTitle);
         doc.setFontStyle("normal");
+
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp1_1, leftMain, shiftExperience + shiftExp1 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp1_1, leftMain, shiftExperience + shiftExp1 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp1_2, leftMain, shiftExperience + shiftExp1 + 1 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(exp1_2, leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp1_3, leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp1_3, leftMain, shiftExperience + shiftExp1 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp1_4, leftMain2, shiftExperience + shiftExp1 + 0 * leading);
+        doc.text(exp1_4, leftMain, shiftExperience + shiftExp1 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp1_5, leftMain2, shiftExperience + shiftExp1 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp1_5, leftMain, shiftExperience + shiftExp1 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
-    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain, align: alignment });
     if (numOfExp >= 2) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp2_1, leftMain, shiftExperience + shiftExp2 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp2_1, leftMain, shiftExperience + shiftExp2 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp2_2, leftMain, shiftExperience + shiftExp2 + 1 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(exp2_2, leftMain, shiftExperience + shiftExp2 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp2_3, leftMain, shiftExperience + shiftExp2 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp2_3, leftMain, shiftExperience + shiftExp2 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
+        doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp2_4, leftMain2, shiftExperience + shiftExp2 + 0 * leading);
+        doc.text(exp2_4, leftMain, shiftExperience + shiftExp2 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp2_5, leftMain2, shiftExperience + shiftExp2 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp2_5, leftMain, shiftExperience + shiftExp2 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
     doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfExp >= 3) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp3_1, leftMain, shiftExperience + shiftExp3 + 0 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp3_1, leftMain, shiftExperience + shiftExp3 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp3_2, leftMain, shiftExperience + shiftExp3 + 1 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(exp2_2, leftMain, shiftExperience + shiftExp3 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(100, 100, 100);
-        doc.text(exp3_3, leftMain, shiftExperience + shiftExp3 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(exp3_3, leftMain, shiftExperience + shiftExp3 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
+        doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(exp3_4, leftMain2, shiftExperience + shiftExp3 + 0 * leading);
+        doc.text(exp3_4, leftMain, shiftExperience + shiftExp3 + 0 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(exp3_5, leftMain2, shiftExperience + shiftExp3 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(exp3_5, leftMain, shiftExperience + shiftExp3 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
 
 
@@ -570,58 +575,58 @@ function getFormInput() {
         doc.setFontStyle("normal");
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa1_1, leftMain, shiftAward + shiftAwa1 + 0 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa1_2, leftMain, shiftAward + shiftAwa1 + 1 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_1, leftMain, shiftAward + shiftAwa1 + 0 * leading, { maxWidth: maxWidthMain });
+        //doc.text(awa1_2, leftMain, shiftAward + shiftAwa1 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa1_3, leftMain, shiftAward + shiftAwa1 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa1_3, leftMain, shiftAward + shiftAwa1 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa1_4, leftMain, shiftAward + shiftAwa1 + 3 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(awa1_4, leftMain, shiftAward + shiftAwa1 + 3 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa1_5, leftMain2, shiftAward + shiftAwa1 + 0 * leading);
+        doc.text(awa1_5, leftMain, shiftAward + shiftAwa1 + 1 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa1_6, leftMain2, shiftAward + shiftAwa1 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa1_6, leftMain, shiftAward + shiftAwa1 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
-    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
+    doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain, align: alignment });
     if (numOfAwa >= 2) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa2_1, leftMain, shiftAward + shiftAwa2 + 0 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa2_2, leftMain, shiftAward + shiftAwa2 + 1 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_1, leftMain, shiftAward + shiftAwa2 + 0 * leading, { maxWidth: maxWidthMain });
+        //doc.text(awa2_2, leftMain, shiftAward + shiftAwa2 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa2_3, leftMain, shiftAward + shiftAwa2 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa2_3, leftMain, shiftAward + shiftAwa2 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa2_4, leftMain, shiftAward + shiftAwa2 + 3 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(awa2_4, leftMain, shiftAward + shiftAwa2 + 3 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa2_5, leftMain2, shiftAward + shiftAwa2 + 0 * leading);
+        doc.text(awa2_5, leftMain, shiftAward + shiftAwa2 + 1 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa2_6, leftMain2, shiftAward + shiftAwa2 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa2_6, leftMain, shiftAward + shiftAwa2 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
     doc.text("error error error error error error error error error error error", 2000, 2000, { maxWidth: maxWidthMain2, align: alignment });
     if (numOfAwa >= 3) {
         doc.setFontSize(14);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa3_1, leftMain, shiftAward + shiftAwa3 + 0 * leading, { maxWidth: maxWidthMain1 });
-        doc.text(awa3_2, leftMain, shiftAward + shiftAwa3 + 1 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_1, leftMain, shiftAward + shiftAwa3 + 0 * leading, { maxWidth: maxWidthMain });
+        //doc.text(awa3_2, leftMain, shiftAward + shiftAwa3 + 1 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(11);
         doc.setTextColor(100, 100, 100);
-        doc.text(awa3_3, leftMain, shiftAward + shiftAwa3 + 2 * leading, { maxWidth: maxWidthMain1 });
+        doc.text(awa3_3, leftMain, shiftAward + shiftAwa3 + 2 * leading, { maxWidth: maxWidthMain });
         doc.setTextColor(0, 0, 0);
-        doc.text(awa3_4, leftMain, shiftAward + shiftAwa3 + 3 * leading, { maxWidth: maxWidthMain1 });
+        //doc.text(awa3_4, leftMain, shiftAward + shiftAwa3 + 3 * leading, { maxWidth: maxWidthMain });
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(rgb_r, rgb_g, rgb_b);
-        doc.text(awa3_5, leftMain2, shiftAward + shiftAwa3 + 0 * leading);
+        doc.text(awa3_5, leftMain, shiftAward + shiftAwa3 + 1 * leading);
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(11);
-        doc.text(awa3_6, leftMain2, shiftAward + shiftAwa3 + 1 * leading, { maxWidth: maxWidthMain2, align: alignment });
+        doc.text(awa3_6, leftMain, shiftAward + shiftAwa3 + 3 * leading, { maxWidth: maxWidthMain, align: alignment });
     }
 
 
@@ -666,8 +671,34 @@ function getFormInput() {
     }
 
 
-
-
     //Save file
     doc.save('Test.pdf');
 }
+
+
+
+//Button
+const docStyle = document.documentElement.style;
+const aElem = document.querySelector('a');
+const boundingClientRect = aElem.getBoundingClientRect();
+aElem.onmousemove = function (e) {
+    const x = e.clientX - boundingClientRect.left;
+    const y = e.clientY - boundingClientRect.top;
+    const xc = boundingClientRect.width / 2;
+    const yc = boundingClientRect.height / 2;
+    const dx = x - xc;
+    const dy = y - yc;
+    docStyle.setProperty('--rx', `${dy / -1}deg`);
+    docStyle.setProperty('--ry', `${dx / 10}deg`);
+};
+aElem.onmouseleave = function (e) {
+    docStyle.setProperty('--ty', '0');
+    docStyle.setProperty('--rx', '0');
+    docStyle.setProperty('--ry', '0');
+};
+aElem.onmousedown = function (e) {
+    docStyle.setProperty('--tz', '-25px');
+};
+document.body.onmouseup = function (e) {
+    docStyle.setProperty('--tz', '-12px');
+};
