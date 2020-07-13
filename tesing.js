@@ -218,16 +218,16 @@ function getFormInput() {
     exp3_5 = x.elements[shiftIndex + 27].value;
 
     edu1_1 = x.elements[shiftIndex + 28].value;
-    edu1_2 = x.elements[shiftIndex + 29].value;
-    edu1_3 = x.elements[shiftIndex + 30].value;
+    edu1_2 = x.elements[shiftIndex + 30].value;
+    edu1_3 = x.elements[shiftIndex + 29].value;
     edu1_4 = x.elements[shiftIndex + 31].value;
     edu2_1 = x.elements[shiftIndex + 32].value;
-    edu2_2 = x.elements[shiftIndex + 33].value;
-    edu2_3 = x.elements[shiftIndex + 34].value;
+    edu2_2 = x.elements[shiftIndex + 34].value;
+    edu2_3 = x.elements[shiftIndex + 33].value;
     edu2_4 = x.elements[shiftIndex + 35].value;
     edu3_1 = x.elements[shiftIndex + 36].value;
-    edu3_2 = x.elements[shiftIndex + 37].value;
-    edu3_3 = x.elements[shiftIndex + 38].value;
+    edu3_2 = x.elements[shiftIndex + 38].value;
+    edu3_3 = x.elements[shiftIndex + 37].value;
     edu3_4 = x.elements[shiftIndex + 39].value;
 
     awa1_1 = x.elements[shiftIndex + 40].value;
@@ -297,7 +297,7 @@ function getFormInput() {
     var maxWidthMain2 = 92;
     //Length
     var charInLine1 = 43;
-    var charInLine2 = 60;
+    var charInLine2 = 70;
     var extra_length = 0;
     var exp1_length = Math.ceil(exp1_5.length / charInLine2) + 4; //2,4,2,3 means the height from title to content
     var exp2_length = Math.ceil(exp2_5.length / charInLine2) + 4;
@@ -702,3 +702,16 @@ aElem.onmousedown = function (e) {
 document.body.onmouseup = function (e) {
     docStyle.setProperty('--tz', '-12px');
 };
+
+
+
+//----------------------------- Smooth scrolling when clicking an anchor link -------------------------------
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+

@@ -3,48 +3,74 @@
   font-size: 18px;
 }
 
+.title {
+  font-family: 'Righteous';
+  font-size: 36px;
+  user-select: none;
+}
+.start-box {
+  padding: 35% 0 45% 0;
+  text-align: center;
+}
+.download-box {
+  padding: 5% 0 5% 0;
+  text-align: center;
+}
+.rounded-btn {
+  padding: 20px 40px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: 8px 12px 32px #00000056;
+  cursor: pointer;
+} .rounded-btn:hover, .rounded-btn:active, .rounded-btn:focus {
+  padding: 20px 80px;
+}
+
 .section {
   background-color: white;
   z-index: 1000;
   padding: 6px 44px 36px 44px;
-  margin: 52px 35% 52px 10%;
+  margin: 52px 10% 52px 35%;
   border-radius: 8px;
   box-shadow: 8px 12px 32px #00000056;
 } @media screen and (max-width: 1000px) {
   .section {
     margin: 52px 36px 52px 36px; } }
 
+/* This is used to notify user should not use mobile */
+.mobileDetect {
+  display: block;
+} @media screen and (max-width: 1000px) {
+    .mobileDetect  {
+      display: none;
+    } 
+  }
+
+a {
+  text-decoration: none;
+  color: #976d6d;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  a:hover, a:active, a:focus {
+    color: #58b3ab;
+    text-decoration: none !important; }
 h1 {
   padding-top: 20px;
   font-size: 28px;
   font-weight: 700;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 h2 {
   padding-top: 20px;
   font-size: 24px;
   font-weight: 500;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 h3 {
   font-size: 18px;
   font-weight: 500;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none; 
-   -khtml-user-select: none; 
-     -moz-user-select: none; 
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 
@@ -66,11 +92,76 @@ select {
 /* ------------------------ Fixed-div ---------------------------- */
 .fixed-div {
   position: fixed;
-  right: 0px;
-  top: 0px;
+  left: 10%;
+  top: 10%;
 }
-
-
+/* -------------------------- Sample ------------------------------ */
+.sample {
+  height: 380px;
+  width: 260px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 8px 12px 32px #00000056;
+  transition: transform 1s;
+} .sample:hover {
+  transform:translate(10px, -10px);
+  transition: transform 1s;
+}
+.black-part {
+  float: left;
+  height: 380px;
+  width: 33%;
+  background-color: rgb(44, 44, 44);
+}
+.white-part {
+  float: left;
+  height: 380px;
+  width: 66%;
+  background-color: rgb(255, 255, 255);
+}
+.black-block {
+  margin: 10px;
+  height: 100px;
+  max-width: 100%;
+  border-color: rgb(47, 255, 141);
+  border-width: 1.5px;
+  border-style: dashed;
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+  transition: transform 1s;
+}
+.white-block {
+  margin: 10px;
+  height: 55px;
+  max-width: 100%;
+  border-color: rgb(0, 255, 115);
+  border-width: 1.5px;
+  border-style: dashed;
+  font-size: 14px;
+  padding: 5px;
+  transition: transform 1s;
+}
+.header-block {
+  margin: 10px;
+  height: 30px;
+  max-width: 100%;
+  border-color: rgb(47, 255, 141);
+  border-width: 1.5px;
+  border-style: dashed;
+  font-size: 14px;
+  padding: 5px;
+  transition: transform 1s;
+} .header-block:hover, .white-block:hover, .black-block:hover {
+  transform:translate(5px, -5px);
+  border-color: rgb(255, 251, 27);
+  transition: transform 1s;
+} .black-block a {
+  font-size: 14px;
+  color: white;
+} .header-block a, .white-block a {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
 
 
 
