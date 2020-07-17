@@ -30,7 +30,7 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	<!-- AOS -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
 	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/b063fa960b.js" crossorigin="anonymous"></script>
@@ -128,7 +128,7 @@
 							</div>
 						</li>
 						<!-- Slider 3: Recent Blog -->
-						<li style="background-image: url(/blog/typography/Typography-slider.png);">
+						<li style="background-image: url(assets/typo-slider.png);">
 							<div class="overlay"></div>
 							<div class="container-fluid">
 								<div class="row">
@@ -188,13 +188,14 @@
 			<section class="my-section" data-section="works" id="works">
 				<h1 class="animate-box" style="text-align: center; padding-bottom: 50px;"
 					data-animate-effect="fadeInUp">featured works</h1>
-				<!-- Project -->
+				<!-- Project: ResumeCreator -->
 				<div class="card animate-box" data-animate-effect="fadeInRight">
 					<div class="card-main">
 						<div class="card--hover">
 							<div class="card--hover--content">
 								<p>RESUME CREATOR</p>
-								<p>Create your professional job-ready resume</p>
+								<p>Create a professional resume from user input</p>
+								<p>Web technology: HTML5, CSS3, Javascript</p>
 								<a href="https://webtoolkits.github.io/resumecreator/" target="_blank"
 									rel="noopener noreferrer">
 									<div class="button">
@@ -210,7 +211,7 @@
 					<div class="card--border"></div>
 				</div>
 				<!-- Project -->
-				<div class="card animate-box" data-animate-effect="fadeInRight">
+				<!-- <div class="card animate-box" data-animate-effect="fadeInRight">
 					<div class="card-main">
 						<div class="card--hover">
 							<div class="card--hover--content">
@@ -228,7 +229,7 @@
 						</div>
 					</div>
 					<div class="card--border"></div>
-				</div>
+				</div> -->
 			</section>
 
 			<!-- SECTION: WHOAMI -->
@@ -824,11 +825,22 @@
 	<!-- MAIN JS -->
 	<script src="/js/main.js"></script>
 
+	<!-- Pointer.js -->
+	<link href="css/cursor.css" rel="stylesheet">
+	<script src="js/cursor.js"></script>
+	<script>
+		init_pointer({
+			// pointerColor: "black", // Css color
+			// ringSize: 20, // Pixels
+			// ringClickSize: 10 // Pixels when clicking
+		})
+	</script>
+
 	<!-- AOS -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 		AOS.init();
-	</script>
+	</script> -->
 	<!-- -------------------------------------------- LIBRARY -------------------------------------------------- -->
 
 </body>
