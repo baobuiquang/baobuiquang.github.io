@@ -1,5 +1,11 @@
 * {
   font-family: 'Quicksand', 'Comic Neue', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -11,18 +17,71 @@ body {
   align-items: center;
 }
 
+.fixed-div {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 10px;
+  padding: 12px;
+  /* transform: rotate(90deg); */
+}
+.fixed-div-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 10px;
+  padding: 12px;
+  /* transform: rotate(90deg); */
+}
+
+/* This is used to notify user should not use mobile */
+.for-desktop {
+  display: block;
+} @media screen and (max-width: 1000px) {
+  .for-desktop  {
+    display: none;
+  } 
+}
+.for-mobile {
+  display: none;}
+@media screen and (max-width: 1000px) {
+  .for-mobile  {
+    display: block;
+    background-color: white;
+    box-shadow: 8px 12px 32px #00000056;
+    border-radius: 12px;
+    margin: 5% 10% 10% 10%;
+    padding: 10%;
+  } 
+} .for-mobile .p {
+  text-align: justify;
+  font-size: 22px;
+}
+
+a {
+  color: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important; }
+  a:hover, a:active, a:focus {
+    color: #58b3ab;
+    text-decoration: none !important; }
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10vmin;
+  margin: 8vmin;
   overflow: hidden;
   /* transform: skew(5deg); */
 }
 .container .card {
   flex: 1;
   transition: all 1s ease-in-out;
-  height: 75vmin;
+  height: 80vmin;
   position: relative;
 }
 .container .card .card__head {
@@ -41,7 +100,7 @@ body {
   white-space: nowrap;
 }
 .container .card:hover {
-  flex-grow: 10;
+  flex-grow: 12;
 }
 .container .card:hover .card__head {
   text-align: center;
@@ -51,6 +110,7 @@ body {
   font-size: 24px;
   /* transform: rotate(0deg) skew(-5deg); */
   transform: rotate(0deg);
+  text-transform: uppercase;
 }
 .container .card:hover img {
   filter: grayscale(0);
