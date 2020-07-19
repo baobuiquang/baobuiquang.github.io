@@ -305,6 +305,12 @@
 
 
 
+
+// -------------------------------- Alert Box -----------------------------------
+function alertBox() {
+	alert("Sorry for this inconvenience! This function is still being developed.");
+}
+
 //-----------------------The Scroll Progress Bar Function------------------------
 window.onscroll = function () { myScrollFunction() };
 
