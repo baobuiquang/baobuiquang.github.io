@@ -6,6 +6,7 @@
      -moz-user-select: none; 
       -ms-user-select: none;
           user-select: none;
+  cursor: url(https://csscursor.info/source/santahand.png), crosshair;
 }
 
 body {
