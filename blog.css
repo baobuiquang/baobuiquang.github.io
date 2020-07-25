@@ -4,6 +4,11 @@
 /* 'Nunito', 'Quicksand', 'Josefin Sans', 'Amatic SC', 'Caveat', 'Kalam', 
 'Mrs Saint Delafield', 'Bad Script', 'Comic Neue', 'Lora' */
 
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
 .anti-copy {
   z-index: 100;
   position: absolute;
