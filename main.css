@@ -247,9 +247,17 @@ a {
     box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     margin: 8px 0px;}
-  .timeline-content .timeline-tag {
+  .timeline-tag-default {
     font-size: 14px;
     background: rgb(110, 110, 110);
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.781);
+    margin: 2px;}
+  .timeline-tag-special {
+    font-size: 14px;
+    background: rgb(68, 133, 124);
     display: inline-block;
     padding: 0px 10px;
     border-radius: 2px;
