@@ -79,7 +79,7 @@ a:hover {
 }
 
 .scroll-div {
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     padding-right: 4px;
     margin-top: var(--margin-top);
 }
