@@ -6,11 +6,26 @@
 }
 
 :root {
+    --margin-top: 14px; 
     --padding: 24px;
     --border-radius: 8px;
     --header-image-height: 110px;
     --avatar-size: 90px;
 }
+
+/* ------------------------ Custom Scroll Bar ------------------------- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgb(240, 240, 240); 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(39, 39, 39); 
+        }
 
 .row::after {
     content: "";
@@ -47,7 +62,7 @@ p {
 }
 
 a {
-    color: darkgray;
+    color: gray;
     text-decoration: none;
     border-bottom: rgb(201, 201, 201) 1.5px dotted;
 }
@@ -57,10 +72,16 @@ a:hover {
 }
 
 .card {
-    margin: 20px;
+    margin: 20px 10px;
     padding: var(--padding);
     border-radius: var(--border-radius);
     background-color: white;
+}
+
+.scroll-div {
+    /* overflow-y: scroll; */
+    padding-right: 4px;
+    margin-top: var(--margin-top);
 }
 
 .header-image {
