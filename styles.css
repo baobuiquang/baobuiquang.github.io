@@ -9,7 +9,7 @@
     --margin-top: 14px; 
     --padding: 24px;
     --border-radius: 8px;
-    --header-image-height: 110px;
+    --header-image-height: 140px;
     --avatar-size: 90px;
 }
 
@@ -86,7 +86,7 @@ a:hover {
 
 .header-image {
     height: var(--header-image-height);
-    background-color: black;
+    background-color: rgb(43, 43, 43);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
