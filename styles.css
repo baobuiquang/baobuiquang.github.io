@@ -2,30 +2,102 @@
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    color: rgb(70, 70, 70);
+    color: rgb(49, 49, 49);
+    line-height: 1.5;
 }
 
 :root {
     --margin-top: 14px; 
-    --padding: 24px;
-    --border-radius: 8px;
-    --header-image-height: 140px;
+    --padding: 20px; /* padding: text and card */
+    --border-radius: 4px;
+    --header-image-height: 16vh;
     --avatar-size: 90px;
+    --background-color:  rgb(245, 245, 245);
+    --sub-color: darkgrey ;
 }
 
-/* ------------------------ Custom Scroll Bar ------------------------- */
-        ::-webkit-scrollbar {
-            width: 6px;
+body {
+    background-color: var(--background-color);
+}
+
+/* p {
+    margin: 12px 0;
+} */
+
+a {
+    color: gray;
+    text-decoration: none;
+    border-bottom: rgb(201, 201, 201) 1.5px dotted;
+}
+a:hover {
+    color: black;
+    border-bottom: none;
+}
+
+
+.card {
+    margin: 3vmin 1.5vmin;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+    .card-name {
+        font-size: large;
+        margin-top: 0;
+        padding-top: 0;
+        position: relative;
+        transform: translateY(-0.5vh);
+    }
+    .scroll-div {
+        height: 93%;
+        overflow-y: scroll;
+        padding-right: 4px;
+        text-align: justify;
+    }
+        .item-title {
+            font-weight: bolder;
+            margin-top: 0.75vh;
         }
-        ::-webkit-scrollbar-track {
-            background: transparent;
+        .item-subtitle {
+            font-size: smaller;
+            color: var(--sub-color);
         }
-        ::-webkit-scrollbar-thumb {
-            background: rgb(240, 240, 240); 
+        .item-link {
+            font-size: smaller;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgb(39, 39, 39); 
+        .item-content {
+            font-size: smaller;
         }
+
+
+.header-image {
+    height: var(--header-image-height);
+    background-color: rgb(43, 43, 43);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.avatar {
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    left: calc(50% - var(--avatar-size)/2);
+    top: calc(var(--header-image-height) - var(--avatar-size)/2);
+    position: relative; 
+    background-color: white; 
+    border-radius: 100%;
+} .avatar-img {
+    background-color: wheat; 
+    height: calc(var(--avatar-size) - 16px);
+    width: calc(var(--avatar-size) - 16px);
+    top: 8px;
+    left: 8px;
+    position: relative;
+    border-radius: 100%;
+}
+
+
+
+
+
 
 .row::after {
     content: "";
@@ -51,59 +123,52 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+    .col-20pcnt {width: 20%;}
+}
+/* ------------------------ Custom Scroll Bar ------------------------- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 248, 248); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(75, 75, 75); 
 }
 
-body {
-    background-color: rgb(238, 238, 238);
-}
-
-p {
-    margin: 12px 0;
-}
-
-a {
-    color: gray;
-    text-decoration: none;
-    border-bottom: rgb(201, 201, 201) 1.5px dotted;
-}
-a:hover {
-    color: black;
-    border-bottom: none;
-}
-
-.card {
-    margin: 3vh 1.5vh;
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    background-color: white;
-}
-
-.scroll-div {
-    overflow-y: scroll;
-    padding-right: 4px;
-    margin-top: var(--margin-top);
-}
-
-.header-image {
-    height: var(--header-image-height);
-    background-color: rgb(43, 43, 43);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.avatar {
-    height: var(--avatar-size);
-    width: var(--avatar-size);
-    left: calc(50% - var(--avatar-size)/2);
-    top: calc(var(--header-image-height) - var(--avatar-size)/2);
-    position: relative; 
-    background-color: white; 
-    border-radius: 100%;
-} .avatar-img {
-    background-color: wheat; 
-    height: calc(var(--avatar-size) - 16px);
-    width: calc(var(--avatar-size) - 16px);
-    top: 8px;
-    left: 8px;
+.tooltip {
     position: relative;
-    border-radius: 100%;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    font-size: small;
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: 50%;
+    margin-left: -50px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

@@ -14,266 +14,295 @@
 
 <body>
 
-
-    <div class="row" style="margin: 5vh 9vw 0 9vw;">
+    <!-- Main -->
+    <div class="row" style="height: 92vh; margin: 4vh 2vw 0 2vw;">
 
         <!-- Column 1 -->
-        <div class="col-3">
+        <div class="col-20pcnt">
             <!-- Name Card -->
             <div class="card" style="padding: 0px;">
+                <!-- Header Image + Avatar -->
                 <div class="header-image">
                     <div class="avatar">
                         <img src="/assets/me002.jpg" class="avatar-img">
                     </div>
                 </div>
-                <div style="height: calc(var(--avatar-size)/2 - var(--padding) - 6px); background-color: white;"></div>
-                <div
-                    style="background-color: white; padding: var(--padding); border-radius: 0 0 var(--border-radius) var(--border-radius);">
-                    <p style="font-size: large; margin-bottom: 0; text-align: center; ">
+                <div style="height: calc(var(--avatar-size)/2 - 16px);"></div>
+                <!-- Text -->
+                <div style="margin: 0 var(--padding); border-radius: var(--border-radius);">
+                    <p style="font-size: large; text-align: center; margin-bottom: 0px;">
                         BUI QUANG BAO
                     </p>
-                    <p style="font-size: smaller; margin-top: 4px; color: darkgray; text-align: center;">
+                    <p style="font-size: smaller; color: darkgray; text-align: center; margin-top: 2px;">
                         Developer - Designer
                     </p>
                     <p style="font-size: smaller; text-align: justify;">
                         "My name is Bui Quang Bao.
-                        I am a 2nd-year Computer Science student from Vietnam National University - University of Science at Ho Chi Minh City. 
-                        I focus on writing clean and efficient code, designing beautiful and functional user experiences."
+                        I am a 2nd-year Computer Science student from Vietnam National University - University of
+                        Science at Ho Chi Minh City.
+                        I focus on writing clean and efficient code, designing beautiful and functional user
+                        experiences."
                     </p>
-                    <div style="text-align: center;">
-                        <a href="https://drive.google.com/file/d/1k4KW6LMmi5N8ToQsVaLmR-w-Mz1AIWLY/view"
-                            style="font-size: smaller;" target="_blank">
-                            Download my CV &#187;
-                        </a>
-                    </div>
                 </div>
+                <!-- Download my CV -->
+                <div style="text-align: center;">
+                    <a href="#" style="font-size: smaller;" target="_blank">
+                        Download my CV &#187;
+                    </a>
+                </div>
+                <div style="height: 2vh;"></div>
+                <!-- Profile -->
+                <div style="width: 100%; position: relative; left: calc(50% - 85px);">
+                    <!-- LinkedIn -->
+                    <div class="tooltip">
+                        <a href="https://www.linkedin.com/in/buiquangbao/" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">LinkedIn</span>
+                    </div>
+                    <!-- Github -->
+                    <div class="tooltip">
+                        <a href="https://github.com/buiquangbao" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Github</span>
+                    </div>
+                    <!-- Mail -->
+                    <div class="tooltip">
+                        <a href="mailto:quangbao.dev@gmail.com" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.238 5-5 5zm-.141-6.333c.63 0 1.141-.512 1.141-1.142v-9.05c0-.63-.511-1.142-1.141-1.142h-13.718c-.63 0-1.141.512-1.141 1.142v9.05c0 .63.511 1.142 1.141 1.142h13.718zm-6.859-4.058l-6.228-4.321-.014 7.712h12.457v-7.712l-6.215 4.321zm5.913-6.609c-1.745 1.215-5.913 4.153-5.913 4.153l-5.947-4.153h11.86z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Mail</span>
+                    </div>
+                    <!-- Instagram -->
+                    <div class="tooltip">
+                        <a href="https://www.instagram.com/bqbao_itus/" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Instagram</span>
+                    </div>
+                    <!-- Behance -->
+                    <div class="tooltip">
+                        <a href="https://www.behance.net/buiquangbao" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.228 15.01h-2.228v-2.01h2.261c1.878 0 2.003 2.01-.033 2.01zm6.758-2.677h3.018c-.117-1.715-2.73-1.977-3.018 0zm-6.804-3.333h-2.182v2h2.389c1.673 0 1.937-2-.207-2zm15.818-4v14c0 2.761-2.238 5-5 5h-14c-2.762 0-5-2.239-5-5v-14c0-2.761 2.238-5 5-5h14c2.762 0 5 2.239 5 5zm-10 3h5v-1h-5v1zm-3.552 3.618c1.907-.974 1.837-4.55-1.813-4.604h-4.635v9.978h4.311c4.522 0 4.445-4.534 2.137-5.374zm9.487.602c-.274-1.763-1.528-2.95-3.583-2.95-2.094 0-3.352 1.34-3.352 3.947 0 2.631 1.367 3.783 3.416 3.783s3.106-1.135 3.4-2h-2.111c-.736.855-2.893.521-2.767-1.353h5.06c.01-.634-.012-1.089-.063-1.427z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Behance</span>
+                    </div>
+                    <!-- Dribble -->
+                    <div class="tooltip">
+                        <a href="https://dribbble.com/buiquangbao" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M13.01 13.188c.617 1.613 1.072 3.273 1.361 4.973-2.232.861-4.635.444-6.428-.955 1.313-2.058 2.989-3.398 5.067-4.018zm-.53-1.286c-.143-.32-.291-.638-.447-.955-1.853.584-4.068.879-6.633.883l-.01.17c0 1.604.576 3.077 1.531 4.223 1.448-2.173 3.306-3.616 5.559-4.321zm-3.462-5.792c-1.698.863-2.969 2.434-3.432 4.325 2.236-.016 4.17-.261 5.791-.737-.686-1.229-1.471-2.426-2.359-3.588zm7.011.663c-1.117-.862-2.511-1.382-4.029-1.382-.561 0-1.102.078-1.621.21.873 1.174 1.648 2.384 2.326 3.625 1.412-.598 2.52-1.417 3.324-2.453zm7.971-1.773v14c0 2.761-2.238 5-5 5h-14c-2.762 0-5-2.239-5-5v-14c0-2.761 2.238-5 5-5h14c2.762 0 5 2.239 5 5zm-4 7c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zm-6.656-1.542c.18.371.348.745.512 1.12 1.439-.248 3.018-.233 4.734.049-.084-1.478-.648-2.827-1.547-3.89-.922 1.149-2.16 2.055-3.699 2.721zm1.045 2.437c.559 1.496.988 3.03 1.279 4.598 1.5-1.005 2.561-2.61 2.854-4.467-1.506-.261-2.883-.307-4.133-.131z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Dribble</span>
+                    </div>
+                    <!-- Portfolio -->
+                    <!-- <div class="tooltip">
+                        <a href="https://buiquangbao.github.io/" style="border-bottom: none;" target="_blank">
+                            <img src="https://i.imgur.com/AignyKC.png" style="width: 24px; border-radius: 5px;">
+                        </a>
+                        <span class="tooltiptext">My Portfolio</span>
+                    </div> -->
+                    <!-- Tumblr -->
+                    <!-- <div class="tooltip">
+                        <a href="{BlogURL}" style="border-bottom: none;" target="_blank">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-1.105 18.739c-.524.691-2.29 1.261-3.889 1.261-3.979 0-6.006-1.466-6.006-4.573v-4.104h-1.933l-.067-.067v-3.16l.045-.064.178-.059c1.597-.534 2.624-1.432 2.851-3.284.055-.447.431-.689.757-.689h4.767l.066.067v3.211l.066.067h2.535l.068.067v3.844l-.068.067h-2.545l-.067.067v3.81c.002.103.006.414.109.414h2.182l.064.046.992 2.941-.105.138zm-1.309-2.278l.664 1.967-.016.07c-.5.48-1.703.837-2.686.854l-.111.001c-3.232 0-3.788-2.468-3.788-3.926v-4.692l-.066-.067h-1.854l-.067-.067-.016-2.041.042-.062c1.67-.65 2.604-1.73 2.849-3.729.014-.111.105-.114.106-.114h2.298l.067.067v3.211l.068.067h2.535l.066.067v2.534l-.066.067h-2.547l-.064.067v4.47c.016.959.477 1.445 1.377 1.445.362 0 .744-.084 1.123-.229l.086.04z" />
+                            </svg>
+                        </a>
+                        <span class="tooltiptext">Tumblr</span>
+                    </div> -->
+                </div>
+                <div style="height: 2vh;"></div>
             </div>
-            <!-- Profile -->
             <div class="card">
-                PROFILE
-                <br>
-                <!-- LinkedIn -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    style="margin-top: var(--margin-top);">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-                <a href="https://www.linkedin.com/in/buiquangbao/" style="position: relative; top: -5px; left: 3px;"
-                    target="_blank">
-                    LinkedIn &#187;
-                </a>
-                <br>
-                <!-- Github -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    style="margin-top: var(--margin-top);">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
-                </svg>
-                <a href="https://github.com/buiquangbao" style="position: relative; top: -5px; left: 3px;"
-                    target="_blank">
-                    Github &#187;
-                </a>
-                <br>
-                <!-- Mail -->
-                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                    style="margin-top: var(--margin-top);">
-                    <path
-                        d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.238 5-5 5zm-.141-6.333c.63 0 1.141-.512 1.141-1.142v-9.05c0-.63-.511-1.142-1.141-1.142h-13.718c-.63 0-1.141.512-1.141 1.142v9.05c0 .63.511 1.142 1.141 1.142h13.718zm-6.859-4.058l-6.228-4.321-.014 7.712h12.457v-7.712l-6.215 4.321zm5.913-6.609c-1.745 1.215-5.913 4.153-5.913 4.153l-5.947-4.153h11.86z" />
-                </svg>
-                <a href="mailto:quangbao.co@gmail.com" style="position: relative; top: -5px; left: 3px;"
-                    target="_blank">
-                    Mail &#187;
-                </a>
+                <div class="item-title" style="font-size: smaller; margin-top: 0px;">
+                    Personal Blogs
+                </div>
+                <a class="item-link" target="_blank" href="https://buiquangbao.tumblr.com/">
+                    Bui Quang Bao | Blogs &#187;</a>
             </div>
         </div>
 
         <!-- Column 2 -->
-        <div class=" col-3">
+        <div class=" col-20pcnt">
             <!-- Education -->
-            <div class="card">
-                EDUCATION
-                <div style="font-size: smaller; margin-top: var(--margin-top);">
-                    <div style="font-weight: bold;">
-                        Vietnam National University - University of Science
-                    </div>
-                    Bachelor's Degree<br>
-                    Computer Science<br>
-                    <div style="font-size: inherit; color: darkgray;">2019 - 2023 (expected)</div>
+            <div class="card" style="height: 26%;">
+                <div class="card-name">EDUCATION</div>
+                <div class="scroll-div">
+                    <div class="item-title">Vietnam National University - University of Science</div>
+                    <div class="item-content">Bachelor's Degree<br>Computer Science</div>
+                    <div class="item-subtitle">2019 - 2023 (expected)</div>
                 </div>
             </div>
-            <!-- Club -->
-            <div class="card">
-                CLUBS
-                <div class="scroll-div" style="height: 30vh;">
-                    <div style="font-size: smaller;">
-                        <div style="font-weight: bold;">
-                            COMSEC - Computer Security Club
-                        </div>
-                        <div style="font-size: inherit; color: darkgray;">June 2020 - now</div>
-                        <div style="font-size: inherit; text-align: justify;">
-                            Learning about Computer Security, including cryptography, forensics, web exploitation,
-                            reverse
-                            engineering. Playing CTF as trainings.<br>
-                        </div>
+            <!-- Communities -->
+            <div class="card" style="height: 64%;">
+                <div class="card-name">COMMUNITIES</div>
+                <div class="scroll-div">
+                    <div class="item-title">COMSEC - Computer Security Club</div>
+                    <div class="item-subtitle">June 2020 - now</div>
+                    <div class="item-content">
+                        Learning about Computer Security, including cryptography, forensics, web exploitation, reverse
+                        engineering. Playing CTF as trainings.
                     </div>
-                    <div style="font-size: smaller; margin-top: var(--margin-top);">
-                        <div style="font-weight: bold;">
-                            Design ITUS - Academic Club
-                        </div>
-                        <div style="font-size: inherit; color: darkgray;">Sep 2019 - now</div>
-                        <div style="font-size: inherit; text-align: justify;">
-                            Responsible for layouts, graphic design contents (logos, posters,
-                            backdrops, etc) for some events, work regularly on Adobe Illustrator.<br>
-                        </div>
+                    <div class="item-title">Design ITUS - Academic Club</div>
+                    <div class="item-subtitle">Sep 2019 - now</div>
+                    <div class="item-content">
+                        Responsible for layouts, graphic design contents (logos, posters, backdrops, etc) for some
+                        events, work regularly on Adobe Illustrator.
                     </div>
                 </div>
-            </div>
-            <!-- Blog -->
-            <div class="card">
-                PERSONAL BLOGS
-                <br>
-                <img src="/assets/favicon.png" width="20px" height="20px"
-                    style="border-radius: 4px; margin-top: var(--margin-top);">
-                <a href="https://buiquangbao.tumblr.com/tagged/blog"
-                    style="font-size: smaller; position: relative; top: -6px; left: 3px;" target="_blank">
-                    Bui Quang Bao | Blogs &#187;
-                </a>
-                <br>
             </div>
         </div>
 
         <!-- Column 3 -->
-        <div class="col-3">
+        <div class="col-20pcnt">
+            <!-- Certificates -->
+            <div class="card" style="height: 45%;">
+                <div class="card-name">CERTIFICATES</div>
+                <div class="scroll-div">
+                    <div class="item-title" style="font-size: smaller;">
+                        Cybersecurity IT Fundamentals Specialization
+                    </div>
+                    <div class="item-subtitle">Issued by Coursera<br>Authorized by IBM</div>
+                    <a class="item-link" target="_blank"
+                        href="https://www.coursera.org/account/accomplishments/specialization/certificate/SD3PDC2PWH8R">
+                        View Certificate &#187;</a> &nbsp;&nbsp;
+                    <a class="item-link" target="_blank"
+                        href="https://www.youracclaim.com/badges/390c3199-2830-4867-a565-ce4d0857c56f/public_url">
+                        Verify &#187;</a>
+                    <div class="item-content">
+                        4 courses completed include
+                        Cybersecurity concepts, tools and processes; compliance frameworks; system administration, OS
+                        and database vulnerabilities basics; types of cyber attacks; basic networking.
+                    </div>
+                    <div class="item-title" style="font-size: smaller;">
+                        Data Science Math Skills
+                    </div>
+                    <div class="item-subtitle">Issued by Coursera<br>Authorized by Duke University</div>
+                    <a class="item-link" target="_blank"
+                        href="https://www.coursera.org/account/accomplishments/certificate/TWGWU6XB7SHQ">
+                        View Certificate &#187;</a>
+                </div>
+            </div>
+            <!-- Awards -->
+            <div class="card" style="height: 45%;">
+                <div class="card-name">AWARDS</div>
+                <div class="scroll-div">
+                    <div class="item-title">HCMUS - IT Talent 2019</div>
+                    <div class="item-subtitle">September 2019</div>
+                    <a class="item-link" target="_blank"
+                        href="https://www.dropbox.com/s/r9724meln9epfaf/Certificate%20-%20BLIT%202019.pdf?dl=0">
+                        View Certificate &#187;</a>
+                    <div class="item-content">
+                        A five-round competition focuses on IT knowledge, team working, theme issue solving (2019 -
+                        environmental issue), organized by the Faculty of Information Technology, University of Science.
+                    </div>
+                    <div class="item-title">Violympic Math Competition</div>
+                    <div class="item-subtitle">Ministry of Education and Training</div>
+                    <div class="item-subtitle">2011 - 2017 (Yearly)</div>
+                    <!-- <a class="item-link" target="_blank"
+                        href="https://www.dropbox.com/s/r9724meln9epfaf/Certificate%20-%20BLIT%202019.pdf?dl=0">
+                        View Certificate &#187;</a> -->
+                    <div class="item-content">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2011-2012: Third prize
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2012-2013: Second prize
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2013-2014: Second prize
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2014-2015: First prize
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2015-2016: First prize
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2016-2017: Second prize
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-20pcnt">
             <!-- Top Skills -->
-            <div class="card">
-                TOP SKILLS
-                <br>
-                <div style="font-size: smaller; margin-top: var(--margin-top);">
-                    <div style="font-weight: bold;">
-                        Front-end Web Development
+            <div class="card" style="height: 31%;">
+                <div class="card-name">TOP SKILLS</div>
+                <div class="scroll-div">
+                    <div class="item-title">Front-end Web Development</div>
+                    <div class="item-content">
+                        HTML5, CSS3, Javascript
                     </div>
-                    <div style="font-size: inherit; text-align: justify;">
-                        HTML5, CSS3, Javascript<br>
+                    <div class="item-title">App & Web UI/UX Design</div>
+                    <div class="item-content">
+                        Figma - Wireframing & Prototyping
                     </div>
-                </div>
-                <div style="font-size: smaller; margin-top: var(--margin-top);">
-                    <div style="font-weight: bold;">
-                        App & Web UI/UX Design
-                    </div>
-                    <div style="font-size: inherit; text-align: justify;">
-                        Figma, App Wireframing & Prototyping<br>
-                    </div>
-                </div>
-                <div style="font-size: smaller; margin-top: var(--margin-top);">
-                    <div style="font-weight: bold;">
-                        Graphic Design, Illustration
-                    </div>
-                    <div style="font-size: inherit; text-align: justify;">
-                        Adobe Illustrator<br>
+                    <div class="item-title">Graphic Design, Illustration</div>
+                    <div class="item-content">
+                        Adobe Illustrator
                     </div>
                 </div>
             </div>
             <!-- Projects -->
-            <div class="card">
-                PROJECTS
-                <div class="scroll-div" style="height: 41vh;">
-                    <div style="font-size: smaller;">
-                        <a href="https://webtoolkits.github.io/resumecreator/" target="_blank"
-                            style="font-weight: bold;">
-                            Resume Creator &#187;
-                        </a>
-                        <div style="font-size: inherit; color: darkgray;">Jun 2020</div>
-                        <div style="font-size: inherit; text-align: justify;">
-                            A static web tool used to generate a simple and elegant resume (in pdf format) from user
-                            input.
-                            Resume Creator is written in HTML, CSS, Javascript and use jsPDF library.<br>
-                        </div>
+            <div class="card" style="height: 59%;">
+                <div class="card-name">PROJECTS</div>
+                <div class="scroll-div">
+                    <div class="item-title">Resume Creator</div>
+                    <a class="item-link" target="_blank" href="https://webtoolkits.github.io/resumecreator/">
+                        View this Project &#187;</a>
+                    <div class="item-subtitle">Jun 2020</div>
+                    <div class="item-content">
+                        A static web tool used to generate a simple and elegant resume (in pdf format) from user input.
+                        Resume Creator is written in HTML, CSS, Javascript and use jsPDF library.
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Column 4 -->
-        <div class="col-3">
-            <!-- Experience -->
-            <div class="card">
-                WHAT I AM DOING
-                <div class="scroll-div" style="height: 35vh;">
-                    <div style="font-size: smaller;">
-                        <div style="font-weight: bold;">
-                            Front-end Web Freelance
-                        </div>
-                        <div style="font-size: inherit; color: darkgray;">May 2020 - now</div>
-                        <div style="font-size: inherit; text-align: justify;">
-                            Responsive Web Design (RWD) and Development using HTML5, CSS3, Javascript.<br>
-                            Products:<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://webtoolkits.github.io/resumecreator/" style="font-size: inherit;"
-                                target="_blank">
-                                Resume Creator &#187;
-                            </a><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://buiquangbao.github.io/" style="font-size: inherit;" target="_blank">
-                                My Portfolio &#187;
-                            </a><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://buiquangbao.tumblr.com/" style="font-size: inherit;" target="_blank">
-                                My Blogs Page &#187;
-                            </a><br>
-                        </div>
+        <!-- Column 5 -->
+        <div class="col-20pcnt">
+            <!-- What Do I Do -->
+            <div class="card" style="height: 93%;">
+                <div class="card-name">WHAT DO I DO</div>
+                <div class="scroll-div">
+                    <div class="item-title">Front-end Web Freelance</div>
+                    <div class="item-subtitle">May 2020 - now</div>
+                    <div class="item-content">
+                        Responsive Web Design (RWD) and Development using HTML5, CSS3, Javascript.
+                        <br>Products:
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a target="_blank" style="font-size: inherit;"
+                            href="https://webtoolkits.github.io/resumecreator/">
+                            Resume Creator &#187;</a>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a target="_blank" style="font-size: inherit;" href="https://buiquangbao.github.io/">
+                            My Portfolio &#187;</a>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a target="_blank" style="font-size: inherit;" href="https://buiquangbao.tumblr.com/">
+                            My Blogs Page &#187;</a>
                     </div>
-                </div>
-
-            </div>
-            <!-- Certificates -->
-            <div class="card">
-                CERTIFICATES
-                <br>
-                <div class="scroll-div" style="height: 25vh;">
-                    <!--  -->
-                    <div style="font-size: smaller; margin-top: 0;">
-                        <div style="font-size: inherit; font-weight: bold;">
-                            Cybersecurity IT Fundamentals Specialization
-                        </div>
-                        <div style="font-size: inherit; color: gray;">Issued by Coursera<br>Authorized by IBM</div>
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SD3PDC2PWH8R"
-                            target="_blank" style="font-size: inherit;">
-                            View Certificate &#187;
-                        </a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="https://www.youracclaim.com/badges/390c3199-2830-4867-a565-ce4d0857c56f/public_url"
-                            target="_blank" style="font-size: inherit; font-weight: bold;">
-                            Verify &#187;
-                        </a>
-                        <div style="font-size: inherit; text-align: justify;">
-                            4 courses completed include<br>Cybersecurity concepts, tools and processes; compliance
-                            frameworks; system administration, OS and database vulnerabilities basics; types of cyber
-                            attacks;
-                            basic networking.
-                            <br>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div style="font-size: smaller; margin-top: var(--margin-top);">
-                        <div style="font-size: inherit; font-weight: bold;">
-                            Data Science Math Skills
-                        </div>
-                        <div style="font-size: inherit; color: gray;">Issued by Coursera<br>Authorized by Duke
-                            University</div>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/TWGWU6XB7SHQ"
-                            target="_blank" style="font-size: inherit;">
-                            View Certificate &#187;
-                        </a>
-                        <br>
-                    </div>
-                    <br>
                 </div>
             </div>
         </div>
 
     </div>
-
 
 
 </body>
