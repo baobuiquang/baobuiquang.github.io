@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
     font-size: 16px;
     color: rgb(49, 49, 49);
     line-height: 1.5;
@@ -8,12 +9,12 @@
 
 :root {
     --margin-top: 14px; 
-    --padding: 20px; /* padding: text and card */
-    --border-radius: 4px;
+    --padding: 18px; /* padding: text and card */
+    --border-radius: 8px;
     --header-image-height: 16vh;
     --avatar-size: 90px;
-    --background-color:  rgb(245, 245, 245);
-    --sub-color: darkgrey ;
+    --background-color:  rgb(255, 255, 255); /*rgb(245, 245, 245)*/
+    --sub-color: rgb(136, 136, 136) ;
 }
 
 body {
@@ -36,10 +37,12 @@ a:hover {
 
 
 .card {
-    margin: 3vmin 1.5vmin;
+    margin: 2.8vmin 1.4vmin;
     padding: var(--padding);
     border-radius: var(--border-radius);
     background-color: white;
+
+    border: 1.5px solid rgb(228, 228, 228);
 }
     .card-name {
         font-size: large;
