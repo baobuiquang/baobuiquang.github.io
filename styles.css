@@ -60,6 +60,7 @@ a:hover {
         .item-title {
             font-weight: bolder;
             margin-top: 0.75vh;
+            text-align: left;
         }
         .item-subtitle {
             font-size: smaller;
