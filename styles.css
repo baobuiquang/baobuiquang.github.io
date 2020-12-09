@@ -59,6 +59,10 @@ a:hover {
   border-bottom: none;
 }
 
+img {
+  background-color: transparent;
+}
+
 h1 {
   font-size: var(--font-size-1);
   font-weight: 600;
