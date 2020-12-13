@@ -14,8 +14,8 @@
 
   --section-padding-1: 12vh;
   --section-padding-2: 12vw;
-  --section-padding-mobile-1: 10px;
-  --section-padding-mobile-2: 20px;
+  --section-padding-mobile-1: 5vh;
+  --section-padding-mobile-2: 10vw;
 
   --padding-reset-1010: 10px; /*Logo padding*/
   --background-color-1:  #EFEDED;
@@ -87,6 +87,10 @@ h1 {
   padding: var(--padding-1) 0;
   position: relative;
   right: 8px;
+} @media only screen and (max-width: 768px) {
+  h1 {
+    right: 0px;
+  }
 }
 
 h2 {
