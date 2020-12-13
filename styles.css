@@ -26,6 +26,19 @@
   --color-1: #141414;
 
   --decorate-text-color: #eeeeee;
+} @media only screen and (max-width: 768px) {
+  :root {
+    --padding-1: 1vh; /*Line to line*/
+    --padding-2: 2vh; /*Sector title to content*/
+    --padding-3: 5vh; /*For only BUI QUANG BAO sector*/
+    --padding-4: 5vh; /*For only Awards sector*/
+
+    --font-size-1: 32px; /*h1. BUI QUANG BAO*/
+    --font-size-2: 28px; /*h2. Sector*/
+    --font-size-3: 20px; /*h3. Title*/
+    --font-size-4: 15px; /*h4. Normal*/
+    --font-size-0: 15px; /*p. Small*/
+  }
 }
 
 ::selection {
@@ -74,11 +87,6 @@ h1 {
   padding: var(--padding-1) 0;
   position: relative;
   right: 8px;
-} @media only screen and (max-width: 768px) {
-  h1 {
-    font-size: var(--font-size-3);
-    right: 0px;
-  }
 }
 
 h2 {
@@ -86,10 +94,6 @@ h2 {
   font-weight: 300;
   margin: 0;
   padding: var(--padding-1) 0;
-} @media only screen and (max-width: 768px) {
-  h2 {
-    
-  }
 }
 
 h3 {
