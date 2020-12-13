@@ -59,6 +59,10 @@ a:hover {
   border-bottom: none;
 }
 
+b {
+  font-size: inherit;
+}
+
 img {
   background-color: transparent;
 }
