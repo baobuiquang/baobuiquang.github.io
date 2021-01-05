@@ -1,21 +1,39 @@
-<!-- 
-  ___      _    ___                      
- | _ )_  _(_)  / _ \ _  _ __ _ _ _  __ _ 
- | _ \ || | | | (_) | || / _` | ' \/ _` |
- |___/\_,_|_|  \__\_\\_,_\__,_|_||_\__, |
-                                   |___/
-  ___           
- | _ ) __ _ ___ 
- | _ \/ _` / _ \
- |___/\__,_\___/
-
- Welcome to my Portfolio!
-
- Contact me if u want: quangbao.dev@gmail.com
- 
- -->
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+  ----- Default: On -----
+  Size calculating method: box-sizing: border-box; [auto]
+  Smooth Scrolling: css (scroll-behavior) [auto]
+  
+  Custom Scroll Bar: css [setup]
+  Link Hover: css [setup]
+  Button Hover: css [setup]
+  Custom Text Selection: css [setup]
+  Favicon: html head [init]
+
+  ----- One-time use -----
+  Body Wrap rule: html init + css [init]
+  Scroll To Top: html init + css + js [init]
+  Auto-update Copyright Year: html footer + css + js [init]
+  Fullscreen Overlay Navigation: html + css +js [init]
+  Custom Cursor: html init/lib + css + js [init]
+  Dark Mode Switch: html init + css + js [init]
+
+  ----- Multi-time use -----
+  Just Display On Desktop/Mobile: css [add class]
+  Anti-copy: css [add class]
+  Rounded-image avatar: css [add class]
+  RWD12 system: css [add class]
+  RWD-n system: css [add class]
+  Image Zoom Effect: html + css [add class]
+  Tooltip-x: css [add class]
+  Snackbar Notification: html + css + js [add class] [! limited]
+  Modal box: html + css + js [add class] [! limited]
+  AOS Animation: html lib + css + js [add class]
+  Highlight Text: css [setup + add tag]
+  Twitter Embed: html [add html]
+-->
 
 <head>
   <meta charset="UTF-8">
@@ -23,857 +41,703 @@
   <title>Bui Quang Bao</title>
   <meta name="description" content="Bui Quang Bao | Portfolio" />
   <link rel="shortcut icon" href="./assets/favicon.png">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./scripts.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-    rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&amp;display=swap"
-    rel="stylesheet">
-  <!-- aos -->
-  <script src="./lib/aos.js"></script>
+  <!-- Creatoper Framework -->
+  <link href="./creatoper.css" rel="stylesheet">
+  <script src="./creatoper.js" async></script>
+  <link href="./creatoper-control.css" rel="stylesheet">
+  <!-- AOS -->
   <link href="./lib/aos.css" rel="stylesheet">
-  <script>
-    AOS.init({
-      duration: 1500,
-    });
-  </script>
+  <script src="./lib/aos.js"></script>
   <!-- Cursor -->
   <script src="./lib/TweenMax.js"></script>
-
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="./styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <script>
-    AOS.init();
-  </script>
-  <div class="custom-cursor"></div>
-  <!-- Init -->
-  <a>
-    <button onclick="topFunction()" id="backtotop">&Uarr;</button>
-  </a>
-  <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href="#buiquangbao" onclick="closeNav()">Bui Quang Bao</a>
-      <a href="#projects" onclick="closeNav()">Projects</a>
-      <a href="#awards" onclick="closeNav()">Awards</a>
-      <a href="#certificates" onclick="closeNav()">Certificates</a>
-      <a href="#education" onclick="closeNav()">Education</a>
-      <a href="#organizations" onclick="closeNav()">Organizations</a>
-      <a href="#activities" onclick="closeNav()">Activities</a>
-      <a href="#footer" onclick="closeNav()">Contact</a>
-      <!-- <iframe width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1174557856&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-      </iframe> -->
-    </div>
-  </div>
-  <a>
-    <div style="position: fixed; top: 45vh;">
-      <span style="padding: 1000px 20px 1000px 0px;" onclick="openNav()">
-        <img src="./assets/chevron-right.svg" style="height: 26px;">
-      </span>
-    </div>
-  </a>
-  <!-- End Init -->
 
-  <!-- BUI QUANG BAO -->
-  <div class="just-display-on-desktop">
-    <img src="assets/RESET1010.jpg" width="100%" height="950px" style="object-fit: cover;">
-  </div>
-  <div class="section-2" id="buiquangbao">
-    <div style="height: var(--padding-3);"></div>
-    <div class="custom-cursor--justhover">
-      <!-- Mobile Warning -->
-      <div class="just-display-on-mobile">
-        <div
-          style="background-color: antiquewhite; width: 100%; padding: 12px; margin-bottom: 32px; font-size: 14px; text-align: justify;">
-          ⚠ Hi there! I guess that you are using your phone, right?
-          This page is suggested to be viewed on desktop screen for the best experience.
-          Thank you!
-        </div>
-      </div>
-      <!--  -->
-      <h1 style="padding: 0 0 0 0;" data-aos="fade-right">Bui Quang Bao</h1>
-      <div class="typewrite" data-period="2000" data-aos="fade-right"
-        data-type='["Hi! My name is Bao!", "I come from Vietnam.", "I am a developer.", "I am a designer."]'>
-        <span class="wrap"></span>
-      </div>
-      <div class="row">
-        <div class="col-4" style="color: transparent;">.</div>
-        <div class="col-1">
-          <div style="padding-top: 12px; font-size: smaller;" data-aos="fade-up">
-            Highlights
+  <!-- Scroll To Top  -->
+  <button onclick="scrollToTop()" id="scrolltotop">&Uarr;</button>
+
+  <!-- Soundcloud -->
+  <!-- Fullscreen Overlay Navigation 2/2 -->
+  <div id="FullNav1" class="fullnav1-overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeFullNav1()">&times;</a>
+    <div class="fullnav1-overlay-content">
+      <div style="margin: 0;">
+        <div style="color: white;" class="anti-copy">
+          <div style="font-size: 12px; position: relative; right: 165px; letter-spacing: 3px;">
+            Click the play button and chilll ~</div>
+          <div style="transform: rotate(25deg); font-size: 30px; position: relative; right: 180px;">
+            &larrpl;
           </div>
         </div>
-        <div class="col-7">
-          <h3 data-aos="fade-up">Winner of AI Hackathon “RESET 1010” - Third Prize</h3>
-          <h4 data-aos="fade-up">President of Academic Club “Design ITUS” - FIT HCMUS</h4>
-          <h4 data-aos="fade-up">Prefinalist with Special Honour - International Youth Math Challenge 2020</h4>
-          <h4 data-aos="fade-up">Violympic Math Competition Awards in 6 consecutive years</h4>
-        </div>
+        <iframe width="400" height="500" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1174557856&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
       </div>
-    </div>
-    <div style="height: var(--padding-3);"></div>
-    <div style="height: var(--padding-2);"></div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section-1" id="projects">
-    <h2 data-aos="fade-up">./PROJECTS</h2>
-    <div style="height: var(--padding-2);"></div>
-    <div class="row">
-      <div class="col-6">
-        <!-- A repo -->
-        <div class="github-repo" data-aos="fade-up">
-          <img src="assets/book.svg">
-          <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis" target="_blank">
-            COVID-19-Virus-Analysis-and-Diagnosis
-          </a>
-          <p>COVID-19 (Sars CoV 2) Virus Spread Analysis using Python and Diagnosis from Radiography using Machine
-            Learning Model (TensorFlow.js)</p>
-          <div class="the-dot"></div>
-          <p class="language">Python</p>
-          <div class="the-dot"></div>
-          <p class="language-2">TensorFlow</p>
-        </div>
-        <!-- A repo -->
-        <div class="github-repo" data-aos="fade-up">
-          <img src="assets/book.svg">
-          <a href="https://github.com/buiquangbao/automation-using-python" target="_blank">
-            automation-using-python
-          </a>
-          <p>The final project to complete the IT Automation with Python Professional Certificate from Google -
-            Automating Real-World Tasks with Python Course</p>
-          <!-- <div class="the-dot"></div>
-          <p class="language">Python</p> -->
-          <div class="the-dot"></div>
-          <p class="language-2">Python</p>
-        </div>
-      </div>
-      <div class="col-6">
-        <!-- A repo -->
-        <div class="github-repo" data-aos="fade-up">
-          <img src="assets/book.svg">
-          <a href="https://github.com/webtoolkits/resumecreator" target="_blank">
-            webtoolkits/resumecreator
-          </a>
-          <p>A static web tool used to generate a simple and elegant resume (in pdf format) from user input, written in
-            HTML, CSS, Javascript and uses jsPDF library</p>
-          <div class="the-dot"></div>
-          <p class="language">HTML</p>
-          <div class="the-dot"></div>
-          <p class="language">CSS</p>
-          <div class="the-dot"></div>
-          <p class="language-2">JavaScript</p>
-        </div>
-        <!-- A repo -->
-        <div class="github-repo" data-aos="fade-up">
-          <img src="assets/book.svg">
-          <a href="https://github.com/creatoper/Agrion" target="_blank">
-            creatoper/Agrion
-          </a>
-          <p>RESET 1010 AI Hackathon Final Product Submission - Application of Computer Vision using Tensorflow - Won
-            3RD Prize</p>
-          <div class="the-dot"></div>
-          <p class="language">TensorFlow</p>
-          <div class="the-dot"></div>
-          <p class="language">ML5.js</p>
-          <div class="the-dot"></div>
-          <p class="language-2">p5.js</p>
-        </div>
-      </div>
-    </div>
-    <div style="height: var(--padding-2);"></div>
-    <div class="row" data-aos="fade-up">
-      <div class="col-4" style="color: transparent;">.</div>
-      <div class="col-4">
-        <a href="https://github.com/buiquangbao" target="_blank">
-          <div class="button-1">
-            More on my Github profile
-          </div>
-        </a>
-      </div>
-      <div class="col-4"></div>
     </div>
   </div>
 
-  <!-- AWARDS -->
-  <div class="section-2" id="awards">
-    <h2 data-aos="fade-up">./AWARDS</h2>
-    <div style="text-align: center;">
-      <!-- Award -->
-      <div style="height: var(--padding-4);"></div>
-      <div class="just-display-on-desktop" style="position: relative;">
-        <div
-          style="position: absolute; width: 100%; top: -120px; z-index: 0; font-size: 200px; font-weight: 900; color: var(--decorate-text-color);">
-          RESET1010
-        </div>
-      </div>
-      <div class="custom-cursor--justhover">
-        <a href="#reset1010">
-          <h3 data-aos="fade-up">Winner of AI Hackathon “RESET 1010” - Third Prize - at the age of 19</h3>
-          <div class="row" data-aos="fade-up">
-            <div class="col-3" style="color: transparent;">.</div>
-            <div class="col-6">
-              <p>
-                A 48-hours AI Hackathon organized by AngelHack, under the sponsorship and coordination of
-                the <b>Ministry of Science and Technology</b>, with the companionship of Aus4Innovation and UNDP, VAIS
-                (Vietnam Artificial Intelligence Solution Company), Hanoi Communist Youth Union and VnExpress newspaper.
-              </p>
-              <p style="text-align: center;">Click to see more about AI Hackathon "RESET 1010" &Darr;</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <!-- Award -->
-      <div style="height: var(--padding-4);"></div>
-      <div class="just-display-on-desktop" style="position: relative;">
-        <div
-          style="position: absolute; width: 100%; top: -120px; z-index: 0; font-size: 200px; font-weight: 900; color: var(--decorate-text-color);">
-          IYMC 2020
-        </div>
-      </div>
-      <div class="custom-cursor--justhover">
-        <h3 data-aos="fade-up">Prefinalist with Special Honour - IYMC 2020</h3>
-        <div class="row" data-aos="fade-up">
-          <div class="col-3" style="color: transparent;">.</div>
-          <div class="col-6">
-            <p>
-              IYMC - International Youth Math Challenge is an international mathematics competition for students from
-              all
-              around the world, enables students to prove their math skills, unleash creativity and apply them to
-              challenging problems. My Certificate Verification ID: QR-2020-E8A66AE5C2C
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Award -->
-      <div style="height: var(--padding-4);"></div>
-      <div class="just-display-on-desktop" style="position: relative;">
-        <div
-          style="position: absolute; width: 100%; top: -120px; z-index: 0; font-size: 180px; font-weight: 900; color: var(--decorate-text-color);">
-          BLIT 2019
-        </div>
-      </div>
-      <div class="custom-cursor--justhover">
-        <h3 data-aos="fade-up">Prefinalist - BLIT 2019</h3>
-        <div class="row" data-aos="fade-up">
-          <div class="col-3" style="color: transparent;">.</div>
-          <div class="col-6">
-            <p>
-              A five-round competition focuses on IT knowledge, team working, theme issue solving, organized by the
-              Faculty of Information Technology, University of Science. My team won the 1st prize in the 24-hours
-              hackathon of round 3 as I was the leader.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Award -->
-      <div style="height: var(--padding-4);"></div>
-      <div class="just-display-on-desktop" style="position: relative;">
-        <div
-          style="position: absolute; width: 100%; top: -120px; z-index: 0; font-size: 190px; font-weight: 900; color: var(--decorate-text-color);">
-          VIOLYMPIC
-        </div>
-      </div>
-      <div class="custom-cursor--justhover">
-        <!-- <a href="#lightbox-image-violympic-1"> -->
-        <h3 data-aos="fade-up">Violympic Math Competition Provincial Awards in 6 consecutive years</h3>
-        <div class="row" data-aos="fade-up">
-          <div class="col-3" style="color: transparent;">.</div>
-          <div class="col-6">
-            <p>
-              Violympic competition, organized by the <b>Ministry of Education and Training</b>, is an annual national
-              mathematics competition for all primary and high school students (from grade 1 to grade 12) in Vietnam.
-              Along with the award from this competition, I was also honored as "Provincial Excellent Student" in the
-              respective years.
-            <div class="row">
-              <div class="col-4" style="color: transparent;">.</div>
-              <div class="col-4" style="text-align: left;">
-                2011-2012: Third prize
-                <br>2012-2013: Second prize
-                <br>2013-2014: Second prize
-                <br>2014-2015: First prize
-                <br>2015-2016: First prize
-                <br>2016-2017: Second prize
-              </div>
-              <div class="col-4"></div>
-            </div>
-            </p>
-          </div>
-        </div>
-        <!-- </a> -->
-      </div>
-      <!-- <div class="gallery-lightboxes">
-        <div class="image-lightbox" id="lightbox-image-violympic-1">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-6" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-2" class="arrow-right"></a>
-            <img src="assets/certificates/1.jpg" alt="">
-          </div>
-        </div>
-        <div class="image-lightbox" id="lightbox-image-violympic-2">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-1" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-3" class="arrow-right"></a>
-            <img src="assets/certificates/2.jpg" alt="">
-          </div>
-        </div>
-        <div class="image-lightbox" id="lightbox-image-violympic-3">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-2" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-4" class="arrow-right"></a>
-            <img src="assets/certificates/3.jpg" alt="">
-          </div>
-        </div>
-        <div class="image-lightbox" id="lightbox-image-violympic-4">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-3" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-5" class="arrow-right"></a>
-            <img src="assets/certificates/4.jpg" alt="">
-          </div>
-        </div>
-        <div class="image-lightbox" id="lightbox-image-violympic-5">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-4" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-6" class="arrow-right"></a>
-            <img src="assets/certificates/5.jpg" alt="">
-          </div>
-        </div>
-        <div class="image-lightbox" id="lightbox-image-violympic-6">
-          <div class="image-lightbox-wrapper">
-            <a href="#_" class="close"></a>
-            <a href="#lightbox-image-violympic-5" class="arrow-left"></a>
-            <a href="#lightbox-image-violympic-1" class="arrow-right"></a>
-            <img src="assets/certificates/6.jpg" alt="">
-          </div>
-        </div>
-      </div> -->
-      <div style="height: var(--padding-2);"></div>
-      <div style="height: var(--padding-2);"></div>
+  <!-- Side Nav -->
+  <div id="side-nav" class="just-display-on-desktop">
+    <!-- Fixed Icon -->
+    <div style="position: fixed; right: 32px; top: 32px;">
+      <!-- <div class="tooltip-left icon-wrap"> -->
+      <a href="https://github.com/buiquangbao" target="_blank"><img src="./assets/icon/github.png" class="icon"></a>
+      <!-- <span class="tooltiptext" style="top: 1px; right: 46px;">Github</span> -->
+      <!-- </div> -->
     </div>
-  </div>
-
-  <!-- CERTIFICATES -->
-  <div class="section-1" id="certificates">
-    <h2 data-aos="fade-up">./CERTIFICATES</h2>
-    <!-- Certificate -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Google IT Automation with Python Specialization Certificate</h3>
-    <h4 data-aos="fade-up">Issued by Coursera. Authorized by <b>Google</b>.</h4>
-    <p data-aos="fade-up">
-      "This six-course certificate, developed by Google, is designed to provide IT professionals with in-demand skills.
-      The curriculum is designed to teach learners how to write code in Python
-      with a special focus on how this applies to automating tasks in the world of IT support and systems
-      administration. Those who received this certificate passed all graded assessments with a score of 80% or above.
-      They have a strong foundation in how to use Git and GitHub, troubleshoot and debug complex problems, and apply
-      automation at scale by using configuration management and the Cloud in order to prepare them for more advanced IT
-      Support Specialist or Junior Systems Administrator positions."
-    </p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-2">
-        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MM73SLTLWJA9"
-          target="_blank">
-          <div class="button-2">
-            View Certificate
-          </div>
-        </a>
-      </div>
-      <div class="col-2">
-        <a href="https://www.youracclaim.com/badges/5983ba5b-5f26-4012-8981-0a80de10e7e4/public_url" target="_blank">
-          <div class="button-2">
-            Verify
-          </div>
-        </a>
-      </div>
-      <div class="col-4"></div>
-    </div>
-    <!-- Certificate -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Cybersecurity IT Fundamentals Specialization Certificate</h3>
-    <h4 data-aos="fade-up">Issued by Coursera. Authorized by <b>IBM</b>.</h4>
-    <p data-aos="fade-up">
-      "This specialization provided the learner with knowledge of cybersecurity concepts, tools and processes;
-      compliance frameworks; system administration, operating system and database vulnerabilities basics; types of cyber
-      attacks; and basic networking. The learner also gained knowledge around important cybersecurity topics such as
-      cryptography and digital forensics. The learner’s knowledge was tested through multiple assessments throughout the
-      courses within this specialization."
-    </p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-2">
-        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SD3PDC2PWH8R"
-          target="_blank">
-          <div class="button-2">
-            View Certificate
-          </div>
-        </a>
-      </div>
-      <div class="col-2">
-        <a href="https://www.youracclaim.com/badges/390c3199-2830-4867-a565-ce4d0857c56f/public_url" target="_blank">
-          <div class="button-2">
-            Verify
-          </div>
-        </a>
-      </div>
-      <div class="col-4"></div>
-    </div>
-    <!-- Certificate -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Visual Elements of UI Design Certificate</h3>
-    <h4 data-aos="fade-up">Issued by Coursera. Authorized by <b>California Institute of the Arts</b>.</h4>
-    <p data-aos="fade-up">
-      "This design-centric course examines how to design and articulate meaning using color, type, and imagery is
-      essential to making interfaces function clearly and seamlessly. Through a series of lectures and visual exercises,
-      learners will focus on the many individual elements and components that make up the skillset of an interface
-      designer.
-      By the end of this course, learners will be able to describe the key formal elements of clear, consistent, and
-      intuitive UI design, and apply your learned skills to the design of a static screen-based interface."
-    </p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-2">
-        <a href="https://www.coursera.org/account/accomplishments/certificate/TQ3LFTHXEYM9" target="_blank">
-          <div class="button-2">
-            View Certificate
-          </div>
-        </a>
-      </div>
-      <div class="col-2">
-        <a href="https://www.coursera.org/account/accomplishments/certificate/TQ3LFTHXEYM9" target="_blank">
-          <div class="button-2">
-            Verify
-          </div>
-        </a>
-      </div>
-      <div class="col-4"></div>
-    </div>
-    <!-- Certificate -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">ICSI | CNSS</h3>
-    <h4 data-aos="fade-up">Issued and authorized by <b>ICSI</b>.</h4>
-    <p data-aos="fade-up">
-      "This course provides a holistic view of modern network security including operating system hardening, firewalls,
-      intrusion-detection systems, VPNs and Encryption. Physical Security, Standards, System Security and Security
-      Policies are also included. Course Objectives: Achieve skills to jump into penetration testing; Prepare for the
-      Certified Network Security Specialist Exam. Audience: System administrators, network administrators, security
-      professionals, students and anyone who is interested in network security technologies."
-    </p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-2">
-        <a href="https://www.accredible.com/19862397" target="_blank">
-          <div class="button-2">
-            View Certificate
-          </div>
-        </a>
-      </div>
-      <div class="col-2">
-        <a href="https://www.accredible.com/19862397" target="_blank">
-          <div class="button-2">
-            Verify
-          </div>
-        </a>
-      </div>
-      <div class="col-4"></div>
-    </div>
-    <!-- Certificate -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Data Science Math Skills Certificate</h3>
-    <h4 data-aos="fade-up">Issued by Coursera. Authorized by <b>Duke University</b>.</h4>
-    <p data-aos="fade-up">
-      "Set theory, including Venn diagrams; Properties of the real number line; Interval notation and algebra with
-      inequalities; Uses for summation and Sigma notation; Math on the Cartesian (x,y) plane, slope and distance
-      formulas; Graphing and describing functions and their inverses on the x-y plane; The concept of instantaneous rate
-      of change and tangent lines to a curve; Exponents, logarithms, and the natural log function; Probability theory,
-      including Bayes’ theorem."
-    </p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-2">
-        <a href="https://www.coursera.org/account/accomplishments/certificate/TWGWU6XB7SHQ" target="_blank">
-          <div class="button-2">
-            View Certificate
-          </div>
-        </a>
-      </div>
-      <div class="col-2"></div>
-      <div class="col-4"></div>
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section-2" id="education">
-    <h2 data-aos="fade-up">./EDUCATION</h2>
-    <!-- Education -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 style="text-align: center;" data-aos="fade-up">Vietnam National University – Ho Chi Minh City – University of
-      Science</h3>
-    <p style="text-align: center;" data-aos="fade-up">Faculty of Information Technology</p>
-  </div>
-
-  <!-- ORGANIZATIONS -->
-  <div class="section-1" id="organizations">
-    <h2 data-aos="fade-up">./ORGANIZATIONS</h2>
-    <!-- Organization -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Co-founder/AI Developer of AGRION Team</h3>
-    <h4 data-aos="fade-up">Since 2020</h4>
-    <p data-aos="fade-up">
-      AGRION Team was established on November 19, 2020, to participate in the AI Hackathon RESET 1010, consisting of 3
-      young members:
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Le Thanh Mai - FTU (Foreign Trade University) alumni - Product Planer role.
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Tran Thi Phuong Anh - HCMIU (International University) alumni - UI/UX Designer role.
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Bui Quang Bao - 2nd-year student of HCMUS (University of Science) - AI Developer role.
-      <br>The team excellently achieved the
-      third prize, being 1 of the 3 winners of the competition. Since then, the team continues to recruit more members,
-      do projects and research more deeply on AI (especially Computer Vision) and software.
-    </p>
-    <!-- Organization -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">President of Academic Club "DESIGN ITUS"</h3>
-    <h4 data-aos="fade-up">President term 2020 - 2021, member since 2019</h4>
-    <p data-aos="fade-up">
-      DESIGN ITUS club was established on October 25, 2010, is an academic club of the Faculty of Information
-      Technology, Vietnam National University, Ho Chi Minh City, University of Science.
-      This is a place for students with passion for graphic design, UI/UX design, photography, photo editing, video
-      making and editing, hand-drawing and digital painting.<br>
-      The club often has seminars to guide the use of tools and software (Adobe Photoshop, Illustrator, Premiere, AE,
-      Davinci Resolve, Figma, Adobe XD, etc), and organize competitions.
-      Outr Space is the annual academic competition of the Design ITUS Club. Held for the first time in May 2017, this
-      is
-      a design and creativity contest with the slogan "Thinking outside of the box", attracting many students to
-      participate. This is an opportunity for students to try their best, show their talents and creativity.
-    </p>
-  </div>
-
-  <!-- EXTRACURRICULAR ACTIVITIES -->
-  <div class="section-2" id="activities">
-    <h2 data-aos="fade-up">./EXTRACURRICULAR ACTIVITIES</h2>
-    <!-- Extra -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Volunteer/Charity</h3>
-    <h4 data-aos="fade-up">Loving Arms 2020 - Green Sprouts - Ho Chi Minh City - July 2020</h4>
-    <h4 data-aos="fade-up">Spring Volunteer Campaign 2020 - Trung An Primary School, Cu Chi District - January 2020</h4>
-    <h4 data-aos="fade-up">Come To Suburb Campaign 2019 - Doi Lau Primary School, An Thoi, Can Gio - December 2019</h4>
-    <!-- Extra -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Events/Activities' Organization Committee</h3>
-    <h4 data-aos="fade-up">BLIT 2020 - HoChiMinh Communist Youth Union + Vietnamese Students’ Association - October to
-      November 2020</h4>
-    <h4 data-aos="fade-up">Bi An Sai Thanh 2019 - HoChiMinh Communist Youth Union + Vietnamese Students’ Association -
-      December 2019</h4>
-    <!-- Extra -->
-    <div style="height: var(--padding-2);"></div>
-    <h3 data-aos="fade-up">Others</h3>
-    <h4 data-aos="fade-up">
-      ASEAN University Network, Ateneo De Manila University -
-      <a href="https://www.dropbox.com/s/e04ml4fwxn2r9es/ASEAN%20University%20Network%20-%20AUN-EEC%20Conference%20Participant%20Certificate.pdf?dl=0"
-        style="font-size: var(--font-size-4);" target="_blank">AUN-EEC Conference Participant Certificate</a>
-    </h4>
-    <h4 data-aos="fade-up">
-      Friedrich Naumann Foundation -
-      <a href="https://www.dropbox.com/s/xnpmh6rocelsxyn/Friedrich%20Naumann%20Foundation%20-%20Fighting%20Falsehoods%20in%20Southeast%20%26%20East%20Asia.pdf?dl=0"
-        style="font-size: var(--font-size-4);" target="_blank">Fighting Falsehoods in Southeast & East Asia
-        Certificate</a>
-    </h4>
-    <h4 data-aos="fade-up">
-      SAC -
-      <a href="https://www.dropbox.com/s/01p648jljkcxcjs/SAC%20-%20Vietnam%20Map%20Guinness%20Record%20Setting%20Participant.pdf?dl=0"
-        style="font-size: var(--font-size-4);" target="_blank">Vietnam Map Guinness Record Setting Participant
-        Certificate</a>
-    </h4>
-  </div>
-
-  <!-- RESET 1010 -->
-  <div class="section-1 just-display-on-desktop" id="reset1010">
-    <div class="row" data-aos="fade-up">
-      <div class="col-1"><img src="./assets/AngelHack.png" width="100%" style="padding: var(--padding-reset-1010)">
-      </div>
-      <div class="col-1"><img src="./assets/MOST.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/UNDP.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/Aus4Innovation.png" width="100%" style="padding: var(--padding-reset-1010)">
-      </div>
-      <div class="col-1"><img src="./assets/VAIS.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/VinBigdata.png" width="100%" style="padding: var(--padding-reset-1010)">
-      </div>
-      <div class="col-1"><img src="./assets/DAC.png" width="100%" style="padding: var(--padding-reset-1010)">
-      </div>
-      <div class="col-1"><img src="./assets/SnorkelAI.png" width="100%" style="padding: var(--padding-reset-1010)">
-      </div>
-      <div class="col-1"><img src="./assets/MMA.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/AIOZ.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/Youth.png" width="100%" style="padding: var(--padding-reset-1010)"></div>
-      <div class="col-1"><img src="./assets/VnExpress.png" width="100%" style="padding: var(--padding-reset-1010)">
+    <!-- Avatar -->
+    <div style="background-color: #ffffff; margin: 26px; padding: 4px; border-radius: 100%;">
+      <div class="image-parent" style="height: 100px; width: 100px; border-radius: 100%;">
+        <img class="image-zoom" src="./assets/avatar.jpg">
       </div>
     </div>
-    <div style="height: var(--padding-2);"></div>
-    <div style="font-size: 62px; font-weight: 700; float: left;" data-aos="fade-up">RESET 1010</div>
-    <div style="font-size: 62px; font-weight: 300;" data-aos="fade-up">&nbsp;AI HACKATHON</div>
-    <div style="font-size: 22px; font-weight: 500;" data-aos="fade-up">CHALLENGE: BUILD AN AI-POWERED APPLICATION TO
-      BOOST THE GREEN
-      RECOVERY OF SME FROM COVID-19</div>
-    <div style="height: var(--padding-2);"></div>
-    <div class="row" data-aos="fade-up">
-      <div class="col-6">
-        <p>
-          The 48-hours AI Hackathon “RESET 1010” was organized by the technology innovation promotion organization
-          AngelHack, under the sponsorship and coordination of the <b>Ministry of Science and Technology</b>, with the
-          companionship of Aus4Innovation (the development cooperation program of the Ministry Australian Foreign
-          Affairs and Trade in Vietnam) and UNDP (United Nations Development Program in Vietnam), VAIS (Vietnam
-          Artificial Intelligence Solution Company), Hanoi Communist Youth Union, VnExpress newspaper.
-        </p>
-      </div>
-      <div class="col-6">
-        <p style="text-align: center;">
-          OUR TEAM'S PRODUCT
-        </p>
-        <img src="./assets/Agrion.png" width="50%" style="margin: 0 25%;" class="custom-cursor--justhover">
-        <p style="text-align: center;">
-          WON THE THIRD PRIZE
-        </p>
-      </div>
-    </div>
-    <div style="height: var(--padding-2);"></div>
-    <img src="assets/certificates/RESET1010WinningCertificate.png" width="100%" data-aos="fade-up">
-    <div style="height: var(--padding-2);"></div>
-    <p data-aos="fade-up">TESTIMONIALS FROM ORGANIZERS</p>
-    <div class="row" data-aos="fade-up">
-      <div class="col-4">
-        <p class="testimonial">
-          "RESET 1010 nằm trong chuỗi sự kiện AI4VN đóng vai trò quan trọng thúc đẩy ngành trí tuệ nhân tạo (AI) tại
-          Việt Nam. Cuộc thi hướng tới phát triển các ứng dụng công nghệ hỗ trợ các doanh nghiệp nhỏ và vừa ổn định sản
-          xuất, phục hồi chuỗi đứt gãy trong cung cấp hàng hóa, từ đó đảm bảo công ăn việc làm cho người lao động trong
-          bối cảnh dịch bệnh vẫn chưa chấm dứt.
-          Những giải pháp sử dụng trí tuệ nhân tạo sẽ giúp kết nối giữa người bán hàng và người tiêu dùng trong tình
-          hình đại dịch để thiết lập cuộc sống trong trạng thái bình thường mới."
-        </p>
-        <div style="height: var(--padding-1);"></div>
-        <p class="testimonial-1">Ông Bùi Thế Duy, Thứ trưởng Bộ Khoa học và Công nghệ</p>
-      </div>
-      <div class="col-4">
-        <p class="testimonial">
-          "Trí tuệ nhân tạo ngày càng chứng tỏ là một công cụ hữu hiệu đối với doanh nghiệp trong việc tối ưu hóa
-          quy trình, nâng cao hiệu suất và tăng doanh thu. Trong bối cảnh đầy thách thức do đại dịch COVID 19 mang lại,
-          hỗ trợ các doanh nghiệp vừa và nhỏ phát triển và thích ứng với các giải pháp dựa trên các ứng dụng AI trở nên
-          quan trọng hơn bao giờ hết. Chúng tôi rất vui được đồng hành cùng Bộ KH&CN, AngleHack, UNDP, Báo VnExpress và
-          Thành Đoàn, Hội Sinh viên, Hội Liên hiệp thanh niên TP. Hà Nội tổ chức cuộc thi này."
-        </p>
-        <div style="height: var(--padding-1);"></div>
-        <p class="testimonial-1">Ông Tom Wood, Tham tán tại Đại sứ quán Australia, Giám đốc Chương trình Aus4Innovation
-        </p>
-      </div>
-      <div class="col-4">
-        <p class="testimonial">
-          "Việc tận dụng sức mạnh của công nghệ trí tuệ nhân tạo để theo dõi nhanh quá trình chuyển đổi sang nền kinh tế
-          tuần hoàn có tiềm năng đẩy nhanh quá trình phục hồi mang tính bền vững ở Việt Nam, thúc đẩy khả năng phục hồi
-          của các doanh nghiệp vừa và nhỏ cũng như mở ra các nguồn vốn mới. Với lý do này, UNDP rất vui mừng được phối
-          hợp với Bộ KH&CN, Chương trình Aus4Innovation, Thành đoàn Hà Nội, và AngelHack đồng tổ chức cuộc thi Hackathon
-          “Reset 1010” nhằm thúc đẩy phục hồi kinh tế xanh tại Việt Nam."
-        </p>
-        <div style="height: var(--padding-1);"></div>
-        <p class="testimonial-1">Bà Caitlin Wiesen, Trưởng đại diện UNDP tại Việt Nam</p>
-      </div>
-    </div>
-    <div style="height: var(--padding-2);"></div>
-    <div data-aos="fade-up">
-      <p>MORE DETAILS</p>
-      <a href="https://www.most.gov.vn/vn/tin-tuc/18701/khai-mac-cuoc-thi-ai-hackathon-online-reset-1010.aspx"
-        target="_blank">
-        Article "Khai mạc cuộc thi AI Hackathon online RESET 1010" by Ministry of Science and Technology
-      </a><br>
-      <a href="https://vjst.vn/vn/tin-tuc/3993/cuoc-thi-ai-hackathon-online-reset-1010.aspx" target="_blank">
-        Article "Cuộc thi AI HACKATHON online RESET 1010" by Vietnam Journal of Science and Technology
-      </a><br>
-      <a href="https://vista.gov.vn/news/xu-huong-nghien-cuu-cong-nghe/cuoc-thi-ai-hackathon-online-reset-1010-3109.html"
-        target="_blank">
-        Article "Cuộc thi AI Hackathon online RESET 1010" by National Agency for Science and Technology Information
-      </a><br>
-      <a href="https://vnexpress.net/thanh-vien-ban-giam-khao-cuoc-thi-reset-1010-4192536.html" target="_blank">
-        Article "Thành viên Ban giám khảo cuộc thi RESET 1010" by VnExpress
-      </a><br>
-      <a href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html"
-        target="_blank">
-        Article "Trí tuệ nhân tạo 'bắt bệnh' cho cây vô địch AI Hackathon 2020" by VnExpress
-      </a><br>
-      <a href="https://www.most.gov.vn/vn/tin-tuc/18948/trao-giai-cuoc-thi-vo-dich-ai-hackathon-2020.aspx"
-        target="_blank">
-        Article "Trao giải cuộc thi vô địch AI Hackathon 2020" by Ministry of Science and Technology
-      </a><br>
-    </div>
-    <div style="height: var(--padding-2);"></div>
-    <a href="#awards">
-      <p style="text-align: center;" data-aos="fade-up">Return to Awards &Uarr;</p>
+    <!-- Menu -->
+    <a href="#buiquangbao">
+      <div class="side-nav-link">Bui Quang Bao</div>
     </a>
-  </div>
-
-  <!-- Footer -->
-  <div class="section-3" id="footer">
-    <div class="custom-cursor--justhover" style="float: left;">
-      <span class="typewriter-text1" style="user-select: none; pointer-events: none;">
-        i'm in the blue nowhere
-      </span>
-      <span class="typewriter-text2" style="user-select: none; pointer-events: none;">
-        伝統ある古典部の再生
-      </span>
+    <a href="#about">
+      <div class="side-nav-link">About</div>
+    </a>
+    <a href="#projects">
+      <div class="side-nav-link">Projects</div>
+    </a>
+    <a href="#awards">
+      <div class="side-nav-link">Awards 🏆</div>
+    </a>
+    <a href="#certificates">
+      <div class="side-nav-link">Certificates</div>
+    </a>
+    <a href="#education">
+      <div class="side-nav-link">Education</div>
+    </a>
+    <a href="#organizations">
+      <div class="side-nav-link">Organizations</div>
+    </a>
+    <a href="#activities">
+      <div class="side-nav-link">Activities</div>
+    </a>
+    <a href="#contact">
+      <div class="side-nav-link">Contact</div>
+    </a>
+    <!-- Chillwithme Button -->
+    <!-- Fullscreen Overlay Navigation 1/2 -->
+    <div class="side-nav-link" onclick="openFullNav1()"
+      style="cursor: pointer; width: calc(100% - 42px); position: absolute; bottom: 36px; ">
+      <div style="letter-spacing: 4px; font-size: 8px; padding: 4px 0; text-align: center;">
+        Chill with me
+      </div>
     </div>
-    <br><br>
-    <div style="height: var(--padding-2);"></div>
-    <p class="contact">
-      <a href="https://github.com/buiquangbao"
-        target="_blank">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://www.linkedin.com/in/buiquangbao/"
-        target="_blank">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="mailto:quangbao.dev@gmail.com" target="_blank">Email</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://www.instagram.com/bqbao_itus/" target="_blank">Instagram</a>
-      <br>
-      <a href="https://buiquangbao.github.io/" style="color: #d8d8d8;">
-        Bui Quang Bao &copy;
-        <script>document.write(new Date().getFullYear())</script>
-      </a>
-    </p>
 
   </div>
 
+  <!-- Body wrap rule -->
+  <div class="body-wrap padding-for-side-nav" style="padding: 0;">
+    <!-- SECTION -->
+    <div class="section-img parallax" style="height: 100vh;" id="buiquangbao">
+      <h1 style="line-height: 1.4; margin-top: 14vh;">
+        Hi there!<br>
+        I'm <mark>Bui Quang Bao</mark><br>
+        Front-end Developer<br>
+        UI/UX Designer<br>
+        & mad computer scientist
+      </h1>
+      <div>
+        <!-- Github -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://github.com/buiquangbao" target="_blank"><img src="./assets/icon/github.png" class="icon"></a>
+          <span class="tooltiptext">Github</span>
+        </div>
+        <!-- Gitlab -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://gitlab.com/buiquangbao" target="_blank"><img src="./assets/icon/gitlab.png" class="icon"></a>
+          <span class="tooltiptext">Gitlab</span>
+        </div>
+        <!-- npm -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://www.npmjs.com/~buiquangbao" target="_blank"><img src="./assets/icon/npm.png"
+              class="icon"></a>
+          <span class="tooltiptext">NPM</span>
+        </div>
+        <!-- Codepen -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://codepen.io/buiquangbao" target="_blank"><img src="./assets/icon/codepen.png"
+              class="icon"></a>
+          <span class="tooltiptext">Codepen</span>
+        </div>
+        <!-- LinkedIn -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://www.linkedin.com/in/buiquangbao" target="_blank"><img src="./assets/icon/linkedin.png"
+              class="icon"></a>
+          <span class="tooltiptext">LinkedIn</span>
+        </div>
+        <!-- Twitter -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://twitter.com/quangbao_dev" target="_blank"><img src="./assets/icon/twitter.png"
+              class="icon"></a>
+          <span class="tooltiptext">Twitter</span>
+        </div>
+        <!-- Instagram -->
+        <div class="tooltip-bottom icon-wrap">
+          <a href="https://www.instagram.com/bqbao_itus/" target="_blank"><img src="./assets/icon/instagram.png"
+              class="icon"></a>
+          <span class="tooltiptext">Instagram</span>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Warning -->
+    <div class="just-display-on-mobile"
+      style="background-color: antiquewhite; color: black; padding: 20px; text-align: justify;">
+      ⚠
+      <br>Hi there! I guess that you are using your phone, right?
+      <br>My portfolio is suggested to be viewed on <b>desktop screen</b> for the best experience.
+      Some "interesting features" will be disabled in mobile mode.
+      <br>Thank you!
+    </div>
+    <!-- ABOUT -->
+    <div class="section-1" id="about">
+      <div class="row">
+        <!-- Who am I -->
+        <div class="col-6">
+          <h3 style="margin-bottom: 0;">Who am I</h3>
+          <p style="margin: 0; color: #888888;">A little bit about myself</p>
+          <div style="height: var(--padding-1);"></div>
+          <p style="text-align: justify; margin-top: 4px;">
+            My name is Bui Quang Bao.
+            <br>I am a design-oriented developer.
+            I focus on writing clean, elegant and efficient code, designing beautiful and functional user
+            experiences.
+            I prefer to keep learning, continue challenging myself and do interesting things. My abundant energy
+            from
+            doing what I love, from my family and my friends fuels me in the pursuit of my career path and my interests.
+          </p>
+          <p>PERSONALITY</p>
+          <a href="https://www.16personalities.com/profiles/9b3fd691d44a3" target="_blank" style="color: white;">
+            <div style="height: 110px; border-radius: 8px;" class="personality-box">
+              <div class="row">
+                <div class="col-3">
+                  <img src="./assets/personality.png" class="rounded-image just-display-on-desktop"
+                    style="height: 80px; width: 80px; margin: 15px 0 0 30px;">
+                </div>
+                <div class="col-5">
+                  <p style="font-size: 11px; margin: 0; padding-top: 12px;">Personality Type</p>
+                  <p style="font-size: 16px; margin: 0;">Turbulent Logician</p>
+                  <p style="font-size: 11px; margin: 0; padding-top: 6px;">Strategy</p>
+                  <p style="font-size: 16px; margin: 0;">Constant Improvement</p>
+                </div>
+                <div class="col-4">
+                  <p style="font-size: 11px; margin: 0; padding-top: 12px;">Code</p>
+                  <p style="font-size: 16px; margin: 0;">INTP-T</p>
+                  <p style="font-size: 11px; margin: 0; padding-top: 6px;">Role</p>
+                  <p style="font-size: 16px; margin: 0;">Analyst</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <p>HIGHLIGHTS</p>
+          <p>🏆 Winner of AI Hackathon "RESET 1010" - Third Prize</p>
+          <p>Invited Guest - Vietnam Artificial Intelligence Festival 2020</p>
+          <p>President of Academic Club "Design ITUS" - FIT HCMUS</p>
+          <p>Violympic Math Competition Awards in 6 consecutive years</p>
+          <p>Prefinalist with Special Honour - International Youth Math Challenge 2020</p>
+        </div>
+        <!-- Twitter Embed -->
+        <div class="col-1" style="color: transparent;">.</div>
+        <div class="col-4">
+          <h3 style="margin-bottom: 0;">I'm on the internet</h3>
+          <p style="margin: 0; color: #888888;">I like to share amazing things</p>
+          <div style="height: var(--padding-1);"></div>
+          <div style="border-radius: 12px; overflow: hidden;">
+            <a class="twitter-timeline" data-theme="dark" height="80vh"
+              data-chrome="noheader nofooter noborders noscrollbar transparent"
+              href="https://twitter.com/quangbao_dev?ref_src=twsrc%5Etfw">Tweets by quangbao_dev</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECTS -->
+    <div class="section-2" id="projects">
+      <h2>PROJECTS</h2>
+      <div style="height: var(--padding-1);"></div>
+      <div class="row-3">
+        <div class="col">
+          <!-- Project -->
+          <div class="project">
+            <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis" target="_blank">
+              <div class="image-parent">
+                <img src="./assets/projects/covid19project.gif" class="image-zoom project-image">
+              </div>
+              <div class="project-content">
+                <h3>COVID-19 Analysis & Diagnosis</h3>
+                <p class="project-description">COVID-19 (Sars CoV 2) Virus Spread Analysis using Python and Diagnosis
+                  from Radiography using Machine Learning Model (TensorFlow.js)
+                </p>
+                <p class="project-sub-title">Language(s)</p>
+                <p class="project-sub-content">Python (Analysis), Javascript</p>
+                <p class="project-sub-title">Deployed on</p>
+                <p class="project-sub-content">Github</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Project -->
+          <div class="project">
+            <a href="https://github.com/webtoolkits/resumecreator" target="_blank">
+              <div class="image-parent">
+                <img src="./assets/projects/resumecreator.gif" class="image-zoom project-image">
+              </div>
+              <div class="project-content">
+                <h3>ResumeCreator</h3>
+                <p class="project-description">A static web tool used to generate a simple and elegant resume (in pdf
+                  format) from user input, written in HTML, CSS, Javascript and uses jsPDF library.
+                <p class="project-sub-title">Language(s)</p>
+                <p class="project-sub-content">HTML5, CSS3, Javascript</p>
+                <p class="project-sub-title">Deployed on</p>
+                <p class="project-sub-content">Github</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Project -->
+          <div class="project">
+            <a href="https://github.com/creatoper/Agrion" target="_blank">
+              <div class="image-parent">
+                <img src="./assets/projects/agrion.gif" class="image-zoom project-image">
+              </div>
+              <div class="project-content">
+                <h3>creatoper/Agrion</h3>
+                <p class="project-description">AI Hackathon "RESET 1010" Winner - 3RD Prize. The core AI function - is
+                  an application of Image Classification, using Machine Learning Model
+                  (TensorFlow.js).
+                </p>
+                <p class="project-sub-title">Language(s)</p>
+                <p class="project-sub-content">Javascript (TensorFlow.js)</p>
+                <p class="project-sub-title">Deployed on</p>
+                <p class="project-sub-content">Github, Gitlab</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row-3">
+        <div class="col">
+          <!-- Project -->
+          <div class="project">
+            <a href="https://github.com/buiquangbao/automation-using-python" target="_blank">
+              <div class="image-parent">
+                <img src="./assets/projects/pythonautomation.gif" class="image-zoom project-image">
+              </div>
+              <div class="project-content">
+                <h3>automation-using-python</h3>
+                <p class="project-description">The final project to complete the IT Automation with Python Professional
+                  Certificate from Google. Automating Real-World Tasks with Python Course.
+                </p>
+                <p class="project-sub-title">Language(s)</p>
+                <p class="project-sub-content">Python (Automation)</p>
+                <p class="project-sub-title">Deployed on</p>
+                <p class="project-sub-content">Github</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Project -->
+          <div class="project">
+            <a href="https://github.com/buiquangbao/socket-server" target="_blank">
+              <div class="image-parent">
+                <img src="./assets/projects/socket.gif" class="image-zoom project-image">
+              </div>
+              <div class="project-content">
+                <h3>socket-server</h3>
+                <p class="project-description">University Project. Subject: Computer Networking. Write web server
+                  application using socket programming to return web page content.
+                </p>
+                <p class="project-sub-title">Language(s)</p>
+                <p class="project-sub-content">Python (Socket programming)</p>
+                <p class="project-sub-title">Deployed on</p>
+                <p class="project-sub-content">Github</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AWARDS -->
+    <div class="section-1" id="awards">
+      <h2>AWARDS</h2>
+      <div style="height: var(--padding-1);"></div>
+      <div class="award">
+        <p class="award-sub">1 x National Artificial Intelligence Hackathon</p>
+        <h3>Winner of AI Hackathon "RESET 1010" - Third Prize</h3>
+        <p>By Ministry of Science and Technology of Vietnam / Bộ Khoa học và Công nghệ Việt Nam</p>
+        <div class="award-sub">Mentioned on:<br></div>
+        <p class="award-sub-2">
+          <a target="_blank"
+            href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+            Ministry of Science and Technology of Vietnam / Bộ Khoa học và Công nghệ Việt Nam &raquo;
+          </a><br>
+          <a target="_blank"
+            href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+            Vietnam Journal of Science and Technology / Tạp chí Khoa học và Công nghệ Việt Nam &raquo;
+          </a><br>
+          <a target="_blank"
+            href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+            National Agency for Science and Technology Information / Cục Thông tin Khoa học và Công nghệ Quốc gia
+            &raquo;
+          </a><br>
+          <a target="_blank"
+            href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+            VnExpress, Tuoitre, Thanhnien Newspaper / Báo VnExpress, Tuổi trẻ, Thanh niên &raquo;
+          </a>
+        </p>
+      </div>
+      <div class="award">
+        <p class="award-sub">6 x National Math Competition</p>
+        <h3>Violympic Math Competition Provincial Awards <mark>in 6 consecutive years</mark></h3>
+        <p>By Ministry of Education and Training of Vietnam / Bộ Giáo dục và Đào tạo Việt Nam</p>
+        <p class="award-sub-2">
+          2011-2012: Third Prize <br>
+          2012-2013: Second Prize <br>
+          2013-2014: Second Prize <br>
+          2014-2015: First Prize <br>
+          2015-2016: First Prize<br>
+          2016-2017: Second Prize</p>
+      </div>
+      <div class="award">
+        <p class="award-sub">1 x Online International Math Competition</p>
+        <h3>Prefinalist with Special Honour - International Youth Math Challenge 2020</h3>
+        <p>By IYMC</p>
+      </div>
+      <div class="award">
+        <p class="award-sub">1 x University Competition</p>
+        <h3>Prefinalist - BLIT 2019</h3>
+        <p>By Faculty of Information Technology - University of Science</p>
+      </div>
+    </div>
+    <!-- CERTIFICATES -->
+    <div class="section-2" id="certificates">
+      <h2>CERTIFICATES</h2>
+      <div style="height: var(--padding-1);"></div>
+      <div class="row-3">
+        <div class="col">
+          <!-- Cert -->
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MM73SLTLWJA9"
+            target="_blank" style="color: white;">
+            <div class="cert">
+              <img src="./assets/certs/google.png" class="cert-logo">
+              <h3>IT Automation with Python Specialization Certificate</h3>
+              <p>Issued by Coursera</p>
+              <p>Authorized by Google</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <!-- Cert -->
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SD3PDC2PWH8R"
+            target="_blank" style="color: white;">
+            <div class="cert">
+              <img src="./assets/certs/IBM.png" class="cert-logo">
+              <h3>Cybersecurity IT Fundamentals Specialization</h3>
+              <p>Issued by Coursera</p>
+              <p>Authorized by IBM</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <!-- Cert -->
+          <a href="https://www.coursera.org/account/accomplishments/certificate/TQ3LFTHXEYM9" target="_blank"
+            style="color: white;">
+            <div class="cert">
+              <img src="./assets/certs/calarts.png" class="cert-logo">
+              <h3>Visual Elements of UI Design Certificate</h3>
+              <p>Issued by Coursera</p>
+              <p>Authorized by California Institute of the Arts</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <!-- Cert -->
+          <a href="https://www.accredible.com/19862397" target="_blank" style="color: white;">
+            <div class="cert">
+              <img src="./assets/certs/icsi.jpg" class="cert-logo">
+              <h3>CNSS | Certified Network Security Specialist</h3>
+              <p>Issued by ICSI</p>
+              <p>Authorized by ICSI</p>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <!-- Cert -->
+          <a href="https://www.coursera.org/account/accomplishments/certificate/TWGWU6XB7SHQ" target="_blank"
+            style="color: white;">
+            <div class="cert">
+              <img src="./assets/certs/duke.png" class="cert-logo">
+              <h3>Data Science Math Skills Certificate</h3>
+              <p>Issued by Coursera</p>
+              <p>Authorized by Duke University</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- EDUCATION -->
+    <div class="section-1" id="education">
+      <h2>EDUCATION</h2>
+      <div style="height: var(--padding-1);"></div>
+      <div class="education-wrap">
+        <div class="row-2">
+          <!-- Uni -->
+          <div class="col">
+            <div class="edu-sub-wrap">
+              <p class="sub-title">🎓</p>
+              <p class="sub-title">UNIVERSITY</p>
+              <div class="row">
+                <div class="col-3" style="color: transparent;">.</div>
+                <div class="col-6">
+                  <img src="./assets/education/VNUHCM.png" class="edu-img" style="padding: 40px;">
+                </div>
+                <div class="col-3" style="color: transparent;">.</div>
+              </div>
+              <h3>Vietnam National University - Ho Chi Minh City<br>University of Science</h3>
+              <p>Faculty of Information Technology - FIT HCMUS</p>
+              <br>
+            </div>
+          </div>
+          <!-- Real Teachers -->
+          <div class="col">
+            <div class="edu-sub-wrap">
+              <p class="sub-title">👑</p>
+              <p class="sub-title">SPECIAL THANKS TO</p>
+              <div style="height: var(--padding-1);"></div>
+              <div class="row-3">
+                <div class="col">
+                  <img src="./assets/education/stackoverflow.png" class="edu-img">
+                </div>
+                <div class=" col">
+                  <img src="./assets/education/google.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/github.png" class="edu-img">
+                </div>
+              </div>
+              <br>
+              <p class="sub-title">AND</p>
+              <div style="height: var(--padding-1);"></div>
+              <div class="row-5 just-display-on-desktop">
+                <div class="col">
+                  <img src="./assets/education/youtube.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/coursera.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/linkedinlearning.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/codepen.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/geeksforgeeks.png" class="edu-img">
+                </div>
+              </div>
+              <div class="row-6 just-display-on-desktop">
+                <div class="col">
+                  <img src="./assets/education/icsi.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/cybrary.png" class="edu-img">
+                </div>
+                <div class=" col">
+                  <img src="./assets/education/freecodecamp.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/w3schools.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/solidsail.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/programiz.png" class="edu-img">
+                </div>
+              </div>
+              <div class="row-9 just-display-on-desktop">
+                <div class="col">
+                  <img src="./assets/education/thenetninja.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/thecodingtrain.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/fireshipio.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/csdojo.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/brackey.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/imphenzia.png" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/quixel.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/sykoo.jpg" class="edu-img">
+                </div>
+                <div class="col">
+                  <img src="./assets/education/codemonkey.jpg" class="edu-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: var(--padding-1);"></div>
+    </div>
+    <!-- ORGANIZATIONS -->
+    <div class="section-2" id="organizations">
+      <h2>ORGANIZATIONS</h2>
+      <div style="height: var(--padding-1);"></div>
+      <div style="height: var(--padding-1);"></div>
+      <!-- ORG -->
+      <div class="row">
+        <div class="col-3">
+          <div class="image-parent" style="height: 200px; width: 200px; border-radius: 100%;">
+            <img class="image-zoom" src="./assets/orgs/designitus.png">
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="org-wrap">
+            <h3>President of Academic Club "DESIGN ITUS"</h3>
+            <p class="org-sub">President term 2020 - 2021, member since 2019</p>
+            <p class="org-content">
+              DESIGN ITUS club was established on October 25, 2010, is an academic club of the Faculty of Information
+              Technology, Vietnam National University, Ho Chi Minh City, University of Science.
+              This is a place for students with passion for graphic design, UI/UX design, photography, photo editing,
+              video making and editing, hand-drawing and digital painting.<br>
+              The club often has seminars to guide the use of tools and software (Adobe Photoshop, Illustrator,
+              Premiere, AE, Davinci Resolve, Figma, Adobe XD, etc), and organize competitions. Outr Space is the annual
+              academic competition of the Design ITUS Club. Held for the first time in May 2017, this is
+              a design and creativity contest with the slogan "Thinking outside of the box", attracting many students to
+              participate. This is an opportunity for students to try their best, show their talents and creativity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="height: var(--padding-1);"></div>
+      <div style="height: var(--padding-1);"></div>
+      <div style="height: var(--padding-1);"></div>
+      <!-- ORG -->
+      <div class="row">
+        <div class="col-3">
+          <div class="image-parent" style="height: 200px; width: 200px; border-radius: 100%;">
+            <img class="image-zoom" src="./assets/orgs/agrion.png">
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="org-wrap">
+            <h3>Co-founder/AI Developer of AGRION Team</h3>
+            <p class="org-sub">Since 2020</p>
+            <p class="org-content">
+              AGRION Team was established on November 19, 2020, to participate in the AI Hackathon RESET 1010,
+              consisting of 3
+              young members:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Le Thanh Mai - FTU (Foreign Trade University) alumni - Product Planer role.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Tran Thi Phuong Anh - HCMIU (International University) alumni - UI/UX Designer role.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Bui Quang Bao - 2nd-year student of HCMUS (University of Science) - AI Developer role. <br>The team
+              <mark>excellently achieved the third prize</mark>, being 1 of the 3 winners of the competition. Since
+              then, the team continues to recruit more members, do projects and research more deeply on AI (especially
+              Computer Vision) and software.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="height: var(--padding-1);"></div>
+    </div>
+    <!-- ACTIVITIES -->
+    <div class="section-1 activities-wrap" id="activities">
+      <h2>EXTRACURRICULAR ACTIVITIES</h2>
+      <h3>Volunteer/Charity Campaign</h3>
+      <p>Loving Arms 2020 - Green Sprouts - Ho Chi Minh City - July 2020</p>
+      <p>Spring Volunteer Campaign 2020 - Trung An Primary School, Cu Chi District - January 2020</p>
+      <p>Come To Suburb Campaign 2019 - Doi Lau Primary School, An Thoi, Can Gio - December 2019</p>
+      <h3>Events/Activities' Organization Committee</h3>
+      <p>BLIT 2020 - HoChiMinh Communist Youth Union + Vietnamese Students’ Association - October to November 2020</p>
+      <p>Bi An Sai Thanh 2019 - HoChiMinh Communist Youth Union + Vietnamese Students’ Association - December 2019</p>
+      <h3>Others</h3>
+      <p>ASEAN University Network, Ateneo De Manila University -
+        <a href="https://www.dropbox.com/s/e04ml4fwxn2r9es/ASEAN%20University%20Network%20-%20AUN-EEC%20Conference%20Participant%20Certificate.pdf?dl=0"
+          style="font-size: var(--font-size-4);" target="_blank">AUN-EEC Conference Participant Certificate &raquo;</a>
+      </p>
+      <p>Friedrich Naumann Foundation -
+        <a href="https://www.dropbox.com/s/xnpmh6rocelsxyn/Friedrich%20Naumann%20Foundation%20-%20Fighting%20Falsehoods%20in%20Southeast%20%26%20East%20Asia.pdf?dl=0"
+          style="font-size: var(--font-size-4);" target="_blank">Fighting Falsehoods in Southeast & East Asia
+          Certificate &raquo;</a>
+      </p>
+      <p>SAC -
+        <a href="https://www.dropbox.com/s/01p648jljkcxcjs/SAC%20-%20Vietnam%20Map%20Guinness%20Record%20Setting%20Participant.pdf?dl=0"
+          style="font-size: var(--font-size-4);" target="_blank">Vietnam Map Guinness Record Setting Participant
+          Certificate &raquo;</a>
+      </p>
+      <br>
+    </div>
+    <!-- CONTACT -->
+    <div class="section-2 parallax contact-wrap" id="contact">
+      <div style="position: relative;  height: 100%;">
+        <h2>CONTACT</h2>
+        <div style="height: var(--padding-1);"></div>
+        <div style="height: var(--padding-1);"></div>
+        <a href="mailto:quangbao.dev@gmail.com" target="_blank">
+          <img src="./assets/icon/mail.png" class="contact-img just-display-on-desktop">
+          <h1>quangbao.dev@gmail.com</h1>
+        </a>
+        <a href="tel:+84849283959" target="_blank">
+          <img src="./assets/icon/phone.png" class="contact-img just-display-on-desktop">
+          <h1>(+84) 849 283 959</h1>
+        </a>
+        <br>
+        <a href="https://twitter.com/quangbao_dev" target="_blank">
+          <img src="./assets/icon/twitter.png" class="contact-img just-display-on-desktop">
+        </a>
+        <a href="https://m.me/quangbao.dev" target="_blank">
+          <img src="./assets/icon/messenger.png" class="contact-img just-display-on-desktop">
+        </a>
+        <a href="https://www.facebook.com/quangbao.dev/" target="_blank">
+          <img src="./assets/icon/facebook.png" class="contact-img just-display-on-desktop">
+        </a>
+        <a href="https://www.instagram.com/bqbao_itus/" target="_blank">
+          <img src="./assets/icon/instagram.png" class="contact-img just-display-on-desktop">
+        </a>
+        <a href="https://www.linkedin.com/in/buiquangbao/" target="_blank">
+          <img src="./assets/icon/linkedin.png" class="contact-img just-display-on-desktop">
+        </a>
+        <!-- Copyrights -->
+        <div style="width: 100%; text-align: center; bottom: 0; position: absolute;">
+          <a href="https://buiquangbao.github.io/"
+            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            &nbsp;&copy; Bui Quang Bao. All Rights Reserved.
+          </a>
+        </div>
+      </div>
 
+    </div>
 
+  </div>
 </body>
 
-<script>
-  // ----------------------------- Back to top -----------------------------------
-  //Get the button
-  var mybutton = document.getElementById("backtotop");
-
-  // When the user scrolls down 500px from the top of the document, show the button
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
-
-<script>
-  // -------------------------- Full Screen Nav Bar ------------------------------
-  function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-  }
-
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-  }
-</script>
-
-<script>
-  // --------------------------------- Cursor ------------------------------------
-  document.addEventListener("DOMContentLoaded", function (event) {
-    var cursor = document.querySelector(".custom-cursor");
-    var links = document.querySelectorAll("a");
-    var justhover = document.querySelectorAll(".custom-cursor--justhover");
-    var initCursor = false;
-
-    for (var i = 0; i < links.length; i++) {
-      var selfLink = links[i];
-
-      selfLink.addEventListener("mouseover", function () {
-        cursor.classList.add("custom-cursor--link");
-      });
-      selfLink.addEventListener("mouseout", function () {
-        cursor.classList.remove("custom-cursor--link");
-      });
-    }
-
-    for (var i = 0; i < justhover.length; i++) {
-      var selfjusthover = justhover[i];
-
-      selfjusthover.addEventListener("mouseover", function () {
-        cursor.classList.add("custom-cursor--justhover-cursor");
-      });
-      selfjusthover.addEventListener("mouseout", function () {
-        cursor.classList.remove("custom-cursor--justhover-cursor");
-      });
-    }
-
-    window.onmousemove = function (e) {
-      var mouseX = e.clientX;
-      var mouseY = e.clientY;
-
-      if (!initCursor) {
-        // cursor.style.opacity = 1;
-        TweenLite.to(cursor, 0.3, {
-          opacity: 1
-        });
-        initCursor = true;
-      }
-
-      TweenLite.to(cursor, 0, {
-        top: mouseY + "px",
-        left: mouseX + "px"
-      });
-    };
-
-    window.onmouseout = function (e) {
-      TweenLite.to(cursor, 0.3, {
-        opacity: 0
-      });
-      initCursor = false;
-    };
-  });
-
-</script>
-
 </html>
-
-
-
-
-<!-- <div class="gallery-lightboxes">
-      <div class="image-lightbox" id="lightbox-image-1">
-        <div class="image-lightbox-wrapper">
-          <a href="#_" class="close"></a>
-          <a href="#lightbox-image-3" class="arrow-left"></a>
-          <a href="#lightbox-image-2" class="arrow-right"></a>
-          <img src="https://source.unsplash.com/F1Pb4g1C58E/600x500" alt="">
-          <div class="image-title">Cat staring at me</div>
-        </div>
-      </div>
-      <div class="image-lightbox" id="lightbox-image-2">
-        <div class="image-lightbox-wrapper">
-          <a href="#_" class="close"></a>
-          <a href="#lightbox-image-1" class="arrow-left"></a>
-          <a href="#lightbox-image-3" class="arrow-right"></a>
-          <img src="https://source.unsplash.com/kjERLXaHjXc/600x500" alt="">
-          <div class="image-title">Cat playing with mouse</div>
-        </div>
-      </div>
-      <div class="image-lightbox" id="lightbox-image-3">
-        <div class="image-lightbox-wrapper">
-          <a href="#_" class="close"></a>
-          <a href="#lightbox-image-2" class="arrow-left"></a>
-          <a href="#lightbox-image-1" class="arrow-right"></a>
-          <img src="https://source.unsplash.com/URnWOJX8wW4/600x500" alt="">
-          <div class="image-title">Cat turns away</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="image-wrapper">
-      <a href="#lightbox-image-2">
-        <div class="image-title">Cat playing with mouse</div>
-      </a>
-    </div> -->
