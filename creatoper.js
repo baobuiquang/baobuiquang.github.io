@@ -1,7 +1,7 @@
 // ---------- AOS Animation ----------
 AOS.init({
     duration: 1500,
-    offset: 50,
+    offset: 65,
     delay: 0,
 });
 
