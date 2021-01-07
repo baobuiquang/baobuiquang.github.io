@@ -159,7 +159,7 @@ p {
 } .education-wrap .edu-img {
     border-radius: 8px;
     width: 90%;
-    transition: all 0.5s;
+    transition: all 0.3s;
 } .education-wrap .edu-img:hover {
     transform: scale(1.25);
 } .education-wrap .edu-sub-wrap {
@@ -169,7 +169,7 @@ p {
     border-radius: 8px;
     margin: 12px;
     filter: grayscale(0.7) brightness(0.8);
-    transition: all 0.5s;
+    transition: all 0.3s;
 } .education-wrap .edu-sub-wrap:hover {
     filter: grayscale(0) brightness(1);
 }
