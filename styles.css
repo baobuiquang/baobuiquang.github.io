@@ -62,14 +62,14 @@ p {
 .icon {
     height: 32px;
     width: 32px;
-    filter: brightness(1);
+    filter: brightness(0.9);
     transition: all 0.3s;
 } .icon:hover {
-    filter: brightness(0.9);
-    transform: scale(1.2);
+    filter: brightness(1.0);
+    transform: scale(1.25);
 }
 .icon-wrap {
-    margin-right: 16px;
+    margin-right: 22px;
     z-index: 0;
 }
 
@@ -132,10 +132,10 @@ p {
     border-radius: 6px;
     overflow: hidden;
     margin: 0 28px 28px 0;
-    transition: all 0.3s; 
     padding: 24px;
     height: 305px;
     overflow: hidden;
+    transition: all 0.3s; 
 } .cert:hover {
     background-color: #1b1c1d;
 } .cert p {
@@ -168,7 +168,7 @@ p {
     padding: 24px;
     border-radius: 8px;
     margin: 12px;
-    filter: grayscale(0.7) brightness(0.8);
+    filter: grayscale(0.8) brightness(0.8);
     transition: all 0.3s;
 } .education-wrap .edu-sub-wrap:hover {
     filter: grayscale(0) brightness(1);
@@ -205,10 +205,9 @@ p {
     position: relative;
     top: 24px;
     margin-right: 28px;
-    filter: brightness(1);
     transition: all 0.3s;
 } .contact-wrap .contact-img:hover {
-    filter: brightness(0.6);
+    transform: scale(1.2);
 } .contact-wrap a {
     color: #ffffff;
 } .contact-wrap a:hover {
@@ -225,7 +224,7 @@ p {
 
 .parallax {
     /* The image used */
-    background-image: url('./assets/desktop.jpg');
+    background-image: url('./assets/desktop-2.jpg');
   
     /* Full height */
     height: 100vh;
