@@ -75,8 +75,8 @@
     --rounded-image-border-color: #dadada;
     --rounded-image-border-width: 2px;
     /* Tooltip */
-    --tooltip-background-color: #ffffff;
-    --tooltip-text-color: #000000;
+    --tooltip-background-color: #ffffff9c;
+    --tooltip-text-color: #0a0a0a;
 }
 
 * {
@@ -453,7 +453,7 @@ mark {
   background-color: var(--tooltip-background-color);
   color: var(--tooltip-text-color);
   text-align: center;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
