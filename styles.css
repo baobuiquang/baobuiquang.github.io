@@ -159,7 +159,7 @@ p {
 } .education-wrap .edu-img {
     border-radius: 8px;
     width: 90%;
-    transition: all 0.7s;
+    transition: all 1s;
 } .education-wrap .edu-img:hover {
     transform: scale(1.15);
 } .education-wrap .edu-sub-wrap {
@@ -169,13 +169,14 @@ p {
     border-radius: 8px;
     margin: 12px;
     filter: grayscale(0.8) brightness(0.8);
-    transition: all 0.3s;
+    transition: all 0.5s;
 } .education-wrap .edu-sub-wrap:hover {
     filter: grayscale(0) brightness(1);
 }
 
 .org-wrap {
-
+    border-left: 0.5px solid #474747;
+    padding-left: 3vw;
 } .org-wrap .org-sub {
     color: #888888;
     margin: 4px 0 6px 0;
@@ -223,7 +224,7 @@ p {
   }
 
 .interests-wrap {
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .parallax {
@@ -270,3 +271,5 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
