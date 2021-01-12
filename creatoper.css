@@ -75,7 +75,7 @@
     --rounded-image-border-color: #dadada;
     --rounded-image-border-width: 2px;
     /* Tooltip */
-    --tooltip-background-color: #ffffff9c;
+    --tooltip-background-color: #fffffff6;
     --tooltip-text-color: #0a0a0a;
 }
 
@@ -418,7 +418,7 @@ mark {
 
 .tooltip-top .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 200px;
   background-color: var(--tooltip-background-color);
   color: var(--tooltip-text-color);
   text-align: center;
