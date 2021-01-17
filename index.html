@@ -77,7 +77,7 @@
       <!-- Avatar -->
       <div style="background-color: #ffffff; margin: 26px; padding: 4px; border-radius: 100%;">
         <div class="image-parent" style="height: 100px; width: 100px; border-radius: 100%;">
-          <img class="image-zoom" src="./assets/avatar.jpg">
+          <img class="image-zoom" id="myImg" src="./assets/avatar.jpg">
         </div>
       </div>
       <!-- Menu -->
@@ -129,6 +129,39 @@
 
   <!-- Body wrap rule -->
   <div class="body-wrap padding-for-side-nav" style="padding: 0; background-color: #202020;">
+    <!-- The Modal Image -->
+    <div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" src="./assets/RESET1010.jpg">
+        <p style="text-align: center; font-style: italic;" class="modal-text">AI Hackathon "RESET 1010"</p>
+        <div id="caption"></div>
+      </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+          captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+      </script>
+    </div>
     <!-- SECTION -->
     <div class="section-img parallax" style="height: 100vh;" id="buiquangbao">
       <h1 style="line-height: 1.4; margin-top: 14vh;" data-aos="fade-down">
