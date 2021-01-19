@@ -89,7 +89,7 @@ p {
     overflow: hidden;
     margin: 0 32px 32px 0;
     transition: all 0.3s;
-    padding: 16px;
+    padding: 10px;
 } @media only screen and (max-width: 768px) {
     .project {
         margin: 0 0px 16px 0;
@@ -101,7 +101,7 @@ p {
     height: 180px; 
     object-fit: cover;
 } .project .project-content {
-    padding: 0 6px 0 6px; 
+    padding: 0 14px 0 14px; 
     color: white;
 } .project .project-content h3 {
     letter-spacing: -0.25px;
