@@ -40,6 +40,22 @@
     rel="stylesheet">
   <!-- Custom CSS -->
   <link href="./styles.css" rel="stylesheet">
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -407,9 +423,11 @@
     </div>
     <!-- AWARDS -->
     <div class="section-1" id="awards">
+
       <h2 data-aos="fade-up">AWARDS</h2>
       <div style="height: var(--padding-1);"></div>
       <div class="award" data-aos="fade-up">
+        <div class="small-decor"></div>
         <p class="award-sub">1 x National Artificial Intelligence Hackathon</p>
         <h3>Winner of AI Hackathon "RESET 1010" - Third Prize</h3>
         <p>By Ministry of Science and Technology of Vietnam / Bộ Khoa học và Công nghệ Việt Nam</p>
@@ -441,6 +459,7 @@
         </div>
       </div>
       <div class="award" data-aos="fade-up">
+        <div class="small-decor"></div>
         <p class="award-sub">6 x National Math Competition</p>
         <h3>Violympic Math Competition Provincial Awards <mark>in 6 consecutive years</mark></h3>
         <p>By Ministry of Education and Training of Vietnam / Bộ Giáo dục và Đào tạo Việt Nam</p>
@@ -453,11 +472,13 @@
           2016-2017: Second Prize</p>
       </div>
       <div class="award" data-aos="fade-up">
+        <div class="small-decor"></div>
         <p class="award-sub">1 x Online International Math Competition</p>
         <h3>Prefinalist with Special Honour - International Youth Math Challenge 2020</h3>
         <p>By IYMC</p>
       </div>
       <div class="award" data-aos="fade-up">
+        <div class="small-decor"></div>
         <p class="award-sub">1 x University Competition</p>
         <h3>Prefinalist - BLIT 2019</h3>
         <p>By Faculty of Information Technology - University of Science</p>
@@ -560,13 +581,15 @@
       <div style="height: var(--padding-1);"></div>
       <!-- ORG -->
       <div class="row" data-aos="fade-up">
-        <div class="col-3">
-          <div class="image-parent" style="height: 12vw; width: 12vw; border-radius: 100%; background-color: white;">
-            <img class="image-zoom" src="./assets/orgs/microsoft.png">
+        <div class="col-2">
+          <div class="image-parent"
+            style="height: 10vw; width: 10vw; border-radius: 00%; background-color: rgb(27, 27, 27); object-fit: fill;">
+            <img class="image-zoom" style="background-color: black;" src="./assets/orgs/microsoft.png">
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <div class="org-wrap">
+            <div class="small-circle"></div>
             <h3>Microsoft Student Ambassador</h3>
             <p class="org-sub">Since January 2021</p>
             <p class="org-content">
@@ -574,13 +597,16 @@
               passion for making differences, amplify impact, building vibrant communities across
               the globe, sharing the latest tech, help students and communities, grow skills, solve real-world problems,
               lead in their local tech circles, develop technical and career skills, never stop learning and pushing to
-              reach the next step.
-              <br><br>
-              <img src="./assets/orgs/MLSA-NewStudent.png" style="border-radius: 8px;">
+              reach the next step.</p>
+            <br>
+            <button class="accordion">MLSA 2021 – Hard work and dedication</button>
+            <div class="panel">
+              <br>
+              <img src="./assets/orgs/MLSA-NewStudent.png" style="border-radius: 6px;">
               <br><br>
               <a target="_blank" href="https://studentambassadors.microsoft.com/en-US/profile/81497"><button
-                  style="cursor: pointer;">See my profile &raquo;</button></a>
-            </p>
+                  style="cursor: pointer;">See my MLSA profile &raquo;</button></a>
+            </div>
           </div>
         </div>
       </div>
@@ -589,13 +615,14 @@
       <div style="height: var(--padding-1);"></div>
       <!-- ORG -->
       <div class="row" data-aos="fade-up">
-        <div class="col-3">
-          <div class="image-parent" style="height: 12vw; width: 12vw; border-radius: 100%;">
+        <div class="col-2">
+          <div class="image-parent" style="height: 10vw; width: 10vw; border-radius: 00%;">
             <img class="image-zoom" src="./assets/orgs/designitus.png">
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <div class="org-wrap">
+            <div class="small-circle"></div>
             <h3>President of Academic Club "DESIGN ITUS"</h3>
             <p class="org-sub">President term 2020 - 2021, member since August 2019</p>
             <p class="org-content">
@@ -617,13 +644,14 @@
       <div style="height: var(--padding-1);"></div>
       <!-- ORG -->
       <div class="row" data-aos="fade-up">
-        <div class="col-3">
-          <div class="image-parent" style="height: 12vw; width: 12vw; border-radius: 100%;">
+        <div class="col-2">
+          <div class="image-parent" style="height: 10vw; width: 10vw; border-radius: 00%;">
             <img class="image-zoom" src="./assets/orgs/agrion.png">
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <div class="org-wrap">
+            <div class="small-circle"></div>
             <h3>Co-founder/AI Developer of AGRION Team</h3>
             <p class="org-sub">Since November 2020</p>
             <p class="org-content">
@@ -919,6 +947,25 @@
     </div>
 
   </div>
+
+
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -119,7 +119,10 @@ p {
 }
 
 .award {
+    border-left: 0.5px solid #474747;
+    padding-left: 2vw;
     margin-bottom: 48px;
+    position: relative;
 } .award p {
     margin: 0;
 } .award h3 {
@@ -131,6 +134,13 @@ p {
     color: #888888;
     margin: 4px 0 0 0;
     padding-left: 2vw;
+} .award .small-decor {
+    background-color: #474747;
+    width: 5.5px;
+    height: 28px;
+    position: absolute;
+    left: -3px;
+    top: 0px;
 }
 
 .cert {
@@ -183,6 +193,14 @@ p {
 .org-wrap {
     border-left: 0.5px solid #474747;
     padding-left: 3vw;
+    position: relative;
+}.org-wrap .small-circle {
+    background-color: #474747;
+    width: 5.5px;
+    height: 28px;
+    position: absolute;
+    left: -3px;
+    top: 0px;
 } .org-wrap .org-sub {
     color: #888888;
     margin: 4px 0 6px 0;
@@ -192,7 +210,7 @@ p {
     margin: 0;
 } .org-wrap p {
     margin: 0;
-}
+} 
 
 .activities-wrap {
 
@@ -398,3 +416,50 @@ p {
     text-align: center;
     margin-top: 30px;
   }
+
+
+
+
+
+
+
+
+
+
+
+.accordion {
+  background-color: #363636;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 14px 24px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color:  #4d4d4d; /*Active*/
+  color: #ffffff;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #ffffff; /*The icon*/
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 0;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
