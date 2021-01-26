@@ -8,6 +8,9 @@
     --scroll-bar-thumb-hover-color: #ffffff;
     --fullbav1-content-padding-top: 6%;
     --fullbav1-tranparency: 0.95;
+
+    --scrolltotop-color: #888888;
+    --scrolltotop-hover-color: #ffffff;
     /* ---------- Custom ---------- */
     --side-nav-background-color: #292929;
     --padding-left-for-side-nav: 200px;
@@ -384,4 +387,14 @@ p {
     .modal-content {
       width: 100%;
     }
+  }
+
+
+
+  .fullnav1-overlay-content {
+    position: relative;
+    top: var(--fullbav1-content-padding-top);
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
   }
