@@ -182,7 +182,7 @@ p {
     background-color: #ffffff;
     color: #000000;
     padding: 24px;
-    border-radius: 8px;
+    border-radius: 6px;
     margin: 12px;
     filter: grayscale(0.8) brightness(0.8);
     transition: all 0.5s;
