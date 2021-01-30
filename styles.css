@@ -463,3 +463,13 @@ p {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+
+
+.link-in-about {
+    color: #ffffff;
+    border-bottom: 1px dotted #969696;
+    transition: all 0.3s;
+} .link-in-about:hover {
+    border-bottom: 2px solid #ffffff;
+}
