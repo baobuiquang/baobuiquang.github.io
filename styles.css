@@ -473,3 +473,35 @@ p {
 } .link-in-about:hover {
     border-bottom: 2px solid #ffffff;
 }
+
+
+.ava-wrap {
+    background-color: #ffffff7e; 
+    margin: 26px; 
+    padding: 4px; 
+    /* border: 2px solid #5e5e5e; */
+    border-radius: 100%;
+    transition: all 0.4s;
+} .ava-wrap:hover {
+    background-color: #ffffff;
+    /* border: 1px solid transparent; */
+    border-radius: 100%;
+}
+
+
+
+.special-effect-wrap {
+    
+}
+.special-effect-wrap .special-effect {
+    position: absolute;
+    height: 2px;
+    width: 80px;
+
+    left: 0px;
+    top: 0px;
+
+    background-color: #ffffff00;
+} .special-effect-wrap:hover .special-effect {
+    background-color: #ffffff00;
+}
