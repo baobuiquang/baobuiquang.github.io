@@ -1,18 +1,6 @@
 :root {
-    /* Creatoper */
-    --text-color-light-mode: #ffffff;
-    --section-1-background-color: #202020;
-    --section-2-background-color: #262626;
-    --scroll-bar-track-color: #292929;
-    --scroll-bar-thumb-color: #888888;
-    --scroll-bar-thumb-hover-color: #ffffff;
-    --fullbav1-content-padding-top: 6%;
-    --fullbav1-tranparency: 0.95;
-
-    --scrolltotop-color: #888888;
-    --scrolltotop-hover-color: #ffffff;
     /* ---------- Custom ---------- */
-    --side-nav-background-color: #292929;
+    --side-nav-background-color: #202020;
     --padding-left-for-side-nav: 200px;
     --side-nav-padding: 20px;
 
@@ -87,7 +75,7 @@ p {
 }
 
 .project {
-    background-color: #363636; 
+    background-color: #2e2e2e; 
     border-radius: 6px;
     overflow: hidden;
     margin: 0 32px 32px 0;
@@ -98,7 +86,7 @@ p {
         margin: 0 0px 16px 0;
     }
 } .project:hover {
-    background-color: #1b1c1d;
+    background-color: #3f3f3f;
 } .project .project-image {
     width: 100%; 
     height: 180px; 
@@ -144,7 +132,7 @@ p {
 }
 
 .cert {
-    background-color: #363636; 
+    background-color: #2e2e2e; 
     border-radius: 6px;
     overflow: hidden;
     margin: 0 28px 28px 0;
@@ -153,7 +141,7 @@ p {
     overflow: hidden;
     transition: all 0.3s; 
 } .cert:hover {
-    background-color: #1b1c1d;
+    background-color: #3f3f3f;
 } .cert p {
     margin: 0;
     color: #888888;
