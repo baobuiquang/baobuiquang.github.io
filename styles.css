@@ -1,495 +1,153 @@
 :root {
-    /* ---------- Custom ---------- */
-    --side-nav-background-color: #202020;
-    --padding-left-for-side-nav: 200px;
-    --side-nav-padding: 20px;
-
-    --padding-1: 4vh; /*Title vs content*/
+    --theme-color: #21C777;
+    --theme-color-hover: #18a05e;
 }
 
 * {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
+
+::selection {
+    color: #000000;
+    background: #ffffff;
+  }
+
+img {
+    width: 100%;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+mark {
+    background-color: #cccccc;
+    color: #000000;
+    /* border: 1px solid #ffffff; */
+    padding: 0px 5px;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 500;
+} h2 {
+    font-weight: 500;
+} h3 {
+    font-weight: 400;
+} 
 
 p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* font-weight: 400; */
-    color: #ebebeb;
-}
-
-.padding-for-side-nav {
-    margin-left: var(--padding-left-for-side-nav);
-} @media only screen and (max-width: 768px) {
-    .padding-for-side-nav {
-        margin-left: 0;
-    }
-  }
-
-#side-nav {
-    background-color: var(--side-nav-background-color);
-    position: fixed;
-    height: 100%;
-    width: var(--padding-left-for-side-nav);
-    padding: var(--side-nav-padding);
-}
-
-.side-nav-link {
-    background-color: transparent;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0px;
     color: #bbbbbb;
-    padding: 10px 26px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    transition: all 0.3s;
-} .side-nav-link:hover {
-    background-color: #bbbbbb;
-    color: #292929;
 }
 
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 32px;
-    }
-  }
+a {
+    font-weight: 300;
+    text-decoration: none;
+    color: #9b9b9b;
+    transition: all 0.5s;
+} a:hover {
+    color: white;
+} .bdudr {
+    font-style: italic;
+    color: #d6d6d6;
+    border-bottom: 1px dotted #525252;
+} .bdudr:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #e5ff00;
+}
+
+.section-margin {
+    height: 15vh;
+    width: 1px;
+}
+
+.line-margin {
+    height: 8px;
+    width: 0;
+}
+
+
+
 
 .icon {
-    height: 32px;
-    width: 32px;
-    filter: brightness(0.9);
+    height: 24px;
+    width: 24px;
+    filter: brightness(0.6);
     transition: all 0.3s;
 } .icon:hover {
     filter: brightness(1.0);
-    transform: scale(1.25);
-}
-.icon-wrap {
-    margin-right: 22px;
-    z-index: 0;
-}
-
-.personality-box {
-    background-color: #3b3b3b;
-    transition: all 0.3s;
-} .personality-box:hover {
-    background-color:#484570;
-}
-
-.project {
-    background-color: #2e2e2e; 
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 0 32px 32px 0;
-    transition: all 0.3s;
-    padding: 10px;
-} @media only screen and (max-width: 768px) {
-    .project {
-        margin: 0 0px 16px 0;
-    }
-} .project:hover {
-    background-color: #3f3f3f;
-} .project .project-image {
-    width: 100%; 
-    height: 180px; 
-    object-fit: cover;
-} .project .project-content {
-    padding: 0 14px 0 14px; 
-    color: white;
-} .project .project-content h3 {
-    letter-spacing: -0.25px;
-} .project .project-description {
-    color: #e7e7e7;
-    text-align: justify; 
-    margin: 0 0 12px 0;
-} .project .project-sub-title {
-    font-size: 12px; color: #858585; margin: 0;
-} .project .project-sub-content {
-    margin: 0 0 12px 0;
-}
-
-.award {
-    border-left: 0.5px solid #474747;
-    padding-left: 2vw;
-    margin-bottom: 48px;
-    position: relative;
-} .award p {
-    margin: 0;
-} .award h3 {
-    margin: 4px 0 4px 0;
-} .award .award-sub {
-    margin: 4px 0 0 0;
-    color: #888888;
-} .award .award-sub-2 {
-    color: #888888;
-    margin: 4px 0 0 0;
-    padding-left: 2vw;
-} .award .small-decor {
-    background-color: #474747;
-    width: 5.5px;
-    height: 28px;
-    position: absolute;
-    left: -3px;
-    top: 0px;
-}
-
-.cert {
-    background-color: #2e2e2e; 
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 0 28px 28px 0;
-    padding: 24px;
-    height: 305px;
-    overflow: hidden;
-    transition: all 0.3s; 
-} .cert:hover {
-    background-color: #3f3f3f;
-} .cert p {
-    margin: 0;
-    color: #888888;
-} .cert h3 {
-    margin: 0 0 4px 0;
-} .cert-logo {
-    height: 100px;
-    width: auto;
-}
-
-.education-wrap {
-    text-align: center;
-} .education-wrap p {
-    margin: 0;
-} .education-wrap h3 {
-    margin: 6px 0 6px 0;
-} .education-wrap .sub-title {
-    color: #888888;
-} .education-wrap .edu-img {
-    border-radius: 8px;
-    width: 90%;
-    transition: all 1s;
-} .education-wrap .edu-img:hover {
-    transform: scale(1.15);
-} .education-wrap .edu-sub-wrap {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 24px;
-    border-radius: 6px;
-    margin: 12px;
-    filter: grayscale(0.8) brightness(0.8);
-    transition: all 0.5s;
-} .education-wrap .edu-sub-wrap:hover {
-    filter: grayscale(0) brightness(1);
-}
-
-.org-wrap {
-    border-left: 0.5px solid #474747;
-    padding-left: 3vw;
-    position: relative;
-}.org-wrap .small-circle {
-    background-color: #474747;
-    width: 5.5px;
-    height: 28px;
-    position: absolute;
-    left: -3px;
-    top: 0px;
-} .org-wrap .org-sub {
-    color: #888888;
-    margin: 4px 0 6px 0;
-} .org-wrap .org-content {
-    text-align: justify;
-} .org-wrap h3 {
-    margin: 0;
-} .org-wrap p {
-    margin: 0;
-} 
-
-.activities-wrap {
-
-} .activities-wrap p {
-    color: #969696;
-    margin: 0 0 4px 0;
-} .activities-wrap h3 {
-    margin: 32px 0 6px 0;
-}
-
-.contact-wrap {
-
-} .contact-wrap .contact-img {
-    height: 32px;
-    width: 32px;
-    float: left;
-    position: relative;
-    top: 24px;
-    margin-right: 28px;
-    transition: all 0.3s;
-} .contact-wrap .contact-img:hover {
     transform: scale(1.2);
-} .contact-wrap a {
-    color: #ffffff;
-} .contact-wrap a:hover {
-    color: #b9b9b9;
-} .contact-wrap h1 {
-    font-size: 28px;
-    margin: 16px 0 0 0;
-    padding: 0;
-} @media only screen and (max-width: 768px) {
-    .contact-wrap h1 {
-        font-size: 16px;
-    }
-  }
-
-.interests-wrap {
-    padding-right: 20px;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url('./assets/desktop-2.jpg');
-  
-    /* Full height */
-    height: 100vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} @media only screen and (max-width: 768px) {
-    .parallax {
-        height: 100%;
-    }
-  }
-
-.parallax-1 {
-    /* The image used */
-    background-image: url('./assets/RESET1010.jpg');
-  
-    /* Full height */
-    height: 20vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.parallax-2 {
-    /* The image used */
-    background-image: url('./assets/desktop.jpg');
-  
-    /* Full height */
-    height: 20vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-/* ---------------------------------------------- Modal Image ------------------------------------------------------ */
-#myImg {
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  #myImg:hover {
-    opacity: 0.9;
-  }
-
-  /* The Modal (background) */
-  .modal {
-    display: none;
-    /* Hidden by default */
+/* ----------------------- Hover to display Div ----------------------- */
+/* .hidden {
+    z-index: -1;
     position: fixed;
-    /* Stay in place */
-    z-index: 1000;
-    /* Sit on top */
-    padding-top: 80px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    /* overflow: auto; */
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.95);
-    /* Black w/ opacity */
-  }
+    top: 30vh;
+    left: 10vw;
+    opacity: 0;
+    transition: all 0.5s;
+} .hidden .hidden-img {
+    width: 30vw;
+    border-radius: 6px;
+}
+  .hover-to-display:hover + .hidden {
+    opacity: 1;
+  } */
 
-  /* Modal Content (image) */
-  .modal-content {
-    margin: auto;
-    padding: 0px;
-    display: block;
-    width: 100%;
-    max-width: 58vw;
-  }
-
-  /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-
-  /* Add Animation */
-  .modal-content, .modal-text,
-  #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-
-  @-webkit-keyframes zoom {
-    from {
-      -webkit-transform: scale(0)
-    }
-
-    to {
-      -webkit-transform: scale(1)
-    }
-  }
-
-  @keyframes zoom {
-    from {
-      transform: scale(0)
-    }
-
-    to {
-      transform: scale(1)
-    }
-  }
-
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px) {
-    .modal-content {
-      width: 100%;
-    }
-  }
-
-
-
-  .fullnav1-overlay-content {
-    position: relative;
-    top: var(--fullbav1-content-padding-top);
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-
-
-
-
-
-
-
-
-
+/* --------------------- Expand Button ---------------------- */
+.expandable {
+    margin: 0px 0 0 0;
+    padding: 0;
+}
 
 .accordion {
-  background-color: #363636;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 14px 24px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color:  #4d4d4d; /*Active*/
-  color: #ffffff;
-}
-
-.accordion:after {
-  content: '\002B';
-  color: #ffffff; /*The icon*/
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.panel {
-  padding: 0 0;
-  background-color: transparent;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-
-
-.link-in-about {
+    padding: 14px 0 14px 2.5vw;
+    background-color: transparent;
     color: #ffffff;
-    border-bottom: 1px dotted #969696;
-    transition: all 0.3s;
-} .link-in-about:hover {
-    border-bottom: 2px solid #ffffff;
-}
-
-
-.ava-wrap {
-    background-color: #ffffff7e; 
-    margin: 26px; 
-    padding: 4px; 
-    /* border: 2px solid #5e5e5e; */
-    border-radius: 100%;
-    transition: all 0.4s;
-} .ava-wrap:hover {
-    background-color: #ffffff;
-    /* border: 1px solid transparent; */
-    border-radius: 100%;
-}
-
-
-
-.special-effect-wrap {
-    
-}
-.special-effect-wrap .special-effect {
-    position: absolute;
-    height: 2px;
-    width: 80px;
-
-    left: 0px;
-    top: 0px;
-
-    background-color: #ffffff00;
-} .special-effect-wrap:hover .special-effect {
-    background-color: #ffffff00;
-}
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.3s;
+    border-left: 1px solid #858585;
+  } .accordion h3, p {
+      margin: 2px 0;
+  }
+  
+  .active, .accordion:hover {
+    background-color:  transparent; /*Active*/
+    color: #ffffff;
+    border-left: 5px solid #ffffff;
+  }
+  
+  .accordion::before {
+    position: relative;
+    height: 0;
+    content: '';
+    color: #ffffff; /*The icon*/
+    font-weight: bold;
+    float: right;
+    top: -8px;
+    right: 0px;
+    font-size: 32px;
+    color: #ffffff;
+  }
+  
+  .active::before {
+    content: "\2022";
+  }
+  
+  .panel {
+    padding: 0 0 0 calc(2.5vw + 4px);
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  } .panel p {
+      margin: 8px 0 4px 0;
+  }

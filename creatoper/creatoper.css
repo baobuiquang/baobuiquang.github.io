@@ -1,0 +1,177 @@
+:root {
+    /* Text System */
+    --text-color: #ffffff;
+    --font-size-0: 16px; /*p*/
+    --font-size-1: 42px; /*h1*/
+    --font-size-2: 32px; /*h2*/
+    --font-size-3: 28px; /*h3*/
+    --font-size-4: 16px; /*h4*/
+    --font-size-5: 16px; /*h5*/
+    --font-size-6:  14px; /*h6*/
+    --font-size-mobile-0: 16px; /*p*/
+    --font-size-mobile-1: 28px; /*h1*/
+    --font-size-mobile-2: 22px; /*h2*/
+    --font-size-mobile-3: 20px; /*h3*/
+    --font-size-mobile-4: 18px; /*h4*/
+    --font-size-mobile-5: 16px; /*h5*/
+    --font-size-mobile-6:  14px; /*h6*/  
+    /* Scroll To Top */
+    --scrolltotop-size: 20px;
+    --scrolltotop-color: #8a8a8a;
+    --scrolltotop-hover-color: #ffffff;
+    --scrolltotop-bottom-distance: 10px;
+    --scrolltotop-right-margin: 10px;
+    --scrolltotop-z-index: 100;
+    --scrolltotop-border: none;
+    --scrolltotop-outline: none;
+    --scrolltotop-cursor: pointer;
+    --scrolltotop-padding: 20px;
+    --scrolltotop-background-color: transparent;
+    /* Custom Scroll Bar */
+    --scroll-bar-width: 4px;
+    --scroll-bar-track-color: transparent;
+    --scroll-bar-thumb-color: #666666;
+    --scroll-bar-thumb-hover-color: #a1a1a1;
+    /* Top Navigation Bar */
+    --navbar-bg-color: transparent;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+/* ======================================== RWD12 System ======================================== */
+.row { margin: 0 8.33%;
+} @media only screen and (min-width: 768px) {
+    .row {margin: 0;}
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    width: 100%;
+    float: left;
+} @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;} .col-2 {width: 16.66%;} .col-3 {width: 25%;} .col-4 {width: 33.33%;} .col-5 {width: 41.66%;} .col-6 {width: 50%;} .col-7 {width: 58.33%;} .col-8 {width: 66.66%;} .col-9 {width: 75%;} .col-10 {width: 83.33%;} .col-11 {width: 91.66%;} .col-12 {width: 100%;}
+}
+
+/* ======================================== RWD-n System ======================================== */
+.none-display {
+    color: transparent;
+}
+[class*="row-"] { margin: 0 8.33%;
+} @media only screen and (min-width: 768px) {
+    [class*="row-"] { margin: 0; }
+}
+.row-2::after, .row-3::after, .row-4::after, .row-5::after, .row-6::after, .row-7::after, .row-8::after, .row-9::after, .row-10::after, .row-11::after, .row-12::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.row-2 .col, .row-3 .col, .row-4 .col, .row-5 .col, .row-6 .col, .row-7 .col, .row-8 .col, .row-9 .col, .row-10 .col, .row-11 .col, .row-12 .col {
+    width: 100%;
+    float: left;
+} @media only screen and (min-width: 768px) {
+    .row-2 .col {width: 50%;} .row-3 .col {width: 33.33%;} .row-4 .col {width: 25%;} .row-5 .col {width: 20%;} .row-6 .col {width: 16.66%;} .row-7 .col {width: 14.28%;} .row-8 .col {width: 12.5%;} .row-9 .col {width: 11.11%;} .row-10 .col {width: 10%;} .row-11 .col {width: 9.09%;} .row-12 .col {width: 8.33%;}
+}
+
+/* ======================================== Text System ======================================== */
+p {
+    font-size: var(--font-size-0);
+} h1 {
+    font-size: var(--font-size-1);
+} h2 {
+    font-size: var(--font-size-2);
+} h3 {
+    font-size: var(--font-size-3);
+} h4 {
+    font-size: var(--font-size-4);
+} h5 {
+    font-size: var(--font-size-5);
+} h6 {
+    font-size: var(--font-size-6);
+}
+@media only screen and (max-width: 768px) {
+    p {
+        font-size: var(--font-size-mobile-0);
+    } h1 {
+        font-size: var(--font-size-mobile-1);
+    } h2 {
+        font-size: var(--font-size-mobile-2);
+    } h3 {
+        font-size: var(--font-size-mobile-3);
+    } h4 {
+        font-size: var(--font-size-mobile-4);
+    } h5 {
+        font-size: var(--font-size-mobile-5);
+    } h6 {
+        font-size: var(--font-size-mobile-6);
+    }
+}
+
+/* ---------------------------------------- Scroll to top ---------------------------------------- */
+#scrolltotop {
+    font-size: var(--scrolltotop-size);
+    display: none;
+    position: fixed;
+    bottom: var(--scrolltotop-bottom-distance);
+    right: var(--scrolltotop-right-margin);
+    z-index: var(--scrolltotop-z-index);
+    border: var(--scrolltotop-border);
+    outline: var(--scrolltotop-outline);
+    color: var(--scrolltotop-color);
+    cursor: var(--scrolltotop-cursor);
+    padding: var(--scrolltotop-padding);
+    background-color: var(--scrolltotop-background-color);
+} #scrolltotop:hover {
+    color: var(--scrolltotop-hover-color);
+}
+
+/* ---------------------------------------- Custom Scroll Bar ---------------------------------------- */
+::-webkit-scrollbar { width: var(--scroll-bar-width); }
+::-webkit-scrollbar-track { background: var(--scroll-bar-track-color); }
+::-webkit-scrollbar-thumb { background: var(--scroll-bar-thumb-color); }
+::-webkit-scrollbar-thumb:hover { background: var(--scroll-bar-thumb-hover-color); }
+
+/* ---------------------------------------- Just Display On Desktop/Mobile ---------------------------------------- */
+
+.just-display-on-desktop {
+    display: block;
+} @media only screen and (max-width: 768px) {
+    .just-display-on-desktop {
+        display: none;
+    }
+}
+.just-display-on-mobile {
+    display: block;
+} @media only screen and (min-width: 768px) {
+    .just-display-on-mobile {
+        display: none;
+    }
+}
+
+/* ---------------------------------------- Anti-copy ---------------------------------------- */
+.anti-copy {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
