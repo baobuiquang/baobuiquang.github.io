@@ -1,0 +1,37 @@
+<div id="youarereadingID" class="youarereading hide">
+    <div style="margin-bottom: 1vh; font-size: 13px;">
+        You are reading
+    </div>
+    <h4 style="margin-bottom: 1vh;">
+        {{ page.title }}
+    </h4>
+    <div style="font-size: 13px; margin-bottom: 1vh;">
+        By
+        <a href="{{page.authorlink}}" target="_blank" style="border: none;">
+            {{ page.author }}
+        </a>
+        | {{ page.date | date: "%B %-d, %Y" }}
+    </div>
+    <div style="margin-bottom: 4vh;">
+        {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}" style="border: none;">
+            <mark class="tag-2">
+                {{ tag_name }}
+            </mark>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    youarereadingID = document.getElementById("youarereadingID");
+    var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 500) {
+            youarereadingID.className = "youarereading show"
+        } else {
+            youarereadingID.className = "youarereading hide"
+        }
+    };
+    window.addEventListener("scroll", myScrollFunc);
+</script>

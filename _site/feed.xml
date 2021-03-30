@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-03-30T17:39:13+07:00</updated><id>/feed.xml</id><title type="html">Creatoper</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">What is Data Science?</title><link href="/what-is-data-science" rel="alternate" type="text/html" title="What is Data Science?" /><published>2021-03-29T09:50:00+07:00</published><updated>2021-03-29T09:50:00+07:00</updated><id>/what-is-data-science</id><content type="html" xml:base="/what-is-data-science">&lt;h3 id=&quot;1-supply-and-demand-for-data-science&quot;&gt;1. Supply and demand for data science&lt;/h3&gt;
+
+&lt;p&gt;Back in the early 60’s, Barbra Streisand sang, “People who need people “are the luckiest people in the world.” And really, the need for belonging, the need to connect, and the need to be valued are all fundamental human motivations. As it happens, working in data science can actually help fulfill some of these foundational needs. By placing you in a position to one, do something wonderful for other people and two, in return to be valued for it. It goes back to something that a Harvard Business Review had to say about it back in 2012. Thomas Davenport and D.J. Patil made the extraordinary claim that data science, of all things, was the sexiest job of the 21st century. But they had good reasons for saying this. They are argued that data scientists had one, a valuable combination of rare qualities that two, put them in high demand. So here are some of the rare qualities. Data scientists are able to find order, meaning, and value in unstructured data. That’s online sources, the graphs of social networks, audio, images, videos, and so on. They’re able to predict outcomes like who’s likely to purchase something or who poses a security threat, or who’s likely to develop a disease, or respond well to a new treatment. They’re able to automate processes like getting individualized recommendations while shopping, identifying friends in photographs, or giving psychological support in AI chat bots. And they’re in high demand for a couple of really simple reasons. They provide hidden insight. Data science is able to show you things that you simply can’t find through other means. And that hidden insight, in turn, provides significant competitive advantage to any organization that has the good foresight to employ and really make the most of data science. Give you a little bit more information about supply and demand here. Number one, there’s been extraordinary growth in job ads. People are looking for data science. So for example, a January 2019 report from Indeed reported a 29% increase in job ads for data science over one year and 344% over six years. This is extraordinary growth. Next, they showed that there’s growth in job searches. People actually trying to find jobs in data science. And they found only a 14% growth over one year. Now that may sound a little low, but the important thing to hear is that the demand is outstripping the availability. And any time that happens, you’ve got value. And what this means, you know, again, specifically, the gap in supply and demand is it significant? LinkedIn reported a gap of over 150,000 jobs in data science. And it’s even more dramatic when you show in related fields like machine learning engineer, artificial intelligence specialist, and so on. It’s big. There are so many possibilities here to do something that is valued for others. And it’s reflected in the salaries for data science. The average salary in data science is $107,000 a year. Which, just for comparison purposes, is over twice the national median in the U.S. of $47,000 a year. And that means that this is one of the best jobs in the U.S. Glass Door in January of 2019 published it’s annual list of best jobs in America and for the fourth year in a row, data scientist is at the top of the list, based on job satisfaction, number of openings, salary. It really lets you know there is extraordinary potential here, something that you can provide of amazing value for potential employers. And you fan fulfill that great need and you can be valued for the things that you’re able to contribute by embracing the methods and the benefits of data science in your work.&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="datascience" /><summary type="html">1. Supply and demand for data science</summary></entry><entry><title type="html">Publish your package to npm</title><link href="/publish-your-package" rel="alternate" type="text/html" title="Publish your package to npm" /><published>2021-03-25T20:00:00+07:00</published><updated>2021-03-25T20:00:00+07:00</updated><id>/publish-your-package</id><content type="html" xml:base="/publish-your-package">&lt;h2 id=&quot;1-what-is-npm-create-an-npm-account&quot;&gt;1. What is &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;? Create an npm account.&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is a package manager for the JavaScript programming language.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is the command line client that allows developers to install and publish packages - packaged modules of code.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is an &lt;a href=&quot;https://github.com/npm&quot;&gt;open source&lt;/a&gt; project and free to use.&lt;/p&gt;
+
+&lt;p&gt;Official website: &lt;strong&gt;&lt;a href=&quot;https://npmjs.com/&quot;&gt;npm&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/npm/1-npm-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Create an npm account at: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/signup&quot;&gt;Sign Up&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Login: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/login&quot;&gt;Login&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/npm/3-npm-sign-up.png&quot; alt=&quot;NPM Sign Up&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-what-is-nodejs-download-nodejs&quot;&gt;2. What is &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;? Download Node.js.&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; is an open-source, cross-platform, back-end JavaScript runtime environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; is an &lt;a href=&quot;https://github.com/nodejs&quot;&gt;open source&lt;/a&gt; project and free to use.&lt;/p&gt;
+
+&lt;p&gt;Official website: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Nodejs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/docs/&quot;&gt;Nodejs Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/npm/1-nodejs-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Download Node.js at: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;Download Node.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/npm/2-nodejs-download.png&quot; alt=&quot;Nodejs Download&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-prepare-your-package&quot;&gt;3. Prepare your package&lt;/h2&gt;
+
+&lt;p&gt;Put all your package’s files in 1 folder&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁your-pkg-name
+├── 📁your-pkg-name-01
+├── 📁your-pkg-name-02
+└── 📁your-pkg-name-03
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁your-pkg-name
+├── 📁your-pkg-name-01
+├── 📁your-pkg-name-02
+└── 📁your-pkg-name-03
+└── package.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-pkg-name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Write your package's description here.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-pkg-name.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;echo &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; exit 1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-package-keyword&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;license&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MIT&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-publish-your-package&quot;&gt;4. Publish your package&lt;/h2&gt;
+
+&lt;style&gt;
+.youtube {
+    width: 100%; height: 46.87vw;
+    border: none; background: transparent;
+} @media only screen and (min-width: 768px) {
+    .youtube {
+        width: 42vw; height: 23.625vw;
+    }
+}
+&lt;/style&gt;
+
+&lt;iframe class=&quot;youtube&quot; src=&quot;https://www.youtube.com/embed/lxxndOskI1o&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Open command line and navigate to your package’s folder&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Login your npm account&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that when you input the password, there is no clue show that you are typing. This will be confused if this is the first time you use the command line.&lt;/p&gt;
+
+&lt;p&gt;Initialize npm package manager&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you have prepared your package, all you need to do is just enter.&lt;/p&gt;
+
+&lt;p&gt;Finally, type&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Publish your package&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm publish
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you see the line&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ your-pkg-name@1.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;your package has been published on npm successfully!&lt;/p&gt;
+
+&lt;p&gt;If there is any error, you should:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check your package’s name, it maybe used by other user (for example: you can’t name your package &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vue&lt;/code&gt;). In this case, you should change your package’s name, or publish your package under your name or organization’s name.&lt;/li&gt;
+  &lt;li&gt;Check your folder’s structure, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.&lt;/li&gt;
+  &lt;li&gt;Check your npm account.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="web" /><category term="npm" /><summary type="html">1. What is npm? Create an npm account.</summary></entry><entry><title type="html">All markdown syntax</title><link href="/all-markdown-syntax" rel="alternate" type="text/html" title="All markdown syntax" /><published>2021-03-20T09:50:00+07:00</published><updated>2021-03-20T09:50:00+07:00</updated><id>/all-markdown-syntax</id><content type="html" xml:base="/all-markdown-syntax">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id imperdiet odio. Etiam quis volutpat mauris. Duis ligula lacus, maximus vel est sed, molestie finibus nisl. Aliquam erat volutpat. Mauris sit amet pretium urna, sit amet tristique enim. In eget arcu mollis, ultricies metus venenatis, tincidunt enim.&lt;/p&gt;
+
+&lt;p&gt;Vestibulum ac sodales nisi, et malesuada tellus. Mauris eu nibh tortor. Aenean egestas enim in est imperdiet, in posuere arcu facilisis. Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This is an &amp;lt;h1&amp;gt; tag
+## This is an &amp;lt;h2&amp;gt; tag
+### This is an &amp;lt;h3&amp;gt; tag
+#### This is an &amp;lt;h4&amp;gt; tag
+##### This is an &amp;lt;h5&amp;gt; tag
+###### This is an &amp;lt;h6&amp;gt; tag
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;this-is-an-h1-tag&quot;&gt;This is an &amp;lt;h1&amp;gt; tag&lt;/h1&gt;
+&lt;p&gt;Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.&lt;/p&gt;
+&lt;h2 id=&quot;this-is-an-h2-tag&quot;&gt;This is an &amp;lt;h2&amp;gt; tag&lt;/h2&gt;
+&lt;p&gt;Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.&lt;/p&gt;
+&lt;h3 id=&quot;this-is-an-h3-tag&quot;&gt;This is an &amp;lt;h3&amp;gt; tag&lt;/h3&gt;
+&lt;p&gt;Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.&lt;/p&gt;
+&lt;h4 id=&quot;this-is-an-h4-tag&quot;&gt;This is an &amp;lt;h4&amp;gt; tag&lt;/h4&gt;
+&lt;h5 id=&quot;this-is-an-h5-tag&quot;&gt;This is an &amp;lt;h5&amp;gt; tag&lt;/h5&gt;
+&lt;h6 id=&quot;this-is-an-h6-tag&quot;&gt;This is an &amp;lt;h6&amp;gt; tag&lt;/h6&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*Italic text*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Italic text&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Bold text**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~Strikethrough text~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;del&gt;Strikethrough text&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Combine: ***bold + italic*** or **bold + *italic* + ~~strikethrough~~**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Combine: &lt;strong&gt;&lt;em&gt;bold + italic&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;bold + &lt;em&gt;italic&lt;/em&gt; + &lt;del&gt;strikethrough&lt;/del&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item 2a&lt;/li&gt;
+      &lt;li&gt;Item 2b&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Item 1
+2. Item 2
+   1. Item 3a
+   2. Item 3b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item 3a&lt;/li&gt;
+      &lt;li&gt;Item 3b&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![Alt Text](https://images.unsplash.com/photo-1535952548450-d7447587e733)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![Alt Text](https://images.unsplash.com/photo-1535952548450-d7447587e733)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[This is a Link](http://buiquangbao.github.io/)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://buiquangbao.github.io/&quot;&gt;This is a Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; “Your time is limited, so don’t waste it living someone else’s life.”&amp;lt;br&amp;gt;
+&amp;gt; Steve Jobs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Your time is limited, so don’t waste it living someone else’s life.”&lt;br /&gt;
+Steve Jobs&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;There are 3 important files: `index.html`, `styles.css` and `scripts.js`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There are 3 important files: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styles.css&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scripts.js&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;
+```javascript
+function plus(p1, p2) {
+  return p1 + p2;
+}
+```
+&lt;/div&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| First   | Second  | Third   |
+| ------- | ------- | ------- |
+| Content | Content | Content |
+| Content | Content | Content |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First&lt;/th&gt;
+      &lt;th&gt;Second&lt;/th&gt;
+      &lt;th&gt;Third&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+      &lt;td&gt;Content&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] this is a complete item
+- [x] this is a complete item
+- [ ] this is an incomplete item
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;this is a complete item&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;this is a complete item&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;this is an incomplete item&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="web" /><category term="markdown" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id imperdiet odio. Etiam quis volutpat mauris. Duis ligula lacus, maximus vel est sed, molestie finibus nisl. Aliquam erat volutpat. Mauris sit amet pretium urna, sit amet tristique enim. In eget arcu mollis, ultricies metus venenatis, tincidunt enim.</summary></entry></feed>

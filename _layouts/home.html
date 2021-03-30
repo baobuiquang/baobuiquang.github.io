@@ -1,0 +1,108 @@
+---
+
+---
+
+{% include head.html %}
+
+<body>
+    {% include mobile-nav.html %}
+
+    <div class="row">
+        <div class="col-3">
+            <div class="side-panel-wrap">
+                <div class="side-panel-left">
+                    <a href="/" style="border: none;" class="just-display-on-desktop">
+                        <img src="../favicon.png" class="logo">
+                    </a>
+                    <!-- {% include youarereading.html %} -->
+                    {% include darkmode.html %}
+                </div>
+            </div>
+            &nbsp;
+        </div>
+        <div class="col-6">
+            <div class="main-panel">
+                <div style="height: 10vh;"></div>
+
+
+                {% for post in site.posts %}
+                <div style="margin-bottom: 2.2vh;">
+                    <a href="/tag/{{post.tags[0]}}" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            {{post.tags[0]}}
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        {{ post.date | date: "%B %-d, %Y" }}
+                    </span>
+                </div>
+                <a href="{{post.url}}" class="title-wrap">
+                    <h2 class="title" style="margin-bottom: 1.5vh;">
+                        {{ post.title }}
+                    </h2>
+                    <div class="review" style="margin-bottom: 5vh;">
+                        {{post.preview}}
+                    </div>
+                </a>
+
+                {% endfor %}
+
+
+
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                Thanks for reading!
+                <div style="margin: 6vh 0; height: 0.5px; width: 100%; background: var(--grey-line);"></div>
+                <p style="margin-bottom: 7vh; text-align: center;">
+                    <a href="/" style="font-weight: 400; border: none;">
+                        <script>document.write(new Date().getFullYear())</script>
+                        &copy;
+                        Creatoper
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="side-panel-wrap">
+                <div class="side-panel-right">
+                    {% include series-posts.html %}
+                </div>
+            </div>
+            &nbsp;
+        </div>
+    </div>
+
+
+    {% include scripts.html %}
+</body>
+
+</html>
+
+
+<!-- <br>
+<div>Post.html</div>
+<div id="test-scripts">> Error!</div>
+<div id="test-creatoper">> Error!</div>
+<div id="test-styles">> Green: styles.css load successfully!</div>
+<div id="test-creatopercss">> Green: creatoper.css load successfully!</div>
+<div id="test-creatopercontrol">> Green: creatoper-control.css load successfully!</div>
+<br> -->
