@@ -17,7 +17,7 @@
 
 body {
     transition: all ease 0.5s;
-    --background: #ffffff;
+    --background: #eeeeee;
     --text-1: #202020;
     --text-2: #555555;
     --link: #000000;
@@ -26,17 +26,19 @@ body {
     --svg-f: invert(0.0);
     /* --------------------------- */
     --border: 1px solid #d1d1d1;
+    --border-2: 2px solid #d1d1d1;
 }
 body.darkmode {
-    --background: #202020;
-    --text-1: #cccccc;
+    --background: #151515;
+    --text-1: #dfdfdf;
     --text-2: #919191;
     --link: #eeeeee;
     --accent: #00d1d1;
     --code-color: #f0808b;
     --svg-f: invert(1.0);
     /* --------------------------- */
-    --border: 1px solid #8a8a8a;
+    --border: 1px solid #272727;
+    --border-2: 2px solid #272727;
 }
 body {
     background: var(--background);
@@ -44,16 +46,19 @@ body {
     overflow-x: hidden;
 }
 
-
+img {
+    width: 100%;
+    
+}
 
 a {
     color: var(--link);
     font-weight: 500;
     text-decoration: none;
-    border-bottom: 2px solid #85858500;
-    transition: all ease 0.05s;
+    text-decoration: underline 2.5px #85858500;
+    transition: all ease 0.2s;
 } a:hover {
-    border-bottom: 2px solid var(--accent);
+    text-decoration: underline 2.5px var(--text-1);
 }
 
 .svg-f {
@@ -73,9 +78,21 @@ a {
     font-size: 20px;
     font-weight: 600;
     margin: 16px 0 0 16.66vw;
-} .top-nav .nav-btn {
+} @media screen and (max-width: 768px) {
+    .top-nav .name {
+        margin: 16px 0 0 8.33vw;
+    }
+}
+.top-nav .nav-btn {
     float: right;
     margin: 12px 16.66vw 0 0;
+} @media screen and (max-width: 768px) {
+    .top-nav .nav-btn {
+        margin: 12px 8.33vw 0 0;
+    }
+}
+.top-nav .nav-btn img {
+    width: initial;
 } .top-nav .nav-link-wrap {
     float: right;
     margin: 19px 0 0 0;
@@ -100,9 +117,9 @@ a {
     width: 175px;
     height: 6px;
     margin-top: 12px;
-    border-bottom: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
+    border-bottom: var(--border-2);
+    border-left: var(--border-2);
+    border-right: var(--border-2);
     float: left;
 }
 .under-2{
@@ -110,9 +127,9 @@ a {
     height: 6px;
     margin-top: 12px;
     margin-left: 13px;
-    border-bottom: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
+    border-bottom: var(--border-2);
+    border-left: var(--border-2);
+    border-right: var(--border-2);
     float: left;
 }
 .undertext-1 {
@@ -130,7 +147,7 @@ a {
     float: left;
 }
 .pfl-section {
-    margin-bottom: 128px;
+    padding-top: 128px;
 }
 .pfl-title {
     font-size: 24px;
@@ -140,9 +157,87 @@ a {
 .pfl-text {
     font-size: 14px;
     text-align: justify; 
-    line-height: 1.5; 
+    line-height: 1.7; 
     color: var(--text-2);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+} .pfl-text a {
+    color: var(--text-2);
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-2);
+    transition: all ease 0.3s !important;
+} .pfl-text a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+.pfl-contact p {
+    margin-bottom: 12px;
+} .pfl-contact a {
+    font-weight: 400;
+}
+
+
+
+.all-posts .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline 3px #00000000;
+    transition: all ease 0.2s;
+    border: none;
+} .all-posts .title:hover {
+    text-decoration: underline 3px var(--text-1);
+} .all-posts .preview {
+    margin: 0;
+}
+
+
+
+
+.featured-post {
+    width: 100%;
+} .featured-post .img-wr {
+    padding-right: 2vw;
+} .featured-post .title {
+    font-size: 24px;
+    margin-top: 16px;
+    text-decoration: underline 3px #00000000;
+    transition: all ease 0.2s;
+} .featured-post .title:hover {
+    text-decoration: underline 3px var(--text-1);
+} .featured-post .lnk {
+
+} .featured-post .lnk:hover {
+    
+}
+.featured-post-2 {
+    width: 100%;
+} .featured-post-2 img {
+    /* padding-right: 1vw; */
+} .featured-post-2 .title {
+    font-size: 22px;
+    margin-top: 16px;
+    text-decoration: underline 3px #00000000;
+    transition: all ease 0.2s;
+} .featured-post-2 .title:hover {
+    text-decoration: underline 3px var(--text-1);
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: var(--text-1);
+    color: var(--background);
+    padding: 5px 14px;
+    margin-right: 8px;
+}
+.preview {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+    text-align: justify;
+    color: var(--text-2);
+    line-height: 1.5;
 }
 
 
@@ -150,8 +245,15 @@ a {
 .modal-top {
     background-color: #202020;  
     height: var(--top-nav-h);
-    border-bottom: var(--border);
+    border-bottom: 1px solid #3a3a3a;
     width: 100%;
+} .modal-top .menu-text {
+    padding: 19px 0 0 var(--menu-pd);
+    color: #f0f0f0;
+} @media screen and (max-width: 768px) {
+    .modal-top .menu-text {
+        padding: 19px 0 0 8.33vw;
+    }
 }
 .modal-cta {
     background-color: #202020; 
@@ -179,8 +281,19 @@ a {
     height: calc(100vh - var(--top-nav-h) - 330px);
     padding: 20px 0 18px var(--menu-pd);
     overflow-y: scroll;
+} @media screen and (max-width: 768px) {
+    .modal-links {
+        padding: 20px 0 18px 8.33vw;
+    }
 } .modal-links .a-wrap {
     margin-bottom: 12px;
+} .modal-links .a-wrap a {
+    font-size: 16px;
+    font-weight: 400;
+} @media screen and (max-width: 768px) {
+    .modal-links .a-wrap a {
+        font-size: 20px;
+    }
 }
 .modal-bottom {
     position: absolute;
@@ -188,10 +301,10 @@ a {
     bottom: 0;
 } 
 .modal-bottom .modal-views {
-    border-top: var(--border);
+    /* border-top: var(--border); */
     width: 100%;
     padding: 16px var(--menu-pd);
-    font-size: 10.5px;
+    font-size: 9.5px;
     text-align: center;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -202,7 +315,7 @@ a {
     pointer-events: none;
 }
 .fhs {
-    font-size: 10.5px;
+    font-size: 9.5px;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -214,20 +327,42 @@ a {
 .modal-bottom .modal-contact {
     border-top: var(--border);
     width: 100%;
-    padding: 16px var(--menu-pd);
+    padding: 13px var(--menu-pd) 9px  var(--menu-pd);
 } .modal-bottom .modal-contact img {
     margin: 6px;
     width: calc(100% - 12px);
+    transition: all ease 0.2s;
+} @media screen and (max-width: 768px) {
+    .modal-bottom .modal-contact img {
+        margin: 12px;
+        width: calc(100% - 24px);
+    }
+} .modal-bottom .modal-contact img:hover {
+    transform: scale(1.2);
 } 
 .modal-bottom .modal-darkmode {
     height: var(--top-nav-h);
     border-top: var(--border);
     width: 100%;
     padding: 16px var(--menu-pd);
+} @media screen and (max-width: 768px) {
+    .modal-bottom .modal-darkmode {
+        height: 69px;
+        padding: 16px 8.33vw;
+    }
 }
-
-
-
+.modal-bottom .modal-darkmode .drk-text {
+    float: left; 
+    font-size: 14px; 
+    font-weight: 500; 
+    top: 4px; 
+    position: relative;
+} @media screen and (max-width: 768px) {
+    .modal-bottom .modal-darkmode .drk-text {
+        font-size: 18px;
+        top: 6px; 
+    }
+}
 
 
 
@@ -283,16 +418,25 @@ a {
     top: 10px;
     right: 10px;
     cursor: pointer;
+} @media screen and (max-width: 768px) {
+    .modal__close {
+        top: 10px;
+        right: 8.33vw;
+    }
 }
 /* Dark Mode */
-.darkmode-button
-{
+.darkmode-button {
     --drkbtn-w: 50px;
     --drkbtn-h: 26px;
     position: relative;
     width: var(--drkbtn-w);
     height: var(--drkbtn-h);
     cursor: pointer;
+} @media screen and (max-width: 768px) {
+    .darkmode-button {
+        --drkbtn-w: 72px;
+        --drkbtn-h: 36px;
+    }
 }
 .darkmode-button input[type="checkbox"]
 {
@@ -359,7 +503,7 @@ a {
     padding: 0;
 }
 .accordion {
-    padding: 16px 0 16px 2.5vw;
+    padding: 8px 0 8px 2.5vw;
     background-color: transparent;
     color: var(--text-1);
     cursor: pointer;
@@ -372,10 +516,11 @@ a {
 } .accordion .h3 {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin: 8px 0;
 } .accordion .p {
     font-size: 14px;
     color: var(--text-2);
+    margin: 8px 0;
 }
 .active, .accordion:hover {
     background-color:  transparent; /*Active*/
@@ -385,14 +530,13 @@ a {
 .accordion::before {
     position: relative;
     height: 0;
-    content: '';
-    color: var(--text-1); /*The icon*/
+    content: ''; /*The icon*/
     font-weight: bold;
     float: right;
-    top: -8px;
+    top: 0px;
     right: 0px;
-    font-size: 32px;
-    color: var(--text-1);
+    font-size: 28px;
+    color: var(--text-2);
 }
 .active::before {
     content: "\2022";
@@ -403,12 +547,28 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
+} .panel .h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px 0;
 } .panel p {
     text-align: justify;
     font-size: 14px;
     color: var(--text-2);
-    line-height: 1.5;
-    margin: 8px 0 4px 0;
+    line-height: 1.7;
+    margin: 8px 0 8px 0;
+}  .panel  a {
+    font-size: 14px;
+    color: var(--text-2);
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-2);
+    transition: all ease 0.3s !important;
+} .panel  a:hover {
+    border-bottom: 1px solid var(--accent);
+} .panel img {
+    border-radius: 4px;
 }
 
 
@@ -428,7 +588,8 @@ a {
 
 
 
-/* .content h1 {
+
+.content h1 {
     margin: 24px 0;
     font-weight: 700;
     text-align: left;
@@ -456,7 +617,7 @@ a {
 .content p {
     font-size: 16px;
     margin-bottom: 12px;
-    line-height: 1.5;
+    line-height: 1.7;
     text-align: justify;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -467,6 +628,8 @@ a {
     pointer-events: none;
 }
 .content a {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-1);
     margin-bottom: 12px;
     font-weight: inherit;
     -webkit-user-select: all;
@@ -476,6 +639,9 @@ a {
     -o-user-select: all;
     user-select: text;
     pointer-events: all;
+    transition: all ease 0.0s;
+} .content a:hover {
+    border-bottom: 2px solid var(--text-1);
 }
 .content .highlighter-rouge {
     font-size: 15px;
@@ -557,7 +723,7 @@ a {
     position: relative;
     line-height: 1.5;
     padding-bottom: 12px;
-} */
+}
 
 
 

@@ -39,67 +39,318 @@
 </head>
 
 <body>
-    
-
-    <div class="row">
-        <div class="col-3">
-            <div class="side-panel-wrap">
-                <div class="side-panel-left">
-                    <a href="/" style="border: none;" class="just-display-on-desktop">
-                        <img src="../favicon.png" class="logo">
-                    </a>
-                    <!-- <div id="youarereadingID" class="youarereading hide">
-    <div style="margin-bottom: 1vh; font-size: 13px;">
-        You are reading
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop">&nwarr;</button>
+</div>
+    <div class="top-nav">
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
     </div>
-    <h4 style="margin-bottom: 1vh;">
-        Notebook
-    </h4>
-    <div style="font-size: 13px; margin-bottom: 1vh;">
-        By
-        <a href="" target="_blank" style="border: none;">
-            
-        </a>
-        | 
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f">
+        </label>
     </div>
-    <div style="margin-bottom: 4vh;">
-        
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            NOTEBOOK</a>
+        <a href="/" class="nav-link">
+            PROJECTS</a>
     </div>
 </div>
-<script>
-    youarereadingID = document.getElementById("youarereadingID");
-    var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 500) {
-            youarereadingID.className = "youarereading show"
-        } else {
-            youarereadingID.className = "youarereading hide"
-        }
-    };
-    window.addEventListener("scroll", myScrollFunc);
-</script> -->
-                    <!-- Dark Mode -->
-<div class="darkmode-wrap just-display-on-desktop">
-    <p style="font-size: 10px; font-weight: 400; margin-bottom: 6px;">
-        Dark Mode
-    </p>
-    <div class="darkmode-button">
-        <input type="checkbox" id="darkmodeCheck">
-        <span></span>
-        <label for="darkmodeCheck">&nbsp;</label>
-    </div>
-</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
                 </div>
             </div>
+            <div class="modal-cta just-display-on-desktop">
+                COVID-19 Virus Analysis and Diagnosis
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        READ THIS POST
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        Bui Quang Bao
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Experiences
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Projects
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Awards
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Certificates
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Education
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;">
+                        3
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-2">
             &nbsp;
         </div>
-        <div class="col-6">
-            <div class="main-panel">
-                <div style="height: 10vh;"></div>
+        <div class="col-8">
+
+            <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+            <div class="nav-link">
+                FEATURED POSTS
+            </div>
+            <div style="height: calc(var(--top-nav-h) - 20px);"></div>
+
+            <div class="featured-post">
+                <div class="row-2" style="margin: 0;">
+                    <div class="col">
+                        <div class="img-wr">
+                            <img src="../assets/projects/covid19prj.gif"
+                                style="padding: 10px 0; background: #000000; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="just-display-on-desktop">
+                            <mark class="tag">
+                                COVID-19
+                            </mark>
+                            <mark class="tag">
+                                MACHINE LEARNING
+                            </mark>
+                            <mark class="tag">
+                                DATA ANALYSIS
+                            </mark>
+                        </div>
+                        <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis" target="_blank">
+                            <h2 class="title">
+                                COVID-19 (Sars Cov 2) virus spread analysis and diagnosis from radiography
+                            </h2>
+                        </a>
+                        <div style="margin-top: 12px; font-size: 14px;">
+                            By <i>Bui Quang Bao</i>
+                        </div>
+                        <div class="preview">
+                            Analysis, the process of turning raw data into insights, can provide us with a view of how
+                            Coronavirus disease influences the communities, indicate if the development of a country
+                            affects its virus spread as well as the infection rate, the death rate and the recovered
+                            rate.
+                            Diagnosis method is significant in preventing the spread of the pandemic. With the dataset
+                            of chest X-ray, we can build a ML model to predict if a new X-ray image is from COVID-19
+                            infected or non-infected.
+                        </div>
+                        <div class="preview" style="margin-top: 12px; font-size: 14px;">
+                            &rdca;
+                            <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis"
+                                target="_blank" style="margin-right: 20px; color: var(--text-2);">
+                                Read on Github</a>
+                            &rdca;
+                            <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis/tree/master/dataset"
+                                target="_blank" style="margin-right: 20px; color: var(--text-2);">
+                                Dataset</a>
+                            &rdca;
+                            <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis/blob/master/Analysis%20SarsCoV2.py"
+                                target="_blank" style="color: var(--text-2);">
+                                Jupyter Python File
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
+            <div style="border-top: var(--border);"></div>
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
 
 
+            <div class="featured-post-2">
+                <div class="row-3" style="margin: 0;">
+                    <div class="col" style="padding-right: 2vw;">
+                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <div class="just-display-on-desktop">
+                            <mark class="tag">
+                                PWA
+                            </mark>
+                            <mark class="tag">
+                                WEB APP
+                            </mark>
+                        </div>
+                        <a href="/">
+                            <h2 class="title">
+                                PWA will lead the web and app industry in near future
+                            </h2>
+                        </a>
+                        <div class="preview">
+                            The final project to complete the IT Automation with Python Professional Certificate from
+                            Google. Automating Real-World Tasks with Python Course.
+                        </div>
+                    </div>
+                    <div class="col" style="padding: 0 1vw;">
+                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <div class="just-display-on-desktop">
+                            <mark class="tag">
+                                Automate
+                            </mark>
+                            <mark class="tag">
+                                Python
+                            </mark>
+                        </div>
+                        <a href="/">
+                            <h2 class="title">
+                                Automating tasks using Python - Capstone project
+                            </h2>
+                        </a>
+                        <div class="preview">
+                            The final project to complete the IT Automation with Python Professional Certificate from
+                            Google. Automating Real-World Tasks with Python Course.
+                        </div>
+                    </div>
+                    <div class="col" style="padding-left: 2vw;">
+                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <div class="just-display-on-desktop">
+                            <mark class="tag">
+                                Package
+                            </mark>
+                            <mark class="tag">
+                                NPM
+                            </mark>
+                        </div>
+                        <a href="/">
+                            <h2 class="title">
+                                Publish, maintain and update package on npm
+                            </h2>
+                        </a>
+                        <div class="preview">
+                            The final project to complete the IT Automation with Python Professional Certificate from
+                            Google. Automating Real-World Tasks with Python Course.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
+            <div style="border-top: var(--border);"></div>
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
+
+
+        </div>
+        <div class="col-2">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-5">
+            <div class="just-display-on-desktop"
+                style="padding: 32px 42px; font-weight: 500; height: calc(3*150px); width: 90%; background: #1d1d1d; color: #e7e7e7; text-align: right;">
+                LATEST POSTS
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="all-posts">
                 
-                <div style="margin-bottom: 2.2vh;">
+                <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
                             technology
@@ -109,17 +360,18 @@
                         March 29, 2021
                     </span>
                 </div>
-                <a href="/what-is-data-science" class="title-wrap">
-                    <h2 class="title" style="margin-bottom: 1.5vh;">
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/what-is-data-science" class="title">
                         What is Data Science?
-                    </h2>
-                    <div class="review" style="margin-bottom: 5vh;">
-                        Supply and demand for data science. The data science Venn diagram. The data science pathway. The data science pathway.
-                    </div>
-                </a>
+                    </a>
+                </h2>
+                <div class="preview">
+                    Supply and demand for data science. The data science Venn diagram. The data science pathway. The data science pathway.
+                </div>
 
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
                 
-                <div style="margin-bottom: 2.2vh;">
+                <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
                             technology
@@ -129,17 +381,18 @@
                         March 25, 2021
                     </span>
                 </div>
-                <a href="/publish-your-package" class="title-wrap">
-                    <h2 class="title" style="margin-bottom: 1.5vh;">
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/publish-your-package" class="title">
                         Publish your package to npm
-                    </h2>
-                    <div class="review" style="margin-bottom: 5vh;">
-                        How to publish packages to npm (the way the industry does things).
-                    </div>
-                </a>
+                    </a>
+                </h2>
+                <div class="preview">
+                    How to publish packages to npm (the way the industry does things).
+                </div>
 
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
                 
-                <div style="margin-bottom: 2.2vh;">
+                <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
                             technology
@@ -149,109 +402,20 @@
                         March 20, 2021
                     </span>
                 </div>
-                <a href="/all-markdown-syntax" class="title-wrap">
-                    <h2 class="title" style="margin-bottom: 1.5vh;">
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/all-markdown-syntax" class="title">
                         All markdown syntax
-                    </h2>
-                    <div class="review" style="margin-bottom: 5vh;">
-                        Markdown is a lightweight markup language for creating formatted text using a plain-text editor.
-                    </div>
-                </a>
-
-                
-
-
-
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                <br><br><br><br><br>
-                Thanks for reading!
-                <div style="margin: 6vh 0; height: 0.5px; width: 100%; background: var(--grey-line);"></div>
-                <p style="margin-bottom: 7vh; text-align: center;">
-                    <a href="/" style="font-weight: 400; border: none;">
-                        <script>document.write(new Date().getFullYear())</script>
-                        &copy;
-                        Creatoper
                     </a>
-                </p>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="side-panel-wrap">
-                <div class="side-panel-right">
-                    <div style="margin-bottom: 2vh;">
-    <div style="font-weight: 500;">
-        
-    </div>
-    <div style="font-size: 13px;">
-        
-        
-    </div>
-</div>
-<ol style="margin-bottom: 2vh;">
-    
-    <a href="/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
-        <div class="post-in-series" style="
-         display: none; 
-        ">
-            <li style="
-            
-            ">
-                All markdown syntax
-            </li>
-        </div>
-    </a>
-    
-    <a href="/publish-your-package" style="text-decoration: none; font-weight: 400;">
-        <div class="post-in-series" style="
-         display: none; 
-        ">
-            <li style="
-            
-            ">
-                Publish your package to npm
-            </li>
-        </div>
-    </a>
-    
-    <a href="/what-is-data-science" style="text-decoration: none; font-weight: 400;">
-        <div class="post-in-series" style="
-         display: none; 
-        ">
-            <li style="
-            
-            ">
-                What is Data Science?
-            </li>
-        </div>
-    </a>
-    
-</ol>
-<div style="height: 10vh;"></div>
+                </h2>
+                <div class="preview">
+                    Markdown is a lightweight markup language for creating formatted text using a plain-text editor.
                 </div>
+
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                
             </div>
-            &nbsp;
         </div>
     </div>
-
 
     <script>
     // Darkmode
@@ -289,13 +453,3 @@
 </body>
 
 </html>
-
-
-<!-- <br>
-<div>Post.html</div>
-<div id="test-scripts">> Error!</div>
-<div id="test-creatoper">> Error!</div>
-<div id="test-styles">> Green: styles.css load successfully!</div>
-<div id="test-creatopercss">> Green: creatoper.css load successfully!</div>
-<div id="test-creatopercontrol">> Green: creatoper-control.css load successfully!</div>
-<br> -->

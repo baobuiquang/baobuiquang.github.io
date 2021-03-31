@@ -21,13 +21,13 @@ Official website: **[npm](https://npmjs.com/)**
 
 Documentation: **[npm Docs](https://docs.npmjs.com/)**
 
-![NPM Landing Page](./assets/img/npm/1-npm-landing-page.png)
+![NPM Landing Page](./post_img/npm/1-npm-landing-page.png)
 
 Create an npm account at: **[Sign Up](https://www.npmjs.com/signup)**
 
 Login: **[Login](https://www.npmjs.com/login)**
 
-![NPM Sign Up](./assets/img/npm/3-npm-sign-up.png)
+![NPM Sign Up](./post_img/npm/2-npm-sign-up.png)
 
 
 ## 2. What is [Node.js](https://nodejs.org/en/)? Download Node.js.
@@ -40,11 +40,11 @@ Official website: **[Nodejs](https://nodejs.org/en/)**
 
 Documentation: **[Nodejs Docs](https://nodejs.org/en/docs/)**
 
-![NPM Landing Page](./assets/img/npm/1-nodejs-landing-page.png)
+![NPM Landing Page](./post_img/npm/3-nodejs-landing-page.png)
 
 Download Node.js at: **[Download Node.js](https://nodejs.org/en/download/)**
 
-![Nodejs Download](./assets/img/npm/2-nodejs-download.png)
+![Nodejs Download](./post_img/npm/4-nodejs-download.png)
 
 ## 3. Prepare your package
 
@@ -63,7 +63,7 @@ Create a `package.json` file
 📁your-pkg-name
 ├── 📁your-pkg-name-01
 ├── 📁your-pkg-name-02
-└── 📁your-pkg-name-03
+├── 📁your-pkg-name-03
 └── package.json
 ```
 

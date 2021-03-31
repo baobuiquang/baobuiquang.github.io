@@ -61,22 +61,22 @@
     </div>
 </div>
 <div class="menu">
-    <input class="modal-state" id="modal-1" type="checkbox" />
+    <input class="modal-state" id="modal-1" type="checkbox">
     <div class="modal">
         <label class="modal__bg" for="modal-1"></label>
         <div class="modal__inner">
             <label class="modal__close" for="modal-1">
-                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0);">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;">
             </label>
             <!-- Custom in modal -->
             <div class="modal-top">
-                <div class="nav-link" style="padding: 19px 0 0 var(--menu-pd); color: #f0f0f0;">
+                <div class="nav-link menu-text">
                     MENU
                 </div>
             </div>
             <div class="modal-cta just-display-on-desktop">
                 COVID-19 Virus Analysis and Diagnosis
-                <a href="/">
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
                     <button>
                         READ THIS POST
                     </button>
@@ -141,39 +141,39 @@
                 <div class="modal-contact">
                     <div class="mobile-row-6">
                         <div class="col">
-                            <a href="/" target="_blank">
+                            <a href="https://github.com/buiquangbao" target="_blank">
                                 <img src="../assets/icon_feather/github.svg" class="svg-f">
                             </a>
                         </div>
                         <div class="col">
-                            <a href="/" target="_blank">
-                                <img src="../assets/icon_feather/gitlab.svg" class="svg-f">
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="/" target="_blank">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
                                 <img src="../assets/icon_feather/codepen.svg" class="svg-f">
                             </a>
                         </div>
                         <div class="col">
-                            <a href="/" target="_blank">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
                                 <img src="../assets/icon_feather/linkedin.svg" class="svg-f">
                             </a>
                         </div>
                         <div class="col">
-                            <a href="/" target="_blank">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
                                 <img src="../assets/icon_feather/twitter.svg" class="svg-f">
                             </a>
                         </div>
                         <div class="col">
-                            <a href="/" target="_blank">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
                                 <img src="../assets/icon_feather/instagram.svg" class="svg-f">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="modal-darkmode">
-                    <div style="float: left; font-size: 14px; font-weight: 500; top: 4px; position: relative;">
+                    <div class="drk-text">
                         Dark Mode
                     </div>
                     <div style="float: right;">
@@ -196,12 +196,10 @@
         <div class="col-8">
 
 
-
-
             <div style="height: 25vh;"></div>
             <div class="row-2">
                 <div class="col">
-                    <div class="pfl-left">
+                    <div class="pfl-left just-display-on-desktop">
                         <div style="font-weight: 400; font-size: 14px; margin-bottom: 8px;">
                             My name is
                         </div>
@@ -221,29 +219,49 @@
                     &nbsp;
                 </div>
                 <div class="col">
-                    <div class="pfl-section">
+                    <!-- About -->
+                    <div class="pfl-section" style="padding-top: 0;">
                         <div class="pfl-title">
                             Who I am
                         </div>
                         <div class="pfl-text">
-                            Born in 2001. I am a developer, designer from Ho Chi Minh City, Vietnam. My personality is
-                            Turbulent Logician (INTP-T), with the Constant Improvement strategy.
+                            I am a developer, computer scientist, UI/UX designer from Ho Chi Minh City, Vietnam. Born in
+                            2001, my personality is
+                            <a target="_blank" href="https://www.16personalities.com/profiles/9b3fd691d44a3">
+                                Turbulent Logician (INTP-T)</a>, with the constant improvement strategy.
                         </div>
                         <div class="pfl-text">
-                            I have done some interesting projects, attended some competitions and achieved some awards.
-                            As a tech insider, I spend most of my time self-study, engaged in tech communities and
+                            I have done some
+                            <a href="#projects">
+                                interesting projects</a>, attended
+                            <a href="#awards">
+                                some competitions</a>
+                            and achieved
+                            <a href="#awards">
+                                some awards</a>.
+                            As a tech insider, I spend most of my time
+                            <a href="#certificates">
+                                self-study</a>, engaged in tech communities and
                             explore the amazing things that craft this modern world.
                         </div>
+                        <div class="pfl-text">
+                            I sometimes write about my experience in the tech industry, my thought of some problems, my
+                            adventures and my personal life at
+                            <a href="/notebook">
+                                Notebook</a>
+                            , hope you enjoy it.
+                        </div>
                     </div>
-                    <div class="pfl-section">
+                    <!-- Experience -->
+                    <div class="pfl-section" id="experience">
                         <div class="pfl-title">
                             What I do
                         </div>
-                        <!--  -->
+                        <!-- MailNhanh -->
                         <div class="expandable">
                             <button class="accordion">
                                 <div class="h3">
-                                    Web Front-end Developer – Part-time
+                                    Web Front-end Developer – Apprenticeship
                                 </div>
                                 <div class="p">
                                     MailNhanh.com
@@ -261,16 +279,16 @@
 
                             </div>
                         </div>
-                        <!--  -->
+                        <!-- MailNhanh -->
                         <div class="expandable">
                             <button class="accordion">
                                 <div class="h3">
-                                    Web Front-end Developer – Part-time
+                                    Web UI/UX, Front-end Developer – Internship
                                 </div>
                                 <div class="p">
                                     MailNhanh.com
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    Feb 2021 – Present
+                                    Jan 2021 – Feb 2021
                                 </div>
                             </button>
                             <div class="panel">
@@ -281,22 +299,652 @@
                                 <p>Content here content here content here content here content here content here content
                                     here content here content here content here content here</p>
 
+                            </div>
+                        </div>
+                        <!-- Microsoft -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Microsoft Student Ambassador at Vietnam
+                                </div>
+                                <div class="p">
+                                    Microsoft
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Dec 2020 – Present
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    After 5 months of applying (from July 2020), I finally received the mail from
+                                    Microsoft in December 2020
+                                    for the acceptance to be the next generation of this "tech-addict" community.
+                                </p>
+                                <a class="bdudr" target="_blank"
+                                    href="https://studentambassadors.microsoft.com/en-US/profile/81497">
+                                    I'm in the community!
+                                </a>
+                                <p>
+                                    Microsoft Learn Student Ambassadors, formerly MSPs (Microsoft Student Partners), is
+                                    a community of student
+                                    leaders with a passion for making differences, amplify impact and building vibrant
+                                    communities across the
+                                    globe. We share the latest tech, solve real-world problems, lead in local tech
+                                    circles, develop technical
+                                    and career skills, never stop learning and pushing to reach the next step.
+                                </p>
+                                <a class="bdudr" target="_blank"
+                                    href="https://techcommunity.microsoft.com/t5/student-developer-blog/bg-p/StudentDeveloperBlog">
+                                    Student Developer Blog - What we are doing »
+                                </a>
+                                <p>2021 - "Hard work and dedication":</p>
+                                <img src="./assets/orgs/MLSA-Alpha.png">
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Design ITUS -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Chairman of Academic Club Design ITUS
+                                </div>
+                                <div class="p">
+                                    Term 2020 – 2021, member since Aug 2019
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p style="font-style: italic;">"Creativity is a drug."</p>
+                                <p>
+                                    Design ITUS club was established on October 25, 2010, is an academic club of the
+                                    Faculty of Information
+                                    Technology, Vietnam National University, Ho Chi Minh City, University of Science.
+                                    This is a place for
+                                    students with passion for graphic design, UI/UX design, photography, photo editing,
+                                    video making and
+                                    editing, hand-drawing and digital painting.
+                                </p>
+                                <p>
+                                    Outr Space is the annual academic competition of the
+                                    Design ITUS Club. Held for the first time in May 2017, this is a design and
+                                    creativity contest with the
+                                    slogan "Thinking outside of the box", attracting many students to participate. This
+                                    is an opportunity for
+                                    students to try their best, show their talents and creativity.
+                                </p>
+                                <img src="./assets/orgs/DesignITUS-01.jpg">
+                                <img src="./assets/orgs/DesignITUS-02.jpg">
+                                <img src="./assets/orgs/DesignITUS-04.jpg">
+                                <img src="./assets/orgs/DesignITUS-03.jpg">
+                                <br><br>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Projects -->
+                    <div class="pfl-section" id="projects">
+                        <div class="pfl-title">
+                            Projects
+                        </div>
+                        <!-- Creatoper -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Creatoper.css & Creatoper.js Library
+                                </div>
+                                <div class="p">
+                                    In development
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>Content here content here content here content here content here content here content
+                                    here content here content here content here content here</p>
+
+                            </div>
+                        </div>
+                        <!-- Agrion -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Agrion (3rd Prize at AI Hackathon "RESET 1010")
+                                </div>
+                                <div class="p">
+                                    Completed
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>This project is the submission for the AI Hackathon "RESET 1010" by the Ministry of
+                                    Science and
+                                    Technology of Vietnam.</p>
+                                <p>Project idea:</p>
+                                <p style="font-style: italic;">
+                                    AGRION is an online agriculture marketplace that: helps farmers across the country
+                                    sell crops directly and
+                                    make better profits, as middlemen are reduced; benefits the customers who get fresh
+                                    produce at better
+                                    prices/conditions by using Agrion Vision, the core AI function, which can: recognize
+                                    agriculture products
+                                    are in good or bad condition, predict the maturity of agricultural products so users
+                                    can know how long
+                                    they remain usable in order to help both farmers and customers easier and quicker in
+                                    the dealing process,
+                                    to rescue the excess agriculture inventory.
+                                </p>
+                                <img src="./assets/projects/agrion.gif">
+                                <p>
+                                    The core AI function - Agrion Vision - is an application of Image Classification in
+                                    Computer Vision
+                                    technology.</p>
+                                <p>
+                                    We use a technique called Transfer Learning, namely MobileNets - a pre-trained
+                                    Convolutional Neural
+                                    Networks - to train the machine learning model to recognize the agricultural
+                                    products are in good or bad
+                                    condition and predict how long they remain usable from photos that users uploaded.
+                                </p>
+                                <p>
+                                    The model we train is Tensorflow model that can be exported into 2 types: Tensorflow
+                                    Lite to implement on
+                                    mobile apps (in collaboration with Flutter) and Tensorflow.js to implement on the
+                                    web.
+                                </p>
+                                <p>
+                                    In the Agrion Vision demo for this hackathon, we have gathered and trained the model
+                                    using a dataset
+                                    including approximately 1470 images of mangoes with “in-good-condition” label and
+                                    1380 images of mangoes
+                                    with “in-bad-condition” label. The accuracy of this model is pretty high, even in
+                                    different backgrounds,
+                                    it still recognizes which mango is in good or bad condition.
+                                </p>
+                                <a class="bdudr" target="_blank" href="https://github.com/creatoper/Agrion">Link to
+                                    project on Github »</a>
+                                <br>
+                                <a class="bdudr" href="#awards">See more about the awards »</a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Covid -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    COVID-19 Analysis and Diagnosis
+                                </div>
+                                <div class="p">
+                                    Completed
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    COVID-19 (Sars CoV 2) Virus Spread Analysis using Python and Diagnosis from
+                                    Radiography using Machine
+                                    Learning Model (TensorFlow.js)
+                                </p>
+                                <p>
+                                    Coronavirus disease (COVID-19) is an infectious global disease. The virus was
+                                    identified in Wuhan, China
+                                    in December 2019. COVID-19 disease is caused by the virus severe acute respiratory
+                                    syndrome coronavirus 2
+                                    (SARS-CoV-2), a new virus in humans causing respiratory illness which can be spread
+                                    from person-to-person.
+                                </p>
+                                <p>
+                                    The World Health Organization (WHO) declared the COVID-19 outbreak a Public Health
+                                    Emergency of
+                                    International Concern (PHEIC) on 30 January 2020 and a pandemic on 11 March 2020.
+                                </p>
+                                <p>
+                                    Analysis, or the process of turning raw data into insights, can provide us with a
+                                    view of how the virus
+                                    influences the communities. Those insights can indicate if the development of a
+                                    country affects its virus
+                                    spread as well as the relationship between the infection rate, the death rate and
+                                    the recovered rate of
+                                    COVID-19 pandemic in some specific countries and on the global.
+                                </p>
+                                <img src="./assets/projects/covid19project.png">
+                                <p>
+                                    The quick diagnosis method is significant in preventing the spread of the Covid-19
+                                    pandemic. With the
+                                    dataset of approximately 1000 images of chest X-ray collected, we can build a
+                                    machine learning model to
+                                    predict whether a new X-ray image is from a COVID-19 infected patient or a
+                                    non-infected person.
+                                </p>
+                                <img src="./assets/projects/covid19project.gif">
+                                <a class="bdudr" target="_blank"
+                                    href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                                    Link to project on Github »</a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Automate -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Automating tasks with Python - Capstone project
+                                </div>
+                                <div class="p">
+                                    Completed
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    The final project to complete the IT Automation with Python Professional Certificate
+                                    from Google.
+                                    Automating Real-World Tasks with Python Course.
+                                </p>
+                                <p>Problem:</p>
+                                <p>
+                                    You work for an online fruits store, and you need to develop a system that will
+                                    update the catalog
+                                    information with data provided by your suppliers. The suppliers send the data as
+                                    large images with an
+                                    associated description of the products in two files (.TIF for the image and .txt for
+                                    the description). The
+                                    images need to be converted to smaller .jpeg images and the text needs to be turned
+                                    into an HTML file that
+                                    shows the image and the product description. The contents of the HTML file need to
+                                    be uploaded to a web
+                                    service that is already running using Django. You also need to gather the name and
+                                    weight of all fruits
+                                    from the .txt files and use a Python request to upload it to your Django server.
+                                    <br>
+                                    You will create a Python script that will process the images and descriptions and
+                                    then update your
+                                    company's online website to add the new products.
+                                    <br>
+                                    Once the task is complete, the supplier should be notified with an email that
+                                    indicates the total weight
+                                    of fruit that were uploaded. The email should have a .PDF attached with the name of
+                                    the fruit and its
+                                    total weight.
+                                    <br>
+                                    Finally, in parallel to the automation running, we want to check the health of the
+                                    system and send an
+                                    email if something goes wrong.
+                                </p>
+                                <img src="./assets/projects/pythonautomation.gif">
+                                <a class="bdudr" target="_blank"
+                                    href="https://github.com/buiquangbao/automation-using-python">
+                                    Link to project on Github »</a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Resume -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Resume Creator
+                                </div>
+                                <div class="p">
+                                    Completed
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    A static web tool used to generate a simple and elegant resume (in pdf format) from
+                                    user input, written
+                                    in HTML, CSS, Javascript and uses jsPDF library.
+                                </p>
+                                <img src="./assets/projects/resumecreator.gif">
+                                <p>
+                                    This is my first "kind-of-usable" project!
+                                </p>
+                                <a class="bdudr" target="_blank" href="https://github.com/webtoolkits/resumecreator">
+                                    Link to project on Github »</a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <br>
+                        <p>
+                            See more on my
+                            <a href="https://github.com/buiquangbao" target="_blank" style="font-weight: 500;">
+                                Github Profile</a>
+                        </p>
+                    </div>
+
+                    <!-- Awards -->
+                    <div class="pfl-section" id="awards">
+                        <div class="pfl-title">
+                            Awards
+                        </div>
+                        <!-- RESET1010 -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="p">
+                                    1 x National Artificial Intelligence Hackathon
+                                </div>
+                                <div class="h3">
+                                    Winner of AI Hackathon "RESET 1010" - Third Prize
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <div class="h3">
+                                    By Ministry of Science and Technology of Vietnam
+                                </div>
+                                <p>
+                                    Challenge: Build an AI-powered Application to Boost the Recovery of SME From
+                                    Covid-19</p>
+                                <p>
+                                    My team's project - Agrion - won the 3rd prize.</p>
+                                <p>Mentioned on:</p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a target="_blank" class="bdudr"
+                                    href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+                                    Ministry of Science and Technology of Vietnam »
+                                </a><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a target="_blank" class="bdudr"
+                                    href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+                                    Vietnam Journal of Science and Technology »
+                                </a><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a target="_blank" class="bdudr"
+                                    href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+                                    National Agency for Science and Technology Information »
+                                </a><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a target="_blank" class="bdudr"
+                                    href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#video_parent_310882:~:text=D%E1%BB%B1%20%C3%A1n%20%22Agrion%22%20c%E1%BB%A7a%20L%C3%AA%20Thanh,%E1%BB%A9ng%20d%E1%BB%A5ng%20AI%20gi%C3%A0nh%20gi%E1%BA%A3i%20Ba.">
+                                    VnExpress, Tuoitre, Thanhnien Newspaper, etc »
+                                </a><br>
+                                <p>Vietnam Artificial Intelligence Festival 2020:</p>
+                                <img src="./assets//awards/RESET1010-01.JPG">
+                                <p>Certificate of Achievement:</p>
+                                <img src="./assets//awards/RESET1010WinningCertificate.png">
+                                <p>The 48-hours AI Hackathon “RESET 1010” was organized by the technology innovation
+                                    promotion organization
+                                    AngelHack, under the sponsorship and coordination of the Ministry of Science and
+                                    Technology, with the
+                                    companionship of Aus4Innovation (the development cooperation program of the Ministry
+                                    Australian Foreign
+                                    Affairs and Trade in Vietnam) and UNDP (United Nations Development Program in
+                                    Vietnam), VAIS (Vietnam
+                                    Artificial Intelligence Solution Company), Hanoi Communist Youth Union, VnExpress
+                                    newspaper.</p>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Violympic -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="p">
+                                    6 x National Math Competition </div>
+                                <div class="h3">
+                                    Violympic Math Competition Provincial Awards
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <div class="h3">
+                                    By Department of Education and Training of Vietnam
+                                </div>
+                                <p>I am honored to receive this award in <mark>6 consecutive years</mark>:</p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2011 – 2012: Third Prize
+                                </p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2012 – 2013: Second Prize
+                                </p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2013 – 2014: Second Prize
+                                </p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2014 – 2015: First Prize
+                                </p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2015 – 2016: First Prize
+                                </p>
+                                <p style="margin: 0;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    2016 – 2017: Second Prize
+                                </p>
+                                <p>
+                                    Violympic competition, organized by the Ministry of Education and Training, is an
+                                    annual national
+                                    mathematics competition for all primary, secondary and high school students (from
+                                    grade 1 to grade 11) in
+                                    Vietnam.
+                                </p>
+                                <p>
+                                    Along with the awards from this competition, I was also honored as "Provincial
+                                    Excellent Student" by my
+                                    schools in the respective years.
+                                </p>
+                                <p>The latest Certificate of Achievement in 2016 – 2017:</p>
+                                <img src="./assets//awards/Violympic-01.jpeg">
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- IYMC -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="p">
+                                    1 x Online International Math Competition
+                                </div>
+                                <div class="h3">
+                                    Prefinalist with Special Honour - IYMC 2020
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>IYMC - International Youth Math Challenge is an international mathematics competition
+                                    for students from
+                                    all around the world, enables students to prove their math skills, unleash
+                                    creativity and apply them to
+                                    challenging problems.</p>
+                                <p>My Certificate Verification ID: QR-2020-E8A66AE5C2C</p>
+                                <p>Special Honour for submitting the solution as digitally written document</p>
+                                <img src="./assets/awards/IYMC-2020.png">
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- BLIT -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="p">
+                                    1 x University Competition
+                                </div>
+                                <div class="h3">
+                                    Prefinalist - BLIT 2019 - FIT HCMUS
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>By Faculty of Information Technology - Vietnam National University - University of
+                                    Science</p>
+                                <p>
+                                    A five-round competition focuses on IT knowledge, team working, theme issue solving,
+                                    organized by the
+                                    Faculty of Information Technology, University of Science. My team won the 1st prize
+                                    in the 24-hours
+                                    hackathon of round 3 as I was the leader.
+                                </p>
+                                <img src="./assets/awards/BLIT-01.JPG">
+                                <img src="./assets/awards/BLIT-02.JPG">
+                                <p>
+                                    This is my first experience in uni life!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates -->
+                    <div class="pfl-section" id="certificates">
+                        <div class="pfl-title">
+                            Certificates
+                        </div>
+                        <!-- Automation -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    IT Automation with Python Specialization Certificate
+                                </div>
+                                <div class="p">
+                                    Issued by Coursera. Authorized by Google.
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <a class="bdudr" target="_blank"
+                                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/MM73SLTLWJA9">
+                                    Link to Certificate »
+                                </a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Cyber -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Cybersecurity Fundamentals Specialization
+                                </div>
+                                <div class="p">
+                                    Issued by Coursera. Authorized by IBM.
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <a class="bdudr" target="_blank"
+                                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/SD3PDC2PWH8R">
+                                    Link to Certificate »
+                                </a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- UI -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Visual Elements of UI Design Certificate
+                                </div>
+                                <div class="p">
+                                    Issued by Coursera. Authorized by California Institute of the Arts.
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <a class="bdudr" target="_blank"
+                                    href="https://www.coursera.org/account/accomplishments/certificate/TQ3LFTHXEYM9">
+                                    Link to Certificate »
+                                </a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- ICSI -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    CNSS
+                                </div>
+                                <div class="p">
+                                    Issued by ICSI.
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <a class="bdudr" target="_blank" href="https://www.accredible.com/19862397">
+                                    Link to Certificate »
+                                </a>
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Data Science -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Data Science Math Skills Certificate
+                                </div>
+                                <div class="p">
+                                    Issued by Coursera. Authorized by Duke University.
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <a class="bdudr" target="_blank"
+                                    href="https://www.coursera.org/account/accomplishments/certificate/TWGWU6XB7SHQ">
+                                    Link to Certificate »
+                                </a>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="pfl-section" id="education">
+                        <div class="pfl-title">
+                            Education
+                        </div>
+                        <!-- Automation -->
+                        <div class="expandable">
+                            <button class="accordion">
+                                <div class="h3">
+                                    Vietnam National University - University of Science
+                                </div>
+                                <div class="p">
+                                    Faculty of Information Technology - FIT HCMUS
+                                </div>
+                                <div class="p">
+                                    Bachelor's Degree
+                                </div>
+                            </button>
+                            <div class="panel">
+                                <p>
+                                    😎
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="pfl-section" id="contact">
+                        <div class="pfl-title">
+                            Contact
+                        </div>
+                        <div class="pfl-contact">
+                            <p><a href="mailto:quangbao.dev@gmail.com" target="_blank">
+                                    quangbao.dev@gmail.com
+                                </a></p>
+                            <p><a href="mailto:bao.buiquang@studentambassadors.com" target="_blank">
+                                    bao.buiquang@studentambassadors.com
+                                </a></p>
+                            <p><a href="https://github.com/buiquangbao" target="_blank">
+                                    Github
+                                </a></p>
+                            <p><a href="https://www.linkedin.com/in/buiquangbao/" target="_blank">
+                                    LinkedIn
+                                </a></p>
+                            <p><a href="https://twitter.com/quangbao_dev" target="_blank">
+                                    Twitter
+                                </a></p>
+                            <p><a href="https://m.me/quangbao.dev" target="_blank">
+                                    Messenger
+                                </a></p>
+                            <p><a href="https://www.facebook.com/quangbao.dev/" target="_blank">
+                                    Facebook
+                                </a></p>
+                            <p><a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                    Instagram
+                                </a></p>
+                        </div>
+                    </div>
+
+
+                    <!-- -------------------------------- -->
+                    <div style="height: 100px;"></div>
+                    <p data-aos="fade-up">
+                        <script>document.write(new Date().getFullYear())</script>
+                        &copy; Bui Quang Bao. All Rights Reserved.
+                    </p>
+                    <div style="height: 128px;"></div>
                 </div>
 
 
+            </div>
 
-            </div>
-            <div class="col-2">
-                &nbsp;
-            </div>
         </div>
+        <div class="col-2">
+            &nbsp;
+        </div>
+    </div>
 
-        <br>
-
-        <script>
+    <script>
     // Darkmode
     function enableDarkMode() {
         document.body.classList.add("darkmode");

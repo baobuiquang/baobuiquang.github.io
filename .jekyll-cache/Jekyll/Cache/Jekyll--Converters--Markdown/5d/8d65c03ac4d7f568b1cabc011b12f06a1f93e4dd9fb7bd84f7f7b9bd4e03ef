@@ -1,4 +1,4 @@
-I"�<h2 id="1-what-is-npm-create-an-npm-account">1. What is <a href="https://www.npmjs.com/">npm</a>? Create an npm account.</h2>
+I"�<h2 id="1-what-is-npm-create-an-npm-account">1. What is <a href="https://www.npmjs.com/">npm</a>? Create an npm account.</h2>
 
 <p><code class="language-plaintext highlighter-rouge">npm</code> is a package manager for the JavaScript programming language.</p>
 
@@ -10,13 +10,13 @@
 
 <p>Documentation: <strong><a href="https://docs.npmjs.com/">npm Docs</a></strong></p>
 
-<p><img src="./assets/img/npm/1-npm-landing-page.png" alt="NPM Landing Page" /></p>
+<p><img src="./post_img/npm/1-npm-landing-page.png" alt="NPM Landing Page" /></p>
 
 <p>Create an npm account at: <strong><a href="https://www.npmjs.com/signup">Sign Up</a></strong></p>
 
 <p>Login: <strong><a href="https://www.npmjs.com/login">Login</a></strong></p>
 
-<p><img src="./assets/img/npm/3-npm-sign-up.png" alt="NPM Sign Up" /></p>
+<p><img src="./post_img/npm/2-npm-sign-up.png" alt="NPM Sign Up" /></p>
 
 <h2 id="2-what-is-nodejs-download-nodejs">2. What is <a href="https://nodejs.org/en/">Node.js</a>? Download Node.js.</h2>
 
@@ -28,11 +28,11 @@
 
 <p>Documentation: <strong><a href="https://nodejs.org/en/docs/">Nodejs Docs</a></strong></p>
 
-<p><img src="./assets/img/npm/1-nodejs-landing-page.png" alt="NPM Landing Page" /></p>
+<p><img src="./post_img/npm/3-nodejs-landing-page.png" alt="NPM Landing Page" /></p>
 
 <p>Download Node.js at: <strong><a href="https://nodejs.org/en/download/">Download Node.js</a></strong></p>
 
-<p><img src="./assets/img/npm/2-nodejs-download.png" alt="Nodejs Download" /></p>
+<p><img src="./post_img/npm/4-nodejs-download.png" alt="Nodejs Download" /></p>
 
 <h2 id="3-prepare-your-package">3. Prepare your package</h2>
 
@@ -49,7 +49,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>📁your-pkg-name
 ├── 📁your-pkg-name-01
 ├── 📁your-pkg-name-02
-└── 📁your-pkg-name-03
+├── 📁your-pkg-name-03
 └── package.json
 </code></pre></div></div>
 

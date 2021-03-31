@@ -5,39 +5,44 @@
 {% include head.html %}
 
 <body>
+    {% include scroll-to-top.html %}
+    {% include top-nav.html %}
+
+    <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+
     <div class="row">
-        <div class="col-3">&nbsp;</div>
-        <div class="col-6">
-            <br>
-            <div class="darkmode-button">
-                <input type="checkbox" id="darkmodeCheck">
-                <span></span>
-            </div>
-
-            <a href="/">
-                Home
-            </a>
-
-            <br><br>
-            {{ page.tag }}
-
-            {% for post in site.tags[page.tag] %}
-            <br><br>
-            <a href="/tag/{{ page.tag }}">
+        <div class="col-5">
+            <div class="just-display-on-desktop"
+                style="text-transform: uppercase; padding: 32px 42px; font-weight: 500; height: calc({{ site.posts | size }}*150px); width: 90%; background: #1d1d1d; color: #e7e7e7; text-align: right;">
                 {{ page.tag }}
-            </a>
-            {{ post.date | date: "%B %-d, %Y" }}
-            <a href="{{post.url}}">
-                <h2>{{ post.title }}</h2>
-            </a>
-            {{post.preview}}
-            {% endfor %}
+            </div>
         </div>
-        <div class="col-3">&nbsp;</div>
+        <div class="col-5">
+            <div class="all-posts">
+                {% for post in site.tags[page.tag] %}
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/{{ page.tag }}" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            {{ page.tag }}
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        {{ post.date | date: "%B %-d, %Y" }}
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="{{post.url}}" class="title">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <div class="preview">
+                    {{post.preview}}
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-
-
-
 
     {% include scripts.html %}
 </body>

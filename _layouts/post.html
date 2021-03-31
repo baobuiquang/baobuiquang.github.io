@@ -5,79 +5,59 @@
 {% include head.html %}
 
 <body>
-    {% include mobile-nav.html %}
+    {% include scroll-to-top.html %}
+    {% include top-nav.html %}
 
     <div class="row">
         <div class="col-3">
-            <div class="side-panel-wrap">
-                <div class="side-panel-left">
-                    <a href="/" style="border: none;" class="just-display-on-desktop">
-                        <img src="../favicon.png" class="logo">
-                    </a>
-                    {% include youarereading.html %}
-                    {% include darkmode.html %}
-                </div>
-            </div>
             &nbsp;
         </div>
         <div class="col-6">
-            <div class="main-panel">
-                <div style="height: 10vh;"></div>
-                <div style="margin-bottom: 3vh;">
-                    {% for tag in page.tags %}
-                    {% capture tag_name %}{{ tag }}{% endcapture %}
-                    <a href="/tag/{{ tag_name }}" style="border: none;">
-                        <mark class="tag">
-                            {{ tag_name }}
-                        </mark>
-                    </a>
-                    {% endfor %}
-                </div>
-                <h1 style="margin-bottom: 3vh;">{{ page.title }}</h1>
-                <div style="font-size: 14px; margin-bottom: 3vh;">
-                    By
-                    <a href="{{page.authorlink}}" target="_blank" style="border: none;">
-                        {{ page.author }}
-                    </a>
-                    | {{ page.date | date: "%B %-d, %Y" }}
-                </div>
-                <div class="content">
-                    {{content}}
-                </div>
-                <br>
-                Thanks for reading!
-                <div style="margin: 6vh 0; height: 0.5px; width: 100%; background: var(--grey-line);"></div>
-                <p style="margin-bottom: 7vh; text-align: center;">
-                    <a href="/" style="font-weight: 400; border: none;">
-                        <script>document.write(new Date().getFullYear())</script>
-                        &copy;
-                        Creatoper
-                    </a>
-                </p>
+
+
+            <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+
+
+            <div style="margin-bottom: 3vh;">
+                {% for tag in page.tags %}
+                {% capture tag_name %}{{ tag }}{% endcapture %}
+                <a href="/tag/{{ tag_name }}" style="border: none;">
+                    <mark class="tag">
+                        {{ tag_name }}
+                    </mark>
+                </a>
+                {% endfor %}
             </div>
+            <h1 style="margin-bottom: 3vh;">{{ page.title }}</h1>
+            <div style="font-size: 14px; margin-bottom: 3vh;">
+                By
+                <a href="{{page.authorlink}}" target="_blank" style="border: none;">
+                    {{ page.author }}
+                </a>
+                | {{ page.date | date: "%B %-d, %Y" }}
+            </div>
+            <div class="content">
+                {{content}}
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+
+
         </div>
         <div class="col-3">
-            <div class="side-panel-wrap">
-                <div class="side-panel-right">
-                    {% include series-posts.html %}
-                </div>
-            </div>
             &nbsp;
         </div>
     </div>
-
 
     {% include scripts.html %}
 </body>
 
 </html>
-
-
-<!-- <br>
-<div>Post.html</div>
-<div id="test-scripts">> Error!</div>
-<div id="test-creatoper">> Error!</div>
-<div id="test-styles">> Green: styles.css load successfully!</div>
-<div id="test-creatopercss">> Green: creatoper.css load successfully!</div>
-<div id="test-creatopercontrol">> Green: creatoper-control.css load successfully!</div>
-<br> -->

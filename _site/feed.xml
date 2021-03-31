@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-03-30T17:39:13+07:00</updated><id>/feed.xml</id><title type="html">Creatoper</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">What is Data Science?</title><link href="/what-is-data-science" rel="alternate" type="text/html" title="What is Data Science?" /><published>2021-03-29T09:50:00+07:00</published><updated>2021-03-29T09:50:00+07:00</updated><id>/what-is-data-science</id><content type="html" xml:base="/what-is-data-science">&lt;h3 id=&quot;1-supply-and-demand-for-data-science&quot;&gt;1. Supply and demand for data science&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-03-31T21:16:05+07:00</updated><id>/feed.xml</id><title type="html">Creatoper</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">What is Data Science?</title><link href="/what-is-data-science" rel="alternate" type="text/html" title="What is Data Science?" /><published>2021-03-29T09:50:00+07:00</published><updated>2021-03-29T09:50:00+07:00</updated><id>/what-is-data-science</id><content type="html" xml:base="/what-is-data-science">&lt;h3 id=&quot;1-supply-and-demand-for-data-science&quot;&gt;1. Supply and demand for data science&lt;/h3&gt;
 
 &lt;p&gt;Back in the early 60’s, Barbra Streisand sang, “People who need people “are the luckiest people in the world.” And really, the need for belonging, the need to connect, and the need to be valued are all fundamental human motivations. As it happens, working in data science can actually help fulfill some of these foundational needs. By placing you in a position to one, do something wonderful for other people and two, in return to be valued for it. It goes back to something that a Harvard Business Review had to say about it back in 2012. Thomas Davenport and D.J. Patil made the extraordinary claim that data science, of all things, was the sexiest job of the 21st century. But they had good reasons for saying this. They are argued that data scientists had one, a valuable combination of rare qualities that two, put them in high demand. So here are some of the rare qualities. Data scientists are able to find order, meaning, and value in unstructured data. That’s online sources, the graphs of social networks, audio, images, videos, and so on. They’re able to predict outcomes like who’s likely to purchase something or who poses a security threat, or who’s likely to develop a disease, or respond well to a new treatment. They’re able to automate processes like getting individualized recommendations while shopping, identifying friends in photographs, or giving psychological support in AI chat bots. And they’re in high demand for a couple of really simple reasons. They provide hidden insight. Data science is able to show you things that you simply can’t find through other means. And that hidden insight, in turn, provides significant competitive advantage to any organization that has the good foresight to employ and really make the most of data science. Give you a little bit more information about supply and demand here. Number one, there’s been extraordinary growth in job ads. People are looking for data science. So for example, a January 2019 report from Indeed reported a 29% increase in job ads for data science over one year and 344% over six years. This is extraordinary growth. Next, they showed that there’s growth in job searches. People actually trying to find jobs in data science. And they found only a 14% growth over one year. Now that may sound a little low, but the important thing to hear is that the demand is outstripping the availability. And any time that happens, you’ve got value. And what this means, you know, again, specifically, the gap in supply and demand is it significant? LinkedIn reported a gap of over 150,000 jobs in data science. And it’s even more dramatic when you show in related fields like machine learning engineer, artificial intelligence specialist, and so on. It’s big. There are so many possibilities here to do something that is valued for others. And it’s reflected in the salaries for data science. The average salary in data science is $107,000 a year. Which, just for comparison purposes, is over twice the national median in the U.S. of $47,000 a year. And that means that this is one of the best jobs in the U.S. Glass Door in January of 2019 published it’s annual list of best jobs in America and for the fourth year in a row, data scientist is at the top of the list, based on job satisfaction, number of openings, salary. It really lets you know there is extraordinary potential here, something that you can provide of amazing value for potential employers. And you fan fulfill that great need and you can be valued for the things that you’re able to contribute by embracing the methods and the benefits of data science in your work.&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="datascience" /><summary type="html">1. Supply and demand for data science</summary></entry><entry><title type="html">Publish your package to npm</title><link href="/publish-your-package" rel="alternate" type="text/html" title="Publish your package to npm" /><published>2021-03-25T20:00:00+07:00</published><updated>2021-03-25T20:00:00+07:00</updated><id>/publish-your-package</id><content type="html" xml:base="/publish-your-package">&lt;h2 id=&quot;1-what-is-npm-create-an-npm-account&quot;&gt;1. What is &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;? Create an npm account.&lt;/h2&gt;
 
@@ -12,13 +12,13 @@
 
 &lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/img/npm/1-npm-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./post_img/npm/1-npm-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Create an npm account at: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/signup&quot;&gt;Sign Up&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Login: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/login&quot;&gt;Login&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/img/npm/3-npm-sign-up.png&quot; alt=&quot;NPM Sign Up&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./post_img/npm/2-npm-sign-up.png&quot; alt=&quot;NPM Sign Up&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;2-what-is-nodejs-download-nodejs&quot;&gt;2. What is &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;? Download Node.js.&lt;/h2&gt;
 
@@ -30,11 +30,11 @@
 
 &lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/docs/&quot;&gt;Nodejs Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/img/npm/1-nodejs-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./post_img/npm/3-nodejs-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Download Node.js at: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;Download Node.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/img/npm/2-nodejs-download.png&quot; alt=&quot;Nodejs Download&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./post_img/npm/4-nodejs-download.png&quot; alt=&quot;Nodejs Download&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;3-prepare-your-package&quot;&gt;3. Prepare your package&lt;/h2&gt;
 
@@ -51,7 +51,7 @@
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁your-pkg-name
 ├── 📁your-pkg-name-01
 ├── 📁your-pkg-name-02
-└── 📁your-pkg-name-03
+├── 📁your-pkg-name-03
 └── package.json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
