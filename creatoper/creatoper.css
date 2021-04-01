@@ -1,6 +1,5 @@
 :root {
     /* Text System */
-    --text-color: #ffffff;
     --font-size-0: 16px; /*p*/
     --font-size-1: 42px; /*h1*/
     --font-size-2: 32px; /*h2*/
@@ -32,12 +31,6 @@
     --scroll-bar-track-color: transparent;
     --scroll-bar-thumb-color: #666666;
     --scroll-bar-thumb-hover-color: #a1a1a1;
-    /* Top Navigation Bar */
-    --navbar-bg-color: transparent;
-}
-
-#test-creatopercss {
-    color: green;
 }
 
 * {
@@ -50,7 +43,6 @@ body {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    /* color: var(--text-color); */
 }
 button {
     outline: none;
@@ -211,4 +203,9 @@ p {
     -o-user-select: none;
     user-select: none;
     pointer-events: none;
+}
+
+/* Test */
+#test-creatopercss {
+    color: green;
 }

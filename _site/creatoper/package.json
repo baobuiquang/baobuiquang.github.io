@@ -1,6 +1,6 @@
 {
   "name": "creatoper",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Web UI Library",
   "main": "creatoper.js",
   "scripts": {

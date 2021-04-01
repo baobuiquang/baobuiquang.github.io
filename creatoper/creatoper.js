@@ -14,7 +14,25 @@ function scrollFunction() {
         scrollToTopButton.style.display = "none";
     }
 }
+// <div class="just-display-on-desktop">
+// <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop" style="transform: rotate(38deg);">&nwarr;</button>
+// </div>
+
+
+
+// --------------------------------------- Auto relnoopener --------------------------------------- //
+function relnoopener() {
+    const a = document.querySelectorAll('a[target="_blank"]');
+    a.forEach(function (element) {
+        if (!element.hasAttribute('rel')) {
+            element.setAttribute('rel', 'noopener');
+        }
+    });
+}
+relnoopener();
+
+
 
 
 // Test
-document.getElementById("test-creatoper").innerHTML = "> creatoper.js load successfully!";
+// document.getElementById("test-creatoper").innerHTML = "> creatoper.js load successfully!";
