@@ -1,2 +1,0 @@
-# Creatoper
-Creatoper Team

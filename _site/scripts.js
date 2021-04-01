@@ -1,6 +1,17 @@
 // Test
 document.getElementById("test-scripts").innerHTML = "> scripts.js load successfully!";
 
+// Auto
+function relnoopener() {
+    const a = document.querySelectorAll('a[target="_blank"]');
+    a.forEach(function (element) {
+        if (!element.hasAttribute('rel')) {
+            element.setAttribute('rel', 'noopener');
+        }
+    });
+}
+relnoopener();
+
 // Service-worker register
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../sw.js');
