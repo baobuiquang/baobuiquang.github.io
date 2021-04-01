@@ -204,15 +204,9 @@ a {
     transition: all ease 0.2s;
 } .featured-post .title:hover {
     text-decoration: underline 3px var(--text-1);
-} .featured-post .lnk {
-
-} .featured-post .lnk:hover {
-    
 }
 .featured-post-2 {
     width: 100%;
-} .featured-post-2 img {
-    /* padding-right: 1vw; */
 } .featured-post-2 .title {
     font-size: 22px;
     margin-top: 16px;
