@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics for Data Science</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            NOTEBOOK</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop">
+                COVID-19 Virus Analysis and Diagnosis
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        READ FULL ARTICLE
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        Bui Quang Bao
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#experience">
+                        Experiences
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#projects">
+                        Projects
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#awards">
+                        Awards
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#certificates">
+                        Certificates
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#education">
+                        Education
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        11
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div style="font-weight: 500;">
+                        DS101
+                    </div>
+                    <div style="font-size: 13px;">
+                        
+                        Data Science Fundamental
+                        
+                    </div>
+                </div>
+                <ol style="margin-bottom: 2vh;">
+                    
+                    <a href="/notebook/what-is-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                What is Data Science?
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/the-place-of-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                The place of Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/ethics-and-agency-in-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Ethics and Agency in Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-data" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Data
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-rules" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Rules
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/tools-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Tools for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/mathematics-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                Mathematics for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyses-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyses for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/acting-on-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Acting on Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                All markdown syntax
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Publish your package to npm
+                            </li>
+                        </div>
+                    </a>
+                    
+                </ol>
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/technology" style="border: none;">
+                    <mark class="tag">
+                        technology
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/web" style="border: none;">
+                    <mark class="tag">
+                        web
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/markdown" style="border: none;">
+                    <mark class="tag">
+                        markdown
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/learning_archive" style="border: none;">
+                    <mark class="tag">
+                        learning_archive
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">Mathematics for Data Science</h1>
+            <div style="font-size: 14px; margin-bottom: 3vh;">
+                <!-- Bui Quang Bao -->
+                
+                <!-- Learning Archive -->
+                
+                In
+                <a href="/tag/learning_archive" style="border: none;">
+                    Learning Archive</a>
+                
+
+            </div>
+            <div class="content">
+                <h2 id="1-algebra">1. Algebra</h2>
+
+<p>When you’re working with data, it’s not too hard to come up with a solution when you have only one problem at a time, and it’s basically stationary. But it’s a whole different story when you have thousands of problems stampeding at you at the same time. In that case, you need a more flexible approach, and this is where algebra can come to the rescue. There are two reasons that it’s important to understand algebra and data science. Number one is that it allows you to scale up. The solution you create to a problem should deal efficiently with many instances at once. Basically create it once, run it many times. And the other one closely related to that is the ability to generalize. Your solution should not apply to just a few specific cases with what’s called Magic Numbers, but to cases that vary in a wide range of arbitrary ways, so you want to prepare for as many contingencies as possible. And so, we’ll start with the basic building blocks of data science, which is Elementary Algebra. An algebraic equation looks like this. This, in fact, is a linear regression equation, but what we’re doing is reusing letters to stand in for numbers. That actually is an interesting thing because a lot of people think that people who work in mathematics and work in data, work with numbers all the time, we actually work with variables, and so, this is the association between variables. So, let’s start right here. Here on the far left, Y is the outcome, and the subscript i means it’s for the case i, person or observation i. That could be one or two or 1,000 or a million. Right next to that is a Greek letter, that’s a lowercase beta, like a b, and it has a zero because it is the Y intercept. It’s sort of the starting value before we add anything else. Next to that is another beta, but this time with a sub one, this is a regression coefficient, and it’s the slope that we use for this variable X one, so that’s going to be our first predictor variable, and we’re going to multiply it for the value of case i. Then we do similar things with the second regression coefficient, and the second predictor variable, then the third regression coefficient, and the third predictor variable. And here at the end, we have an epsilon, and this stands for error, and it means, how far off is our prediction from the actual values for each person, one at a time? And as wonderful as a regression equation like that is, the power of computing comes in when we go past a single dimension to the rows and columns of a matrix. That’s how your computer likes to see math, and how it processes it. This is what’s known as Linear Algebra, it works with matrices and vectors. Over here on the far left is a vector that has all of the outcome scores for each case. In this situation, there’s only two, there’s Y sub one for the first person, and Y sub two for the second. If there were 100 people, we would have 100 numbers all arranged vertically, if there were a million, we’d have a million numbers arranged all vertically. Those are the outcomes, and they’re in a vector. Right next to this is all the scores, this is a matrix because it has both rows and columns, and it contains the data for each individual person. Next to that is another vector, which has the regression coefficients written again with the beta, and we have the intercept at the top, and then, each of the three slopes. And then, we finish with a vector of error terms for each individual person, there’s only two in this case, but there could be 1,000 or a million. Let me fill this in with some numbers so you can see how it works in practice. If we’re going to estimate the salary for a person working in data science, and this is actually based loosely on real data from a few years ago, let’s say we have two people, and the first one has a known salary of 137,000, the other one has a salary of 80,000, and what we’re going to do is see how we can run that through this matrix equation, this linear algebra, to estimate those numbers. The first thing here is we have their data in the matrix on the left and the regression coefficients on the right. This one is the intercept, everybody gets a one, because everybody’s number is multiplied times 50,000, that’s the starting value that everybody gets. Next to that is a number that, in this case, years of experience. So, this person has nine years, and for each year, we estimate an additional $2,000 in salary. Next to that is a number that indicates negotiating ability on a one to five scale, where one is very low, very poor negotiator, five is a very strong negotiator. And for each step up, we predict a $5,000 increase in annual salary. This person has a three, they’re middling, so we would add $15,000 onto their expected salary. This last one is an indicator variable, it’s a zero/one, zero is no, one is yes, to say whether this person is a founder or an owner of the company. If they are, then we would expect them to make about $30,000 more per year, that’s reasonable. And when you put all of these things together, we predict 113,000 for this first person. Now, they actually had 137,000, so we’re off by a little bit, and that’s the error equation. And that doesn’t necessarily mean we messed up, we only have three variables in the equation, we didn’t put down where they live, we didn’t put down what sector they’re working in, and we didn’t put down what kind of client projects they have, all of those things would influence it as well. But this shows you how you can use these vectors and matrices to do the algebra for an important question, like estimating salary. Now, one of the neat things about matrix notation is that it’s like packing a suitcase, you can go from lots of different individual things into a much more compact and maneuverable and agile package. This is matrix notation, and what it is here is this is the same information that I showed you just a moment ago, except now, you see how it’s in bold, each of these symbols now stands for the entire vector or matrix. This Y on the side stands for every single outcome score for every person in our data. This X is the matrix of all of the predictor data, and this bolded beta is the vector of all of the regression coefficients. And this over here, the epsilon, is the vector of all error terms. So, it’s very compact, and this is the way that computers like to deal with the information, and it makes it much easier for them to manipulate it and get the things that you’re looking for. Now, even though you’re going to be using the computer to do this, there’s a couple of reasons you want to be aware of how the algebra functions. Number one is it allows you to choose procedures well. You can know which algorithms will work best with the data that you currently have to answer the questions that motivated your project in the first place. And the second one is it can hep you resolve problems. Things don’t always go as planned, and you’ll know what to do when things don’t go as expected, so you can respond thoughtfully, and get the insight and the actionable steps you need out of your data.</p>
+
+<h2 id="2-calculus">2. Calculus</h2>
+
+<p>You may have the best product or service in the world, but if you want to get paid, you’ve got to make the sale and you got to do it in a way that’s profitable for you. Surprisingly, calculus may be one of the things to help you do just that. The idea here is that calculus is involved any time you’re trying to do a maximization and a minimization, when you’re trying to find the balance between these disparate demands. Let me give you an example of this might work. Let’s say that you sell a corporate coaching package online and that you currently sell it for $500 and that you have 300 sales per week. That’s $150,000 revenue per week. But let’s say that, based on your experience with adjusting prices, you’ve determined that for every $10 off of the price, you can add 15 sales per week. And let’s also assume, just for purposes of this analysis, that there’s no increase in overhead. So, the idea here is you can change the sales by adjusting the price, but where are you going to have the maximum revenue? Well, let’s start with a simple thing, the formula. Revenue is equal to the price times the number of sales, that’s easy. Well, just a second ago I said that the price is $500, but for every $10 of discount, you can change sales, so we have $10 times d, which is the units of discount. And then next to that is sales and currently, you’re having 300 sales per week, but for each unit of discount, you can add 15 more sales. Okay, we’ve got an equation here and if you multiply this through, go back to high school, then what you get is negative 150d squared plus 4500d plus 150,000 and this is the thing that we can use to maximize the revenue. This is where calculus comes in. What we’re going to do is we’re going to take the derivative of this formula. Now, this one actually wouldn’t be too hard to do by hand. You can also just stick it into a calculator online, it’ll do it for you, but the derivative is what’s going to help us find the best discount for maximizing revenue. So, if we get the derivative, it’s negative 300 times d minus 15. All right, we want to find out when this is equal to zero because that let’s us know where the maximum of the distribution is. So, we set it equal to zero, we divide both sides by negative 300, that just cancels out, and then we add 15 to both sides and we get d is equal to 15. Now, let me show you what that actually is representing. This is a graph of the equation that I showed you earlier and it has the units of discount across the bottom and it has the weekly revenue up the side and you can see that it goes up and then it curves back down. We want to find where that curve is the highest. Now, one way to do that’s put a vertical line across the top and the highest point actually is this one right here, it’s 15 units of discount, which is the same thing we got from the calculus. Now, let’s go back and determine what that means for our price. The price is $500 minus $10 per unit of discount. We decided that 15 was the optimal solution. $10 times 15 is 150, $500 minus 150 is $350, so that’s the price that’s going to get us the optimal revenue. Well, let’s see how that affects sales. We go back to sales, we originally have 300 per week and we had determined that for every unit of discount, we get 15 more sales per week. Well, we decided that 15 was the ideal units of discount, 15 times 15 is 225, add that to 300, and you get 525 sales per week once we make the change. So, our current revenue is $500 times 300 sales per week, that’s $150,000 in revenue per week, but if we were to change the price and drop it down to 350, we would increase the sales to 525 and that would gives an estimated total revenue of $183,750 and that’s a lot more money. In fact, the ratio is 1.225, which means it’s a 22.5% improvement in revenue. In fact, let’s look at the revenue this way. If we lower the price by 30%, going from $500 to $350 is 30%, we are able to increase the sales by 75% and that, taken together, increases the revenue by 22.5%. That’s an increase of almost $2 million annually, simply by making things more affordable and reaching a wider audience and helping them reach their own professional dreams. And that is the way that calculus can help you get paid.</p>
+
+<h2 id="3-optimization-and-the-combinatorial-explosion">3. Optimization and the combinatorial explosion</h2>
+
+<p>If you want to have a winning team, you need to have both excellent players and excellent teams or combinations of players. Now, you might be tempted to simply take the players that you have and try them in every possible situation, see where they work together in the different positions. If you’re in a sport that only has a few people, like say, for instance, beach volleyball where there’s two people on each team, this is something you can do. Let’s say you have four players total to choose from and you want to try them out in two, where you put each person into a position and you try all the possible permutations. Well, the formula for that is this one right here where we take the n players, that’s how many we’re choosing from, that’s four, and r is how many we’re taking at a time, that’s two, and that gives us 12 possible permutations. That’s something you could do in a day or two and feel confident about the decision that you’ve made. But what if you have more people? Let’s say you’re actually dealing with basketball. Well, well now you’re going to have five people on the court at a time and you’re going to have 15 people on an NBA roster to choose from. So now you have a permutations of 15, that’s your n players taken five at a time, and if you’re randomly shuffling them around in positions to see who does better at what and how well they work together, this is your formula, and unfortunately, now you have 360360 possible permutations. That’s going to keep you busy for a really, really long time, and you know what? It’s not even as bad as it gets. Let’s go to baseball. And let’s say you want to try out the 25 players on your roster where you put nine of them on the field at a time, and this is actually the sport where I first heard people talk about this. Well, the math gets out of hand very quickly. You’re doing permutations where n is 25 players taken r as nine at a time, and that gets you over 741 billion possible permutations, which is possibly longer than the entire universe has been in existence, and so that’s just not going to work. You’re trying to find an optimum solution, but randomly going through every possibility doesn’t work. This is called the combinatorial explosion because the growth is explosive as the number of units and the number of possibilities rises and so you need to find another way that can save you some time and still help you find an optimum solution. There are a few simple ways of approaching this. Number one is just to go into Excel. If you can estimate a basic function, you can use trial and error to modeling the function and look for a local maximum. Excel also has what if functions and scenarios that help you do that. You can also use calculus for simple functions. You can use a calculus-based approach that I’ve demonstrated elsewhere. You, on the other hand, you need to be able to estimate the functions and get a derivative. And then there’s also optimization, also known as mathematical optimization or mathematical programming, and certain versions of which are known as linear programming. And I want to show you very quickly how I can use optimization in Excel to answer a basic question. Now my goal here is not to show you every step involved in Excel. What I’m try to do is show you that it is possible and what it looks like. If you decide it’s something you want to pursue, you’re going to need to go back and spend a little more time trying the ins and outs of how this works. I’m going to be using a little piece of software that is an included add-in called Solver for Excel. And what I’ve done is I’ve set up a hypothetical situation where a person owns a yoga studio and they’re trying to maximize their revenue for the amount of time they spend. And the first thing I do is over here, I put down a list of possible things a person could spend their time on, from responding to social media and writing a newsletter to teaching classes to recording videos, and I say about how long it takes to do each one and how much each of those impacts the bottom line. And then one of the important things about optimization is putting in constraints, and so here I say we need to do at least this many on the left. We need to do no more than this many on the right. You know, you have to respond to your email, but you can’t teach classes all day long. You get burned out, and so you have these minima and these maxima, and then we’re going to use the Solver to try to find an optimal number of units. How much of your time you should spend on each of these activities. We’re going to maximize the impact, which is basically revenue, and then we’re going to make it so it’s no more than 40 hours because you still have a life you’ve got to live. Now when you call up the Solver dialog box, it looks like this. This is where you say what you’re trying to maximize, what you’re going to constrain, what it’s allowed to change, and there’s a number of options here that can get pretty complex. Again, my goal here is not to show you how to use it, but simply that it exists and it can solve this kind of problem. When I hit solve, what it does is it adjusts the column in F and it says this is your optimal distribution. It says spend this much time on each of these things, and what that is going to do is it’s going to maximize the impact, which is going to be associated with revenue. And it also says how much time you’re going to spend on each one. I also put a little dot plot here on the end just to give a visualization. You’re going to spend most of your time teaching group classes in the studio, but you’ll do at least a little bit of everything else as a way of maximizing the impact. This is a way of reaching a conclusion about the optimal way of allocating your time, maybe even recruiting a team, without having to go through billions and billions of possibilities. That’s one of the beauties of data analysis and data science, to help you cut through the mess and find the most direct way to the goals that are important to you.</p>
+
+<h2 id="4-bayes-theorem">4. Bayes’ theorem</h2>
+
+<p>Performing is hard. You put in a lifetime of training, weeks of preparation for an event and even when you’ve done the very best, you can never be completely certain that everything’s going to work out exactly the way you wanted it to. There’s a certain element of luck or probability associated with it. It’s the same thing in data science. No matter how big your dataset, no matter how sophisticated your analysis and the resources available to your organization, there’s still an inescapable element of probability. It’s just how it works. And one of the best things you can do is to explicitly incorporate that uncertainty into your data science work to give you more meaningful and more reliable insights. This is Bayes’ Theorem and this is one of the keys to incorporating that uncertainty. What Bayes’ Theorem does is it gives you the posterior or after-the-data probability of a hypothesis as a function of the likelihood of the data given the hypothesis, the prior probability of the hypothesis and the probability of getting the data you found. Now you can also write it as a formula like this but it’s going to be a lot easier if I give you an example and do the work graphically. So, let’s take a look at medical diagnosis as a way of applying Bayesian analysis or Bayes’ Theorem to interpreting the results of a study. There are three things you need to know. First off, you need to know the base rate of a disease, how common is it overall? Let’s assume that we have a disease that affects 5% of the people who are tested. Then we need to know the true positive rate, so 90% of the people with the disease will test positive. It means that 10% won’t. Those will be false negatives. There’s also a false positive rate, that’s 10% of the people who do not have the disease will also test positive. It depends on how the test is set up but that’s not completely unlikely and so, we have the base rate, the true positive rate and the false positive rate. We can use those to answer this question. If a person tests positive and the test is advertised as 90% accurate, then what is the probability that they actually have the disease? Well, I’m going to give you a hint. The answer is not 90%. And it has to do because of the way we incorporate the base rates and the false positives. So let’s go and look at this. This square represents 100% of the people tested for the disease. Up here at the top we have 5% of the total, that’s the people who actually have the disease. Below that are the people without the disease, that’s 95% of the total. Then if we take the people with the disease and give them a test, the people who have the disease who test positive, that’s in blue, 90% of them, that’s 90% of 5% is 4.5% of the total number of people and these are the true positives. Now next to that, we add the people without the disease who test positive. That’s 10% of the 95%, so that’s 9.5% of the total and those are the false positives and so, you can see, everybody in blue got a positive result but what’s the probability that you actually have the disease? Well, to do that, we’re going to calculate the posterior probability of the disease. We take the true positives and divide it by all of the positives, the true and the false positives. Now in this particular case, that’s 4.5% divided by the sum of 4.5 and 9.5% which is 14%. 4.5 divided by 14% is 32.1% and what this means is that even though the test is advertised as 90% accurate, depending on the base rate of the disease, and the false positive, a positive test result may still mean that you have less than a 1/3 chance of having the disease. That’s a huge difference between what people expect the result to be and how it’s actually going to play out in practice and that’s one of the most important things you can do for accurately interpreting and putting into action the results of your data science analyses to get meaningful and accurate insight.</p>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ DON'T DELETE THIS LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>

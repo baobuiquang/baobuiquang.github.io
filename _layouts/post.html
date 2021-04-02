@@ -10,15 +10,45 @@
 
     <div class="row">
         <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div style="font-weight: 500;">
+                        {{page.series}}
+                    </div>
+                    <div style="font-size: 13px;">
+                        {% if page.series == "DS101" %}
+                        Data Science Fundamental
+                        {% endif %}
+                    </div>
+                </div>
+                <ol style="margin-bottom: 2vh;">
+                    {% for post in site.posts reversed%}
+                    <a href="{{post.url}}" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    {% if page.series != post.series or page.series == null %} display: none; {% endif %}
+                    ">
+                            <li style="
+                        {% if page.url == post.url %} color: var(--accent); font-weight: 500;{% endif %}
+                        ">
+                                {{ post.title }}
+                            </li>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </ol>
+            </div>
+
+
+
             &nbsp;
         </div>
         <div class="col-6">
 
 
-            <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+            <div style="height: var(--padding-top-post);"></div>
 
 
-            <div style="margin-bottom: 3vh;">
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
                 {% for tag in page.tags %}
                 {% capture tag_name %}{{ tag }}{% endcapture %}
                 <a href="/tag/{{ tag_name }}" style="border: none;">
