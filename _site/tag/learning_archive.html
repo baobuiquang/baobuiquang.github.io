@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publish your package to npm</title>
+    <title>Learning Archive</title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
     <link rel="shortcut icon" href="../favicon.png">
     <!-- Jekyll -->
@@ -57,12 +57,6 @@
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
             NOTEBOOK</a>
-        <a href="https://github.com/buiquangbao" target="_blank" class="nav-link">
-            GITHUB</a>
-        <a href="/" class="nav-link">
-            PIXELAX</a>
-        <a href="/" class="nav-link">
-            CREATOPER</a>
     </div>
 </div>
 <div class="menu">
@@ -140,7 +134,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        3
+                        5
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -195,199 +189,79 @@
     </div>
 </div>
 
+    <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+
     <div class="row">
-        <div class="col-3">
-            &nbsp;
+        <div class="col-5">
+            <div class="just-display-on-desktop"
+                style="text-transform: uppercase; padding: 32px 42px; font-weight: 500; height: calc(5*150px); width: 90%; background: #1d1d1d; color: #e7e7e7; text-align: right;">
+                learning_archive
+            </div>
         </div>
-        <div class="col-6">
-
-
-            <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
-
-
-            <div style="margin-bottom: 3vh;">
+        <div class="col-5">
+            <div class="all-posts">
                 
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/learning_archive" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            learning_archive
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        January 1, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/ethics-and-agency-in-ds" class="title">
+                        Ethics and Agency in Data Science
+                    </a>
+                </h2>
+                <div class="preview">
+                    Data science can make you feel like a superhero who's here to save the world or at least your business's world. But an alarming amount of data work can also end up in court or on the wrong side of a protest so I want to talk about a few things that can help keep you, your company and your data science work on the up and up.
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
                 
-                <a href="/tag/technology" style="border: none;">
-                    <mark class="tag">
-                        technology
-                    </mark>
-                </a>
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/learning_archive" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            learning_archive
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        January 1, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/the-place-of-data-science" class="title">
+                        The place of Data Science
+                    </a>
+                </h2>
+                <div class="preview">
+                    At this exact moment in history, when people think about data science, the mind turns inexorably towards artificial intelligence, often with humanoid robots lost deep in thought. But before I compare and contrast data science and AI, I want to mention a few things about the nature of categories and definitions.
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
                 
-                
-                <a href="/tag/web" style="border: none;">
-                    <mark class="tag">
-                        web
-                    </mark>
-                </a>
-                
-                
-                <a href="/tag/npm" style="border: none;">
-                    <mark class="tag">
-                        npm
-                    </mark>
-                </a>
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/learning_archive" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            learning_archive
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        January 1, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/what-is-data-science" class="title">
+                        What is Data Science?
+                    </a>
+                </h2>
+                <div class="preview">
+                    Back in the early 60's, Barbra Streisand sang, 'People who need people are the luckiest people in the world.' And really, the need for belonging, the need to connect, and the need to be valued are all fundamental human motivations. As it happens, working in data science can actually help fulfill some of these foundational needs.
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
                 
             </div>
-            <h1 style="margin-bottom: 3vh;">Publish your package to npm</h1>
-            <div style="font-size: 14px; margin-bottom: 3vh;">
-                By
-                <a href="https://buiquangbao.github.io/" target="_blank" style="border: none;">
-                    Bui Quang Bao
-                </a>
-                | March 25, 2021
-            </div>
-            <div class="content">
-                <h2 id="1-what-is-npm-create-an-npm-account">1. What is <a href="https://www.npmjs.com/">npm</a>? Create an npm account.</h2>
-
-<p><code class="language-plaintext highlighter-rouge">npm</code> is a package manager for the JavaScript programming language.</p>
-
-<p><code class="language-plaintext highlighter-rouge">npm</code> is the command line client that allows developers to install and publish packages - packaged modules of code.</p>
-
-<p><code class="language-plaintext highlighter-rouge">npm</code> is an <a href="https://github.com/npm">open source</a> project and free to use.</p>
-
-<p>Official website: <strong><a href="https://npmjs.com/">npm</a></strong></p>
-
-<p>Documentation: <strong><a href="https://docs.npmjs.com/">npm Docs</a></strong></p>
-
-<p><img src="./post_img/npm/1-npm-landing-page.png" alt="NPM Landing Page" /></p>
-
-<p>Create an npm account at: <strong><a href="https://www.npmjs.com/signup">Sign Up</a></strong></p>
-
-<p>Login: <strong><a href="https://www.npmjs.com/login">Login</a></strong></p>
-
-<p><img src="./post_img/npm/2-npm-sign-up.png" alt="NPM Sign Up" /></p>
-
-<h2 id="2-what-is-nodejs-download-nodejs">2. What is <a href="https://nodejs.org/en/">Node.js</a>? Download Node.js.</h2>
-
-<p><code class="language-plaintext highlighter-rouge">Node.js</code> is an open-source, cross-platform, back-end JavaScript runtime environment.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Node.js</code> is an <a href="https://github.com/nodejs">open source</a> project and free to use.</p>
-
-<p>Official website: <strong><a href="https://nodejs.org/en/">Nodejs</a></strong></p>
-
-<p>Documentation: <strong><a href="https://nodejs.org/en/docs/">Nodejs Docs</a></strong></p>
-
-<p><img src="./post_img/npm/3-nodejs-landing-page.png" alt="NPM Landing Page" /></p>
-
-<p>Download Node.js at: <strong><a href="https://nodejs.org/en/download/">Download Node.js</a></strong></p>
-
-<p><img src="./post_img/npm/4-nodejs-download.png" alt="Nodejs Download" /></p>
-
-<h2 id="3-prepare-your-package">3. Prepare your package</h2>
-
-<p>Put all your package’s files in 1 folder</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>📁your-pkg-name
-├── 📁your-pkg-name-01
-├── 📁your-pkg-name-02
-└── 📁your-pkg-name-03
-</code></pre></div></div>
-
-<p>Create a <code class="language-plaintext highlighter-rouge">package.json</code> file</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>📁your-pkg-name
-├── 📁your-pkg-name-01
-├── 📁your-pkg-name-02
-├── 📁your-pkg-name-03
-└── package.json
-</code></pre></div></div>
-
-<p>Edit the <code class="language-plaintext highlighter-rouge">package.json</code> file</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-pkg-name"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Write your package's description here."</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-pkg-name.js"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> 
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> 
-    </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"your-package-keyword"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your Name Here"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h2 id="4-publish-your-package">4. Publish your package</h2>
-
-<style>
-.youtube {
-    width: 100%; height: 46.87vw;
-    border: none; background: transparent;
-} @media only screen and (min-width: 768px) {
-    .youtube {
-        width: 42vw; height: 23.625vw;
-    }
-}
-</style>
-
-<iframe class="youtube" src="https://www.youtube.com/embed/lxxndOskI1o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Open command line and navigate to your package’s folder</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd
-</code></pre></div></div>
-
-<p>Login your npm account</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm login
-</code></pre></div></div>
-
-<p>Note that when you input the password, there is no clue show that you are typing. This will be confused if this is the first time you use the command line.</p>
-
-<p>Initialize npm package manager</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init
-</code></pre></div></div>
-
-<p>If you have prepared your package, all you need to do is just enter.</p>
-
-<p>Finally, type</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yes
-</code></pre></div></div>
-
-<p>Publish your package</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm publish
-</code></pre></div></div>
-
-<p>If you see the line</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ your-pkg-name@1.0.1
-</code></pre></div></div>
-
-<p>your package has been published on npm successfully!</p>
-
-<p>If there is any error, you should:</p>
-
-<ul>
-  <li>Check your package’s name, it maybe used by other user (for example: you can’t name your package <code class="language-plaintext highlighter-rouge">react</code> or <code class="language-plaintext highlighter-rouge">vue</code>). In this case, you should change your package’s name, or publish your package under your name or organization’s name.</li>
-  <li>Check your folder’s structure, <code class="language-plaintext highlighter-rouge">package.json</code> file.</li>
-  <li>Check your npm account.</li>
-</ul>
-
-            </div>
-            <br>
-            Thanks for reading!
-            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
-            <p style="margin-bottom: 7vh; text-align: center;">
-                <a href="/" style="font-weight: 400; border: none;">
-                    <script>document.write(new Date().getFullYear())</script>
-                    &copy;
-                    Bui Quang Bao
-                </a>
-            </p>
-
-
-        </div>
-        <div class="col-3">
-            &nbsp;
         </div>
     </div>
 

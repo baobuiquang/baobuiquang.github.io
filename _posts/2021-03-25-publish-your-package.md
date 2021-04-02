@@ -3,10 +3,9 @@ layout: post
 title: "Publish your package to npm"
 date: 2021-03-25 20:00:00 +0700
 author: "Bui Quang Bao"
-authorlink: https://buiquangbao.github.io/
 tags: technology web npm
 series:
-preview: "How to publish packages to npm (the way the industry does things)."
+preview: "npm is a package manager for the JavaScript programming language. npm is the command line client that allows developers to install and publish packages - packaged modules of code. npm is an open source project and free to use."
 ---
 
 ## 1. What is [npm](https://www.npmjs.com/)? Create an npm account.
@@ -27,7 +26,7 @@ Create an npm account at: **[Sign Up](https://www.npmjs.com/signup)**
 
 Login: **[Login](https://www.npmjs.com/login)**
 
-![NPM Sign Up](./post_img/npm/2-npm-sign-up.png)
+![NPM Sign Up](../post_img/npm/2-npm-sign-up.png)
 
 
 ## 2. What is [Node.js](https://nodejs.org/en/)? Download Node.js.
@@ -40,11 +39,11 @@ Official website: **[Nodejs](https://nodejs.org/en/)**
 
 Documentation: **[Nodejs Docs](https://nodejs.org/en/docs/)**
 
-![NPM Landing Page](./post_img/npm/3-nodejs-landing-page.png)
+![NPM Landing Page](../post_img/npm/3-nodejs-landing-page.png)
 
 Download Node.js at: **[Download Node.js](https://nodejs.org/en/download/)**
 
-![Nodejs Download](./post_img/npm/4-nodejs-download.png)
+![Nodejs Download](../post_img/npm/4-nodejs-download.png)
 
 ## 3. Prepare your package
 

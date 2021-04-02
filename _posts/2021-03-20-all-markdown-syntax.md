@@ -3,7 +3,6 @@ layout: post
 title: "All markdown syntax"
 date: 2021-03-20 09:50:00 +0700
 author: "Bui Quang Bao"
-authorlink: https://buiquangbao.github.io/
 tags: technology web markdown
 series: RWD101
 preview: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor."

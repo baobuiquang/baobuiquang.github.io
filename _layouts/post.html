@@ -30,11 +30,20 @@
             </div>
             <h1 style="margin-bottom: 3vh;">{{ page.title }}</h1>
             <div style="font-size: 14px; margin-bottom: 3vh;">
+                <!-- Bui Quang Bao -->
+                {% if "Bui Quang Bao" contains page.author %}
                 By
-                <a href="{{page.authorlink}}" target="_blank" style="border: none;">
-                    {{ page.author }}
-                </a>
+                <a href="/" target=" _blank" style="border: none;">
+                    Bui Quang Bao</a>
                 | {{ page.date | date: "%B %-d, %Y" }}
+                {% endif%}
+                <!-- Learning Archive -->
+                {% if "Learning Archive" contains page.author %}
+                In
+                <a href="/tag/learning_archive" style="border: none;">
+                    Learning Archive</a>
+                {% endif%}
+
             </div>
             <div class="content">
                 {{content}}

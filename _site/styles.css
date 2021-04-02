@@ -188,6 +188,11 @@ a {
     text-decoration: underline 3px var(--text-1);
 } .all-posts .preview {
     margin: 0;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 
@@ -272,7 +277,7 @@ a {
 }
 .modal-links {
     width: 100%;
-    height: calc(100vh - var(--top-nav-h) - 330px);
+    height: calc(100vh - var(--top-nav-h) - 300px);
     padding: 20px 0 18px var(--menu-pd);
     overflow-y: scroll;
 } @media screen and (max-width: 768px) {

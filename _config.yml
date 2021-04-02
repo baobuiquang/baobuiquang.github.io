@@ -41,7 +41,7 @@ defaults:
       type: "posts"
     values:
         layout: "post" #default layout
-        permalink: /:title
+        permalink: /notebook/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default.
