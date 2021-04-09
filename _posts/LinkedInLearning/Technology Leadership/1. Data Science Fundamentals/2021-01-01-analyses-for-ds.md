@@ -3,7 +3,7 @@ layout: post
 title: "Analyses for Data Science"
 date: 2021-01-01 00:00:08 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "When it comes to business decisions, humans and machines approach things very differently. One element of this is that machines have essentially perfect memory. You can give it to 'em once and they'll probably give it back to you exactly the same way later."
 ---

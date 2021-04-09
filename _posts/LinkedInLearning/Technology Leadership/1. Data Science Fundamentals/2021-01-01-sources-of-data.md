@@ -3,7 +3,7 @@ layout: post
 title: "Sources of Data"
 date: 2021-01-01 00:00:04 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "Anybody who's cooked knows how time-consuming food prep can be, and that doesn't say anything about actually going to the market, finding the ingredients, putting things together in bowls and sorting them, let alone cooking the food. And it turns out there's a similar kind of thing that happens in data science, and that's the data preparation part."
 ---

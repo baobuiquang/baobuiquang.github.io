@@ -20,7 +20,7 @@ Official website: **[npm](https://npmjs.com/)**
 
 Documentation: **[npm Docs](https://docs.npmjs.com/)**
 
-![NPM Landing Page](./post_img/npm/1-npm-landing-page.png)
+![NPM Landing Page](../post_img/npm/1-npm-landing-page.png)
 
 Create an npm account at: **[Sign Up](https://www.npmjs.com/signup)**
 

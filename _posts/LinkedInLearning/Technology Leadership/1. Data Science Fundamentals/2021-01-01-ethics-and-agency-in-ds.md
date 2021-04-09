@@ -3,7 +3,7 @@ layout: post
 title: "Ethics and Agency in Data Science"
 date: 2021-01-01 00:00:03 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "Data science can make you feel like a superhero who's here to save the world or at least your business's world. But an alarming amount of data work can also end up in court or on the wrong side of a protest so I want to talk about a few things that can help keep you, your company and your data science work on the up and up."
 ---

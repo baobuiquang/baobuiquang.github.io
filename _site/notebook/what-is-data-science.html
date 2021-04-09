@@ -57,6 +57,8 @@
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
             NOTEBOOK</a>
+        <a href="https://creatoper.github.io" target="_blank" class="nav-link">
+            CREATOPER</a>
     </div>
 </div>
 <div class="menu">
@@ -93,17 +95,17 @@
                         Notebook
                     </a>
                 </div>
-                <div class="a-wrap">
+                <!-- <div class="a-wrap">
                     <a href="https://buiquangbao.github.io/#experience">
                         Experiences
                     </a>
-                </div>
+                </div> -->
                 <div class="a-wrap">
                     <a href="https://buiquangbao.github.io/#projects">
                         Projects
                     </a>
                 </div>
-                <div class="a-wrap">
+                <!-- <div class="a-wrap">
                     <a href="https://buiquangbao.github.io/#awards">
                         Awards
                     </a>
@@ -117,6 +119,16 @@
                     <a href="https://buiquangbao.github.io/#education">
                         Education
                     </a>
+                </div> -->
+                <div class="a-wrap">
+                    <a href="/" target="_blank">
+                        x Creatoper Library
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Pixelax
+                    </a>
                 </div>
                 <div class="a-wrap">
                     <a href="https://buiquangbao.github.io/#contact">
@@ -125,7 +137,7 @@
                 </div>
             </div>
             <div class="modal-bottom">
-                <div class="modal-views">
+                <div class="modal-views" style="padding-bottom: 0;">
                     <span class="fhs">
                         <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
                             fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
@@ -134,10 +146,14 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        11
+                        17
                     </a>
                     POSTS | SINCE 2020
                 </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
                 <div class="modal-contact">
                     <div class="mobile-row-6">
                         <div class="col">
@@ -193,12 +209,13 @@
         <div class="col-3">
             <div class="post-in-series-wrap">
                 <div style="margin-bottom: 2vh;">
-                    <div style="font-weight: 500;">
+                    <div class="page-series-code">
                         DS101
                     </div>
-                    <div style="font-size: 13px;">
+                    <div class="page-series-name">
                         
                         Data Science Fundamental
+                        
                         
                     </div>
                 </div>
@@ -312,6 +329,78 @@
                         </div>
                     </a>
                     
+                    <a href="/notebook/create-a-risk-plan" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Create a risk plan
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/identify-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Identify project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyze-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyze project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/respond-to-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Respond to project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/monitor-and-control-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Monitor and control project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/risk-management-in-real-world" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Risk management in real world
+                            </li>
+                        </div>
+                    </a>
+                    
                     <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
                         <div class="post-in-series" style="
                      display: none; 
@@ -359,16 +448,9 @@
                 </a>
                 
                 
-                <a href="/tag/web" style="border: none;">
+                <a href="/tag/data_science" style="border: none;">
                     <mark class="tag">
-                        web
-                    </mark>
-                </a>
-                
-                
-                <a href="/tag/markdown" style="border: none;">
-                    <mark class="tag">
-                        markdown
+                        data_science
                     </mark>
                 </a>
                 
@@ -381,7 +463,7 @@
                 
             </div>
             <h1 style="margin-bottom: 3vh;">What is Data Science?</h1>
-            <div style="font-size: 14px; margin-bottom: 3vh;">
+            <div class="author-name">
                 <!-- Bui Quang Bao -->
                 
                 <!-- Learning Archive -->
@@ -395,11 +477,27 @@
             <div class="content">
                 <h2 id="1-supply-and-demand-for-data-science">1. Supply and demand for data science</h2>
 
-<p>Back in the early 60’s, Barbra Streisand sang, “People who need people “are the luckiest people in the world.” And really, the need for belonging, the need to connect, and the need to be valued are all fundamental human motivations. As it happens, working in data science can actually help fulfill some of these foundational needs. By placing you in a position to one, do something wonderful for other people and two, in return to be valued for it. It goes back to something that a Harvard Business Review had to say about it back in 2012. Thomas Davenport and D.J. Patil made the extraordinary claim that data science, of all things, was the sexiest job of the 21st century. But they had good reasons for saying this. They are argued that data scientists had one, a valuable combination of rare qualities that two, put them in high demand. So here are some of the rare qualities. Data scientists are able to find order, meaning, and value in unstructured data. That’s online sources, the graphs of social networks, audio, images, videos, and so on. They’re able to predict outcomes like who’s likely to purchase something or who poses a security threat, or who’s likely to develop a disease, or respond well to a new treatment. They’re able to automate processes like getting individualized recommendations while shopping, identifying friends in photographs, or giving psychological support in AI chat bots. And they’re in high demand for a couple of really simple reasons. They provide hidden insight. Data science is able to show you things that you simply can’t find through other means. And that hidden insight, in turn, provides significant competitive advantage to any organization that has the good foresight to employ and really make the most of data science. Give you a little bit more information about supply and demand here. Number one, there’s been extraordinary growth in job ads. People are looking for data science. So for example, a January 2019 report from Indeed reported a 29% increase in job ads for data science over one year and 344% over six years. This is extraordinary growth. Next, they showed that there’s growth in job searches. People actually trying to find jobs in data science. And they found only a 14% growth over one year. Now that may sound a little low, but the important thing to hear is that the demand is outstripping the availability. And any time that happens, you’ve got value. And what this means, you know, again, specifically, the gap in supply and demand is it significant? LinkedIn reported a gap of over 150,000 jobs in data science. And it’s even more dramatic when you show in related fields like machine learning engineer, artificial intelligence specialist, and so on. It’s big. There are so many possibilities here to do something that is valued for others. And it’s reflected in the salaries for data science. The average salary in data science is $107,000 a year. Which, just for comparison purposes, is over twice the national median in the U.S. of $47,000 a year. And that means that this is one of the best jobs in the U.S. Glass Door in January of 2019 published it’s annual list of best jobs in America and for the fourth year in a row, data scientist is at the top of the list, based on job satisfaction, number of openings, salary. It really lets you know there is extraordinary potential here, something that you can provide of amazing value for potential employers. And you fan fulfill that great need and you can be valued for the things that you’re able to contribute by embracing the methods and the benefits of data science in your work.</p>
+<p>Back in the early 60’s, Barbra Streisand sang, “People who need people “are the luckiest people in the world.” And really, the need for belonging, the need to connect, and the need to be valued are all fundamental human motivations. As it happens, working in data science can actually help fulfill some of these foundational needs. By placing you in a position to one, do something wonderful for other people and two, in return to be valued for it.</p>
+
+<p>It goes back to something that a Harvard Business Review had to say about it back in 2012. Thomas Davenport and D.J. Patil made the extraordinary claim that data science, of all things, was the sexiest job of the 21st century. But they had good reasons for saying this. They are argued that data scientists had one, a valuable combination of rare qualities that two, put them in high demand. So here are some of the rare qualities.</p>
+
+<p>Data scientists are able to find order, meaning, and value in unstructured data. That’s online sources, the graphs of social networks, audio, images, videos, and so on. They’re able to predict outcomes like who’s likely to purchase something or who poses a security threat, or who’s likely to develop a disease, or respond well to a new treatment. They’re able to automate processes like getting individualized recommendations while shopping, identifying friends in photographs, or giving psychological support in AI chat bots. And they’re in high demand for a couple of really simple reasons. They provide hidden insight. Data science is able to show you things that you simply can’t find through other means. And that hidden insight, in turn, provides significant competitive advantage to any organization that has the good foresight to employ and really make the most of data science.</p>
+
+<p>Give you a little bit more information about supply and demand here. Number one, there’s been extraordinary growth in job ads. People are looking for data science. So for example, a January 2019 report from Indeed reported a 29% increase in job ads for data science over one year and 344% over six years. This is extraordinary growth. Next, they showed that there’s growth in job searches. People actually trying to find jobs in data science. And they found only a 14% growth over one year. Now that may sound a little low, but the important thing to hear is that the demand is outstripping the availability. And any time that happens, you’ve got value. And what this means, you know, again, specifically, the gap in supply and demand is it significant? LinkedIn reported a gap of over 150,000 jobs in data science. And it’s even more dramatic when you show in related fields like machine learning engineer, artificial intelligence specialist, and so on. It’s big.</p>
+
+<p>There are so many possibilities here to do something that is valued for others. And it’s reflected in the salaries for data science. The average salary in data science is $107,000 a year. Which, just for comparison purposes, is over twice the national median in the U.S. of $47,000 a year. And that means that this is one of the best jobs in the U.S. Glass Door in January of 2019 published it’s annual list of best jobs in America and for the fourth year in a row, data scientist is at the top of the list, based on job satisfaction, number of openings, salary. It really lets you know there is extraordinary potential here, something that you can provide of amazing value for potential employers. And you fan fulfill that great need and you can be valued for the things that you’re able to contribute by embracing the methods and the benefits of data science in your work.</p>
 
 <h2 id="2-the-data-science-venn-diagram">2. The data science Venn diagram</h2>
 
-<p>Sometimes the whole is greater than the sum of its parts, and you can see this in a lot of different places. Take, for instance, music. You take John, and Paul, and George, and Ringo, all wonderful musicians in their own rights, but put them together and you have The Beatles and you have revolutionized popular culture. Or take the fact that everybody has a circle of friends and basically everybody has the internet now, and you have created social networks and you have revolutionized the computing world. Or in 2013, Drew Conway proposed the combination of hacking skills, that’s computer programming, and math and statistics, and substantive or topical domain expertise, together give you data science, a new field that has revolutionized both the technology and the business world. And I want to talk a little more about why each of those three elements in the Venn diagram of data science are so important. First one, the hacking skills or computer programming, the reason that’s important is because you have such novel sources of data. You have social media and social networks, you have challenging formats like the graph data from those social networks or images or video that don’t fit into the rows and columns of a spreadsheet, or you have streaming data like sensor data or live web data that comes in so fast that you can’t pause it to analyze it. All of these require the creativity that comes with hacking and the ability to work freely with what you have in front of you. Now in terms of actual computer programming skills, there’s a few things that are very useful in data science. The ability to work with a language like Python or R, these are programming languages that are very frequently used for data manipulation and modeling. There’s C, and C++, and Java. These are general-purpose languages that are used for the back end, the foundational elements of data science, and they provide maximum speed. There’s S-Q-L or SQL. That stands for structured query language. This is a language for working with relational databases to do queries and data manipulation. And then there are packages you can use in other languages like TensorFlow. This is an open-source library that’s used for deep learning and it has revolutionized the way that data science is performed right now. And then there’s the mathematical elements of data science. First off, there’s several forms of mathematics that are particularly useful in data science. There’s probability, and linear algebra, and calculus, and regression, and I’ll talk about some of each of these, but they allow you to do something important. Number one, they allow you to choose the procedures. You want to judge the fit between your question, which is always the first and most important thing, the data that you have available to you, and then you choose a procedure that answers your questions based on your data. And if you understand the mathematics and how it works, you’ll be able to make a much better and more informed choice. And also, you’ll be able to diagnose problems. Murphy’s Law applies in data science as well as everywhere else that anything that can go wrong, will go wrong, and you need to know what to do when the procedures that you’ve chosen fail or they give sometimes impossible results. You need to understand exactly how the data’s being manipulated so you can see where the trouble areas are and how to resolve them. And then the third area of Conway’s data science Venn diagram is substantive expertise. This is each domain or topic area has its own goals, methods, and constraints. If you’re working in social media marketing, you’re going to have a very different set of goals and methods than if you’re working in biomedical informatics. And you need to know what constitutes value in the particular domain you’re working in. And finally, how to implement the insights because data science is an action-oriented field. It’s designed to tell you what to do next to get the most value, provide the best service that you possibly can based on the data that you have. So taken together, the hacking or programming, the math and statistics, and the substantive expertise are the individual elements or components, the parts that make up the larger-than-the-sum whole of data science.</p>
+<p>Sometimes the whole is greater than the sum of its parts, and you can see this in a lot of different places. Take, for instance, music. You take John, and Paul, and George, and Ringo, all wonderful musicians in their own rights, but put them together and you have The Beatles and you have revolutionized popular culture. Or take the fact that everybody has a circle of friends and basically everybody has the internet now, and you have created social networks and you have revolutionized the computing world. Or in 2013, Drew Conway proposed the combination of hacking skills, that’s computer programming, and math and statistics, and substantive or topical domain expertise, together give you data science, a new field that has revolutionized both the technology and the business world. And I want to talk a little more about why each of those three elements in the Venn diagram of data science are so important.</p>
+
+<p>First one, the hacking skills or computer programming, the reason that’s important is because you have such novel sources of data. You have social media and social networks, you have challenging formats like the graph data from those social networks or images or video that don’t fit into the rows and columns of a spreadsheet, or you have streaming data like sensor data or live web data that comes in so fast that you can’t pause it to analyze it. All of these require the creativity that comes with hacking and the ability to work freely with what you have in front of you.</p>
+
+<p>Now in terms of actual computer programming skills, there’s a few things that are very useful in data science. The ability to work with a language like Python or R, these are programming languages that are very frequently used for data manipulation and modeling. There’s C, and C++, and Java. These are general-purpose languages that are used for the back end, the foundational elements of data science, and they provide maximum speed. There’s S-Q-L or SQL. That stands for structured query language. This is a language for working with relational databases to do queries and data manipulation.</p>
+
+<p>And then there are packages you can use in other languages like TensorFlow. This is an open-source library that’s used for deep learning and it has revolutionized the way that data science is performed right now.</p>
+
+<p>And then there’s the mathematical elements of data science. First off, there’s several forms of mathematics that are particularly useful in data science. There’s probability, and linear algebra, and calculus, and regression, and I’ll talk about some of each of these, but they allow you to do something important. Number one, they allow you to choose the procedures. You want to judge the fit between your question, which is always the first and most important thing, the data that you have available to you, and then you choose a procedure that answers your questions based on your data. And if you understand the mathematics and how it works, you’ll be able to make a much better and more informed choice. And also, you’ll be able to diagnose problems. Murphy’s Law applies in data science as well as everywhere else that anything that can go wrong, will go wrong, and you need to know what to do when the procedures that you’ve chosen fail or they give sometimes impossible results. You need to understand exactly how the data’s being manipulated so you can see where the trouble areas are and how to resolve them. And then the third area of Conway’s data science Venn diagram is substantive expertise. This is each domain or topic area has its own goals, methods, and constraints. If you’re working in social media marketing, you’re going to have a very different set of goals and methods than if you’re working in biomedical informatics. And you need to know what constitutes value in the particular domain you’re working in. And finally, how to implement the insights because data science is an action-oriented field. It’s designed to tell you what to do next to get the most value, provide the best service that you possibly can based on the data that you have. So taken together, the hacking or programming, the math and statistics, and the substantive expertise are the individual elements or components, the parts that make up the larger-than-the-sum whole of data science.</p>
 
 <h2 id="3-the-data-science-pathway">3. The data science pathway</h2>
 

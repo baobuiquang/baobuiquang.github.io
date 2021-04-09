@@ -106,6 +106,10 @@ a {
     font-size: 16px;
     font-weight: 600;
     margin-right: 2vw;
+} @media screen and (max-width: 768px) {
+    .nav-link {
+        font-size: 18px;
+    }
 }
 
 
@@ -165,6 +169,10 @@ a {
     line-height: 1.7; 
     color: var(--text-2);
     margin-bottom: 10px;
+} @media screen and (max-width: 768px) {
+    .pfl-text {
+        font-size: 18px;
+    }
 } .pfl-text a {
     color: var(--text-2);
     font-weight: 400;
@@ -225,6 +233,42 @@ a {
 } .featured-post-2 .title:hover {
     text-decoration: underline 3px var(--text-1);
 }
+.featured-post-2 .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} .featured-post-2 .item {
+    width: 30%;
+} @media screen and (max-width: 768px) {
+    .featured-post-2 .item {
+        width: 100%;
+    }
+}
+
+
+
+.page-series-code {
+    font-weight: 500;
+    font-size: 13px;
+}
+.page-series-name {
+    font-size: 13px;
+}
+.author-name {
+    font-size: 14px;
+    margin-bottom: 3vh;
+}
+@media screen and (max-width: 768px) {
+    .page-series-code {
+        font-size: 18px;
+    }
+    .page-series-name {
+        font-size: 18px;
+    }
+    .author-name {
+        font-size: 17px;
+    }
+}
 
 .tag {
     font-size: 11px;
@@ -242,6 +286,10 @@ a {
     text-align: justify;
     color: var(--text-2);
     line-height: 1.5;
+} @media screen and (max-width: 768px) {
+    .preview {
+        font-size: 16px;
+    }
 }
 
 
@@ -249,10 +297,12 @@ a {
     position: fixed;
     top: 150px;
     left: 3vw;
+    width: 21vw;
     padding-top: 0;
 } @media screen and (max-width: 768px) {
     .post-in-series-wrap {
         position: relative;
+        width: 100%;
         top: 0;
         left: 0;
         padding-top: calc(2*var(--top-nav-h) - 20px);
@@ -264,7 +314,13 @@ a {
     padding: 8px 0;
     border-left: 2px solid var(--text-2);
     transition: all ease 0.2s;
-} .post-in-series:hover {
+} @media screen and (max-width: 768px) {
+    .post-in-series {
+        font-size: 18px;
+        padding: 12px 0;
+    }
+}
+.post-in-series:hover {
     border-left: 6px solid var(--text-2);
 }
 .post-in-series-wrap ol {
@@ -312,7 +368,7 @@ a {
 }
 .modal-links {
     width: 100%;
-    height: calc(100vh - var(--top-nav-h) - 300px);
+    height: calc(100vh - var(--top-nav-h) - 315px);
     padding: 20px 0 18px var(--menu-pd);
     overflow-y: scroll;
 } @media screen and (max-width: 768px) {
@@ -357,6 +413,13 @@ a {
     -o-user-select: none;
     user-select: none;
     pointer-events: none;
+} @media screen and (max-width: 768px) {
+    .modal-bottom .modal-views {
+        font-size: 14px;
+    }
+    .fhs {
+        font-size: 14px;
+    }
 }
 .modal-bottom .modal-contact {
     border-top: var(--border);
@@ -555,7 +618,11 @@ a {
     font-size: 14px;
     color: var(--text-2);
     margin: 8px 0;
-}
+} @media screen and (max-width: 768px) {
+    .accordion .p {
+        font-size: 16px;
+    } 
+} 
 .active, .accordion:hover {
     background-color:  transparent; /*Active*/
     color: var(--text-1);
@@ -591,7 +658,11 @@ a {
     color: var(--text-2);
     line-height: 1.7;
     margin: 8px 0 8px 0;
-}  .panel  a {
+}  @media screen and (max-width: 768px) {
+    .panel p {
+        font-size: 18px;
+    }  
+} .panel  a {
     font-size: 14px;
     color: var(--text-2);
     font-weight: 400;
@@ -660,6 +731,10 @@ a {
     -o-user-select: none;
     user-select: none;
     pointer-events: none;
+} @media screen and (max-width: 768px) {
+    .content p {
+        font-size: 18px;
+    }    
 }
 .content a {
     text-decoration: none;

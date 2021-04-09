@@ -3,7 +3,7 @@ layout: post
 title: "Sources of Rules"
 date: 2021-01-01 00:00:05 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "Let's say you meet someone at a party and after talking for awhile you start to wonder if that person might be interested in you. This is apparently a question that is on a lot of people's minds. If Google's auto-complete is to be trusted, assessing attraction is a major research question."
 ---

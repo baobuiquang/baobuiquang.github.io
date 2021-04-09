@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identify project risks</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            NOTEBOOK</a>
+        <a href="https://creatoper.github.io" target="_blank" class="nav-link">
+            CREATOPER</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop">
+                COVID-19 Virus Analysis and Diagnosis
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        READ FULL ARTICLE
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        Bui Quang Bao
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <!-- <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#experience">
+                        Experiences
+                    </a>
+                </div> -->
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#projects">
+                        Projects
+                    </a>
+                </div>
+                <!-- <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#awards">
+                        Awards
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#certificates">
+                        Certificates
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#education">
+                        Education
+                    </a>
+                </div> -->
+                <div class="a-wrap">
+                    <a href="/" target="_blank">
+                        x Creatoper Library
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Pixelax
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views" style="padding-bottom: 0;">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        17
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div class="page-series-code">
+                        PM101
+                    </div>
+                    <div class="page-series-name">
+                        
+                        
+                        Project Management: Risks
+                        
+                    </div>
+                </div>
+                <ol style="margin-bottom: 2vh;">
+                    
+                    <a href="/notebook/what-is-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                What is Data Science?
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/the-place-of-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                The place of Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/ethics-and-agency-in-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Ethics and Agency in Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-data" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Data
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-rules" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Rules
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/tools-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Tools for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/mathematics-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Mathematics for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyses-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyses for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/acting-on-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Acting on Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/create-a-risk-plan" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Create a risk plan
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/identify-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                Identify project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyze-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyze project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/respond-to-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Respond to project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/monitor-and-control-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Monitor and control project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/risk-management-in-real-world" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Risk management in real world
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                All markdown syntax
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Publish your package to npm
+                            </li>
+                        </div>
+                    </a>
+                    
+                </ol>
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/project_management" style="border: none;">
+                    <mark class="tag">
+                        project_management
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/risk" style="border: none;">
+                    <mark class="tag">
+                        risk
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/learning_archive" style="border: none;">
+                    <mark class="tag">
+                        learning_archive
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">Identify project risks</h1>
+            <div class="author-name">
+                <!-- Bui Quang Bao -->
+                
+                <!-- Learning Archive -->
+                
+                In
+                <a href="/tag/learning_archive" style="border: none;">
+                    Learning Archive</a>
+                
+
+            </div>
+            <div class="content">
+                <h2 id="1-risk-identification-methods">1. Risk identification methods</h2>
+
+<p>Moving forward on a project without performing risk identification is like heading on a hike in the wilderness without a GPS. It’s easy to get yourself quite lost when you encounter the unexpected and don’t have anything to help you navigate. Risks represent the unexpected in my hiking analogy. Different types of projects have different risks and if you don’t know your risks, the probability of them occurring and the impact they’ll have, it’s impossible to manage them. So an appropriate risk identification process is crucial. Here are risk identification approaches I recommend for use with your projects. The first approach is to hold a brainstorming session, also called a risk workshop. As they say, several heads are better than one, and this holds true when identifying project risks. For these workshops however, don’t limit yourself to your project team. It’s a good idea to involve your stakeholders, sponsor, and potentially other project managers in this workshop. To make these sessions more effective, it’s important that you use a list of questions, also called a prompt list. For example, is your customer organization used to change? Are there external factors that will impact your project? Does a lack of a particular skill in the organization present a risk? What are the lessons learned from previous projects? In the this session, have everyone come up with their top five risks, and remember that through this exercise, traditional brainstorming rules apply. Capture all the potential risks. There are no bad ideas. You’ll sort through them later. If you need some ideas for your prompt list, I’ve provided sample questions that you can download in the Exercise Files for this course. Examples include, what would be most likely to become more expensive to produce than what we expect, and why? Which of our project team members is mostly likely to have another priority item assigned to him? What would the impact be? The second risk identification method I recommend is to use industry-specific risk categories. For example, in the construction industry, there are safety risks. In IT, there are information security risks and risk involving making solutions too complex. To help, most industry associations have online resources and risk tools that you can leverage. Use them to identify risks if you’re a member of an association that makes risk resources available. You might also find resources through other project managers involved in your industry. The Project Management Institute also has project management standards for projects in government, software, and construction. The last technique to consider for risk identification is to examine your work breakdown structure, or WBS, and identify risk by task or groups of tasks. Using the tasks in the WBS can trigger risk ideas that you otherwise might miss. This is a good last step to help ensure you’ve thoroughly considered risks that may impact your project. You can’t address risks you haven’t identified. Launching your risk management approach with thorough and well-considered risk identification practices will help you avoid being lost in the project wilderness without a GPS.</p>
+
+<h2 id="2-categorizing-and-consolidating-risks">2. Categorizing and consolidating risks</h2>
+
+<p>Risks are like having a large cart of groceries. You need to sort things out, place items in separate bags for the freezer, fridge and pantry so you’re organized when you get home. The same pertains to risks on your project. How will you ensure your risks are well-organized so you can manage them? Categorizing risks for your project is a great way to ensure you’re well-organized. Let me share some typical ways to categorize risks and some tips for using those categories wisely. First, try to identify any risks that have common causes. For example, one common area for risks might be not having enough people, or you lack people with the relevant skills. You could have a substantial list of risks, but many can be managed collectively by tying them back to a category of people and skills. A second way to categorize risk is by business area, such as external market risks or business strategy changes. This can be very helpful when you’re dealing with your client and the risks they bring to the project. Taking this approach can enhance the perception that you’re managing the project with your client and their needs in mind. It can also help engage your client to ensure you manage their risks appropriately. A third way to categorize risks is by technical area. These might include design and development challenges, testing and maintenance risks and uncertainty with technical vendors. Fourth, you can utilize an integration risk category. Integration risks surface when you’re working on your project while there are other things happening in your organization. This activity can cause priority problems or conflicts with other project deliverables. If you have nine projects targeting a single business area, this might signal a need to address integration risks, as solutions may need to be coordinated or even merged together. Although these are common risk categories, you may find other categories that are more useful on the specific projects you manage. No matter which categories you use, here are a few tips for using those categories to manage risks. Revise your categories as necessary. As the project progresses, you may learn more about the risks that are substantial. Therefore, more relevant categories may surface. My final tip is to always keep your list of categories short and simple. Try to avoid a heap of categories for you and your team to sort out. Package the risks so they’re relevant for your project team and other stakeholders. For help with this, I’ve included a risk identification checklist in the exercise files for the course to give you an example. Using well-crafted risk categories can help you manage your project risks more easily. But it also helps your stakeholders see the risks for what they are, and helps you work with your risks more effectively, kind of like ensuring you don’t leave frozen items on your kitchen counter when you get home from the store.</p>
+
+<h2 id="3-risk-records-and-registers">3. Risk records and registers</h2>
+
+<p>Risk management plans fill up lots of waste baskets, accompanied by frustrated project managers screaming things like, “This risk plan is useless.” The difference between risk plans that work and those that do not usually comes down to one simple element: the way risks are written. Let me share a story where risk records were written inadequately. An airport identifies a risk that their fuel trucks may be unable to make it to refuel airplanes in a timely manner. This’ll cause flight delays. As a response, the project manager assumes the risk involves the fuel trucks having a mechanical failure. He decides to have more fuel trucks available so they’ll always have a truck ready to refuel the aircraft. Sounds like a reasonable risk mitigation strategy. However, during the next month the fuel truck drivers go on strike. They could have all the fuel trucks in the world, and none of them would show up. What went wrong here? The project team only considered one cause for the risk occurring. So you don’t end up like our unfortunate airport manager, let’s take a look at the formula for writing effective risk records. A properly structured risk record is as easy as pie. The probability of impact as the result of an event. Add the cause of the event and you have a useful risk record. Back to our airport example. An appropriate risk record would be there is an x% chance that the fuel truck drivers will go on strike, causing the fuel trucks and aircraft departures to be delayed. This will increase costs by $y per flight. It’s notable here that you may need more than one risk record to cover other items, flat tires, for instance, that may delay fuel truck arrivals. This could be covered with additional trucks. Doing good risk identification and analysis is important, but it all has to go somewhere. That place would be your risk register. First, your risk register captures the risks that have been identified in an overall assessment of project risk. Your project level risk comes from looking at your risk overall, and total potential impact to your project. Many high-impact risks that would be expensive to avoid would lead to a high risk project. Few risks overall or few risks that have high cost response plans likely means your project is low risk. Between these two end points you probably have a medium risk project. Second, include your plans for treating each risk, as well as the cost of any treatment strategy. You might do this for medium and high risks only. Third, identify the owner of each risk and how the risk is tied to tasks in your project schedule. Finally, keep it current. Make sure the risk register is updated after every status meeting. Follow these activities and it will bring your risk management to life and keep your project healthy. Oh, and it’ll also reduce your need to empty your waste basket.</p>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ DON'T DELETE THIS LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>

@@ -3,7 +3,7 @@ layout: post
 title: "Acting on Data Science"
 date: 2021-01-01 00:00:09 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "You've done all the work. You've planned the project. You've found data. You cleaned and organized the data. You created a model, you validated the model and you just want to put a bow on it and be done. Well, one thing that you need to consider before you wrap it all up, is who is going to make the decision?"
 ---

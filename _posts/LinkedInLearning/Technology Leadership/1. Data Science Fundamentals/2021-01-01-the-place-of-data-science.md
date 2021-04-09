@@ -3,7 +3,7 @@ layout: post
 title: "The place of Data Science"
 date: 2021-01-01 00:00:02 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "At this exact moment in history, when people think about data science, the mind turns inexorably towards artificial intelligence, often with humanoid robots lost deep in thought. But before I compare and contrast data science and AI, I want to mention a few things about the nature of categories and definitions."
 ---

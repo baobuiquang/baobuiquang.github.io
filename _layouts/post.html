@@ -12,12 +12,15 @@
         <div class="col-3">
             <div class="post-in-series-wrap">
                 <div style="margin-bottom: 2vh;">
-                    <div style="font-weight: 500;">
+                    <div class="page-series-code">
                         {{page.series}}
                     </div>
-                    <div style="font-size: 13px;">
+                    <div class="page-series-name">
                         {% if page.series == "DS101" %}
                         Data Science Fundamental
+                        {% endif %}
+                        {% if page.series == "PM101" %}
+                        Project Management: Risks
                         {% endif %}
                     </div>
                 </div>
@@ -59,7 +62,7 @@
                 {% endfor %}
             </div>
             <h1 style="margin-bottom: 3vh;">{{ page.title }}</h1>
-            <div style="font-size: 14px; margin-bottom: 3vh;">
+            <div class="author-name">
                 <!-- Bui Quang Bao -->
                 {% if "Bui Quang Bao" contains page.author %}
                 By

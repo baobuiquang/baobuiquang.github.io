@@ -3,7 +3,7 @@ layout: post
 title: "Tools for Data Science"
 date: 2021-01-01 00:00:06 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "When people think about data science, machine learning and artificial intelligence, the talk turns almost immediately to tools. Things like programming languages and sophisticated computer setups, but remember, the tools are simply a means to an end, and even then only a part of it."
 ---

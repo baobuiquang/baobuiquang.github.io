@@ -8,13 +8,13 @@
     {% include scroll-to-top.html %}
     {% include top-nav.html %}
 
-    <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+    <div style="height: calc(2*var(--top-nav-h) - 0px);"></div>
 
     <div class="row">
         <div class="col-5">
             <div class="just-display-on-desktop"
                 style="text-transform: uppercase; padding: 32px 42px; font-weight: 500; height: calc({{ site.posts | size }}*150px); width: 90%; background: #1d1d1d; color: #e7e7e7; text-align: right;">
-                {{ page.tag }}
+                {{ page.title }}
             </div>
         </div>
         <div class="col-5">

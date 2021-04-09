@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a risk plan</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            NOTEBOOK</a>
+        <a href="https://creatoper.github.io" target="_blank" class="nav-link">
+            CREATOPER</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop">
+                COVID-19 Virus Analysis and Diagnosis
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        READ FULL ARTICLE
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        Bui Quang Bao
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <!-- <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#experience">
+                        Experiences
+                    </a>
+                </div> -->
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#projects">
+                        Projects
+                    </a>
+                </div>
+                <!-- <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#awards">
+                        Awards
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#certificates">
+                        Certificates
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#education">
+                        Education
+                    </a>
+                </div> -->
+                <div class="a-wrap">
+                    <a href="/" target="_blank">
+                        x Creatoper Library
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Pixelax
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views" style="padding-bottom: 0;">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        17
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div class="page-series-code">
+                        PM101
+                    </div>
+                    <div class="page-series-name">
+                        
+                        
+                        Project Management: Risks
+                        
+                    </div>
+                </div>
+                <ol style="margin-bottom: 2vh;">
+                    
+                    <a href="/notebook/what-is-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                What is Data Science?
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/the-place-of-data-science" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                The place of Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/ethics-and-agency-in-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Ethics and Agency in Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-data" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Data
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/sources-of-rules" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Sources of Rules
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/tools-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Tools for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/mathematics-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Mathematics for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyses-for-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyses for Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/acting-on-ds" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Acting on Data Science
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/create-a-risk-plan" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                Create a risk plan
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/identify-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Identify project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/analyze-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Analyze project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/respond-to-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Respond to project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/monitor-and-control-project-risks" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Monitor and control project risks
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/risk-management-in-real-world" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                    
+                    ">
+                            <li style="
+                        
+                        ">
+                                Risk management in real world
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                All markdown syntax
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                Publish your package to npm
+                            </li>
+                        </div>
+                    </a>
+                    
+                </ol>
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/project_management" style="border: none;">
+                    <mark class="tag">
+                        project_management
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/risk" style="border: none;">
+                    <mark class="tag">
+                        risk
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/learning_archive" style="border: none;">
+                    <mark class="tag">
+                        learning_archive
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">Create a risk plan</h1>
+            <div class="author-name">
+                <!-- Bui Quang Bao -->
+                
+                <!-- Learning Archive -->
+                
+                In
+                <a href="/tag/learning_archive" style="border: none;">
+                    Learning Archive</a>
+                
+
+            </div>
+            <div class="content">
+                <h2 id="1-understanding-risks-and-opportunities">1. Understanding risks and opportunities</h2>
+
+<p>Projects deal with change, and dealing with change is risky business, as many businesses don’t handle change very well. My experience is that many project managers aren’t prepared so they don’t appropriately manage risk. When I talk about risk, I’m talking about things that haven’t happened yet. There’s a probability of some sort of event occurring that’ll have an impact on your project. There are two major categories for risk, positive and negative risk. Positive risks are often called opportunities. These are things that can happen that will enhance the outcome of your project. For example, your project team might make a breakthrough that cuts the time to complete a set of tasks in half the time. As there are typically more instances of negative things happening in projects that have to be managed, project managers typically focus on negative risk. Negative risks are events that could cause your project to be thrown off course, so it’s vital that you pay attention to them. Whether you’re dealing with positive or negative risk, there are a standard series of steps to follow when managing risk. First, you need to identify the risks on your project. When you see something that will probably happen, you should take action ahead of time, before the impacts affect your project. Be proactive rather than being reactive. The second step is to assess the likelihood of a risk happening and determine which risks you will address. You don’t address all risks, as some, like an asteroid destroying your building, is so unlikely you won’t want to deal with it via risk management. Addressing risks means taking action. Determining the actions to take is step three. This is to investigate alternatives to address your risks. You’ll want to steer your project around the bumpy section of the road, or you might try to smooth out part of the road for a more comfortable ride. Using either alternative, the idea for you as a project manager is to control how much your projects are exposed to risk. The last step in the risk management process is to control risks on an ongoing basis. This is important to do because risks change over time. You should frequently assess your project for the likelihood of a risk happening and its potential impact. Understanding the consequences of any risk will help you manage it appropriately. Any sort of change comes with a level of risk. It’s how you manage that risk that makes all the difference. Ultimately, project management is risk management. By clearly understanding your risks in light of what you’re trying to achieve, your project has a greater chance of being delivered successfully, and you might not be perceived as a risk taker for working on your project.</p>
+
+<h2 id="2-incorporating-risk-management">2. Incorporating risk management</h2>
+
+<p>Don’t try this at home. We hear this a lot on action or experiment based TV programs. Why? Because the risks of harm are great. The average person should never try the skateboard tricks you see on TV. Projects, while not typically physically dangerous, should come with a warning like those TV programs. They come with risk. As a project manager, not a day goes by when I don’t see something that could present a risk to my project. My advice to you? Deal with risk thoroughly without it consuming every moment of your day. Here are a few survival tips to help you do this. First, use risk to prioritize what you do on a day-to-day basis. At the start of every day, prioritize your tasks. Seek to tackle the riskiest things first. For example, if you think that one of your vendors might miss a deadline, you should prioritize your time to visit with them to understand and examine your options if necessary. If you think a risk is going to impact an implementation process, look at that process, assess it, and attempt to control it. Better yet, change the process to reduce the risk. Second, discuss risk openly with your sponsor. Ask what risks they think are important and determine what they think of your strategies to deal with risks. Ask for suggestions and garner their support. Third, make risks a regular topic at your status meetings. You should include your customers and your sponsor in these discussions. Having regular, open, and frank discussions about risk will help you manage risk as a regular course of doing business. Finally, after each of these risk assessment discussions, create or update your overall risk plan. This plan details the risks you are managing and provides an ongoing means of reporting what actions you’re taking and the status of each risk. Your vendor potentially being late would be added to your plan, if you didn’t have one in there already. The risk plan helps you ensure you’re on top of what’s going on with risk on your project. Working the plan proactively helps you be cool, calm, and collected in your risk management approach. I like to treat risk management as an everyday event and an essential part of keeping my projects on track. If you ignore the whole idea of risk management, you’ll end up fighting fires and this is a tough way to spend your day. Fighting fires can have a negative impact on your schedule, your costs, and the quality of the products you deliver. Not to mention the emotional drain it puts on your and your team. And you’ll be so busy putting out the fires that any process improvement opportunities will be largely overlooked. If you look and act like you’re in control of risk, then you’ll have a better chance of getting other engaged in a sensible risk management approach. In addition, you’ll help your management perceive you as a person with a balanced business approach to implementing your project and not engaging on those crazy skateboard stunts you’d only see on TV.</p>
+
+<h2 id="3-stakeholders-risk-tolerance">3. Stakeholder’s risk tolerance</h2>
+
+<p>World renowned boxer Muhammad Ali said, “He who is not courageous enough to take risks “will accomplish nothing in life.” Now, his idea of risk, however, may be different than yours and mine. After all, he used to step into the boxing ring with someone trying to knock his head off. Most project managers don’t want anything to do with being in a boxing ring, but they’re happy to tolerate other risks. So, how do you find out about your stakeholder’s risk tolerance? First, be prepared that your stakeholders, sponsors, and the people on your project team will each tolerate risk differently. Some people might actually step into that boxing ring while others are cautious just walking down stairs. And there’s everyone in between. You need to take this into consideration when you talk about risk in your project. The key is to always listen carefully as you discuss elements of your project. The second thing to keep in mind is that people have business motivations to protect scope, time, or money when these constraints are discussed. We need to understand these motivations. For example, one organization I know of is involved in yearly industry trade shows. At these shows the company is expected to display new products. If they don’t have new products ready to show off at the trade shows, it’ll impact their business. A project stakeholder in this instance will be totally focused on time constraints because it’s critical they have products ready to demonstrate at that trade show. Risk impacts to cost and scope are a much lower priority for them as long as they get their new product when required. A third factor when considering risk tendency is your stakeholder’s performance evaluation. How is your stakeholder being appraised by their manager? What are they being encouraged to do or change in their business area? Candid discussions about your stakeholder’s expectations and concerns can give you a feel for which project constraints they’ll want to focus on. To obtain this information, it’s necessary to pose critical questions, and listen very carefully to the answers you receive. Without directly asking about their personal performance evaluation you can ask them what business outcomes are they most excited about, and what potential negative business outcomes most concern you? What are you being incented to achieve this year? Fourth, is the culture of the organization. It has a substantial impact on risk tolerance. Some entrepreneurial organizations will take significant risk, whereas more conservative industries will more aggressively seek to mitigate risk. And as their project manager, they’ll expect you to conform to their style. Muhammad Ali used to say, “I float like a butterfly, sting like a bee.” Appreciate the risk tolerance of your stakeholders, and you might not float like a butterfly, but you won’t be accused of stinging like a bee.</p>
+
+<h2 id="4-the-components-of-a-risk-plan">4. The components of a risk plan</h2>
+
+<p>Murphy’s Law states if anything can go wrong, it will. Well, I believe Murphy has relatives, and they all live in project circles. Doesn’t take much for risk to haunt your project. So, to control this potential chaos, you build a risk plan. A risk plan is a document that describes how project risk management will be structured and performed on a project. I’ve included a sample plan in the exercise files, and shortly, I will talk you through an example based on that plan structure. First, your risk plan needs to describe your risk identification approach. The most common way to do this is to run a risk identification workshop. Get a group together, including sponsors and project team members, and brainstorm risks. You could use risk registers from prior projects as a start. The second element of a risk plan is to capture how you’ll describe the risks. For example, you’ll want to capture the characteristics of the risks. Characteristics include categories like personnel or technical issues. You might also capture the nature of impact to the project should the risk occur. Schedule, cost, and scope are common impact descriptions. The third element of your risk plan is to document how you will perform qualitative and quantitative risk analysis. Qualitative analysis is when you prioritize risks based on their probability and impact of occurring. Quantitative analysis is when you estimate their effects on project objectives. Here’s an example of a qualitative analysis. The risk is, will a power outage impact the installation of your deliverables. If so, what impact would this have on your project? What’s the likelihood of it occurring? To do this efficiently, I suggest you use high, medium, and low to answer each of those questions. You don’t need to get overly detailed at this point. After this qualitative analysis, you take a further look at your significant risks via a quantitative analysis. You try to quantify the impact. By doing the quantitative analysis you can assess how much you could spend to try and reduce the risk. Using our power outage example, you don’t want to use $10,000 to buy a power generator to prevent the power outage risk that will cost $5,000 if it occurs. The fourth element of a risk plan is the approach you’ll take to address each significant risk. For example, will you purchase the power generator to avoid a total power outage, or will you schedule alternate installation times in the event of a power disruption. The last element of your risk management plan is how you will monitor and update risks as your project progresses. This section describes things like regular risk assessment meetings to keep on top of changing risks. It also describes how you’ll update and communicate new risk status items on your project. Using these elements to create and manage your risk plan will put you on solid ground to handle risks, and uninvite all the Murphys from your project party.</p>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ DON'T DELETE THIS LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>

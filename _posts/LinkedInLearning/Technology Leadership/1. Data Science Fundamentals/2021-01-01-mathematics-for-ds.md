@@ -3,7 +3,7 @@ layout: post
 title: "Mathematics for Data Science"
 date: 2021-01-01 00:00:07 +0700
 author: "Learning Archive"
-tags: technology web markdown learning_archive
+tags: technology data_science learning_archive
 series: DS101
 preview: "When you're working with data, it's not too hard to come up with a solution when you have only one problem at a time, and it's basically stationary. But it's a whole different story when you have thousands of problems stampeding at you at the same time."
 ---
