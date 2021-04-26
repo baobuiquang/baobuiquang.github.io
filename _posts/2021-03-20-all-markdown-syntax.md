@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "All markdown syntax"
+title: "Collection of the most used markdown syntaxes"
 date: 2021-03-20 09:50:00 +0700
 author: "Bui Quang Bao"
 tags: technology web markdown
-series: RWD101
-preview: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor."
+series:
+preview: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It is widely used in blogging, instant messaging, online forums, collaborative software, documentation pages, and readme files. In this post, I will collect some of the most commonly-used markdown syntaxes."
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id imperdiet odio. Etiam quis volutpat mauris. Duis ligula lacus, maximus vel est sed, molestie finibus nisl. Aliquam erat volutpat. Mauris sit amet pretium urna, sit amet tristique enim. In eget arcu mollis, ultricies metus venenatis, tincidunt enim.
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. Markdown is widely used in blogging, instant messaging, online forums, collaborative software, documentation pages, and readme files.
 
-Vestibulum ac sodales nisi, et malesuada tellus. Mauris eu nibh tortor. Aenean egestas enim in est imperdiet, in posuere arcu facilisis. Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.
+In this post, I will collect some of the most commonly-used markdown syntaxes.
 
 ```
 # This is an <h1> tag
@@ -22,16 +22,16 @@ Vestibulum ac sodales nisi, et malesuada tellus. Mauris eu nibh tortor. Aenean e
 ```
 
 # This is an <h1> tag
-Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta lectus nunc, ullamcorper venenatis eros commodo eu. Ut malesuada felis et massa pulvinar, eget convallis risus hendrerit. Sed posuere orci ac turpis venenatis aliquet. Proin pellentesque ut mauris nec interdum.
 ## This is an <h2> tag
-Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta lectus nunc, ullamcorper venenatis eros commodo eu. Ut malesuada felis et massa pulvinar, eget convallis risus hendrerit. Sed posuere orci ac turpis venenatis aliquet. Proin pellentesque ut mauris nec interdum.
 ### This is an <h3> tag
-Donec rutrum elit vitae sodales congue. Suspendisse sit amet dolor laoreet quam tempus rhoncus. Morbi viverra diam eu orci convallis, id sollicitudin justo blandit. Curabitur mattis dolor non ex rutrum, a auctor nisi malesuada.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta lectus nunc, ullamcorper venenatis eros commodo eu. Ut malesuada felis et massa pulvinar, eget convallis risus hendrerit. Sed posuere orci ac turpis venenatis aliquet. Proin pellentesque ut mauris nec interdum.
 #### This is an <h4> tag
 ##### This is an <h5> tag
 ###### This is an <h6> tag
 
-
+<br>
 ```
 *Italic text*
 ```
@@ -152,3 +152,4 @@ function plus(p1, p2) {
 - [ ] this is an incomplete item
 
 
+All for your need!

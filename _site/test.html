@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cell {
+            float: left;
+            background: antiquewhite;
+            border: 1px solid #000000;
+            padding: 16px 32px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <table>
+        <tbody id="stocks">
+            <tr>
+                <th>Open Price</th>
+                <th>Close Price</th>
+                <th>Current Volume</th>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <script>
+        alphavantage = "https://www.alphavantage.co/query?function=";
+        api_key = "X9FHQS6YCGKNZQBX";
+
+        function getFinance(ticker) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", alphavantage + "GLOBAL_QUOTE&symbol=" + ticker + "&apikey=" + api_key, true);
+            xmlhttp.send();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let myObj = JSON.parse(this.responseText);
+                    let obj = myObj;
+                    let finance = [""];
+
+                    obj = obj[Object.keys(obj)[0]];    // Object "Global Quote"
+
+                    finance.push(obj["01. symbol"]);
+                    finance.push(obj["02. open"]);
+                    finance.push(obj["03. high"]);
+                    finance.push(obj["04. low"]);
+                    finance.push(obj["05. price"]);
+                    finance.push(obj["06. volume"]);
+                    finance.push(obj["07. latest trading day"]);
+                    finance.push(obj["08. previous close"]);
+                    finance.push(obj["09. change"]);
+                    finance.push(obj["10. change percent"]);
+
+                    console.log(">> " + finance);
+
+                    document.getElementById("stocks").innerHTML +=
+                        "<tr>" +
+                        "<td id=\"stck" + ticker + "open\"></td>" +
+                        "<td id=\"stck" + ticker + "close\"></td>" +
+                        "<td id=\"stck" + ticker + "volume\"></td>" +
+                        "</tr>";
+
+                    document.getElementById("stck" + ticker + "open").innerHTML = finance[1];
+                    document.getElementById("stck" + ticker + "close").innerHTML = finance[4];
+                    document.getElementById("stck" + ticker + "volume").innerHTML = finance[5];
+                }
+            };
+        }
+        getFinance("AAPL");
+        getFinance("MSFT");
+        getFinance("TSLA");
+        getFinance("GOOG");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,14 +1,16 @@
 ---
 layout: post
-title: "Publish your package to npm"
+title: "How to publish your package to npm"
 date: 2021-03-25 20:00:00 +0700
 author: "Bui Quang Bao"
 tags: technology web npm
 series:
-preview: "npm is a package manager for the JavaScript programming language. npm is the command line client that allows developers to install and publish packages - packaged modules of code. npm is an open source project and free to use."
+preview: "npm is a package manager for the JavaScript programming language. npm is the command line client that allows developers to install and publish packages - packaged modules of code. npm is an open source project and free to use. In this post, I will show you how to publish a package to the most popular package manager - npm."
 ---
 
-## 1. What is [npm](https://www.npmjs.com/)? Create an npm account.
+In this post, I will show you how to publish a package to the most popular package manager - npm.
+
+## 1. What is npm? Create an npm account.
 
 `npm` is a package manager for the JavaScript programming language.
 
@@ -29,7 +31,7 @@ Login: **[Login](https://www.npmjs.com/login)**
 ![NPM Sign Up](../post_img/npm/2-npm-sign-up.png)
 
 
-## 2. What is [Node.js](https://nodejs.org/en/)? Download Node.js.
+## 2. What is Node.js? Download Node.js.
 
 `Node.js` is an open-source, cross-platform, back-end JavaScript runtime environment.
 
@@ -89,29 +91,19 @@ Edit the `package.json` file
 
 ## 4. Publish your package
 
-<style>
-.youtube {
-    width: 100%; height: 46.87vw;
-    border: none; background: transparent;
-} @media only screen and (min-width: 768px) {
-    .youtube {
-        width: 42vw; height: 23.625vw;
-    }
-}
-</style>
 <iframe class="youtube"
 src="https://www.youtube.com/embed/lxxndOskI1o" 
 frameborder="0" 
 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-Open command line and navigate to your package's folder
+Open command line and navigate to your package's folder:
 
 ```
 cmd
 ```
 
-Login your npm account
+Login your npm account:
 
 ```
 npm login
@@ -119,7 +111,7 @@ npm login
 
 Note that when you input the password, there is no clue show that you are typing. This will be confused if this is the first time you use the command line.
 
-Initialize npm package manager
+Initialize npm package manager:
 
 ```
 npm init
@@ -127,19 +119,19 @@ npm init
 
 If you have prepared your package, all you need to do is just enter.
 
-Finally, type
+Finally, type:
 
 ```
 yes
 ```
 
-Publish your package
+Publish your package:
 
 ```
 npm publish
 ```
 
-If you see the line
+If you see the line:
 
 ```
 + your-pkg-name@1.0.1
@@ -149,6 +141,8 @@ your package has been published on npm successfully!
 
 If there is any error, you should:
 
-* Check your package's name, it maybe used by other user (for example: you can't name your package `react` or `vue`). In this case, you should change your package's name, or publish your package under your name or organization's name.
-* Check your folder's structure, `package.json` file.
+* Check your package's name, it maybe used by other user (for example: you can't name your package `react` or `vue`, because they are already exist). In this case, you should change your package's name, or publish your package under your name or organization's name.
+* Check your folder's structure and `package.json` file.
 * Check your npm account.
+
+This is the end of this post, happy coding!

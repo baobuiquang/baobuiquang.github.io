@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publish your package to npm</title>
+    <title>How to publish your package to npm</title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="shortcut icon" href="../assets/favicon.png">
     <!-- Jekyll -->
     
     
@@ -45,6 +45,7 @@
         style="transform: rotate(38deg);">&nwarr;</button>
 </div>
     <div class="top-nav">
+
     <div class="name">
         <a href="/" class="nav-link">
             BUI QUANG BAO</a>
@@ -56,9 +57,11 @@
     </div>
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
-            NOTEBOOK</a>
-        <a href="https://creatoper.github.io" target="_blank" class="nav-link">
-            CREATOPER</a>
+            Notebook</a>
+        <a href="/notebook" class="nav-link">
+            Showcase</a>
+        <a href="/" target="_blank" class="nav-link">
+            Atom UI</a>
     </div>
 </div>
 <div class="menu">
@@ -146,7 +149,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        17
+                        19
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -406,7 +409,7 @@
                             <li style="
                         
                         ">
-                                All markdown syntax
+                                Collection of the most used markdown syntaxes
                             </li>
                         </div>
                     </a>
@@ -418,7 +421,31 @@
                             <li style="
                          color: var(--accent); font-weight: 500;
                         ">
-                                Publish your package to npm
+                                How to publish your package to npm
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/kdrama-start-up" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                K-Drama "Start-up" and what I got after watching it
+                            </li>
+                        </div>
+                    </a>
+                    
+                    <a href="/notebook/d" style="text-decoration: none; font-weight: 400;">
+                        <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                            <li style="
+                        
+                        ">
+                                
                             </li>
                         </div>
                     </a>
@@ -460,7 +487,7 @@
                 </a>
                 
             </div>
-            <h1 style="margin-bottom: 3vh;">Publish your package to npm</h1>
+            <h1 style="margin-bottom: 3vh;">How to publish your package to npm</h1>
             <div class="author-name">
                 <!-- Bui Quang Bao -->
                 
@@ -474,7 +501,9 @@
 
             </div>
             <div class="content">
-                <h2 id="1-what-is-npm-create-an-npm-account">1. What is <a href="https://www.npmjs.com/">npm</a>? Create an npm account.</h2>
+                <p>In this post, I will show you how to publish a package to the most popular package manager - npm.</p>
+
+<h2 id="1-what-is-npm-create-an-npm-account">1. What is npm? Create an npm account.</h2>
 
 <p><code class="language-plaintext highlighter-rouge">npm</code> is a package manager for the JavaScript programming language.</p>
 
@@ -494,7 +523,7 @@
 
 <p><img src="../post_img/npm/2-npm-sign-up.png" alt="NPM Sign Up" /></p>
 
-<h2 id="2-what-is-nodejs-download-nodejs">2. What is <a href="https://nodejs.org/en/">Node.js</a>? Download Node.js.</h2>
+<h2 id="2-what-is-nodejs-download-nodejs">2. What is Node.js? Download Node.js.</h2>
 
 <p><code class="language-plaintext highlighter-rouge">Node.js</code> is an open-source, cross-platform, back-end JavaScript runtime environment.</p>
 
@@ -551,49 +580,38 @@
 
 <h2 id="4-publish-your-package">4. Publish your package</h2>
 
-<style>
-.youtube {
-    width: 100%; height: 46.87vw;
-    border: none; background: transparent;
-} @media only screen and (min-width: 768px) {
-    .youtube {
-        width: 42vw; height: 23.625vw;
-    }
-}
-</style>
-
 <iframe class="youtube" src="https://www.youtube.com/embed/lxxndOskI1o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<p>Open command line and navigate to your package’s folder</p>
+<p>Open command line and navigate to your package’s folder:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmd
 </code></pre></div></div>
 
-<p>Login your npm account</p>
+<p>Login your npm account:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm login
 </code></pre></div></div>
 
 <p>Note that when you input the password, there is no clue show that you are typing. This will be confused if this is the first time you use the command line.</p>
 
-<p>Initialize npm package manager</p>
+<p>Initialize npm package manager:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init
 </code></pre></div></div>
 
 <p>If you have prepared your package, all you need to do is just enter.</p>
 
-<p>Finally, type</p>
+<p>Finally, type:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yes
 </code></pre></div></div>
 
-<p>Publish your package</p>
+<p>Publish your package:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm publish
 </code></pre></div></div>
 
-<p>If you see the line</p>
+<p>If you see the line:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ your-pkg-name@1.0.1
 </code></pre></div></div>
@@ -603,10 +621,12 @@
 <p>If there is any error, you should:</p>
 
 <ul>
-  <li>Check your package’s name, it maybe used by other user (for example: you can’t name your package <code class="language-plaintext highlighter-rouge">react</code> or <code class="language-plaintext highlighter-rouge">vue</code>). In this case, you should change your package’s name, or publish your package under your name or organization’s name.</li>
-  <li>Check your folder’s structure, <code class="language-plaintext highlighter-rouge">package.json</code> file.</li>
+  <li>Check your package’s name, it maybe used by other user (for example: you can’t name your package <code class="language-plaintext highlighter-rouge">react</code> or <code class="language-plaintext highlighter-rouge">vue</code>, because they are already exist). In this case, you should change your package’s name, or publish your package under your name or organization’s name.</li>
+  <li>Check your folder’s structure and <code class="language-plaintext highlighter-rouge">package.json</code> file.</li>
   <li>Check your npm account.</li>
 </ul>
+
+<p>This is the end of this post, happy coding!</p>
 
             </div>
             <br>

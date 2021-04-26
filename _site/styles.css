@@ -21,7 +21,7 @@
 }
 
 body {
-    transition: all ease 0.5s;
+    transition: all ease 0.0s;
     --background: #eeeeee;
     --text-1: #202020;
     --text-2: #555555;
@@ -204,7 +204,7 @@ a {
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
 }
 
@@ -859,6 +859,15 @@ a {
 }
 
 
+
+.youtube {
+    width: 100%; height: 46.87vw;
+    border: none; background: transparent;
+} @media only screen and (min-width: 768px) {
+    .youtube {
+        width: 50vw; height: 28.125vw;
+    }
+}
 
 
 
