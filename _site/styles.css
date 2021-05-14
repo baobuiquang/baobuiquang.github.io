@@ -22,7 +22,8 @@
 
 body {
     transition: all ease 0.0s;
-    --background: #eeeeee;
+    --background: #f0f0f0;
+    --background-nav: #f0f0f0d9;
     --text-1: #202020;
     --text-2: #555555;
     --link: #000000;
@@ -35,6 +36,7 @@ body {
 }
 body.darkmode {
     --background: #151515;
+    --background-nav: #141414d9;
     --text-1: #dfdfdf;
     --text-2: #919191;
     --link: #eeeeee;
@@ -53,7 +55,7 @@ body {
 
 img {
     width: 100%;
-    
+    border-radius: 5px;
 }
 
 a {
@@ -72,7 +74,10 @@ a {
 
 .top-nav {
     z-index: 10;
-    background: var(--background);
+
+    background: var(--background-nav);
+    backdrop-filter: blur( 8px );
+
     height: var(--top-nav-h);
     width: 100%;
     border-bottom: var(--border);
@@ -278,6 +283,8 @@ a {
     color: var(--background);
     padding: 5px 14px;
     margin-right: 8px;
+
+    border-radius: 3px;
 }
 .preview {
     font-size: 14px;
@@ -475,7 +482,7 @@ a {
     bottom: 0;
     left: 0;
     text-align: left;
-    background: #00000050;
+    background: rgba(0, 0, 0, 0.5);
     transition: all ease 0.2s;
 }
 .modal__bg {
@@ -497,7 +504,9 @@ a {
     top: 0;
 }
 .modal__inner {
-    background: var(--background);
+    background: var(--background-nav);
+    backdrop-filter: blur(12px);
+
     position: absolute;
     top: 0;
     right: calc(16.66vw - 12px);
@@ -784,7 +793,7 @@ a {
 }
 .content img {
     width: 100%;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 .content blockquote {
     padding-left: 24px;
