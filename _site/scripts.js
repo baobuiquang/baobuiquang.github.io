@@ -56,3 +56,24 @@ function localViewCount() {
     }
 }
 localViewCount();
+
+
+let code_block = document.querySelectorAll(".highlighter-rouge");
+for (let i = 0; i < 1000; i++) {
+    if (code_block[i] == undefined) break;
+    if (code_block[i].querySelectorAll(".highlight").length > 0) {
+        code_block[i].insertAdjacentHTML(
+            "afterbegin",
+            "<div class='highlighter-rouge-deco'>" +
+            "<div class='dot1'></div>" +
+            "<div class='dot2'></div>" +
+            "<div class='dot3'></div>" +
+            "</div>"
+        );
+    } else {
+        code_block[i].style.top = "-1px";
+        code_block[i].style.padding = "2px 8px 4px 8px";
+    }
+}
+
+

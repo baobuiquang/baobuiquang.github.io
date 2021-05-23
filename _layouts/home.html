@@ -14,21 +14,35 @@
         </div>
         <div class="col-8">
 
-            <div style="height: calc(2*var(--top-nav-h) - 20px);"></div>
+            <div style="height: calc(2*var(--top-nav-h) - 36px);"></div>
+
+            <div class="sub-menu-bar">
+                <a href="#latest">Latest Posts</a>
+                <a href="#">Technology</a>
+                <a href="#">Web Development</a>
+                <a href="#">Artificial Intelligence</a>
+                <a href="#">Data Analysis</a>
+                <a href="#">Computer Security</a>
+                <a href="#">Personal</a>
+                <a href="#">Experience</a>
+            </div>
+
+            <div style="height: calc(var(--top-nav-h) - 36px);"></div>
+            <div style="border-top: var(--border);"></div>
+
+            <!-- <div style="height: calc(var(--top-nav-h) - 20px);"></div>
             <div class="nav-link">
                 FEATURED POSTS
-            </div>
-            <div style="height: calc(var(--top-nav-h) - 20px);"></div>
+            </div> -->
+            <div style="height: calc(var(--top-nav-h) - 10px);"></div>
 
-            <div class="featured-post">
-                <div class="row-2" style="margin: 0;">
-                    <div class="col">
-                        <div class="img-wr">
-                            <img src="../assets/projects/covid19prj.gif"
-                                style="padding: 0px 0; background: #00000000; object-fit: contain;" alt="covid19">
-                        </div>
+            <div class="featured-post just-display-on-desktop">
+                <div style="margin: 0; display: flex; flex-direction: row; align-items: stretch;">
+                    <div style="width: 50%; display: flex; background: #000000; border-radius: 5px;">
+                        <img src="../assets/projects/covid19prj.gif"
+                            style="padding: 0px 0; background: #00000000; object-fit: contain;" alt="covid19">
                     </div>
-                    <div class="col">
+                    <div style="width: 50%; margin: 0 0 0 2vw;">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
                                 ARTIFICIAL INTELLIGENCE
@@ -40,7 +54,7 @@
                                 COVID-19
                             </mark>
                         </div>
-                        <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis" target="_blank">
+                        <a href="https://buiquangbao.github.io/notebook/covid-19">
                             <h2 class="title">
                                 COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
                             </h2>
@@ -50,15 +64,15 @@
                         </div>
                         <div class="preview" style="display: -webkit-box;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 6;
+                        -webkit-line-clamp: 7;
                         overflow: hidden;">
-                            Analysis, the process of turning raw data into insights, can provide us with a view of how
+                            Analysis, the process of turning raw data into insights, provide us with a view of how
                             Coronavirus disease influences the communities, indicate if the development of a country
                             affects its virus spread as well as the infection rate, the death rate and the recovered
                             rate.
-                            Diagnosis method is significant in preventing the spread of the pandemic. With the dataset
-                            of chest X-ray, we can build a ML model to predict if a new X-ray image is from COVID-19
-                            infected or non-infected.
+                            Diagnosis method is potential in preventing the spread of the pandemic. With the dataset
+                            of chest X-ray, we can build a Machine Learning model to predict if a new X-ray image is
+                            from COVID-19 infected or non-infected.
                         </div>
                         <div class="preview" style="margin-top: 12px; font-size: 14px;">
                             &rtrif;
@@ -84,74 +98,73 @@
             <div style="border-top: var(--border);"></div>
             <div style="height: calc(var(--top-nav-h) - 0px);"></div>
 
-
             <div class="featured-post-2">
                 <div class="flex">
+                    <!-- 1 -->
                     <div class="item">
-                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <img src="../post-img/9.png">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
-                                PWA
+                                personal
                             </mark>
                             <mark class="tag">
-                                WEB APP
+                                experience
                             </mark>
                         </div>
                         <a href="/">
                             <h2 class="title">
-                                PWA will lead the web and app industry in near future
+                                My first internship when I was a 2nd-year student
                             </h2>
                         </a>
                         <div class="preview">
-                            The final project to complete the IT Automation with Python Professional Certificate from
-                            Google. Automating Real-World Tasks with Python Course.
+                            I got my first internship at a tech-service startup as a UI/UX developer when I was a
+                            second-year student. It's hard at first, but after that, I have learned and realized a lot.
                         </div>
                     </div>
+                    <!-- 2 -->
                     <div class="item">
-                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <img src="../post-img/4.jpg">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
-                                Automate
+                                personal
                             </mark>
                             <mark class="tag">
-                                Python
+                                experience
                             </mark>
                         </div>
                         <a href="/">
                             <h2 class="title">
-                                Automating tasks using Python - Capstone project
+                                Normal life of a Computer Science student ~
+                                <!-- I accelerate my student life. And that's worth it. -->
                             </h2>
                         </a>
                         <div class="preview">
-                            The final project to complete the IT Automation with Python Professional Certificate from
-                            Google. Automating Real-World Tasks with Python Course.
+                            Have you ever wonder what a computer science student's life looks like? Just a small talk
+                            about what I learn, what I do, how I set my ultimate goals, how I manage everything.
                         </div>
                     </div>
+                    <!-- 3 -->
                     <div class="item">
-                        <!-- <img src="../assets/projects/pythonautomation.gif"> -->
+                        <img src="../post-img/3.jpg">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
-                                Package
-                            </mark>
-                            <mark class="tag">
-                                NPM
+                                ARTIFICIAL INTELLIGENCE
                             </mark>
                         </div>
                         <a href="/">
                             <h2 class="title">
-                                Publish, maintain and update package on npm
+                                We won the AI Hackathon RESET1010!
                             </h2>
                         </a>
                         <div class="preview">
-                            The final project to complete the IT Automation with Python Professional Certificate from
-                            Google. Automating Real-World Tasks with Python Course.
+                            Challenge: Build an AI-powered application to boost the recovery of SME from Covid-19. We
+                            won the 3rd prize from the Ministry of Science and Technology of Vietnam.
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
+            <div style="height: calc(var(--top-nav-h) - 0px);" id="latest"></div>
             <div style="border-top: var(--border);"></div>
             <div style="height: calc(var(--top-nav-h) - 0px);"></div>
 
@@ -162,12 +175,17 @@
         </div>
     </div>
 
+
+
+    <div class="left-latest-post-bar-wrap just-display-on-desktop">
+        <div class="left-latest-post-bar">
+            LATEST POSTS
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-5">
-            <div class="just-display-on-desktop"
-                style="padding: 32px 42px; font-weight: 500; height: calc({{ site.posts | size }}*180px); width: 90%; background: #1d1d1d; color: #e7e7e7; text-align: right; border-top-right-radius: 4px;">
-                LATEST POSTS
-            </div>
+            &nbsp;
         </div>
         <div class="col-5">
             <div class="all-posts">
@@ -199,7 +217,7 @@
                     {{post.preview}}
                 </div>
 
-                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                <div style="height: calc(var(--top-nav-h));"></div>
                 {% endfor %}
             </div>
         </div>

@@ -1,0 +1,13 @@
+I"þ<h3 id="covid-19-virus-pandemic">COVID-19 virus pandemic</h3>
+<p>Coronavirus disease (COVID-19) is an infectious global disease. The virus was identified in Wuhan, China in December 2019. COVID-19 disease is caused by the virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), a new virus in humans causing respiratory illness which can be spread from person-to-person.</p>
+
+<p>The World Health Organization (WHO) declared the COVID-19 outbreak a Public Health Emergency of International Concern (PHEIC) on 30 January 2020 and a pandemic on 11 March 2020.</p>
+<h3 id="analysis-and-diagnosis-of-covid-19">Analysis and Diagnosis of COVID-19</h3>
+<p>Analysis, or the process of turning raw data into insights, can provide us with a view of how the virus influences the communities. Those insights can indicate if the development of a country affects its virus spread as well as the relationship between the infection rate, the death rate and the recovered rate of COVID-19 pandemic in some specific countries and on the global.</p>
+
+<p>The quick diagnosis method is significant in preventing the spread of the Covid-19 pandemic. With the dataset of approximately 1000 images of chest X-ray collected, we can build a machine learning model to predict whether a new X-ray image is from a COVID-19 infected patient or a non-infected person.</p>
+
+<p><a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis" target="_blank">
+  <button class="button-in-post">READ THE FULL ORIGINAL ARTICLE</button>
+</a></p>
+:ET

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            Notebook</a>
+        <a href="/notebook" class="nav-link">
+            Showcase</a>
+        <a href="/" target="_blank" class="nav-link">
+            SolidCoreJS</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop" style="text-align: left;">
+                Powerful plugins library for your desired website.
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        SOLID CORE JS
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        My Biography
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        UI Showcase
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Memory
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        About this website
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views" style="padding-bottom: 0;">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        13
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div class="page-series-code">
+                        CS50
+                    </div>
+                    <div class="page-series-name">
+                        
+                        
+                        
+                        Computer Science
+                        
+                        
+                    </div>
+                </div>
+                <div class="post-in-series-list-wrap">
+                    <ol style="margin-bottom: 2vh;">
+                        
+                        <a href="/notebook/about" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    About this website
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/covid-19" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Collection of the most used markdown syntaxes
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    How to publish your package to the most popular package manager - npm
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/kdrama-start-up" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    K-Drama "Start-up" - Brilliant minds and cutting-edge technology are not enough.
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-hardware" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Hardware
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-internet" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Internet
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-multimedia" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Multimedia
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-security" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Security
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-web-development" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Web Development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-programming" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                    Programming
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/css-tips" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    CSS tips that every beginner should know in the web development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/ctf-crack-me" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Crack Me (Hash Cracking)
+                                </li>
+                            </div>
+                        </a>
+                        
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/cs50" style="border: none;">
+                    <mark class="tag">
+                        cs50
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/lecture_notes" style="border: none;">
+                    <mark class="tag">
+                        lecture_notes
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">Programming</h1>
+            <div class="author-name">
+                <!-- Bui Quang Bao -->
+                
+                By
+                <a href="/" target=" _blank" style="border: none;">
+                    Bui Quang Bao</a>
+                | May 15, 2021
+                
+                <!-- Learning Archive -->
+                
+
+            </div>
+            <div class="content">
+                <h2 id="introduction"><strong>Introduction</strong></h2>
+
+<ul>
+  <li>David plays a game called Oscartime that was the first Scratch program he created</li>
+  <li>Scratch is a graphical programming language created by MIT’s Lifelong Kindergarten Group</li>
+  <li>The language not only helps get kids excited about programming, but it’s also very instructive</li>
+</ul>
+
+<h2 id="software"><strong>Software</strong></h2>
+
+<ul>
+  <li>Programing is ultimately about making software
+    <ul>
+      <li>Software is what runs on our hardware
+        <ul>
+          <li>Could run on a desktop, or phone, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="finding-mike-smith"><strong>Finding Mike Smith</strong></h2>
+
+<ul>
+  <li>Code is just a technical implementation of algorithms
+    <ul>
+      <li>Algorithms are step by step instructions for solving problems</li>
+    </ul>
+  </li>
+  <li>Consider a phonebook full of thousands of names and phone numbers</li>
+  <li>How do we lookup someone like Mike Smith?
+    <ul>
+      <li>We could start at the first page, move to the next, and so on until we find him
+        <ul>
+          <li>This is a correct algorithm, as we will find Mike Smith eventually</li>
+          <li>However, it’s inefficient</li>
+        </ul>
+      </li>
+      <li>We could start at the first page and count by 2s
+        <ul>
+          <li>I would find Mike Smith twice as quickly</li>
+          <li>However, this alone is not correct as we could miss Mike Smith if his name is sandwiched between two pages</li>
+          <li>We could fix this by checking the previous page if we go past where Mike Smith should be</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>More likely, we’d probably go to the middle of the phonebook and find ourselves in the “M” section
+    <ul>
+      <li>As Smith is after M, he must be in the latter (right) half of the book
+        <ul>
+          <li>We can ignore the other half</li>
+        </ul>
+      </li>
+      <li>After removing the other half, we are left with half of the book, representing the same problem we started with fundamentally
+        <ul>
+          <li>We can keep repeating this process until we’re down to one page with Mike’s number on it</li>
+        </ul>
+      </li>
+      <li>This leverages the fact that the book is sorted alphabetically</li>
+      <li>We are deviding and conquering
+        <ul>
+          <li>1000 pages → 500 pages → 250 pages → 125 pages…</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="phonebook-algorithm"><strong>Phonebook Algorithm</strong></h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span> <span class="nx">pick</span> <span class="nx">up</span> <span class="nx">phone</span> <span class="nx">book</span>
+<span class="mi">2</span> <span class="nx">open</span> <span class="nx">to</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">phone</span> <span class="nx">book</span>
+<span class="mi">3</span> <span class="nx">look</span> <span class="nx">at</span> <span class="nx">names</span>
+<span class="mi">4</span> <span class="k">if</span> <span class="nx">Smith</span> <span class="nx">is</span> <span class="nx">among</span> <span class="nx">names</span>
+<span class="mi">5</span>     <span class="nx">call</span> <span class="nx">Mike</span>
+<span class="mi">6</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">Smith</span> <span class="nx">is</span> <span class="nx">earlier</span> <span class="k">in</span> <span class="nx">book</span>
+<span class="mi">7</span>     <span class="nx">open</span> <span class="nx">to</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">left</span> <span class="nx">half</span> <span class="k">of</span> <span class="nx">book</span>
+<span class="mi">8</span>     <span class="nx">go</span> <span class="nx">back</span> <span class="nx">to</span> <span class="nx">step</span> <span class="mi">3</span>
+<span class="mi">9</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">Smith</span> <span class="nx">is</span> <span class="nx">later</span> <span class="k">in</span> <span class="nx">book</span>
+<span class="mi">10</span>    <span class="nx">open</span> <span class="nx">to</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">right</span> <span class="nx">half</span> <span class="k">of</span> <span class="nx">book</span>
+<span class="mi">11</span>    <span class="nx">go</span> <span class="nx">back</span> <span class="nx">to</span> <span class="nx">step</span> <span class="mi">3</span>
+<span class="mi">12</span> <span class="k">else</span>
+<span class="mi">13</span>    <span class="nx">quit</span>
+</code></pre></div></div>
+
+<h2 id="pseudocode"><strong>Pseudocode</strong></h2>
+
+<ul>
+  <li>This example algorithm is code, not written in a programming language, but rather English</li>
+  <li>This is called Pseudocode
+    <ul>
+      <li>Code-like syntax written in English</li>
+      <li>Numbered lines to maintain order and reference lines</li>
+      <li><code class="language-plaintext highlighter-rouge">pick up</code>, <code class="language-plaintext highlighter-rouge">open to</code>, <code class="language-plaintext highlighter-rouge">look at</code>, <code class="language-plaintext highlighter-rouge">call</code>, <code class="language-plaintext highlighter-rouge">open</code>, and <code class="language-plaintext highlighter-rouge">go back</code> are functions</li>
+      <li><code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">if else</code>, and <code class="language-plaintext highlighter-rouge">else</code> are conditions</li>
+      <li><code class="language-plaintext highlighter-rouge">Smith is among names</code>, <code class="language-plaintext highlighter-rouge">Smith is earlier in book</code>, and <code class="language-plaintext highlighter-rouge">Smith is later in book</code> are Boolean expressions
+        <ul>
+          <li>Can be either true or false</li>
+          <li>If these are true, the indented code below is executed</li>
+        </ul>
+      </li>
+      <li>Both line 8 and 11 say to go back to step 3
+        <ul>
+          <li>This creates a loop
+            <ul>
+              <li>Doing the sane thing again and again</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="programming-constructs"><strong>Programming Constructs</strong></h2>
+
+<ul>
+  <li>These constructs of loops, Boolean expressions, functions, and conditions as well as others such as variables, threads, events, and more are common across all programming languages</li>
+</ul>
+
+<h2 id="c">C</h2>
+
+<ul>
+  <li>C is one of the oldest programming languages that someone might still write in</li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world/n"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Some of this syntax may look cryptic, but you can likely guess what it does
+    <ul>
+      <li>It prints “hello, world” to the screen</li>
+      <li>The other details can be learned
+        <ul>
+          <li>Just like with written human languages that are foreign, you just haven’t learned the patterns yet</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Many programming languages have similarities, so it becomes easier to learn new ones with knowledge under your belt</li>
+  <li>Ultimately, programming is about writhing software to control hardware to solve a problem</li>
+  <li>However, computers only understand binary (0’s and 1’s)
+    <ul>
+      <li>Source code what we humans write and it can be converted into machine code (0’s and 1’s)
+        <ul>
+          <li>This is achieved by using a program called a compiler</li>
+          <li>This allows a human to write the code and a machine to read and run it</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="c-1"><strong>C++</strong></h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="s">"hello, world"</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This program written in C++ still prints “hello, world”</li>
+  <li>Many programming languages do the same things differently
+    <ul>
+      <li>We can solve the same problem using any different number of languages</li>
+      <li>It could be easier to use one programming language for a specific problem
+        <ul>
+          <li>Different languages were invented to tackle different kinds of problems</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="python"><strong>Python</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Straightforwardly, this prints “hello, world”</li>
+  <li>Python is a different type of language as you don’t type source code and manually convert it into machine code
+    <ul>
+      <li>A special program called an interpreter converts the source code into an intermediate language called byte code
+        <ul>
+          <li>Which is not machine code (0’s and 1’s)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="mi">2</span>        <span class="mi">0</span> <span class="n">LOAD_GLOBAL</span>           <span class="mi">0</span> <span class="p">(</span><span class="k">print</span><span class="p">)</span>
+           <span class="mi">3</span> <span class="n">LOAD_CONST</span>            <span class="mi">1</span> <span class="p">(</span><span class="s">'hello, world'</span><span class="p">)</span>
+           <span class="mi">6</span> <span class="n">CALL_FUNCTION</span>         <span class="mi">1</span> <span class="p">(</span><span class="mi">1</span> <span class="n">positional</span><span class="p">,</span> <span class="mi">0</span> <span class="n">keyword</span> <span class="n">pair</span><span class="p">)</span>
+           <span class="mi">9</span> <span class="n">POP_TOP</span>
+          <span class="mi">10</span> <span class="n">LOAD_CONST</span>            <span class="mi">0</span> <span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+          <span class="mi">13</span> <span class="n">RETURN_VALUE</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>The interpreter reads this one line at a time</li>
+    </ul>
+  </li>
+  <li>The takeaway from this is that there different ways of doing the same thing in many different languages
+    <ul>
+      <li>And languages get used in different ways!</li>
+      <li>Sometimes you need to compile code, sometimes you need to interpret code</li>
+    </ul>
+  </li>
+  <li>At the end of the day, the consumer interacts with the software in the same way
+    <ul>
+      <li>They don’t need to know what language it’s written in as long is it run on their computer
+        <ul>
+          <li>Programs are often packaged differently for different operating systems</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="other-programming-language"><strong>Other Programming Language</strong></h2>
+
+<ul>
+  <li>
+    <p>Java</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">class</span> <span class="nc">Hello</span>
+  <span class="o">{</span>
+      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+      <span class="o">{</span>
+          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"hello, world"</span><span class="o">);</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Ruby</p>
+
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">put</span> <span class="s2">"hello, world"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Lisp</p>
+
+    <div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">(</span><span class="nb">print</span> <span class="s">"hello, world"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>JavaScript</p>
+
+    <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello, world</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="introducing-scratch"><strong>Introducing Scratch</strong></h2>
+
+<ul>
+  <li>Each of these languages have a lot more features, but they have commonalities
+    <ul>
+      <li>Functions, loops, conditions, Boolean expressions, variables, threads, etc.</li>
+    </ul>
+  </li>
+  <li>To focus on these ideas in a graphical manner, we’ll explore Scratch</li>
+  <li>In the earlier Oscartime example, trash was moving down the screen
+    <ul>
+      <li>A screen is just a grid of pixels</li>
+      <li>To make animation, we move an image on it slightly
+        <ul>
+          <li>If done quickly, it looks like movement</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>To make the trash stop at the bottom of the screen, we use some Boolean expression and condition
+    <ul>
+      <li>“If you’re touching the bottom of the screen, stop moving”</li>
+      <li>Or “Only if you’re not touching the bottom of the screen, keep moving”</li>
+    </ul>
+  </li>
+  <li>When trash is put in the can, the lid lifts and Oscar counts the pieces of trash disposed of
+    <ul>
+      <li>The sprite for Oscar is using a variable
+        <ul>
+          <li>Initialized (set initially) to 0</li>
+          <li>Increments (adds 1 to the variable) for each piece of trash</li>
+        </ul>
+      </li>
+      <li>A condition is also used here
+        <ul>
+          <li>“If a piece of trash is added, then increment the variable for trash pieces”</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The music was playing in some kind of loop</li>
+  <li>Even though this program is complex enough to take 8 hours to make, it’s ultimately built with the same fundamental building blocks of conditions, loops, etc.</li>
+</ul>
+
+<h2 id="hello-world-in-scratch"><strong>hello, world in Scratch</strong></h2>
+
+<ul>
+  <li>This is how we say “hello, world” in Scratch
+    <ul>
+      <li>By default, a graphical cat will preform this code
+        <ul>
+          <li>Can change the cat into other things</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>This is the function for say</li>
+  <li>This says “hello, world” forever</li>
+  <li>This says “hello, world” 50 times</li>
+  <li>This is an example of how to specify things conditionally</li>
+  <li>Scratch allow you to programing by piecing together puzzle pieces with shapes that imply what to do</li>
+  <li>We can put an if else inside another if else</li>
+  <li>The green blocks are Boolean Expressions</li>
+</ul>
+
+<h2 id="scratch-interface"><strong>Scratch Interface</strong></h2>
+
+<ul>
+  <li>Scratch is not only a language but a programming environment as well</li>
+  <li>On the left is Scratch the cat in a 2D world with height and width
+    <ul>
+      <li>Can change background and more sprites to this world</li>
+    </ul>
+  </li>
+  <li>In the middle are palettes containing scripts
+    <ul>
+      <li>Blue are motion blocks</li>
+      <li>In the costumes tab we can change aesthetics</li>
+      <li>The sounds tab can introduces sounds and multimedia</li>
+    </ul>
+  </li>
+  <li>The blank slate on the right is where we can drag and drop the puzzle pieces and connect them in order to instruct Scratch to do things</li>
+  <li><code class="language-plaintext highlighter-rouge">when green flag clicked</code> is equivalent to the start of your program
+    <ul>
+      <li>The green flag button starts, the red stop sign button ends</li>
+    </ul>
+  </li>
+  <li>When we drag blocks together, the edge of the block glows white to signify they connect</li>
+  <li>The hello, world Scratch program won’t stop until we click the red stop sign as we never told Scratch to stop in the script</li>
+</ul>
+
+<h2 id="sounds"><strong>Sounds</strong></h2>
+
+<ul>
+  <li>We can also add sounds</li>
+</ul>
+
+<h2 id="loops"><strong>Loops</strong></h2>
+
+<ul>
+  <li>If we want Scratch to do something repeatedly, we can use loops
+    <ul>
+      <li>Can move the sound into a repeat block
+        <ul>
+          <li>The containing block will grow to fit
+            <ul>
+              <li>This seems to only ply the meow once</li>
+              <li>The sound repeats so quickly they overlap</li>
+              <li>This one plays the sound until done before the next cycle in the loop</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>This processes was an example of a common and frustrating experience when programming: bugs</li>
+</ul>
+
+<h2 id="animation"><strong>Animation</strong></h2>
+
+<ul>
+  <li>I want the cat to move back and forth forever</li>
+  <li>This moves the Scratch the cat forward (to the right) until he hits the edge
+    <ul>
+      <li>If we drag the cat back, he’ll keep moving forward</li>
+    </ul>
+  </li>
+  <li>Scratch will now rotate 180° if touching the edge of the screen
+    <ul>
+      <li>But scratch is flipping upside down (literally rotating 180°)
+        <ul>
+          <li>Another bug!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>We can record custom sounds under the sounds tab and add it</li>
+</ul>
+
+<h2 id="breaking-down-problems"><strong>Breaking Down Problems</strong></h2>
+
+<ul>
+  <li>Its much easier to write complex programs if you start out by breaking them down into their component parts
+    <ul>
+      <li>Consider individual milestones for yourself</li>
+    </ul>
+  </li>
+  <li>Even companies like MS didn’t create Word in a day
+    <ul>
+      <li>Software developers make one small feature at a time</li>
+      <li>Eventually, this becomes millions of lines of code</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pet-the-cat"><strong>pet the cat</strong></h2>
+
+<ul>
+  <li>Reading and understanding code is another side of software development
+    <ul>
+      <li>Teams need to do this to collaborate</li>
+    </ul>
+  </li>
+  <li>When this program starts, nothing happens until the mouse pointer touches the cat, in which the cat meows</li>
+</ul>
+
+<h2 id="dont-pet-the-cat"><strong>don’t pet the cat</strong></h2>
+
+<ul>
+  <li>This script has an <code class="language-plaintext highlighter-rouge">if else</code></li>
+  <li>Will play a lion’s roar if the mouse pointer touches the cat, but will meow and wait 2 seconds if not</li>
+</ul>
+
+<h2 id="counting-sheep"><strong>counting sheep</strong></h2>
+
+<ul>
+  <li>This first sets a variable called <code class="language-plaintext highlighter-rouge">counter</code> to 0</li>
+  <li>It will forever say counter for 1 second, wait one second, then increment the counter</li>
+  <li>Ultimately, this will count forever</li>
+</ul>
+
+<h2 id="cough0"><strong>cough0</strong></h2>
+
+<ul>
+  <li>We can create our own puzzle pieces
+    <ul>
+      <li>We can do this in most programming languages
+        <ul>
+          <li>Where we create functions</li>
+        </ul>
+      </li>
+      <li>In scratch we can utilize the functionality of existing puzzle pieces</li>
+    </ul>
+  </li>
+  <li>There is an opportunity for better design here
+    <ul>
+      <li>IT looks like we’ve copied and pasted puzzle pieces</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cough1"><strong>cough1</strong></h2>
+
+<ul>
+  <li>We can improve this with loops</li>
+  <li>Better design as we can change what the cat is saying or the wait time in one place</li>
+</ul>
+
+<h2 id="cough2"><strong>cough2</strong></h2>
+
+<ul>
+  <li>What if I just want a puzzle piece to make any sprite cough?
+    <ul>
+      <li>Gain the ability to share the functionality to use elsewhere</li>
+      <li>We’ve defined a new block called <code class="language-plaintext highlighter-rouge">cough</code>
+        <ul>
+          <li>We repeat <code class="language-plaintext highlighter-rouge">cough</code> 3 times, abstracting away the complexity</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>We can go even further by passing in a value to your custom block
+    <ul>
+      <li>This value is called an argument or parameter
+        <ul>
+          <li>For example, the say block takes in an argument of “hello, world” or some other phrase</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Whatever the user passed into <code class="language-plaintext highlighter-rouge">cough</code> will replace n!</li>
+  <li>The evolution of this program is an example of what it’s like to program and solve problems
+    <ul>
+      <li>There were opportunities to improve from a correct yet poor design</li>
+      <li>To be good at programming is to be able to notice opportunities like this</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="threads"><strong>Threads</strong></h2>
+
+<ul>
+  <li>In Scratch, we can have multiple sprites, each with their own scripts
+    <ul>
+      <li>Two things will happen simultaneously, called threads</li>
+    </ul>
+  </li>
+  <li>This program has a cat chasing a bird</li>
+  <li>Here’s what guides the bird:
+    <ul>
+      <li>Location in the world can be addressed with coordinates</li>
+      <li>Will keep moving around if not touching the cat</li>
+    </ul>
+  </li>
+  <li>Here’s what guides the cat:
+    <ul>
+      <li>The cat will point in a random direction</li>
+      <li>Forever checks if touching the bird and moves towards the bird
+        <ul>
+          <li>If touching the bird, a lion’s roar will play and the script will stop</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>If we increase the movement speed of the bird to 6 steps, it still gets caught</li>
+  <li>If we increase the movement speed of the cat to 10 steps, the bird stands no chance!</li>
+</ul>
+
+<h2 id="events"><strong>Events</strong></h2>
+
+<ul>
+  <li>A computer can do multiple things at a time due to multithreading
+    <ul>
+      <li>Now that computers have multiple cores, they can literally do two things at once</li>
+      <li>However, computers are so fast that even if two things are technically not happening at the same time, we can’t notice the difference</li>
+      <li>These threads can also intercommunicate in Scratch with events</li>
+    </ul>
+  </li>
+  <li>This sprite (an orange puppet) will forever check for the spacebar being pressed
+    <ul>
+      <li>If this happens, the sprite will say “Marco!” for 2 seconds and broadcast <code class="language-plaintext highlighter-rouge">event</code>
+        <ul>
+          <li>Events are messages only the computer can hear
+            <ul>
+              <li>If another sprite is configured to listed for <code class="language-plaintext highlighter-rouge">event</code> it can respond</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>This sprite will say “Polo!” for 2 seconds if it hears <code class="language-plaintext highlighter-rouge">event</code></li>
+  <li>When the green flag is clicked, the orange puppet will wait for the spacebar and then tell the other sprite when to say “Polo!”</li>
+  <li>This idea allows two sprites to interact in such a way that one sprite does something only if the other does something first</li>
+</ul>
+
+<h2 id="closing-thoughts"><strong>Closing Thoughts</strong></h2>
+
+<ul>
+  <li>Programmers in the real world don’t typically program by dragging and dropping code blocks
+    <ul>
+      <li>They write textural lines of code (C, Java, Python, etc.)</li>
+      <li>However, the ideas are fundamentally identical
+        <ul>
+          <li>Scratch gets rid of the syntactical distractions</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Understanding functions, loops, conditions, variables, etc. provides a fundamental understanding of what it’s like to program</li>
+  <li>We focused on imperative or procedural programming, but other types of programming exist as well
+    <ul>
+      <li>Object oriented programming</li>
+      <li>Functional programming</li>
+    </ul>
+  </li>
+  <li>Even in all these different ways of programming, we are still utilizing the same basic building blocks we’ve explored in Scratch
+    <ul>
+      <li>We can assemble these building blocks to solve problems</li>
+    </ul>
+  </li>
+  <li>Oscartime was a complex game
+    <ul>
+      <li>Zooming in, we see these basic concepts
+        <ul>
+          <li>Forever loops make the trash fall, an if conditions to raise the lid of the trash, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>There are many more languages out there
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_programming_languages">https://en.wikipedia.org/wiki/List_of_programming_languages</a></li>
+      <li>There tend to be trends in the industry</li>
+      <li>A programmer typically has one or a few languages that the reach for to tackle a problem</li>
+      <li>Good to introduce yourself to new languages
+        <ul>
+          <li>They are easier to learn than spoken or written languages as the ideas persist</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="its-raining-men"><strong>It’s Raining Men</strong></h2>
+
+<ul>
+  <li>David closes it all with another Scratch project</li>
+</ul>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+
+            <!-- Bui Quang Bao -->
+            
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+            
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ TO MYSELF: DON'T DELETE THIS F*CKING LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>

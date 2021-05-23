@@ -22,23 +22,32 @@
                         {% if page.series == "PM101" %}
                         Project Management: Risks
                         {% endif %}
+                        {% if page.series == "CS50" %}
+                        Computer Science
+                        {% endif %}
+                        {% if page.series == "CTF" %}
+                        Capture The Flag - WriteUps
+                        {% endif %}
                     </div>
                 </div>
-                <ol style="margin-bottom: 2vh;">
-                    {% for post in site.posts reversed%}
-                    <a href="{{post.url}}" style="text-decoration: none; font-weight: 400;">
-                        <div class="post-in-series" style="
+                <div class="post-in-series-list-wrap">
+                    <ol style="margin-bottom: 2vh;">
+                        {% for post in site.posts reversed%}
+                        <a href="{{post.url}}" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
                     {% if page.series != post.series or page.series == null %} display: none; {% endif %}
                     ">
-                            <li style="
+                                <li style="
                         {% if page.url == post.url %} color: var(--accent); font-weight: 500;{% endif %}
                         ">
-                                {{ post.title }}
-                            </li>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </ol>
+                                    {{ post.title }}
+                                </li>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </ol>
+                </div>
+
             </div>
 
 
@@ -84,6 +93,9 @@
             <br>
             Thanks for reading!
             <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+
+            <!-- Bui Quang Bao -->
+            {% if "Bui Quang Bao" contains page.author %}
             <p style="margin-bottom: 7vh; text-align: center;">
                 <a href="/" style="font-weight: 400; border: none;">
                     <script>document.write(new Date().getFullYear())</script>
@@ -91,6 +103,7 @@
                     Bui Quang Bao
                 </a>
             </p>
+            {% endif%}
 
 
         </div>

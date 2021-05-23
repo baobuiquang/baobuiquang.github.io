@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            Notebook</a>
+        <a href="/notebook" class="nav-link">
+            Showcase</a>
+        <a href="/" target="_blank" class="nav-link">
+            SolidCoreJS</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop" style="text-align: left;">
+                Powerful plugins library for your desired website.
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        SOLID CORE JS
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        My Biography
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        UI Showcase
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Memory
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        About this website
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views" style="padding-bottom: 0;">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        13
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div class="page-series-code">
+                        CS50
+                    </div>
+                    <div class="page-series-name">
+                        
+                        
+                        
+                        Computer Science
+                        
+                        
+                    </div>
+                </div>
+                <div class="post-in-series-list-wrap">
+                    <ol style="margin-bottom: 2vh;">
+                        
+                        <a href="/notebook/about" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    About this website
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/covid-19" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Collection of the most used markdown syntaxes
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    How to publish your package to the most popular package manager - npm
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/kdrama-start-up" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    K-Drama "Start-up" - Brilliant minds and cutting-edge technology are not enough.
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-hardware" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Hardware
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-internet" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Internet
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-multimedia" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                    Multimedia
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-security" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Security
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-web-development" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Web Development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-programming" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Programming
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/css-tips" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    CSS tips that every beginner should know in the web development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/ctf-crack-me" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Crack Me (Hash Cracking)
+                                </li>
+                            </div>
+                        </a>
+                        
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/cs50" style="border: none;">
+                    <mark class="tag">
+                        cs50
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/lecture_notes" style="border: none;">
+                    <mark class="tag">
+                        lecture_notes
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">Multimedia</h1>
+            <div class="author-name">
+                <!-- Bui Quang Bao -->
+                
+                By
+                <a href="/" target=" _blank" style="border: none;">
+                    Bui Quang Bao</a>
+                | May 15, 2021
+                
+                <!-- Learning Archive -->
+                
+
+            </div>
+            <div class="content">
+                <h2 id="introduction"><strong>Introduction</strong></h2>
+<ul>
+  <li>Odds are you use it everyday, but what is it?</li>
+</ul>
+
+<h2 id="audio"><strong>Audio</strong></h2>
+<ul>
+  <li>Computers are good at recording, playing back, and generating audio</li>
+  <li>Uses different file formats
+    <ul>
+      <li>File formats are just a way of storing 0s and 1s on disk so that certain software knows how to interpret it</li>
+    </ul>
+  </li>
+  <li>MIDI
+    <ul>
+      <li>Way of storing musical notes for certain songs</li>
+      <li>Can do this for different instruments
+        <ul>
+          <li>Programs can render the notes for these instruments</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>GarageBand
+    <ul>
+      <li>Included with macOS</li>
+      <li>This is the Star Wars theme in MIDI
+        <ul>
+          <li>Doesn’t sound quite as good as the actual version</li>
+          <li>Computer synthesizes the notes
+            <ul>
+              <li>Not an actual recording</li>
+              <li>Computer interprets notes in the MIDI file</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>MIDI is common in the digital workspace among musicians who wish to share music with each other.</li>
+  <li>Humans typically like to hear music preformed and recorded by humans
+    <ul>
+      <li>File formats for recorded music include:
+        <ul>
+          <li>AAC</li>
+          <li>MIDI</li>
+          <li>MP3</li>
+          <li>WAV</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>WAV is an early sound format, but still used
+    <ul>
+      <li>Uncompressed data storage allowing high quality</li>
+    </ul>
+  </li>
+  <li>MP3
+    <ul>
+      <li>File format for audio that uses compression
+        <ul>
+          <li>Significantly reduce how many bits are necessary to store a song</li>
+          <li>Discards 0s and 1s that humans can’t necessarily hear
+            <ul>
+              <li>True audiophiles may disagree</li>
+            </ul>
+          </li>
+          <li>Trade off between optimizing storage space and sacrificing quality</li>
+          <li>This compression is said to be lossy
+            <ul>
+              <li>Losing the quality in the compression process</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>AAC
+    <ul>
+      <li>Similar to MP3</li>
+      <li>May see when you download a song from iTunes</li>
+    </ul>
+  </li>
+  <li>Streaming services such as Spotify don’t transfer a file to you but rather stream bits of information to you</li>
+  <li>How do we think about the quality of these formats?
+    <ul>
+      <li>Sampling frequency
+        <ul>
+          <li>Number of times per seconds we take a digital snapshot of what a person would hear</li>
+        </ul>
+      </li>
+      <li>Bit depth
+        <ul>
+          <li>Number of bits used for these individual snapshots</li>
+        </ul>
+      </li>
+      <li>Sampling frequency x bit depth = number of bits necessary to store one second of music</li>
+      <li>Audio file formats allow you to modify what these parameters are</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="graphics"><strong>Graphics</strong></h2>
+<ul>
+  <li>A graphic, what we see with multimedia, is really just a bunch of pixels both horizontal and vertical
+    <ul>
+      <li>All file formats are rectangular in nature, though transparent pixels can make images look to take on other shapes</li>
+      <li>In the simplest form, each of the dots or pixels is a bunch of 0s and 1s</li>
+      <li>To create a file format, we just need to determine a mapping</li>
+    </ul>
+  </li>
+  <li>This image is only black and white, so how to represent color?</li>
+</ul>
+
+<h2 id="rgb"><strong>RGB</strong></h2>
+<ul>
+  <li>RGB stands for Red Green Blue
+    <ul>
+      <li>With information giving an amount of red, an amount of green, and an amount of blue, you can tell a computer how to colorize pixels</li>
+      <li>None of the colors yields a black pixel</li>
+      <li>All of the colors yields a white pixel</li>
+      <li>In between these two options is where we get all sorts of colors</li>
+    </ul>
+  </li>
+  <li>Consider the three bytes: 11111111 00000000 00000000
+    <ul>
+      <li>If we interpret these bytes to represent colors, it appears we want all of the red, none of the green, and none of the blue</li>
+      <li>These 24 bits (3 bytes = 3 x 8 bits = 24 bits) represent the color we know as red!
+        <ul>
+          <li>If a computer wanted to represent this color, it would store these 24 bits</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Consider the three bytes: 00000000 11111111 00000000
+    <ul>
+      <li>Green</li>
+    </ul>
+  </li>
+  <li>Consider the three bytes: 00000000 0000000 11111111
+    <ul>
+      <li>Blue</li>
+    </ul>
+  </li>
+  <li>Consider the three bytes: 00000000 0000000 0000000
+    <ul>
+      <li>Black</li>
+    </ul>
+  </li>
+  <li>Consider the three bytes: 11111111 11111111 11111111
+    <ul>
+      <li>White</li>
+    </ul>
+  </li>
+  <li>Can get many color variations by mixing the above colors in different quantities</li>
+  <li>When we talk about image formats, we typically don’t talk in terms of binary but rather something called hexadecimal (base-16, contains 16 digits)
+    <ul>
+      <li>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f</li>
+      <li>0 is the smallest number we can represent in single digit</li>
+      <li>f is the largest number (value of 15) we can represent in a single digit</li>
+    </ul>
+  </li>
+  <li>Consider the 8 bits: 1111 1111
+    <ul>
+      <li>Each hexadecimal digit represents four bits</li>
+      <li>One hexadecimal digit can represent the first four bits, another can represent the second four
+        <ul>
+          <li>Represent something with eight symbols using only two!</li>
+        </ul>
+      </li>
+      <li>1111 is the decimal number 15, which is f</li>
+      <li>Therefore, 1111 1111 in hexadecimal is ff</li>
+    </ul>
+  </li>
+  <li>Red can thus be represented in hexadecimal as ff 00 00</li>
+  <li>Green can be represented in hexadecimal as 00 ff 00</li>
+  <li>Blue can be represented in hexadecimal as 00 00 ff</li>
+  <li>A lot of graphical editing software such as Photoshop use hexadecimal to represent colors</li>
+</ul>
+
+<h2 id="bitmap-format"><strong>Bitmap Format</strong></h2>
+<ul>
+  <li>This background for Windows XP was a bitmap file (.bmp)
+    <ul>
+      <li>A mapping or grid of bits much like the smiley face from before</li>
+    </ul>
+  </li>
+  <li>Zooming in on this image show that it is just a grid of dots
+    <ul>
+      <li>Notice the pixelation</li>
+    </ul>
+  </li>
+  <li>Much like with audio, so too in the world of images do you have discretion over how many bits to use
+    <ul>
+      <li>How many bits to represent each pixel’s color?</li>
+      <li>Resolution is another factor
+        <ul>
+          <li>An image that is only 100 pixels scaled up only duplicates the existing limited information, resulting in a blotchy image</li>
+          <li>Would be better to start with image that has a higher resolution (more pixels)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>A lot of repeated colors, so it seems silly to represent each color with the same number of bits</li>
+</ul>
+
+<h2 id="image-compression"><strong>Image Compression</strong></h2>
+<ul>
+  <li>Graphical file formats can often be compressed</li>
+  <li>Can be done lossy or losslessly
+    <ul>
+      <li>With audio, we threw away audio information that the human ear can’t necessarily hear
+        <ul>
+          <li>This is lossy compression; throwing information away</li>
+        </ul>
+      </li>
+      <li>Using fewer bits to represent the same information is lossless compression</li>
+    </ul>
+  </li>
+  <li>Lossless compression</li>
+  <li>There is a lot of repeated blue in the first image
+    <ul>
+      <li>Using the same 24 bits to represent each pixel!</li>
+    </ul>
+  </li>
+  <li>The second image is compressed and not what a user would see
+    <ul>
+      <li>The first column contains the color that the rest of the row (scan line) should have
+        <ul>
+          <li>Image contains instructions on how to repeat the color in a particular row</li>
+        </ul>
+      </li>
+      <li>When a color is encountered that isn’t in the first column (the apple in this case), the instructions would list the colors for each non-repeated pixel</li>
+      <li>This uses less bits but makes the original information recoverable</li>
+    </ul>
+  </li>
+  <li>Lossy compression</li>
+  <li>This is a .jpg photograph that is somewhat compressed, but not easy to tell</li>
+  <li>Let’s say we want to compress this image further so that we can share it without going over a social media platform’s limit</li>
+  <li>It contains more complicated patterns of colors, so let’s try a lossy compression resulting in the following:</li>
+  <li>Lossy compression means that I won’t be able to get that original image back
+    <ul>
+      <li>The compression throws away bits of information
+        <ul>
+          <li>“Does the sky really need this many shades of blue?”</li>
+          <li>“Does this leaf really need this many shades of green”
+            <ul>
+              <li>Replaces bits with only a few colors giving an approximation</li>
+              <li>I will not be able to know how clear the sky used to be from this information</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="image-file-formats"><strong>Image File Formats</strong></h2>
+<ul>
+  <li>BMP
+    <ul>
+      <li>Originally used by Windows</li>
+      <li>Not super common these days</li>
+    </ul>
+  </li>
+  <li>GIF
+    <ul>
+      <li>Low quality images
+        <ul>
+          <li>Only supports 8-bit color</li>
+        </ul>
+      </li>
+      <li>Often used for memes
+        <ul>
+          <li>Can be animated</li>
+          <li>Like a video file with only a few images</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>JPEG
+    <ul>
+      <li>Supports 24-bit color</li>
+      <li>Losslessly compresses
+        <ul>
+          <li>Can minimize amount of compression to create high quality photos</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>PNG
+    <ul>
+      <li>High quality graphics</li>
+      <li>Supports 24-bit color</li>
+    </ul>
+  </li>
+  <li>All these formats ultimately have an limited amount of information
+    <ul>
+      <li>Ultimate just store pixels and colors of when the image was taken</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="enhance"><strong>“Enhance”</strong></h2>
+<ul>
+  <li>Common for popular culture abuses of what it means to be a multimedia format
+    <ul>
+      <li>“Enhancing” means to make an image as clear as possible not matter what format it was saved in</li>
+    </ul>
+  </li>
+  <li>David shows a clip of characters “enhancing” an image
+    <ul>
+      <li>The characters zoom into a pixelated frame of a video and somehow clear it up to see a reflection
+        <ul>
+          <li>Video is just a whole bunch of images being shown to us quickly (24 frames per second, etc.)</li>
+        </ul>
+      </li>
+      <li>The pixelated image only contains information for those pixels
+        <ul>
+          <li>There is no way to obtain a clear image unless the original image was already at a high resolution</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>David contrasts this with an aware clip of Futurama</li>
+</ul>
+
+<h2 id="video-compression"><strong>Video Compression</strong></h2>
+<ul>
+  <li>You can think of a video format as similar to a flip book</li>
+  <li>Video formats are just a bunch of images shown quickly in succession to create the illusion of motion
+    <ul>
+      <li>Not necessarily all information stored as png, jpg, gif, or even images</li>
+      <li>Algorithms and mathematics can help go from one frame to another</li>
+    </ul>
+  </li>
+  <li>Opportunities for compression
+    <ul>
+      <li>Can leverage same image compression techniques for each frame (intra-frame coding)</li>
+      <li>Background of multiple frames can contain redundant information</li>
+      <li>Compare current frame and next frame of video and determine what has changed
+        <ul>
+          <li>Store these differences</li>
+          <li>Key frames store a snapshot of time to remember what the video looks like</li>
+          <li>In each subsequent frame remember what has changed
+            <ul>
+              <li>Using algorithms and math, background is drawn</li>
+            </ul>
+          </li>
+          <li>Key frames are stored multiple times to guarantee that frames can be recovered</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="video-file-formats"><strong>Video File Formats</strong></h2>
+<ul>
+  <li>In the world of video, there are more solutions on how to store information</li>
+  <li>Video file formats are containers
+    <ul>
+      <li>Containers are digital container in which you can put multiple types of data</li>
+      <li>Can include a video track, audio track, a secondary audio track (for different languages), closed captions, …</li>
+    </ul>
+  </li>
+  <li>AVI
+    <ul>
+      <li>Commonly used in Windows</li>
+    </ul>
+  </li>
+  <li>DivX</li>
+  <li>Matroska
+    <ul>
+      <li>Open source container meant to be more versatile</li>
+    </ul>
+  </li>
+  <li>MP4
+    <ul>
+      <li>Pretty much universal in all browsers</li>
+    </ul>
+  </li>
+  <li>QuickTime
+    <ul>
+      <li>Commonly used in MacOS</li>
+    </ul>
+  </li>
+  <li>Codecs
+    <ul>
+      <li>Ways of storing and encoding information</li>
+      <li>For video:
+        <ul>
+          <li>H.264</li>
+          <li>MPEG-4 Part-2</li>
+          <li>…</li>
+        </ul>
+      </li>
+      <li>For audio:
+        <ul>
+          <li>Can be stand alone files or tracks in a container!</li>
+          <li>AAC</li>
+          <li>MP3</li>
+          <li>…</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3d-video"><strong>3D Video</strong></h2>
+<ul>
+  <li>Increasingly, 3D formats are becoming more common
+    <ul>
+      <li>This is a 360 degree image of Sanders Theatre
+        <ul>
+          <li>A spherical image</li>
+          <li>Looks distorted in 2D</li>
+          <li>Like flattening a globe</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Images can contain metadata
+    <ul>
+      <li>Information that viewers can’t see</li>
+      <li>Tells programs, applications, and browsers how to display the image</li>
+    </ul>
+  </li>
+  <li>With sensors on a headset, users can experience virtual reality</li>
+  <li>More file formats are still on the horizon, but ultimately all of them boil down to storing 0s and 1s and why!</li>
+</ul>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+
+            <!-- Bui Quang Bao -->
+            
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+            
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ TO MYSELF: DON'T DELETE THIS F*CKING LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>
