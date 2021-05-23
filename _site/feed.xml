@@ -1,4 +1,336 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-23T21:18:21+07:00</updated><id>/feed.xml</id><title type="html">Creatoper</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">CSS tips that every beginner should know in the web development</title><link href="/notebook/css-tips" rel="alternate" type="text/html" title="CSS tips that every beginner should know in the web development" /><published>2021-05-16T07:00:00+07:00</published><updated>2021-05-16T07:00:00+07:00</updated><id>/notebook/css-tips</id><content type="html" xml:base="/notebook/css-tips">&lt;h2 id=&quot;1-understand-box-model&quot;&gt;1. Understand Box Model&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-23T21:32:43+07:00</updated><id>/feed.xml</id><title type="html">Creatoper</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Crack Me (Hash Cracking)</title><link href="/notebook/ctf-crack-me" rel="alternate" type="text/html" title="Crack Me (Hash Cracking)" /><published>2021-05-23T07:00:00+07:00</published><updated>2021-05-23T07:00:00+07:00</updated><id>/notebook/ctf-crack-me</id><content type="html" xml:base="/notebook/ctf-crack-me">&lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;There is some way to crack the hash…&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁 phase1.zip
+├── readme1.md
+├── hashed
+└── 🔒 phase2.zip
+    ├── readme2.md
+    ├── id_rsa
+    └── 🔒 flag.zip
+        └── flag.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;phase1zip&quot;&gt;Phase1.zip&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashed&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$6$OQy2HYdK1F0RuFLv$OEsWe98lUzVkAiZy0.BDj.1GwjRtD72QZtQ7XugSdGss6TEXxnu4b3NWaVKBoSFtJ/LlG59l2sh4nLUPIqeLV1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the start of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$6$&lt;/code&gt; , we know this hash is SHA-512 encrypted (sha512crypt).&lt;/p&gt;
+
+&lt;p&gt;Open hashcat, we will brute force attack for plaintext:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hashcat -a 0 -m 1800 hashed.txt rockyou.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/1.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/2.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Plaintext: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;playboy123&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We encode the plaintext to Base64: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cGxheWJveTEyMw==&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the password for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phase2.zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;phase2zip&quot;&gt;Phase2.zip&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,73E0EECBF0999EC31697625F5C39B23D
+
+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
+-----END RSA PRIVATE KEY-----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Look at the structure, we know that this is RSA private-key cryptosystem.&lt;/p&gt;
+
+&lt;p&gt;It’s funny that the author of this chall even didn’t change the name of the file: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rda&lt;/code&gt;. This is unique file name that tell us what to do! :))&lt;/p&gt;
+
+&lt;p&gt;Okay, in the head of the hash:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DEK-Info: AES-128-CBC,73E0EECBF0999EC31697625F5C39B23D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Again, AES Encryption, this is really weak and we can easily attack it.&lt;/p&gt;
+
+&lt;p&gt;Open Johndaripper:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh2john.py id_rsa &amp;gt; id_rsa.hash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We the the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ida_rsa.hash&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id_rsa:$sshng$1$16$73E0EECBF0999EC31697625F5C39B23D$2352$21199bb94fc5b972a24b7f482a278c80a68c77bb14c2a293fabfa7e1810e742299ea0924bc62117f4a337ca633906818c7b7bd493091e238c57f184f0fab2427fbc0d03acfaaf2a07e1ff8b87ee9f4f42902c5d73bd8858e553198a6b4438f0779810c7ac6d44884cf03bb8881ea796a932d9faf33ad21dafe4371d5da914d7d4212a711d71bab1d89f828a16d2774ca4b3a29d09d6cecb706704128b8c258d872d907e63ec90b3d671b5c4849f0941a1f57284ce14b92354aab5a54d188c931691298aed29fd8d212967cd7e6575dc46eeb3bfa9c4c05e6b804df13327ea29dd8cc2b54634ff0f9bae792f7e1f3da5eb1ca172cc11e07e0f09d3fd3eff160020e10ad33358b8b57a368e7cb1cc98459a1f1708cd67cb54629bcd53b69f435f6ab7b074df9c8d320be62b781f42f2bfc4894d34c1cf9c6cf9c240c9efa994be9ead485fc17149c1696219c64d963cfb6db3545a02a50502415095f5b20f925cef47f6ec4e481d2ae9bdd1950731f7071eca44b47ef79d2fa14ed84c634b8b182f4a627b58afb0aeaf59bc5e6b9c9c2db93f922b1fc5b300636c68e1e3046d8101496cf2843caecd39ca26f89026863461b2b7a264318cb9f314db157d57a2155f12c0c3eb0b7ae006e4444aa24901b1882dac72cdb8629be0cd17ee28de84b868f6f29ddceed374c88c3fcb64076a66504ae2bb559774eec28b28bf3ecb65972403efc344615aec4c97773830ad87ebb3cf2ca09b350be627c35ece72ff8a8c1a46376bb49727e02a790af22e1dffc58797381ad9553bbaa261a0e4adfff3b53c13bd9d49f75c6708289e890d2841a3ae20867321068f5297afa219e14d32e58b78fa93db96d1c50b10174b18f96b933d001501df480b7840d02632a6314e3e6d6c33020e8afe8d72df87a6d4872a986531ebd6e88f7da25567c434f3d6bdbba431bd2f99d4008d643751c4e2f6dbc131cab2cd3a1d516abdd80a5ae4cc42e2071bbc375bb0eb778cb153362c22d6a86546ba3f85305ddc319605db0686d3471acb180b5a64632ca5d1bf9ac51a50cb4b9eeb266d6f5c1098a8286f7820dcffe1847075318861ed1f8c61059b42078751736c9681292ed6d23d403bf6a664b740f2f4f0f13dc8c02f1e74030cd368a36d596f9bf9c7d6cad0f0a17a9b3a55e5972d9890d47344077d85b53270a8a11be6906069aa405564e68aa6591ab4951072655b9a689c44d8885f2188f2001bd43c9c7f6a1cce79fe248247a56c9eeb24e7a9352d2dc8ca4daf9e139647e94e6dc667449064fcfc115fec9c5e8f485e73bf6a7421e076cd7b46451334a36a88b077b08e0bbc7dd8e893aadf91e4e3811972cd866de162bb59da5b39e680f681f096e9bb54554ce73dfbc7051c38080d53762ead2bab92fcdd3c71a2f6a06f77353ccc63fd66bed0fd98262740bdb6c6b868f8385f9f0cfe47d74c55917196be274f3c047f37ad50b216ff044532c4bf5b53689595e41e7992e5ada2695a241af36960425526f8729347383fb8643a6e5ec145b87c49716d38a22a6c16c85f927c302884adc9da11e75b55d8ba7406bd765312696b0627838f42fbd9b8df8c402dd806b73e1bd5c1e7b109fda316a5003df16d92b2ba6a68fd70eabdfafeea4be14faec8a7a5f7c3f08726c74669e0d01caa4a21d70297d9ef1cea7a8db93ba7df9e28fd8fb53adcd45dbbb404690f3b79efce69b63119e4140d7c4a0f4efe3b990e5082e49c6c67f07b0ffd37da62792c9ce806ad2e782d3576ceabd3e273eb508306a815e0220b7a84b09c3a6a1f020bc0a1eb2be680bf737a76b0e75633c26bb3628533ce21765a2f8eedfc428bbbe163c388124fbafecc31220ef58abafc3f7ecb936b85765b8605501a7e38441d0540dfc72b8df9f5021035a8e6e79d42dee1213687bd196866ef6b7f113b9e9aa53ff9eb6db16585b34afd0a5b6a5118d43f55fa935990f2a82ede5523bcd02ab6154590a0e46f69da7d0d9b7bb996e3c6b41651e8a5e5f177c4c0cf5a34f5093833311cd3cdc94d2b493515879e8537c3f7e7da5bee233630bf4c91ed59a6c80b44202661d66145c332cbbd934896e3833eddbe8474bfb202a2ed6fd78f5a774c51d94e1f0193626245e29acecec4b6e34983d2bf899950a18ee03bd466007330b2cb6a3513ae43ec9f23afc8508870d9feeafb2a70b0b98bbe278ea3f145756927ded8aeecdabe6b1a3bd5c8359652a69eed9314d4dfc6bb40d5b5ed207cf54298d7c1967cb9bf0ff7c7fcb771d3c8ed983654d9644c843f75a03418b9982f6cc15c97d33f9545a8d5accdde506d224d522c213dda5f3b0d03d6f655806d9b43a672138d3b3dc360967dd9a9b9629a001d8c0f6eb7eba8526ea3f79849e35fb1734c6050716cdeb53bea606ffc28e8e2cb0a9513652798eca966dd82a7366f2bb82c98f09b95c7293264d01d9d93a8af87bf39295fdd64dd6b67e1c6792806ed210969972e0b3373e68ed6fe3471000ede7ffdd2bdea73d2544a2608fe0bfbc851069ecd7d4a677d394055466ad5d1e080251fc7f77333062c31bda3840ccae4427ef4bfd91dfa8647ecc0faa49d92a513805425ab15b6d8cbda1a641afdaf744478daabc1bb325586bfe76d31e95edcbb177bb325286d8b4f74054ad4875203a3d648e4f33bff2bcba14e2af2e68ff9f71712367fb3b19dd5e260debcf70331b260d27b6a9c44e736d202435cac6dfa2c6e1ff276ff1716d61ea14c47712bdd5a2a4568367b7ef2434fa1626c9cb142c565de3549f92e33d2e796368b5a2d92b67cca6430a2dc832bf16c18e2d79d5fcdcd86f0f815a12a3b74899e42ea84de2a380163143f8d261e41fb1072d4a2b398c1a57696dca0dd59abf9458cc9ab2989b9816b15679629817afa23cda073f8d4550a2a9cf65f44c65db1702dde088737eb887dbd1c195ee0b43b1055287e1f7c5e897180462a0108c631931101a23cd3dcb386b697102bda8d90542516581b871c4877d2f0da02fe66e5b25cc38991dae33e22c757b24d885d91defb9c6a7ce609e0005603ad5c51ba09e544770c51476b4023bdf73e26126f8d501756cb4cb66f66ffa00f9698e4bd7746621eced0c836e1b924861842f7a351f6d31573c2c1a0cbdd8f2bfe1b12d01bf8f98ef56386ca31454076eaddae65fc4d99572f8e659e33eea65feedb8687fbc9323b02a689599db94f59caedac98c250845ed93e306d8503d8bc8220dc0d973bbd4762dc27bcc572ea8145b2b7b8a9d83800f2abcdfb77798d8b2a668c6dcbc1124d14b02c64c85770e3e839eb363b96fd78f8d51
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, attack the hash:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/3.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Plaintext: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;felecity&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Base64 encoded: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZmVsZWNpdHk=&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For sure this is the password for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag.zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/4.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Case closed!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="security" /><category term="ctf" /><category term="hash" /><category term="technology" /><summary type="html">Description</summary></entry><entry><title type="html">The Chosen One (AES-ECB Attack)</title><link href="/notebook/ctf-aes-ecb" rel="alternate" type="text/html" title="The Chosen One (AES-ECB Attack)" /><published>2021-05-22T07:00:00+07:00</published><updated>2021-05-22T07:00:00+07:00</updated><id>/notebook/ctf-aes-ecb</id><content type="html" xml:base="/notebook/ctf-aes-ecb">&lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;The cryptography technique can be good, but the implementation is bad. Do you know the weakness of AES-ECB?&lt;/p&gt;
+
+&lt;p&gt;Netcat &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc 61.28.237.24 30300&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;File &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;server.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env python
+&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Crypto.Cipher&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AES&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;plaintext_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plaintext_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# TODO 
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# TODO
+&lt;/span&gt;    
+    &lt;span class=&quot;n&quot;&gt;padding_character&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;D&quot;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cipher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MODE_ECB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Welcome to AES-ECB Encryption Machine. &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Please give us your plaintext, we'll give you its ciphertext!!!!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;=====================================&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Your input: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;rlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;inp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rstrip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding_character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            
+            &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'The ciphertext:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cipher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encrypt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hex'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;KeyboardInterrupt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;approach&quot;&gt;Approach&lt;/h2&gt;
+
+&lt;p&gt;Netcat:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-aes-ecb/1.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py)&lt;/p&gt;
+
+&lt;p&gt;AES - Advanced Encryption Standard: &lt;a href=&quot;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&quot;&gt;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Block cipher mode of operation: &lt;a href=&quot;https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation&quot;&gt;https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it’s ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-aes-ecb/2.svg&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;padding_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding_character&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Before the encryption, the script requests an input to be encrypted, the input is concatenated with the flag, and padding is used to complete the last blocks, for example, assuming the padding character is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt;, the given input is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, and the flag is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MY-CTF{My_name_is_Bui_Quang_Bao}&lt;/code&gt;. The plaintext before encryption will look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BMY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CTF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;My_name_is_Bui_Quang_Bao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_______________________________&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BMY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CTF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;My_name_&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_Bui_Quang_Bao&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_______________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What happen if we give the input &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BBBBBBBBBBBBBBB&lt;/code&gt;?&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Plaintext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BBBBBBBBBBBBBBBMY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CTF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;My_name_is_Bui_Quang_Bao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_________________&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BBBBBBBBBBBBBBBM&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CTF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;My_name_is&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Bui_Quang_Bao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The lack of diffusion is the Achilles’ heel of this AES-ECB encryption. ECB does not hide data patterns well since it encrypts identical plaintext blocks into similar ciphertext blocks.&lt;/p&gt;
+
+&lt;p&gt;So, the idea to exploit this weakness is brute force attack, every single byte of the flag.&lt;/p&gt;
+
+&lt;p&gt;With the input is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; :&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;???????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;????????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_______________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c03&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the input is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x + pad_char * 15&lt;/code&gt; (we are assuming that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pad_char&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; is one character in ASCII)&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x_______________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Have you realized anything yet?&lt;/p&gt;
+
+&lt;p&gt;If we brute force attack for the character &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;, we will know the last character of the flag when the block &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c1&lt;/code&gt; is equal to the block &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c03&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;Continue with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BB&lt;/code&gt;, we will have the last 2 character of the flag:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BB&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;????????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;______________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c03&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;______________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Continue with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BBB&lt;/code&gt;, we will have the last 3 character of the flag:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BB&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;??????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;????????????????&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;??!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;____________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c03&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;?!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;____________&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;________________&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we just need to write a script to do the attack for us.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pwn&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cls'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;61.28.237.24&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvuntil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pad_char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;D&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;send_txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;B&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;c01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c03&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c04&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvuntil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;127&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;send_txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pad_char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvuntil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c03&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&quot;Connection: 61.28.237.24 - Port: 30300 - buiquangbao&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Cracking AES-ECB Encryption...&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;&amp;gt; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Block 1:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Block 2:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Block 3:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Block 4:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;cls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Flag cracked!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&amp;gt; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Terminal and result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../post-img/ctf-aes-ecb/3.gif&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Case closed!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="security" /><category term="ctf" /><category term="hash" /><category term="technology" /><summary type="html">Description</summary></entry><entry><title type="html">CSS tips that every beginner should know in the web development</title><link href="/notebook/css-tips" rel="alternate" type="text/html" title="CSS tips that every beginner should know in the web development" /><published>2021-05-16T07:00:00+07:00</published><updated>2021-05-16T07:00:00+07:00</updated><id>/notebook/css-tips</id><content type="html" xml:base="/notebook/css-tips">&lt;h2 id=&quot;1-understand-box-model&quot;&gt;1. Understand Box Model&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;../post-img/css-tips/1.png&quot; alt=&quot;CSS&quot; /&gt;&lt;/p&gt;
 
@@ -174,138 +506,7 @@ Is that a good idea? I'm not sure. Give it a try at your job and let me know wha
 
 &lt;p&gt;&lt;img src=&quot;../post-img/css-tips/38.png&quot; alt=&quot;CSS&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is the end of this post, hope you enjoyed it!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="web" /><category term="css" /><summary type="html">1. Understand Box Model</summary></entry><entry><title type="html">Crack Me (Hash Cracking)</title><link href="/notebook/ctf-crack-me" rel="alternate" type="text/html" title="Crack Me (Hash Cracking)" /><published>2021-05-16T07:00:00+07:00</published><updated>2021-05-16T07:00:00+07:00</updated><id>/notebook/ctf-crack-me</id><content type="html" xml:base="/notebook/ctf-crack-me">&lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;There is some way to crack the hash…&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁 phase1.zip
-├── readme1.md
-├── hashed
-└── 🔒 phase2.zip
-    ├── readme2.md
-    ├── id_rsa
-    └── 🔒 flag.zip
-        └── flag.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;phase1zip&quot;&gt;Phase1.zip&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashed&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$6$OQy2HYdK1F0RuFLv$OEsWe98lUzVkAiZy0.BDj.1GwjRtD72QZtQ7XugSdGss6TEXxnu4b3NWaVKBoSFtJ/LlG59l2sh4nLUPIqeLV1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With the start of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$6$&lt;/code&gt; , we know this hash is SHA-512 encrypted (sha512crypt).&lt;/p&gt;
-
-&lt;p&gt;Open hashcat, we will brute force attack for plaintext:&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hashcat -a 0 -m 1800 hashed.txt rockyou.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/1.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/2.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Plaintext: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;playboy123&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;We encode the plaintext to Base64: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cGxheWJveTEyMw==&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This is the password for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phase2.zip&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;phase2zip&quot;&gt;Phase2.zip&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-----BEGIN RSA PRIVATE KEY-----
-Proc-Type: 4,ENCRYPTED
-DEK-Info: AES-128-CBC,73E0EECBF0999EC31697625F5C39B23D
-
-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
------END RSA PRIVATE KEY-----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Look at the structure, we know that this is RSA private-key cryptosystem.&lt;/p&gt;
-
-&lt;p&gt;It’s funny that the author of this chall even didn’t change the name of the file: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rda&lt;/code&gt;. This is unique file name that tell us what to do! :))&lt;/p&gt;
-
-&lt;p&gt;Okay, in the head of the hash:&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DEK-Info: AES-128-CBC,73E0EECBF0999EC31697625F5C39B23D
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Again, AES Encryption, this is really weak and we can easily attack it.&lt;/p&gt;
-
-&lt;p&gt;Open Johndaripper:&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh2john.py id_rsa &amp;gt; id_rsa.hash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We the the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ida_rsa.hash&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id_rsa:$sshng$1$16$73E0EECBF0999EC31697625F5C39B23D$2352$21199bb94fc5b972a24b7f482a278c80a68c77bb14c2a293fabfa7e1810e742299ea0924bc62117f4a337ca633906818c7b7bd493091e238c57f184f0fab2427fbc0d03acfaaf2a07e1ff8b87ee9f4f42902c5d73bd8858e553198a6b4438f0779810c7ac6d44884cf03bb8881ea796a932d9faf33ad21dafe4371d5da914d7d4212a711d71bab1d89f828a16d2774ca4b3a29d09d6cecb706704128b8c258d872d907e63ec90b3d671b5c4849f0941a1f57284ce14b92354aab5a54d188c931691298aed29fd8d212967cd7e6575dc46eeb3bfa9c4c05e6b804df13327ea29dd8cc2b54634ff0f9bae792f7e1f3da5eb1ca172cc11e07e0f09d3fd3eff160020e10ad33358b8b57a368e7cb1cc98459a1f1708cd67cb54629bcd53b69f435f6ab7b074df9c8d320be62b781f42f2bfc4894d34c1cf9c6cf9c240c9efa994be9ead485fc17149c1696219c64d963cfb6db3545a02a50502415095f5b20f925cef47f6ec4e481d2ae9bdd1950731f7071eca44b47ef79d2fa14ed84c634b8b182f4a627b58afb0aeaf59bc5e6b9c9c2db93f922b1fc5b300636c68e1e3046d8101496cf2843caecd39ca26f89026863461b2b7a264318cb9f314db157d57a2155f12c0c3eb0b7ae006e4444aa24901b1882dac72cdb8629be0cd17ee28de84b868f6f29ddceed374c88c3fcb64076a66504ae2bb559774eec28b28bf3ecb65972403efc344615aec4c97773830ad87ebb3cf2ca09b350be627c35ece72ff8a8c1a46376bb49727e02a790af22e1dffc58797381ad9553bbaa261a0e4adfff3b53c13bd9d49f75c6708289e890d2841a3ae20867321068f5297afa219e14d32e58b78fa93db96d1c50b10174b18f96b933d001501df480b7840d02632a6314e3e6d6c33020e8afe8d72df87a6d4872a986531ebd6e88f7da25567c434f3d6bdbba431bd2f99d4008d643751c4e2f6dbc131cab2cd3a1d516abdd80a5ae4cc42e2071bbc375bb0eb778cb153362c22d6a86546ba3f85305ddc319605db0686d3471acb180b5a64632ca5d1bf9ac51a50cb4b9eeb266d6f5c1098a8286f7820dcffe1847075318861ed1f8c61059b42078751736c9681292ed6d23d403bf6a664b740f2f4f0f13dc8c02f1e74030cd368a36d596f9bf9c7d6cad0f0a17a9b3a55e5972d9890d47344077d85b53270a8a11be6906069aa405564e68aa6591ab4951072655b9a689c44d8885f2188f2001bd43c9c7f6a1cce79fe248247a56c9eeb24e7a9352d2dc8ca4daf9e139647e94e6dc667449064fcfc115fec9c5e8f485e73bf6a7421e076cd7b46451334a36a88b077b08e0bbc7dd8e893aadf91e4e3811972cd866de162bb59da5b39e680f681f096e9bb54554ce73dfbc7051c38080d53762ead2bab92fcdd3c71a2f6a06f77353ccc63fd66bed0fd98262740bdb6c6b868f8385f9f0cfe47d74c55917196be274f3c047f37ad50b216ff044532c4bf5b53689595e41e7992e5ada2695a241af36960425526f8729347383fb8643a6e5ec145b87c49716d38a22a6c16c85f927c302884adc9da11e75b55d8ba7406bd765312696b0627838f42fbd9b8df8c402dd806b73e1bd5c1e7b109fda316a5003df16d92b2ba6a68fd70eabdfafeea4be14faec8a7a5f7c3f08726c74669e0d01caa4a21d70297d9ef1cea7a8db93ba7df9e28fd8fb53adcd45dbbb404690f3b79efce69b63119e4140d7c4a0f4efe3b990e5082e49c6c67f07b0ffd37da62792c9ce806ad2e782d3576ceabd3e273eb508306a815e0220b7a84b09c3a6a1f020bc0a1eb2be680bf737a76b0e75633c26bb3628533ce21765a2f8eedfc428bbbe163c388124fbafecc31220ef58abafc3f7ecb936b85765b8605501a7e38441d0540dfc72b8df9f5021035a8e6e79d42dee1213687bd196866ef6b7f113b9e9aa53ff9eb6db16585b34afd0a5b6a5118d43f55fa935990f2a82ede5523bcd02ab6154590a0e46f69da7d0d9b7bb996e3c6b41651e8a5e5f177c4c0cf5a34f5093833311cd3cdc94d2b493515879e8537c3f7e7da5bee233630bf4c91ed59a6c80b44202661d66145c332cbbd934896e3833eddbe8474bfb202a2ed6fd78f5a774c51d94e1f0193626245e29acecec4b6e34983d2bf899950a18ee03bd466007330b2cb6a3513ae43ec9f23afc8508870d9feeafb2a70b0b98bbe278ea3f145756927ded8aeecdabe6b1a3bd5c8359652a69eed9314d4dfc6bb40d5b5ed207cf54298d7c1967cb9bf0ff7c7fcb771d3c8ed983654d9644c843f75a03418b9982f6cc15c97d33f9545a8d5accdde506d224d522c213dda5f3b0d03d6f655806d9b43a672138d3b3dc360967dd9a9b9629a001d8c0f6eb7eba8526ea3f79849e35fb1734c6050716cdeb53bea606ffc28e8e2cb0a9513652798eca966dd82a7366f2bb82c98f09b95c7293264d01d9d93a8af87bf39295fdd64dd6b67e1c6792806ed210969972e0b3373e68ed6fe3471000ede7ffdd2bdea73d2544a2608fe0bfbc851069ecd7d4a677d394055466ad5d1e080251fc7f77333062c31bda3840ccae4427ef4bfd91dfa8647ecc0faa49d92a513805425ab15b6d8cbda1a641afdaf744478daabc1bb325586bfe76d31e95edcbb177bb325286d8b4f74054ad4875203a3d648e4f33bff2bcba14e2af2e68ff9f71712367fb3b19dd5e260debcf70331b260d27b6a9c44e736d202435cac6dfa2c6e1ff276ff1716d61ea14c47712bdd5a2a4568367b7ef2434fa1626c9cb142c565de3549f92e33d2e796368b5a2d92b67cca6430a2dc832bf16c18e2d79d5fcdcd86f0f815a12a3b74899e42ea84de2a380163143f8d261e41fb1072d4a2b398c1a57696dca0dd59abf9458cc9ab2989b9816b15679629817afa23cda073f8d4550a2a9cf65f44c65db1702dde088737eb887dbd1c195ee0b43b1055287e1f7c5e897180462a0108c631931101a23cd3dcb386b697102bda8d90542516581b871c4877d2f0da02fe66e5b25cc38991dae33e22c757b24d885d91defb9c6a7ce609e0005603ad5c51ba09e544770c51476b4023bdf73e26126f8d501756cb4cb66f66ffa00f9698e4bd7746621eced0c836e1b924861842f7a351f6d31573c2c1a0cbdd8f2bfe1b12d01bf8f98ef56386ca31454076eaddae65fc4d99572f8e659e33eea65feedb8687fbc9323b02a689599db94f59caedac98c250845ed93e306d8503d8bc8220dc0d973bbd4762dc27bcc572ea8145b2b7b8a9d83800f2abcdfb77798d8b2a668c6dcbc1124d14b02c64c85770e3e839eb363b96fd78f8d51
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Next, attack the hash:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/3.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Plaintext: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;felecity&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Base64 encoded: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ZmVsZWNpdHk=&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;For sure this is the password for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag.zip&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/ctf-crack-me/4.png&quot; alt=&quot;CTF&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Case closed!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="security" /><category term="ctf" /><category term="hash" /><category term="technology" /><summary type="html">Description</summary></entry><entry><title type="html">Web Development</title><link href="/notebook/cs50t-web-development" rel="alternate" type="text/html" title="Web Development" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-web-development</id><content type="html" xml:base="/notebook/cs50t-web-development">&lt;h2 id=&quot;internet-recap&quot;&gt;&lt;strong&gt;Internet Recap&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This is the end of this post, hope you enjoyed it!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="web" /><category term="css" /><summary type="html">1. Understand Box Model</summary></entry><entry><title type="html">Web Development</title><link href="/notebook/cs50t-web-development" rel="alternate" type="text/html" title="Web Development" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-web-development</id><content type="html" xml:base="/notebook/cs50t-web-development">&lt;h2 id=&quot;internet-recap&quot;&gt;&lt;strong&gt;Internet Recap&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;All the computers on the internet are interconnected that supports HTTP and TCP/IP&lt;/li&gt;
@@ -1054,436 +1255,7 @@ e8xXLqgUWyt7ip2DgA8qvN+3d5jYsqZoxty8ESTRSwLGTIV3Dj6DnrNjuW/Xj41R
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;These building blocks are what allow you to put your content on the internet!&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Internet Recap</summary></entry><entry><title type="html">Multimedia</title><link href="/notebook/cs50t-multimedia" rel="alternate" type="text/html" title="Multimedia" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-multimedia</id><content type="html" xml:base="/notebook/cs50t-multimedia">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Odds are you use it everyday, but what is it?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;audio&quot;&gt;&lt;strong&gt;Audio&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Computers are good at recording, playing back, and generating audio&lt;/li&gt;
-  &lt;li&gt;Uses different file formats
-    &lt;ul&gt;
-      &lt;li&gt;File formats are just a way of storing 0s and 1s on disk so that certain software knows how to interpret it&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;MIDI
-    &lt;ul&gt;
-      &lt;li&gt;Way of storing musical notes for certain songs&lt;/li&gt;
-      &lt;li&gt;Can do this for different instruments
-        &lt;ul&gt;
-          &lt;li&gt;Programs can render the notes for these instruments&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;GarageBand
-    &lt;ul&gt;
-      &lt;li&gt;Included with macOS&lt;/li&gt;
-      &lt;li&gt;This is the Star Wars theme in MIDI
-        &lt;ul&gt;
-          &lt;li&gt;Doesn’t sound quite as good as the actual version&lt;/li&gt;
-          &lt;li&gt;Computer synthesizes the notes
-            &lt;ul&gt;
-              &lt;li&gt;Not an actual recording&lt;/li&gt;
-              &lt;li&gt;Computer interprets notes in the MIDI file&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;MIDI is common in the digital workspace among musicians who wish to share music with each other.&lt;/li&gt;
-  &lt;li&gt;Humans typically like to hear music preformed and recorded by humans
-    &lt;ul&gt;
-      &lt;li&gt;File formats for recorded music include:
-        &lt;ul&gt;
-          &lt;li&gt;AAC&lt;/li&gt;
-          &lt;li&gt;MIDI&lt;/li&gt;
-          &lt;li&gt;MP3&lt;/li&gt;
-          &lt;li&gt;WAV&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;WAV is an early sound format, but still used
-    &lt;ul&gt;
-      &lt;li&gt;Uncompressed data storage allowing high quality&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;MP3
-    &lt;ul&gt;
-      &lt;li&gt;File format for audio that uses compression
-        &lt;ul&gt;
-          &lt;li&gt;Significantly reduce how many bits are necessary to store a song&lt;/li&gt;
-          &lt;li&gt;Discards 0s and 1s that humans can’t necessarily hear
-            &lt;ul&gt;
-              &lt;li&gt;True audiophiles may disagree&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Trade off between optimizing storage space and sacrificing quality&lt;/li&gt;
-          &lt;li&gt;This compression is said to be lossy
-            &lt;ul&gt;
-              &lt;li&gt;Losing the quality in the compression process&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;AAC
-    &lt;ul&gt;
-      &lt;li&gt;Similar to MP3&lt;/li&gt;
-      &lt;li&gt;May see when you download a song from iTunes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Streaming services such as Spotify don’t transfer a file to you but rather stream bits of information to you&lt;/li&gt;
-  &lt;li&gt;How do we think about the quality of these formats?
-    &lt;ul&gt;
-      &lt;li&gt;Sampling frequency
-        &lt;ul&gt;
-          &lt;li&gt;Number of times per seconds we take a digital snapshot of what a person would hear&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Bit depth
-        &lt;ul&gt;
-          &lt;li&gt;Number of bits used for these individual snapshots&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Sampling frequency x bit depth = number of bits necessary to store one second of music&lt;/li&gt;
-      &lt;li&gt;Audio file formats allow you to modify what these parameters are&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;graphics&quot;&gt;&lt;strong&gt;Graphics&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A graphic, what we see with multimedia, is really just a bunch of pixels both horizontal and vertical
-    &lt;ul&gt;
-      &lt;li&gt;All file formats are rectangular in nature, though transparent pixels can make images look to take on other shapes&lt;/li&gt;
-      &lt;li&gt;In the simplest form, each of the dots or pixels is a bunch of 0s and 1s&lt;/li&gt;
-      &lt;li&gt;To create a file format, we just need to determine a mapping&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;This image is only black and white, so how to represent color?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;rgb&quot;&gt;&lt;strong&gt;RGB&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;RGB stands for Red Green Blue
-    &lt;ul&gt;
-      &lt;li&gt;With information giving an amount of red, an amount of green, and an amount of blue, you can tell a computer how to colorize pixels&lt;/li&gt;
-      &lt;li&gt;None of the colors yields a black pixel&lt;/li&gt;
-      &lt;li&gt;All of the colors yields a white pixel&lt;/li&gt;
-      &lt;li&gt;In between these two options is where we get all sorts of colors&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the three bytes: 11111111 00000000 00000000
-    &lt;ul&gt;
-      &lt;li&gt;If we interpret these bytes to represent colors, it appears we want all of the red, none of the green, and none of the blue&lt;/li&gt;
-      &lt;li&gt;These 24 bits (3 bytes = 3 x 8 bits = 24 bits) represent the color we know as red!
-        &lt;ul&gt;
-          &lt;li&gt;If a computer wanted to represent this color, it would store these 24 bits&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the three bytes: 00000000 11111111 00000000
-    &lt;ul&gt;
-      &lt;li&gt;Green&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the three bytes: 00000000 0000000 11111111
-    &lt;ul&gt;
-      &lt;li&gt;Blue&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the three bytes: 00000000 0000000 0000000
-    &lt;ul&gt;
-      &lt;li&gt;Black&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the three bytes: 11111111 11111111 11111111
-    &lt;ul&gt;
-      &lt;li&gt;White&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Can get many color variations by mixing the above colors in different quantities&lt;/li&gt;
-  &lt;li&gt;When we talk about image formats, we typically don’t talk in terms of binary but rather something called hexadecimal (base-16, contains 16 digits)
-    &lt;ul&gt;
-      &lt;li&gt;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f&lt;/li&gt;
-      &lt;li&gt;0 is the smallest number we can represent in single digit&lt;/li&gt;
-      &lt;li&gt;f is the largest number (value of 15) we can represent in a single digit&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider the 8 bits: 1111 1111
-    &lt;ul&gt;
-      &lt;li&gt;Each hexadecimal digit represents four bits&lt;/li&gt;
-      &lt;li&gt;One hexadecimal digit can represent the first four bits, another can represent the second four
-        &lt;ul&gt;
-          &lt;li&gt;Represent something with eight symbols using only two!&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;1111 is the decimal number 15, which is f&lt;/li&gt;
-      &lt;li&gt;Therefore, 1111 1111 in hexadecimal is ff&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Red can thus be represented in hexadecimal as ff 00 00&lt;/li&gt;
-  &lt;li&gt;Green can be represented in hexadecimal as 00 ff 00&lt;/li&gt;
-  &lt;li&gt;Blue can be represented in hexadecimal as 00 00 ff&lt;/li&gt;
-  &lt;li&gt;A lot of graphical editing software such as Photoshop use hexadecimal to represent colors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bitmap-format&quot;&gt;&lt;strong&gt;Bitmap Format&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;This background for Windows XP was a bitmap file (.bmp)
-    &lt;ul&gt;
-      &lt;li&gt;A mapping or grid of bits much like the smiley face from before&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Zooming in on this image show that it is just a grid of dots
-    &lt;ul&gt;
-      &lt;li&gt;Notice the pixelation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Much like with audio, so too in the world of images do you have discretion over how many bits to use
-    &lt;ul&gt;
-      &lt;li&gt;How many bits to represent each pixel’s color?&lt;/li&gt;
-      &lt;li&gt;Resolution is another factor
-        &lt;ul&gt;
-          &lt;li&gt;An image that is only 100 pixels scaled up only duplicates the existing limited information, resulting in a blotchy image&lt;/li&gt;
-          &lt;li&gt;Would be better to start with image that has a higher resolution (more pixels)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A lot of repeated colors, so it seems silly to represent each color with the same number of bits&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;image-compression&quot;&gt;&lt;strong&gt;Image Compression&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Graphical file formats can often be compressed&lt;/li&gt;
-  &lt;li&gt;Can be done lossy or losslessly
-    &lt;ul&gt;
-      &lt;li&gt;With audio, we threw away audio information that the human ear can’t necessarily hear
-        &lt;ul&gt;
-          &lt;li&gt;This is lossy compression; throwing information away&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Using fewer bits to represent the same information is lossless compression&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lossless compression&lt;/li&gt;
-  &lt;li&gt;There is a lot of repeated blue in the first image
-    &lt;ul&gt;
-      &lt;li&gt;Using the same 24 bits to represent each pixel!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The second image is compressed and not what a user would see
-    &lt;ul&gt;
-      &lt;li&gt;The first column contains the color that the rest of the row (scan line) should have
-        &lt;ul&gt;
-          &lt;li&gt;Image contains instructions on how to repeat the color in a particular row&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;When a color is encountered that isn’t in the first column (the apple in this case), the instructions would list the colors for each non-repeated pixel&lt;/li&gt;
-      &lt;li&gt;This uses less bits but makes the original information recoverable&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lossy compression&lt;/li&gt;
-  &lt;li&gt;This is a .jpg photograph that is somewhat compressed, but not easy to tell&lt;/li&gt;
-  &lt;li&gt;Let’s say we want to compress this image further so that we can share it without going over a social media platform’s limit&lt;/li&gt;
-  &lt;li&gt;It contains more complicated patterns of colors, so let’s try a lossy compression resulting in the following:&lt;/li&gt;
-  &lt;li&gt;Lossy compression means that I won’t be able to get that original image back
-    &lt;ul&gt;
-      &lt;li&gt;The compression throws away bits of information
-        &lt;ul&gt;
-          &lt;li&gt;“Does the sky really need this many shades of blue?”&lt;/li&gt;
-          &lt;li&gt;“Does this leaf really need this many shades of green”
-            &lt;ul&gt;
-              &lt;li&gt;Replaces bits with only a few colors giving an approximation&lt;/li&gt;
-              &lt;li&gt;I will not be able to know how clear the sky used to be from this information&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;image-file-formats&quot;&gt;&lt;strong&gt;Image File Formats&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;BMP
-    &lt;ul&gt;
-      &lt;li&gt;Originally used by Windows&lt;/li&gt;
-      &lt;li&gt;Not super common these days&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;GIF
-    &lt;ul&gt;
-      &lt;li&gt;Low quality images
-        &lt;ul&gt;
-          &lt;li&gt;Only supports 8-bit color&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Often used for memes
-        &lt;ul&gt;
-          &lt;li&gt;Can be animated&lt;/li&gt;
-          &lt;li&gt;Like a video file with only a few images&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JPEG
-    &lt;ul&gt;
-      &lt;li&gt;Supports 24-bit color&lt;/li&gt;
-      &lt;li&gt;Losslessly compresses
-        &lt;ul&gt;
-          &lt;li&gt;Can minimize amount of compression to create high quality photos&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PNG
-    &lt;ul&gt;
-      &lt;li&gt;High quality graphics&lt;/li&gt;
-      &lt;li&gt;Supports 24-bit color&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;All these formats ultimately have an limited amount of information
-    &lt;ul&gt;
-      &lt;li&gt;Ultimate just store pixels and colors of when the image was taken&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;enhance&quot;&gt;&lt;strong&gt;“Enhance”&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Common for popular culture abuses of what it means to be a multimedia format
-    &lt;ul&gt;
-      &lt;li&gt;“Enhancing” means to make an image as clear as possible not matter what format it was saved in&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;David shows a clip of characters “enhancing” an image
-    &lt;ul&gt;
-      &lt;li&gt;The characters zoom into a pixelated frame of a video and somehow clear it up to see a reflection
-        &lt;ul&gt;
-          &lt;li&gt;Video is just a whole bunch of images being shown to us quickly (24 frames per second, etc.)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;The pixelated image only contains information for those pixels
-        &lt;ul&gt;
-          &lt;li&gt;There is no way to obtain a clear image unless the original image was already at a high resolution&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;David contrasts this with an aware clip of Futurama&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;video-compression&quot;&gt;&lt;strong&gt;Video Compression&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;You can think of a video format as similar to a flip book&lt;/li&gt;
-  &lt;li&gt;Video formats are just a bunch of images shown quickly in succession to create the illusion of motion
-    &lt;ul&gt;
-      &lt;li&gt;Not necessarily all information stored as png, jpg, gif, or even images&lt;/li&gt;
-      &lt;li&gt;Algorithms and mathematics can help go from one frame to another&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Opportunities for compression
-    &lt;ul&gt;
-      &lt;li&gt;Can leverage same image compression techniques for each frame (intra-frame coding)&lt;/li&gt;
-      &lt;li&gt;Background of multiple frames can contain redundant information&lt;/li&gt;
-      &lt;li&gt;Compare current frame and next frame of video and determine what has changed
-        &lt;ul&gt;
-          &lt;li&gt;Store these differences&lt;/li&gt;
-          &lt;li&gt;Key frames store a snapshot of time to remember what the video looks like&lt;/li&gt;
-          &lt;li&gt;In each subsequent frame remember what has changed
-            &lt;ul&gt;
-              &lt;li&gt;Using algorithms and math, background is drawn&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Key frames are stored multiple times to guarantee that frames can be recovered&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;video-file-formats&quot;&gt;&lt;strong&gt;Video File Formats&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;In the world of video, there are more solutions on how to store information&lt;/li&gt;
-  &lt;li&gt;Video file formats are containers
-    &lt;ul&gt;
-      &lt;li&gt;Containers are digital container in which you can put multiple types of data&lt;/li&gt;
-      &lt;li&gt;Can include a video track, audio track, a secondary audio track (for different languages), closed captions, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;AVI
-    &lt;ul&gt;
-      &lt;li&gt;Commonly used in Windows&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;DivX&lt;/li&gt;
-  &lt;li&gt;Matroska
-    &lt;ul&gt;
-      &lt;li&gt;Open source container meant to be more versatile&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;MP4
-    &lt;ul&gt;
-      &lt;li&gt;Pretty much universal in all browsers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;QuickTime
-    &lt;ul&gt;
-      &lt;li&gt;Commonly used in MacOS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Codecs
-    &lt;ul&gt;
-      &lt;li&gt;Ways of storing and encoding information&lt;/li&gt;
-      &lt;li&gt;For video:
-        &lt;ul&gt;
-          &lt;li&gt;H.264&lt;/li&gt;
-          &lt;li&gt;MPEG-4 Part-2&lt;/li&gt;
-          &lt;li&gt;…&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;For audio:
-        &lt;ul&gt;
-          &lt;li&gt;Can be stand alone files or tracks in a container!&lt;/li&gt;
-          &lt;li&gt;AAC&lt;/li&gt;
-          &lt;li&gt;MP3&lt;/li&gt;
-          &lt;li&gt;…&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3d-video&quot;&gt;&lt;strong&gt;3D Video&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Increasingly, 3D formats are becoming more common
-    &lt;ul&gt;
-      &lt;li&gt;This is a 360 degree image of Sanders Theatre
-        &lt;ul&gt;
-          &lt;li&gt;A spherical image&lt;/li&gt;
-          &lt;li&gt;Looks distorted in 2D&lt;/li&gt;
-          &lt;li&gt;Like flattening a globe&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Images can contain metadata
-    &lt;ul&gt;
-      &lt;li&gt;Information that viewers can’t see&lt;/li&gt;
-      &lt;li&gt;Tells programs, applications, and browsers how to display the image&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;With sensors on a headset, users can experience virtual reality&lt;/li&gt;
-  &lt;li&gt;More file formats are still on the horizon, but ultimately all of them boil down to storing 0s and 1s and why!&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Introduction Odds are you use it everyday, but what is it?</summary></entry><entry><title type="html">Security</title><link href="/notebook/cs50t-security" rel="alternate" type="text/html" title="Security" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-security</id><content type="html" xml:base="/notebook/cs50t-security">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Internet Recap</summary></entry><entry><title type="html">Security</title><link href="/notebook/cs50t-security" rel="alternate" type="text/html" title="Security" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-security</id><content type="html" xml:base="/notebook/cs50t-security">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Our data is under constant threat, but how can we defend ourselves?&lt;/li&gt;
 &lt;/ul&gt;
@@ -3430,7 +3202,436 @@ e8xXLqgUWyt7ip2DgA8qvN+3d5jYsqZoxty8ESTRSwLGTIV3Dj6DnrNjuW/Xj41R
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Introduction We use the internet on a daily basis and have constant access and connectivity Home network Cable modem, DSL modem, or FIOS device Connects to the internet Pay monthly for an ISP (Internet Service Provider) Verizon, Comcast, etc. Could have built in wireless connectivity for your devices May need an additional home router Devices connect to a router via cables or wifi</summary></entry><entry><title type="html">K-Drama “Start-up” - Brilliant minds and cutting-edge technology are not enough.</title><link href="/notebook/kdrama-start-up" rel="alternate" type="text/html" title="K-Drama “Start-up” - Brilliant minds and cutting-edge technology are not enough." /><published>2021-04-12T20:00:00+07:00</published><updated>2021-04-12T20:00:00+07:00</updated><id>/notebook/kdrama-start-up</id><content type="html" xml:base="/notebook/kdrama-start-up">&lt;p&gt;Three SamsanTech members, Nam Do-san, Kim Yong-san, and Lee Chul-san, are working on computer vision - image recognition/classification, an &lt;strong&gt;artificial intelligence&lt;/strong&gt; field. The concept of technology was the main theme of this drama. Isn’t it intriguing?! (It’s for this reason that I opted to watch this film, despite the fact that I’m not usually interested in K-Drama.)&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Introduction We use the internet on a daily basis and have constant access and connectivity Home network Cable modem, DSL modem, or FIOS device Connects to the internet Pay monthly for an ISP (Internet Service Provider) Verizon, Comcast, etc. Could have built in wireless connectivity for your devices May need an additional home router Devices connect to a router via cables or wifi</summary></entry><entry><title type="html">Multimedia</title><link href="/notebook/cs50t-multimedia" rel="alternate" type="text/html" title="Multimedia" /><published>2021-05-15T07:00:00+07:00</published><updated>2021-05-15T07:00:00+07:00</updated><id>/notebook/cs50t-multimedia</id><content type="html" xml:base="/notebook/cs50t-multimedia">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Odds are you use it everyday, but what is it?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;audio&quot;&gt;&lt;strong&gt;Audio&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computers are good at recording, playing back, and generating audio&lt;/li&gt;
+  &lt;li&gt;Uses different file formats
+    &lt;ul&gt;
+      &lt;li&gt;File formats are just a way of storing 0s and 1s on disk so that certain software knows how to interpret it&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MIDI
+    &lt;ul&gt;
+      &lt;li&gt;Way of storing musical notes for certain songs&lt;/li&gt;
+      &lt;li&gt;Can do this for different instruments
+        &lt;ul&gt;
+          &lt;li&gt;Programs can render the notes for these instruments&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GarageBand
+    &lt;ul&gt;
+      &lt;li&gt;Included with macOS&lt;/li&gt;
+      &lt;li&gt;This is the Star Wars theme in MIDI
+        &lt;ul&gt;
+          &lt;li&gt;Doesn’t sound quite as good as the actual version&lt;/li&gt;
+          &lt;li&gt;Computer synthesizes the notes
+            &lt;ul&gt;
+              &lt;li&gt;Not an actual recording&lt;/li&gt;
+              &lt;li&gt;Computer interprets notes in the MIDI file&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MIDI is common in the digital workspace among musicians who wish to share music with each other.&lt;/li&gt;
+  &lt;li&gt;Humans typically like to hear music preformed and recorded by humans
+    &lt;ul&gt;
+      &lt;li&gt;File formats for recorded music include:
+        &lt;ul&gt;
+          &lt;li&gt;AAC&lt;/li&gt;
+          &lt;li&gt;MIDI&lt;/li&gt;
+          &lt;li&gt;MP3&lt;/li&gt;
+          &lt;li&gt;WAV&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;WAV is an early sound format, but still used
+    &lt;ul&gt;
+      &lt;li&gt;Uncompressed data storage allowing high quality&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MP3
+    &lt;ul&gt;
+      &lt;li&gt;File format for audio that uses compression
+        &lt;ul&gt;
+          &lt;li&gt;Significantly reduce how many bits are necessary to store a song&lt;/li&gt;
+          &lt;li&gt;Discards 0s and 1s that humans can’t necessarily hear
+            &lt;ul&gt;
+              &lt;li&gt;True audiophiles may disagree&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Trade off between optimizing storage space and sacrificing quality&lt;/li&gt;
+          &lt;li&gt;This compression is said to be lossy
+            &lt;ul&gt;
+              &lt;li&gt;Losing the quality in the compression process&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AAC
+    &lt;ul&gt;
+      &lt;li&gt;Similar to MP3&lt;/li&gt;
+      &lt;li&gt;May see when you download a song from iTunes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Streaming services such as Spotify don’t transfer a file to you but rather stream bits of information to you&lt;/li&gt;
+  &lt;li&gt;How do we think about the quality of these formats?
+    &lt;ul&gt;
+      &lt;li&gt;Sampling frequency
+        &lt;ul&gt;
+          &lt;li&gt;Number of times per seconds we take a digital snapshot of what a person would hear&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Bit depth
+        &lt;ul&gt;
+          &lt;li&gt;Number of bits used for these individual snapshots&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Sampling frequency x bit depth = number of bits necessary to store one second of music&lt;/li&gt;
+      &lt;li&gt;Audio file formats allow you to modify what these parameters are&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;graphics&quot;&gt;&lt;strong&gt;Graphics&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A graphic, what we see with multimedia, is really just a bunch of pixels both horizontal and vertical
+    &lt;ul&gt;
+      &lt;li&gt;All file formats are rectangular in nature, though transparent pixels can make images look to take on other shapes&lt;/li&gt;
+      &lt;li&gt;In the simplest form, each of the dots or pixels is a bunch of 0s and 1s&lt;/li&gt;
+      &lt;li&gt;To create a file format, we just need to determine a mapping&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This image is only black and white, so how to represent color?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rgb&quot;&gt;&lt;strong&gt;RGB&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;RGB stands for Red Green Blue
+    &lt;ul&gt;
+      &lt;li&gt;With information giving an amount of red, an amount of green, and an amount of blue, you can tell a computer how to colorize pixels&lt;/li&gt;
+      &lt;li&gt;None of the colors yields a black pixel&lt;/li&gt;
+      &lt;li&gt;All of the colors yields a white pixel&lt;/li&gt;
+      &lt;li&gt;In between these two options is where we get all sorts of colors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the three bytes: 11111111 00000000 00000000
+    &lt;ul&gt;
+      &lt;li&gt;If we interpret these bytes to represent colors, it appears we want all of the red, none of the green, and none of the blue&lt;/li&gt;
+      &lt;li&gt;These 24 bits (3 bytes = 3 x 8 bits = 24 bits) represent the color we know as red!
+        &lt;ul&gt;
+          &lt;li&gt;If a computer wanted to represent this color, it would store these 24 bits&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the three bytes: 00000000 11111111 00000000
+    &lt;ul&gt;
+      &lt;li&gt;Green&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the three bytes: 00000000 0000000 11111111
+    &lt;ul&gt;
+      &lt;li&gt;Blue&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the three bytes: 00000000 0000000 0000000
+    &lt;ul&gt;
+      &lt;li&gt;Black&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the three bytes: 11111111 11111111 11111111
+    &lt;ul&gt;
+      &lt;li&gt;White&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Can get many color variations by mixing the above colors in different quantities&lt;/li&gt;
+  &lt;li&gt;When we talk about image formats, we typically don’t talk in terms of binary but rather something called hexadecimal (base-16, contains 16 digits)
+    &lt;ul&gt;
+      &lt;li&gt;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f&lt;/li&gt;
+      &lt;li&gt;0 is the smallest number we can represent in single digit&lt;/li&gt;
+      &lt;li&gt;f is the largest number (value of 15) we can represent in a single digit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider the 8 bits: 1111 1111
+    &lt;ul&gt;
+      &lt;li&gt;Each hexadecimal digit represents four bits&lt;/li&gt;
+      &lt;li&gt;One hexadecimal digit can represent the first four bits, another can represent the second four
+        &lt;ul&gt;
+          &lt;li&gt;Represent something with eight symbols using only two!&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;1111 is the decimal number 15, which is f&lt;/li&gt;
+      &lt;li&gt;Therefore, 1111 1111 in hexadecimal is ff&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Red can thus be represented in hexadecimal as ff 00 00&lt;/li&gt;
+  &lt;li&gt;Green can be represented in hexadecimal as 00 ff 00&lt;/li&gt;
+  &lt;li&gt;Blue can be represented in hexadecimal as 00 00 ff&lt;/li&gt;
+  &lt;li&gt;A lot of graphical editing software such as Photoshop use hexadecimal to represent colors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bitmap-format&quot;&gt;&lt;strong&gt;Bitmap Format&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;This background for Windows XP was a bitmap file (.bmp)
+    &lt;ul&gt;
+      &lt;li&gt;A mapping or grid of bits much like the smiley face from before&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Zooming in on this image show that it is just a grid of dots
+    &lt;ul&gt;
+      &lt;li&gt;Notice the pixelation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Much like with audio, so too in the world of images do you have discretion over how many bits to use
+    &lt;ul&gt;
+      &lt;li&gt;How many bits to represent each pixel’s color?&lt;/li&gt;
+      &lt;li&gt;Resolution is another factor
+        &lt;ul&gt;
+          &lt;li&gt;An image that is only 100 pixels scaled up only duplicates the existing limited information, resulting in a blotchy image&lt;/li&gt;
+          &lt;li&gt;Would be better to start with image that has a higher resolution (more pixels)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A lot of repeated colors, so it seems silly to represent each color with the same number of bits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;image-compression&quot;&gt;&lt;strong&gt;Image Compression&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Graphical file formats can often be compressed&lt;/li&gt;
+  &lt;li&gt;Can be done lossy or losslessly
+    &lt;ul&gt;
+      &lt;li&gt;With audio, we threw away audio information that the human ear can’t necessarily hear
+        &lt;ul&gt;
+          &lt;li&gt;This is lossy compression; throwing information away&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Using fewer bits to represent the same information is lossless compression&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lossless compression&lt;/li&gt;
+  &lt;li&gt;There is a lot of repeated blue in the first image
+    &lt;ul&gt;
+      &lt;li&gt;Using the same 24 bits to represent each pixel!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The second image is compressed and not what a user would see
+    &lt;ul&gt;
+      &lt;li&gt;The first column contains the color that the rest of the row (scan line) should have
+        &lt;ul&gt;
+          &lt;li&gt;Image contains instructions on how to repeat the color in a particular row&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;When a color is encountered that isn’t in the first column (the apple in this case), the instructions would list the colors for each non-repeated pixel&lt;/li&gt;
+      &lt;li&gt;This uses less bits but makes the original information recoverable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lossy compression&lt;/li&gt;
+  &lt;li&gt;This is a .jpg photograph that is somewhat compressed, but not easy to tell&lt;/li&gt;
+  &lt;li&gt;Let’s say we want to compress this image further so that we can share it without going over a social media platform’s limit&lt;/li&gt;
+  &lt;li&gt;It contains more complicated patterns of colors, so let’s try a lossy compression resulting in the following:&lt;/li&gt;
+  &lt;li&gt;Lossy compression means that I won’t be able to get that original image back
+    &lt;ul&gt;
+      &lt;li&gt;The compression throws away bits of information
+        &lt;ul&gt;
+          &lt;li&gt;“Does the sky really need this many shades of blue?”&lt;/li&gt;
+          &lt;li&gt;“Does this leaf really need this many shades of green”
+            &lt;ul&gt;
+              &lt;li&gt;Replaces bits with only a few colors giving an approximation&lt;/li&gt;
+              &lt;li&gt;I will not be able to know how clear the sky used to be from this information&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;image-file-formats&quot;&gt;&lt;strong&gt;Image File Formats&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;BMP
+    &lt;ul&gt;
+      &lt;li&gt;Originally used by Windows&lt;/li&gt;
+      &lt;li&gt;Not super common these days&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GIF
+    &lt;ul&gt;
+      &lt;li&gt;Low quality images
+        &lt;ul&gt;
+          &lt;li&gt;Only supports 8-bit color&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Often used for memes
+        &lt;ul&gt;
+          &lt;li&gt;Can be animated&lt;/li&gt;
+          &lt;li&gt;Like a video file with only a few images&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JPEG
+    &lt;ul&gt;
+      &lt;li&gt;Supports 24-bit color&lt;/li&gt;
+      &lt;li&gt;Losslessly compresses
+        &lt;ul&gt;
+          &lt;li&gt;Can minimize amount of compression to create high quality photos&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PNG
+    &lt;ul&gt;
+      &lt;li&gt;High quality graphics&lt;/li&gt;
+      &lt;li&gt;Supports 24-bit color&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;All these formats ultimately have an limited amount of information
+    &lt;ul&gt;
+      &lt;li&gt;Ultimate just store pixels and colors of when the image was taken&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;enhance&quot;&gt;&lt;strong&gt;“Enhance”&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Common for popular culture abuses of what it means to be a multimedia format
+    &lt;ul&gt;
+      &lt;li&gt;“Enhancing” means to make an image as clear as possible not matter what format it was saved in&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;David shows a clip of characters “enhancing” an image
+    &lt;ul&gt;
+      &lt;li&gt;The characters zoom into a pixelated frame of a video and somehow clear it up to see a reflection
+        &lt;ul&gt;
+          &lt;li&gt;Video is just a whole bunch of images being shown to us quickly (24 frames per second, etc.)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The pixelated image only contains information for those pixels
+        &lt;ul&gt;
+          &lt;li&gt;There is no way to obtain a clear image unless the original image was already at a high resolution&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;David contrasts this with an aware clip of Futurama&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;video-compression&quot;&gt;&lt;strong&gt;Video Compression&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can think of a video format as similar to a flip book&lt;/li&gt;
+  &lt;li&gt;Video formats are just a bunch of images shown quickly in succession to create the illusion of motion
+    &lt;ul&gt;
+      &lt;li&gt;Not necessarily all information stored as png, jpg, gif, or even images&lt;/li&gt;
+      &lt;li&gt;Algorithms and mathematics can help go from one frame to another&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Opportunities for compression
+    &lt;ul&gt;
+      &lt;li&gt;Can leverage same image compression techniques for each frame (intra-frame coding)&lt;/li&gt;
+      &lt;li&gt;Background of multiple frames can contain redundant information&lt;/li&gt;
+      &lt;li&gt;Compare current frame and next frame of video and determine what has changed
+        &lt;ul&gt;
+          &lt;li&gt;Store these differences&lt;/li&gt;
+          &lt;li&gt;Key frames store a snapshot of time to remember what the video looks like&lt;/li&gt;
+          &lt;li&gt;In each subsequent frame remember what has changed
+            &lt;ul&gt;
+              &lt;li&gt;Using algorithms and math, background is drawn&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Key frames are stored multiple times to guarantee that frames can be recovered&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;video-file-formats&quot;&gt;&lt;strong&gt;Video File Formats&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;In the world of video, there are more solutions on how to store information&lt;/li&gt;
+  &lt;li&gt;Video file formats are containers
+    &lt;ul&gt;
+      &lt;li&gt;Containers are digital container in which you can put multiple types of data&lt;/li&gt;
+      &lt;li&gt;Can include a video track, audio track, a secondary audio track (for different languages), closed captions, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AVI
+    &lt;ul&gt;
+      &lt;li&gt;Commonly used in Windows&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DivX&lt;/li&gt;
+  &lt;li&gt;Matroska
+    &lt;ul&gt;
+      &lt;li&gt;Open source container meant to be more versatile&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MP4
+    &lt;ul&gt;
+      &lt;li&gt;Pretty much universal in all browsers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;QuickTime
+    &lt;ul&gt;
+      &lt;li&gt;Commonly used in MacOS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Codecs
+    &lt;ul&gt;
+      &lt;li&gt;Ways of storing and encoding information&lt;/li&gt;
+      &lt;li&gt;For video:
+        &lt;ul&gt;
+          &lt;li&gt;H.264&lt;/li&gt;
+          &lt;li&gt;MPEG-4 Part-2&lt;/li&gt;
+          &lt;li&gt;…&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;For audio:
+        &lt;ul&gt;
+          &lt;li&gt;Can be stand alone files or tracks in a container!&lt;/li&gt;
+          &lt;li&gt;AAC&lt;/li&gt;
+          &lt;li&gt;MP3&lt;/li&gt;
+          &lt;li&gt;…&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3d-video&quot;&gt;&lt;strong&gt;3D Video&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Increasingly, 3D formats are becoming more common
+    &lt;ul&gt;
+      &lt;li&gt;This is a 360 degree image of Sanders Theatre
+        &lt;ul&gt;
+          &lt;li&gt;A spherical image&lt;/li&gt;
+          &lt;li&gt;Looks distorted in 2D&lt;/li&gt;
+          &lt;li&gt;Like flattening a globe&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Images can contain metadata
+    &lt;ul&gt;
+      &lt;li&gt;Information that viewers can’t see&lt;/li&gt;
+      &lt;li&gt;Tells programs, applications, and browsers how to display the image&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;With sensors on a headset, users can experience virtual reality&lt;/li&gt;
+  &lt;li&gt;More file formats are still on the horizon, but ultimately all of them boil down to storing 0s and 1s and why!&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Bui Quang Bao</name></author><category term="cs50" /><category term="lecture_notes" /><summary type="html">Introduction Odds are you use it everyday, but what is it?</summary></entry><entry><title type="html">K-Drama “Start-up” - Brilliant minds and cutting-edge technology are not enough.</title><link href="/notebook/kdrama-start-up" rel="alternate" type="text/html" title="K-Drama “Start-up” - Brilliant minds and cutting-edge technology are not enough." /><published>2021-04-12T20:00:00+07:00</published><updated>2021-04-12T20:00:00+07:00</updated><id>/notebook/kdrama-start-up</id><content type="html" xml:base="/notebook/kdrama-start-up">&lt;p&gt;Three SamsanTech members, Nam Do-san, Kim Yong-san, and Lee Chul-san, are working on computer vision - image recognition/classification, an &lt;strong&gt;artificial intelligence&lt;/strong&gt; field. The concept of technology was the main theme of this drama. Isn’t it intriguing?! (It’s for this reason that I opted to watch this film, despite the fact that I’m not usually interested in K-Drama.)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-01.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;&lt;/p&gt;
 
@@ -3461,127 +3662,4 @@ e8xXLqgUWyt7ip2DgA8qvN+3d5jYsqZoxty8ESTRSwLGTIV3Dj6DnrNjuW/Xj41R
 &lt;p&gt;&lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-00.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;
 &lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-02.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;
 &lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-03.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;
-&lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-04.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="personal" /><category term="movie" /><category term="technology" /><category term="ai" /><summary type="html">Three SamsanTech members, Nam Do-san, Kim Yong-san, and Lee Chul-san, are working on computer vision - image recognition/classification, an artificial intelligence field. The concept of technology was the main theme of this drama. Isn’t it intriguing?! (It’s for this reason that I opted to watch this film, despite the fact that I’m not usually interested in K-Drama.)</summary></entry><entry><title type="html">How to publish your package to the most popular package manager - npm</title><link href="/notebook/publish-your-package" rel="alternate" type="text/html" title="How to publish your package to the most popular package manager - npm" /><published>2021-03-25T20:00:00+07:00</published><updated>2021-03-25T20:00:00+07:00</updated><id>/notebook/publish-your-package</id><content type="html" xml:base="/notebook/publish-your-package">&lt;p&gt;In this post, I will show you how to publish a package to the most popular package manager - npm.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-what-is-npm-create-an-npm-account&quot;&gt;1. What is npm? Create an npm account.&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is a package manager for the JavaScript programming language. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is the command line client that allows developers to install and publish packages - packaged modules of code.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; is an &lt;a href=&quot;https://github.com/npm&quot;&gt;open source&lt;/a&gt; project and free to use.&lt;/p&gt;
-
-&lt;p&gt;Official website: &lt;strong&gt;&lt;a href=&quot;https://npmjs.com/&quot;&gt;npm&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/publish-your-package/1-npm-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Create an npm account at: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/signup&quot;&gt;Sign Up&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Login: &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/login&quot;&gt;Login&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/publish-your-package/2-npm-sign-up.png&quot; alt=&quot;NPM Sign Up&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-what-is-nodejs-download-nodejs&quot;&gt;2. What is Node.js? Download Node.js.&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; is an open-source, cross-platform, back-end JavaScript runtime environment.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; is an &lt;a href=&quot;https://github.com/nodejs&quot;&gt;open source&lt;/a&gt; project and free to use.&lt;/p&gt;
-
-&lt;p&gt;Official website: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Nodejs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Documentation: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/docs/&quot;&gt;Nodejs Docs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/publish-your-package/3-nodejs-landing-page.png&quot; alt=&quot;NPM Landing Page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Download Node.js at: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;Download Node.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../post-img/publish-your-package/4-nodejs-download.png&quot; alt=&quot;Nodejs Download&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-prepare-your-package&quot;&gt;3. Prepare your package&lt;/h2&gt;
-
-&lt;p&gt;Put all your package’s files in 1 folder&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁your-pkg-name
-├── 📁your-pkg-name-01
-├── 📁your-pkg-name-02
-└── 📁your-pkg-name-03
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📁your-pkg-name
-├── 📁your-pkg-name-01
-├── 📁your-pkg-name-02
-├── 📁your-pkg-name-03
-└── package.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-pkg-name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Write your package's description here.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-pkg-name.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;echo &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; exit 1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;keywords&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;your-package-keyword&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Your Name Here&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;license&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MIT&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;4-publish-your-package&quot;&gt;4. Publish your package&lt;/h2&gt;
-
-&lt;iframe class=&quot;youtube&quot; src=&quot;https://www.youtube.com/embed/lxxndOskI1o&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Open command line and navigate to your package’s folder:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cmd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Login your npm account:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm login
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that when you input the password, there is no clue show that you are typing. This will be confused if this is the first time you use the command line.&lt;/p&gt;
-
-&lt;p&gt;Initialize npm package manager:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you have prepared your package, all you need to do is just enter.&lt;/p&gt;
-
-&lt;p&gt;Finally, type:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yes
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Publish your package:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm publish
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you see the line:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ your-pkg-name@1.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;your package has been published on npm successfully!&lt;/p&gt;
-
-&lt;p&gt;If there is any error, you should:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Check your package’s name, it maybe used by other user (for example: you can’t name your package &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vue&lt;/code&gt;, because they are already exist). In this case, you should change your package’s name, or publish your package under your name or organization’s name.&lt;/li&gt;
-  &lt;li&gt;Check your folder’s structure and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.&lt;/li&gt;
-  &lt;li&gt;Check your npm account.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is the end of this post, happy coding!&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="technology" /><category term="web" /><category term="npm" /><summary type="html">In this post, I will show you how to publish a package to the most popular package manager - npm.</summary></entry></feed>
+&lt;img src=&quot;../post-img/kdrama-start-up/kdrama-startup-04.png&quot; alt=&quot;Start-up K-Drama&quot; /&gt;&lt;/p&gt;</content><author><name>Bui Quang Bao</name></author><category term="personal" /><category term="movie" /><category term="technology" /><category term="ai" /><summary type="html">Three SamsanTech members, Nam Do-san, Kim Yong-san, and Lee Chul-san, are working on computer vision - image recognition/classification, an artificial intelligence field. The concept of technology was the main theme of this drama. Isn’t it intriguing?! (It’s for this reason that I opted to watch this film, despite the fact that I’m not usually interested in K-Drama.)</summary></entry></feed>

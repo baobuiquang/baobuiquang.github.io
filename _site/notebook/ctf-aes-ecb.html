@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chosen One (AES-ECB Attack)</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <!-- Jekyll -->
+    
+    
+
+
+
+
+
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#ff0000" />
+    <link rel="apple-touch-icon" href="../assets/apple-icon-180.png">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
+    <link href="../creatoper/creatoper-control.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll To Top  -->
+<div class="just-display-on-desktop">
+    <button onclick="scrollToTop()" id="scrolltotop" class="just-display-on-desktop"
+        style="transform: rotate(38deg);">&nwarr;</button>
+</div>
+    <div class="top-nav">
+
+    <div class="name">
+        <a href="/" class="nav-link">
+            BUI QUANG BAO</a>
+    </div>
+    <div class="nav-btn">
+        <label for="modal-1" style="cursor: pointer;">
+            <img src="../assets/icon_feather/menu.svg" height="36px" class="svg-f" alt="menu">
+        </label>
+    </div>
+    <div class="nav-link-wrap just-display-on-desktop">
+        <a href="/notebook" class="nav-link">
+            Notebook</a>
+        <a href="/notebook" class="nav-link">
+            Showcase</a>
+        <a href="/" target="_blank" class="nav-link">
+            SolidCoreJS</a>
+    </div>
+</div>
+<div class="menu">
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal__bg" for="modal-1"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-1">
+                <img src="../assets/icon_feather/x.svg" height="40px" style="filter: invert(1.0); width: initial;"
+                    alt="close">
+            </label>
+            <!-- Custom in modal -->
+            <div class="modal-top">
+                <div class="nav-link menu-text">
+                    MENU
+                </div>
+            </div>
+            <div class="modal-cta just-display-on-desktop" style="text-align: left;">
+                Powerful plugins library for your desired website.
+                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                    <button>
+                        SOLID CORE JS
+                    </button>
+                </a>
+            </div>
+            <div class="modal-links">
+                <div class="a-wrap">
+                    <a href="/">
+                        My Biography
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        UI Showcase
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="/notebook">
+                        Notebook
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        Memory
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/#contact">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="a-wrap">
+                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                        About this website
+                    </a>
+                </div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-views" style="padding-bottom: 0;">
+                    <span class="fhs">
+                        <script language="JavaScript">var fhsh = document.createElement('script'); var fhs_id_h = "3360434";
+                            fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=&a=1";
+                            document.head.appendChild(fhsh); document.write("<span id='h_" + fhs_id_h + "'></span>");
+                        </script>
+                    </span>
+                    TOTAL VIEWS |
+                    <a style="font-weight: 500;" href="/">
+                        14
+                    </a>
+                    POSTS | SINCE 2020
+                </div>
+
+                <!-- local_views -->
+                <div class="modal-views" style="padding-top: 4px; text-transform: uppercase;" id="local_views"></div>
+
+                <div class="modal-contact">
+                    <div class="mobile-row-6">
+                        <div class="col">
+                            <a href="https://github.com/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/github.svg" class="svg-f" alt="github">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://codepen.io/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/codepen.svg" class="svg-f" alt="codepen">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.npmjs.com/package/creatoper" target="_blank">
+                                <img src="../assets/icon_feather/package.svg" class="svg-f" alt="npm">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/buiquangbao" target="_blank">
+                                <img src="../assets/icon_feather/linkedin.svg" class="svg-f" alt="linkedin">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://twitter.com/quangbao_dev" target="_blank">
+                                <img src="../assets/icon_feather/twitter.svg" class="svg-f" alt="twitter">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.instagram.com/quangbao_dev/" target="_blank">
+                                <img src="../assets/icon_feather/instagram.svg" class="svg-f" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-darkmode">
+                    <div class="drk-text">
+                        Dark Mode
+                    </div>
+                    <div style="float: right;">
+                        <div class="darkmode-button">
+                            <input type="checkbox" id="darkmodeCheck">
+                            <span></span>
+                            <label for="darkmodeCheck">&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="post-in-series-wrap">
+                <div style="margin-bottom: 2vh;">
+                    <div class="page-series-code">
+                        CTF
+                    </div>
+                    <div class="page-series-name">
+                        
+                        
+                        
+                        
+                        Capture The Flag - WriteUps
+                        
+                    </div>
+                </div>
+                <div class="post-in-series-list-wrap">
+                    <ol style="margin-bottom: 2vh;">
+                        
+                        <a href="/notebook/about" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    About this website
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/covid-19" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/all-markdown-syntax" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Collection of the most used markdown syntaxes
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/publish-your-package" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    How to publish your package to the most popular package manager - npm
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/kdrama-start-up" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    K-Drama "Start-up" - Brilliant minds and cutting-edge technology are not enough.
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-hardware" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Hardware
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-internet" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Internet
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-multimedia" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Multimedia
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-security" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Security
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-web-development" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Web Development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/cs50t-programming" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Programming
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/css-tips" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                     display: none; 
+                    ">
+                                <li style="
+                        
+                        ">
+                                    CSS tips that every beginner should know in the web development
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/ctf-aes-ecb" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                         color: var(--accent); font-weight: 500;
+                        ">
+                                    The Chosen One (AES-ECB Attack)
+                                </li>
+                            </div>
+                        </a>
+                        
+                        <a href="/notebook/ctf-crack-me" style="text-decoration: none; font-weight: 400;">
+                            <div class="post-in-series" style="
+                    
+                    ">
+                                <li style="
+                        
+                        ">
+                                    Crack Me (Hash Cracking)
+                                </li>
+                            </div>
+                        </a>
+                        
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            &nbsp;
+        </div>
+        <div class="col-6">
+
+
+            <div style="height: var(--padding-top-post);"></div>
+
+
+            <div style="margin-bottom: 3vh;" class="just-display-on-desktop">
+                
+                
+                <a href="/tag/security" style="border: none;">
+                    <mark class="tag">
+                        security
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/ctf" style="border: none;">
+                    <mark class="tag">
+                        ctf
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/hash" style="border: none;">
+                    <mark class="tag">
+                        hash
+                    </mark>
+                </a>
+                
+                
+                <a href="/tag/technology" style="border: none;">
+                    <mark class="tag">
+                        technology
+                    </mark>
+                </a>
+                
+            </div>
+            <h1 style="margin-bottom: 3vh;">The Chosen One (AES-ECB Attack)</h1>
+            <div class="author-name">
+                <!-- Bui Quang Bao -->
+                
+                By
+                <a href="/" target=" _blank" style="border: none;">
+                    Bui Quang Bao</a>
+                | May 22, 2021
+                
+                <!-- Learning Archive -->
+                
+
+            </div>
+            <div class="content">
+                <h2 id="description">Description</h2>
+
+<p>The cryptography technique can be good, but the implementation is bad. Do you know the weakness of AES-ECB?</p>
+
+<p>Netcat <code class="language-plaintext highlighter-rouge">nc 61.28.237.24 30300</code></p>
+
+<p>File <code class="language-plaintext highlighter-rouge">server.py</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+</span>
+<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+<span class="kn">from</span> <span class="nn">select</span> <span class="kn">import</span> <span class="n">select</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">padding</span><span class="p">(</span><span class="n">plaintext</span><span class="p">):</span>
+
+    <span class="n">plaintext_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+    <span class="n">padding_length</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">if</span> <span class="n">plaintext_length</span> <span class="o">%</span> <span class="mi">32</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">padding_length</span> <span class="o">=</span> <span class="p">(</span><span class="n">plaintext_length</span> <span class="o">//</span> <span class="mi">32</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">32</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">padding_length</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">padding_length</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="s">"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</span> <span class="c1"># TODO 
+</span>    <span class="n">key</span> <span class="o">=</span> <span class="s">"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</span> <span class="c1"># TODO
+</span>    
+    <span class="n">padding_character</span> <span class="o">=</span> <span class="s">"D"</span>
+    
+    <span class="k">assert</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="o">==</span> <span class="mi">32</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">32</span><span class="p">)</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">AES</span><span class="p">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
+
+    <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"Welcome to AES-ECB Encryption Machine. </span><span class="se">\n</span><span class="s">Please give us your plaintext, we'll give you its ciphertext!!!!"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">=====================================</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">Your input: '</span><span class="p">)</span>
+            <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span>
+
+            <span class="n">rlist</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[])</span>
+
+            <span class="n">inp</span> <span class="o">=</span> <span class="s">''</span>
+            <span class="k">if</span> <span class="n">rlist</span><span class="p">:</span>
+                <span class="n">user_input</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">rstrip</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="n">user_input</span> <span class="o">+</span> <span class="n">flag</span>
+            <span class="n">padding_length</span> <span class="o">=</span> <span class="n">padding</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+            <span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span><span class="p">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">padding_length</span><span class="p">,</span> <span class="n">padding_character</span><span class="p">)</span>
+            
+            <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'The ciphertext:</span><span class="se">\n</span><span class="s">{}</span><span class="se">\n\n</span><span class="s">'</span><span class="p">.</span><span class="nb">format</span><span class="p">((</span><span class="n">cipher</span><span class="p">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)).</span><span class="n">encode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">)))</span>
+        <span class="k">except</span> <span class="nb">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="approach">Approach</h2>
+
+<p>Netcat:</p>
+
+<p><img src="../post-img/ctf-aes-ecb/1.png" alt="CTF" /></p>
+
+<p>From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py)</p>
+
+<p>AES - Advanced Encryption Standard: <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">https://en.wikipedia.org/wiki/Advanced_Encryption_Standard</a></p>
+
+<p>Block cipher mode of operation: <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation</a></p>
+
+<p>By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it’s ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.</p>
+
+<p><img src="../post-img/ctf-aes-ecb/2.svg" alt="CTF" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plaintext</span> <span class="o">=</span> <span class="n">user_input</span> <span class="o">+</span> <span class="n">flag</span>
+<span class="n">padding_length</span> <span class="o">=</span> <span class="n">padding</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+<span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span><span class="p">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">padding_length</span><span class="p">,</span> <span class="n">padding_character</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Before the encryption, the script requests an input to be encrypted, the input is concatenated with the flag, and padding is used to complete the last blocks, for example, assuming the padding character is <code class="language-plaintext highlighter-rouge">_</code>, the given input is <code class="language-plaintext highlighter-rouge">B</code>, and the flag is <code class="language-plaintext highlighter-rouge">MY-CTF{My_name_is_Bui_Quang_Bao}</code>. The plaintext before encryption will look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Plaintext</span><span class="p">:</span> <span class="n">BMY</span><span class="o">-</span><span class="n">CTF</span><span class="p">{</span><span class="n">My_name_is_Bui_Quang_Bao</span><span class="p">}</span><span class="n">_______________________________</span>
+
+<span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">BMY</span><span class="o">-</span><span class="n">CTF</span><span class="p">{</span><span class="n">My_name_</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="n">is_Bui_Quang_Bao</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="p">}</span><span class="n">_______________</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>What happen if we give the input <code class="language-plaintext highlighter-rouge">BBBBBBBBBBBBBBB</code>?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Plaintext</span><span class="p">:</span> <span class="n">BBBBBBBBBBBBBBBMY</span><span class="o">-</span><span class="n">CTF</span><span class="p">{</span><span class="n">My_name_is_Bui_Quang_Bao</span><span class="p">}</span><span class="n">_________________</span>
+
+<span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">BBBBBBBBBBBBBBBM</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Y</span><span class="o">-</span><span class="n">CTF</span><span class="p">{</span><span class="n">My_name_is</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="n">_Bui_Quang_Bao</span><span class="p">}</span><span class="n">_</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>The lack of diffusion is the Achilles’ heel of this AES-ECB encryption. ECB does not hide data patterns well since it encrypts identical plaintext blocks into similar ciphertext blocks.</p>
+
+<p>So, the idea to exploit this weakness is brute force attack, every single byte of the flag.</p>
+
+<p>With the input is <code class="language-plaintext highlighter-rouge">B</code> :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">B</span><span class="err">???????????????</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="err">????????????????</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="err">?</span><span class="n">_______________</span> <span class="o">--&gt;</span> <span class="n">c03</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>With the input is <code class="language-plaintext highlighter-rouge">x + pad_char * 15</code> (we are assuming that <code class="language-plaintext highlighter-rouge">pad_char</code> is <code class="language-plaintext highlighter-rouge">_</code>, <code class="language-plaintext highlighter-rouge">x</code> is one character in ASCII)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">x_______________</span> <span class="o">--&gt;</span> <span class="n">c1</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>Have you realized anything yet?</p>
+
+<p>If we brute force attack for the character <code class="language-plaintext highlighter-rouge">x</code>, we will know the last character of the flag when the block <code class="language-plaintext highlighter-rouge">c1</code> is equal to the block <code class="language-plaintext highlighter-rouge">c03</code>!</p>
+
+<p>Continue with <code class="language-plaintext highlighter-rouge">BB</code>, we will have the last 2 character of the flag:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">BB</span><span class="err">??????????????</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="err">????????????????</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="err">?</span><span class="p">}</span><span class="n">______________</span> <span class="o">--&gt;</span> <span class="n">c03</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span><span class="n">______________</span> <span class="o">--&gt;</span> <span class="n">c1</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>Continue with <code class="language-plaintext highlighter-rouge">BBB</code>, we will have the last 3 character of the flag:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">BB</span><span class="err">??????????????</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="err">????????????????</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="err">??!</span><span class="p">}</span><span class="n">____________</span> <span class="o">--&gt;</span> <span class="n">c03</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Block</span> <span class="mi">1</span><span class="p">:</span> <span class="n">x</span><span class="err">?!</span><span class="p">}</span><span class="n">____________</span> <span class="o">--&gt;</span> <span class="n">c1</span>
+<span class="n">Block</span> <span class="mi">2</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">3</span><span class="p">:</span> <span class="n">________________</span>
+<span class="n">Block</span> <span class="mi">4</span><span class="p">:</span> <span class="n">________________</span>
+</code></pre></div></div>
+
+<p>Now we just need to write a script to do the attack for us.</p>
+
+<h2 id="solution">Solution</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">def</span> <span class="nf">cls</span><span class="p">():</span> <span class="k">return</span> <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'cls'</span><span class="p">)</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s">"61.28.237.24"</span><span class="p">,</span> <span class="mi">30300</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s">":"</span><span class="p">)</span>
+
+<span class="n">pad_char</span> <span class="o">=</span> <span class="s">"D"</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="s">""</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">33</span><span class="p">):</span>
+    <span class="n">send_txt</span> <span class="o">=</span> <span class="s">"B"</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">conn</span><span class="p">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">send_txt</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="n">recvline</span><span class="p">()</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">recvline</span><span class="p">()</span>
+    <span class="n">c01</span><span class="p">,</span> <span class="n">c02</span><span class="p">,</span> <span class="n">c03</span><span class="p">,</span> <span class="n">c04</span> <span class="o">=</span> <span class="n">code</span><span class="p">[:</span><span class="mi">32</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">64</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">64</span><span class="p">:</span><span class="mi">96</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">96</span><span class="p">:</span><span class="mi">128</span><span class="p">]</span>
+    <span class="n">conn</span><span class="p">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s">":"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">127</span><span class="p">):</span>
+        <span class="n">char</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">send_txt</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">flag</span> <span class="o">+</span> <span class="n">pad_char</span> <span class="o">*</span> <span class="mi">16</span>
+        <span class="n">conn</span><span class="p">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">send_txt</span><span class="p">)</span>
+        <span class="n">conn</span><span class="p">.</span><span class="n">recvline</span><span class="p">()</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">recvline</span><span class="p">()</span>
+        <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c4</span> <span class="o">=</span> <span class="n">code</span><span class="p">[:</span><span class="mi">32</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">64</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">64</span><span class="p">:</span><span class="mi">96</span><span class="p">],</span> <span class="n">code</span><span class="p">[</span><span class="mi">96</span><span class="p">:</span><span class="mi">128</span><span class="p">]</span>
+        <span class="n">conn</span><span class="p">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s">":"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="n">c03</span><span class="p">):</span>
+            <span class="n">flag</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">flag</span>
+            <span class="n">cls</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span>
+                <span class="s">"Connection: 61.28.237.24 - Port: 30300 - buiquangbao</span><span class="se">\n</span><span class="s">Cracking AES-ECB Encryption...</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"&gt;&gt; "</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Block 1:"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">Block 2:"</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span>
+                  <span class="s">"</span><span class="se">\n</span><span class="s">Block 3:"</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">Block 4:"</span><span class="p">,</span> <span class="n">c4</span><span class="p">)</span>
+            <span class="k">break</span>
+
+<span class="n">cls</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Flag cracked!</span><span class="se">\n\n</span><span class="s">&gt;&gt; "</span><span class="p">,</span> <span class="n">flag</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Terminal and result:</p>
+
+<p><img src="../post-img/ctf-aes-ecb/3.gif" alt="CTF" /></p>
+
+<p>Case closed!</p>
+
+            </div>
+            <br>
+            Thanks for reading!
+            <div style="margin: 6vh 0; height: 0.5px; width: 100%; border-bottom: var(--border);"></div>
+
+            <!-- Bui Quang Bao -->
+            
+            <p style="margin-bottom: 7vh; text-align: center;">
+                <a href="/" style="font-weight: 400; border: none;">
+                    <script>document.write(new Date().getFullYear())</script>
+                    &copy;
+                    Bui Quang Bao
+                </a>
+            </p>
+            
+
+
+        </div>
+        <div class="col-3">
+            &nbsp;
+        </div>
+    </div>
+
+    <script>
+    // Darkmode
+    function enableDarkMode() {
+        document.body.classList.add("darkmode");
+        localStorage.setItem("isDarkMode", "true");
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    function disableDarkMode() {
+        document.body.classList.remove("darkmode");
+        localStorage.setItem("isDarkMode", "false");
+        document.getElementById("darkmodeCheck").checked = false;
+    }
+    let isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode === "true") {
+        enableDarkMode();
+        document.getElementById("darkmodeCheck").checked = true;
+    }
+    const darkmodeButton = document.querySelector(".darkmode-button");
+    darkmodeButton.addEventListener("click", function () {
+        isDarkMode = localStorage.getItem("isDarkMode");
+        isDarkMode === "true" ? disableDarkMode() : enableDarkMode();
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
+<script src="../scripts.js" defer></script>
+
+
+
+<!-- ------ TO MYSELF: DON'T DELETE THIS F*CKING LINE ------ -->
+<div id="test-scripts" style="display: none;">> Error!</div>
+</body>
+
+</html>

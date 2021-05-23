@@ -129,7 +129,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        13
+                        14
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -379,7 +379,7 @@
 
                     
                     <span style="font-size: 13px; font-weight: 500;">
-                        May 16, 2021
+                        May 23, 2021
                     </span>
                     
 
@@ -391,7 +391,33 @@
                     </a>
                 </h2>
                 <div class="preview">
+                    With the start of `$6$` , we know this hash is SHA-512 encrypted (sha512crypt). We encode the plaintext to Base64. Look at the structure, we know that this is RSA private-key cryptosystem. It's funny that the author of this chall even didn't change the name of the file: `id_rda`. This is unique file name that tell us what to do! :))
+                </div>
+
+                <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/security" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            security
+                        </mark>
+                    </a>
+
                     
+                    <span style="font-size: 13px; font-weight: 500;">
+                        May 22, 2021
+                    </span>
+                    
+
+
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/ctf-aes-ecb" class="title">
+                        The Chosen One (AES-ECB Attack)
+                    </a>
+                </h2>
+                <div class="preview">
+                    From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py) By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it's ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>

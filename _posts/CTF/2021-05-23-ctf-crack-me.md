@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Crack Me (Hash Cracking)"
-date: 2021-05-16 07:00:00 +0700
+date: 2021-05-23 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: security ctf hash technology
 series: CTF
-preview: ""
+preview: "With the start of `$6$` , we know this hash is SHA-512 encrypted (sha512crypt). We encode the plaintext to Base64. Look at the structure, we know that this is RSA private-key cryptosystem. It's funny that the author of this chall even didn't change the name of the file: `id_rda`. This is unique file name that tell us what to do! :))"
 ---
 
 ## Description
