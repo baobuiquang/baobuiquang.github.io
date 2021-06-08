@@ -1,0 +1,349 @@
+I"k-<h2 id="ip"><strong>IP</strong></h2>
+<ul>
+  <li>Every computer on the internet has an IP (Internet Protocol) address
+    <ul>
+      <li>Of the form #.#.#.#
+        <ul>
+          <li>Four numbers separated by dots of the values 0-255</li>
+          <li>Other IP address formats exist today as well</li>
+        </ul>
+      </li>
+      <li>Like postal addresses, they uniquely identify computers on the internet
+        <ul>
+          <li>Any device connected to the internet has an IP address
+            <ul>
+              <li>Allows other computers to talk to it</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>ISPs assign a IP address to your computer (router)
+    <ul>
+      <li>Used to be physically configured</li>
+      <li>DHCP (Dynamic Host Configuration Protocol)
+        <ul>
+          <li>Software that ISPs provides to allow your computer to request an IP address</li>
+          <li>DHCP servers respond with a specific IP address for your Home</li>
+        </ul>
+      </li>
+      <li>Multiple devices can connect to your home network
+        <ul>
+          <li>The home router supports DHCP and assigns IP addresses to your devices</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dns"><strong>DNS</strong></h2>
+<ul>
+  <li>We access websites using domain names (Facebook.com, Google.com, etc.), but it turns out that these sites too have IP addresses</li>
+  <li>DNS (Domain Name System) servers convert domain names into IP addresses</li>
+</ul>
+
+<h2 id="packets"><strong>Packets</strong></h2>
+<ul>
+  <li>Computers communicate by sending packets, which are like virtual envelopes sent between computers
+    <ul>
+      <li>Ultimately still 0s and 1s</li>
+    </ul>
+  </li>
+  <li>As an analogy, suppose we want to find a cat image on the internet</li>
+  <li>So, we send a request to a server, say Google, like “get cat.jpg”
+    <ul>
+      <li>We place this request in an envelope</li>
+    </ul>
+  </li>
+  <li>On the envelope, we list out IP as the return address</li>
+  <li>However, for the recipient of the request, we don’t know the IP address for Google
+    <ul>
+      <li>Have to rely on DNS</li>
+      <li>Send a request to our ISPs DNS server for Google’s IP address
+        <ul>
+          <li>If the ISP’s DNS server doesn’t know a website’s IP address, it has been configured to ask another DNS server</li>
+          <li>There exist root servers that know where to look to for an IP address if it exists</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>After sending the request off, we’ll get a response ms later</li>
+  <li>The cat will be sent back in one or more packets
+    <ul>
+      <li>If the cat image is too large for a single envelope, sending it in one packet could take up internet traffic</li>
+      <li>To solve this, Google will divide the cat image into smaller fragments
+        <ul>
+          <li>Put the fragments into different envelopes</li>
+          <li>Write information on the envelopes
+            <ul>
+              <li>Return address: Google’s IP address</li>
+              <li>Delivery address: Our IP address</li>
+              <li>List the number of packets on each envelope (1 of 4, 2 of 4, etc.)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tcpip"><strong>TCP/IP</strong></h2>
+<ul>
+  <li>IP goes beyond addresses
+    <ul>
+      <li>Set of conventions computers and servers follow to allow intercommunication</li>
+    </ul>
+  </li>
+  <li>Fragmentation like in the envelope example are supported by IP
+    <ul>
+      <li>If missing a packet, you can logically infer which packet you’re missing based on the ones received
+        <ul>
+          <li>However, IP doesn’t tell computers what to do in this case</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>TCP (Transmission Control Protocol) ensures packets can get to their destination
+    <ul>
+      <li>Commonly used with IP (TCP/IP)</li>
+      <li>Supports sequence numbers that help data get to its destination
+        <ul>
+          <li>When missing a packet, a computer can make a request for the missing packet</li>
+          <li>The computer will put packets together to get a whole file</li>
+        </ul>
+      </li>
+      <li>Also includes conventions for requesting services (port identifiers)
+        <ul>
+          <li>To make sure Google knows we’re requesting a webpage and not an email or other service</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ports"><strong>Ports</strong></h2>
+<ul>
+  <li>Per TCP, the world has standardized numbers that represent different services</li>
+  <li>If 5.6.7.8 is Google’s IP address, 5.6.7.8;80 (port 80) lets use know that we want a webpage
+    <ul>
+      <li>80 means http (hypertext transfer protocol)
+        <ul>
+          <li>The language that web servers speak</li>
+        </ul>
+      </li>
+      <li>Google will send the request to their web server via http</li>
+    </ul>
+  </li>
+  <li>Many websites use secure connections with SSL or HTTPS, which uses the port 443</li>
+  <li>Email uses port 25</li>
+  <li>Other ports exist as well</li>
+</ul>
+
+<h2 id="protocols"><strong>Protocols</strong></h2>
+<ul>
+  <li>Protocols are just sets of rules
+    <ul>
+      <li>Humans use these all the time, such as the protocol for meeting people: handshakes</li>
+    </ul>
+  </li>
+  <li>When a request is made to Google for an image, HTTP tells Google how to respond appropriately</li>
+</ul>
+
+<h2 id="udp"><strong>UDP</strong></h2>
+<ul>
+  <li>User Datagram Protocol
+    <ul>
+      <li>Doesn’t guarantee delivery</li>
+      <li>Used for video conferencing such as FaceTime
+        <ul>
+          <li>Packets can be dropped for the sake of keeping the conversation flowing</li>
+        </ul>
+      </li>
+      <li>Used anytime you want to keep data coming without waiting for a buffer to fill</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ips-in-more-detail"><strong>IPs in More Detail</strong></h2>
+<ul>
+  <li>IP addresses are limited
+    <ul>
+      <li>In the format #.#.#.#, each number is 8 bits, so 32 bits total
+        <ul>
+          <li>
+            <p>This yields 2 or about 4 billion possible addresses</p>
+
+            <p>32</p>
+
+            <ul>
+              <li>We’re running out of addresses for all computers</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Current version of addresses is IPv4</li>
+      <li>Moving towards IPv6
+        <ul>
+          <li>
+            <p>Uses 128 bits, yielding 2 possible addresses</p>
+
+            <p>128</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>How do you find your IP address?</li>
+  <li>On a Mac, go to system preferences an poke around a bit</li>
+  <li>Private addresses exist
+    <ul>
+      <li>10.#.#.#, 192.168.#.#, or 172.16.#.#</li>
+      <li>Only with special configuration can someone talk to your computer</li>
+      <li>Your personal device is not a server, so people should not need to access them directly
+        <ul>
+          <li>Your device needs to request data from servers</li>
+        </ul>
+      </li>
+      <li>Even email is stored on a server such as Gmail and your device makes a request to that server to access that email</li>
+    </ul>
+  </li>
+  <li>Looking at advanced settings…
+    <ul>
+      <li>Subnet mask is used to decide if another computer is on the same network</li>
+      <li>Router (aka Gateway) has its own address
+        <ul>
+          <li>Routs data in different directions</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>On windows:
+    <ul>
+      <li>Shows DNS servers as well</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="routers"><strong>Routers</strong></h2>
+<ul>
+  <li>Routers have bunches if wires coming and going out of them
+    <ul>
+      <li>They have a big table with IP addresses and where data should be routed to get to that destination
+        <ul>
+          <li>Often, the data is routed to some next router</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Routers purpose is to send data in the direction of a destination
+    <ul>
+      <li>The next router will send it to another until it reaches a destination</li>
+    </ul>
+  </li>
+  <li>The internet is a network of networks (with their own routers)
+    <ul>
+      <li>Often multiple ways to go from A to B
+        <ul>
+          <li>Based in US Military logic to prevent downtime if a particular router goes down</li>
+          <li>When multiple packets are sent, like cat.jpg from Google, they can each take a different path, still getting to their destination eventually
+            <ul>
+              <li>Sometimes the internet is busy and the quickest path changes</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="traceroute"><strong>Traceroute</strong></h2>
+<ul>
+  <li>How long does it take for this process of data transfer to take on the internet?</li>
+  <li>Traceroute is a program that sends packets to each router on a path to a destination, reporting the time it takes to reach that router</li>
+  <li>From Sanders Theatre to Google.com:
+    <ul>
+      <li>1-2: A few unnamed routers at Harvard</li>
+      <li>3-4: More Harvard routers</li>
+      <li>5-6: Level3 is a ISP</li>
+      <li>7+: The routers are denying the request</li>
+    </ul>
+  </li>
+  <li>From Sanders Theatre to Berkeley.edu
+    <ul>
+      <li>6: Northern Crossroads</li>
+      <li>7-14: A fast connection
+        <ul>
+          <li>8-9: Chicago</li>
+          <li>10-11: Denver</li>
+          <li>12-13: Las Vegas</li>
+          <li>14: Los Angeles</li>
+        </ul>
+      </li>
+      <li>19 is where it arrives at Berkeley in 80 ms!</li>
+    </ul>
+  </li>
+  <li>From Sanders Theatre to MIT.edu
+    <ul>
+      <li>6-7: Goes to New York connectivity</li>
+      <li>8: MIT’s website is outsourced to Akamai’s NYC servers</li>
+    </ul>
+  </li>
+  <li>From Sanders Theatre to CNN.jp
+    <ul>
+      <li>9-10 jumps from Seattle to Osaka past an ocean!
+        <ul>
+          <li>Using undersea cabling</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="undersea-cabling"><strong>Undersea Cabling</strong></h2>
+<ul>
+  <li>David shows a video about undersea cables</li>
+</ul>
+
+<h2 id="cable-modem-demo"><strong>Cable Modem Demo</strong></h2>
+<ul>
+  <li>David examines a home cable modem, focusing on its ports
+    <ul>
+      <li>Coaxial cable to plug into the wall</li>
+      <li>Phone jacks (RJ11) as many services are bundled together these days</li>
+      <li>Four jacks for ethernet cables (RJ45)
+        <ul>
+          <li>Devices can plug into these for internet connectivity</li>
+        </ul>
+      </li>
+      <li>This modem has wifi support built in</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="network-switch-demo"><strong>Network Switch Demo</strong></h2>
+<ul>
+  <li>David examines a network switch
+    <ul>
+      <li>A device that you can plug into your router to allow more connections for all your other devices</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="home-router-demo"><strong>Home Router Demo</strong></h2>
+<ul>
+  <li>David examines a home router</li>
+  <li>Home routers can have wifi, firewall, and switching capabilities</li>
+</ul>
+
+<h2 id="network-cable-demo"><strong>Network Cable Demo</strong></h2>
+<ul>
+  <li>David cuts open a network ethernet cable to examine its inner workings</li>
+  <li>Inside a network cable are 8 wires of different colors
+    <ul>
+      <li>Some are for transmitting data, others for receiving data</li>
+      <li>Others still are for insulation and cancellation of interference</li>
+    </ul>
+  </li>
+</ul>
+:ET

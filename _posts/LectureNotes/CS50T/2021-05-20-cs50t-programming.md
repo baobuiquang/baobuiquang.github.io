@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "Programming"
+title: "CS50T - Programming"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: cs50 lecture_notes
 series: CS50
 preview: "Code is just a technical implementation of algorithms - Algorithms are step by step instructions for solving problems - Consider a phonebook full of thousands of names and phone numbers - How do we lookup someone like Mike Smith? - We could start at the first page, move to the next, and so on until we find him - This is a correct algorithm, as we will find Mike Smith eventually."
 ---
-
-## **Introduction**
-
-- David plays a game called Oscartime that was the first Scratch program he created
-- Scratch is a graphical programming language created by MIT’s Lifelong Kindergarten Group
-- The language not only helps get kids excited about programming, but it’s also very instructive
 
 ## **Software**
 
@@ -44,7 +38,7 @@ preview: "Code is just a technical implementation of algorithms - Algorithms are
 
 ## **Phonebook Algorithm**
 
-```jsx
+```python
 1 pick up phone book
 2 open to middle of phone book
 3 look at names
@@ -356,7 +350,3 @@ print("hello, world")
     - A programmer typically has one or a few languages that the reach for to tackle a problem
     - Good to introduce yourself to new languages
         - They are easier to learn than spoken or written languages as the ideas persist
-
-## **It’s Raining Men**
-
-- David closes it all with another Scratch project

@@ -1,6 +1,6 @@
 :root {
     /* Text System */
-    --font-size-0: 16px; /*p*/
+    --font-size-0: 17px; /*p*/
     --font-size-1: 42px; /*h1*/
     --font-size-2: 32px; /*h2*/
     --font-size-3: 28px; /*h3*/
@@ -172,7 +172,10 @@ p {
 }
 
 /* ---------------------------------------- Custom Scroll Bar ---------------------------------------- */
-::-webkit-scrollbar { width: var(--scroll-bar-width); }
+::-webkit-scrollbar { 
+    width: var(--scroll-bar-width); 
+    height: var(--scroll-bar-width);
+}
 ::-webkit-scrollbar-track { background: var(--scroll-bar-track-color); }
 ::-webkit-scrollbar-thumb { background: var(--scroll-bar-thumb-color); }
 ::-webkit-scrollbar-thumb:hover { background: var(--scroll-bar-thumb-hover-color); }

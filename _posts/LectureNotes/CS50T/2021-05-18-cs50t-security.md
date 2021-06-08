@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "Security"
+title: "CS50T - Security"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
-tags: cs50 lecture_notes
+tags: cs50 lecture_notes security
 series: CS50
 preview: "So many of our current networks are wireless - You probably been conditioned to look for free wifi - Sometimes still might not connect for various reasons - If the wireless connection has not padlock (no password to log in) the connection is not secure - You may still visit https or secure websites - However, everything you do on http sites can be seen."
 ---
-
-## **Introduction**
-- Our data is under constant threat, but how can we defend ourselves?
 
 ## **Privacy**
 - Keeping people away from things you don’t want them to see

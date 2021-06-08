@@ -8,13 +8,13 @@
     {% include scroll-to-top.html %}
     {% include top-nav.html %}
 
-    <div class="row">
+    <div class="row just-display-on-desktop">
         <div class="col-2">
             &nbsp;
         </div>
         <div class="col-8">
 
-            <div style="height: calc(2*var(--top-nav-h) - 36px);"></div>
+            <div style="height: calc(2*var(--top-nav-h) - 39px);"></div>
 
             <div class="sub-menu-bar">
                 <a href="#latest">Latest Posts</a>
@@ -34,7 +34,7 @@
             <div class="nav-link">
                 FEATURED POSTS
             </div> -->
-            <div style="height: calc(var(--top-nav-h) - 10px);"></div>
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
 
             <div class="featured-post just-display-on-desktop">
                 <div style="margin: 0; display: flex; flex-direction: row; align-items: stretch;">
@@ -48,33 +48,38 @@
                                 ARTIFICIAL INTELLIGENCE
                             </mark>
                             <mark class="tag">
-                                DATA ANALYSIS
+                                DATA SCIENCE
                             </mark>
                             <mark class="tag">
                                 COVID-19
                             </mark>
                         </div>
-                        <a href="https://buiquangbao.github.io/notebook/covid-19">
+                        <a href="/notebook/covid-19">
                             <h2 class="title">
                                 COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
                             </h2>
                         </a>
-                        <div style="margin-top: 12px; font-size: 14px;">
+                        <div style="margin-top: 10px; font-size: 14px;">
                             By <i>Bui Quang Bao</i>
                         </div>
                         <div class="preview" style="display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 7;
                         overflow: hidden;">
-                            Analysis, the process of turning raw data into insights, provide us with a view of how
+                            <!-- Analysis, the process of turning raw data into insights, provide us with a view of how
                             Coronavirus disease influences the communities, indicate if the development of a country
                             affects its virus spread as well as the infection rate, the death rate and the recovered
                             rate.
                             Diagnosis method is potential in preventing the spread of the pandemic. With the dataset
                             of chest X-ray, we can build a Machine Learning model to predict if a new X-ray image is
-                            from COVID-19 infected or non-infected.
+                            from COVID-19 infected or non-infected. -->
+                            Analysis, the process of turning raw data into insights, provide us with a view of how
+                            Coronavirus disease influences the communities, indicate if the development of a country
+                            affects its virus spread as well as the infection rate, the death rate and the recovered
+                            rate. With the dataset of chest X-ray, we can build a Machine Learning model to predict if a
+                            new X-ray image is from COVID-19 infected or non-infected.
                         </div>
-                        <div class="preview" style="margin-top: 12px; font-size: 14px;">
+                        <div class="preview" style="margin-top: 10px; font-size: 14px;">
                             &rtrif;
                             <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis/tree/master/dataset/dataset_radiography"
                                 target="_blank" style="margin-right: 20px; color: var(--text-2);">
@@ -111,19 +116,20 @@
                                 experience
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
                                 My first internship when I was a 2nd-year student
                             </h2>
                         </a>
                         <div class="preview">
                             I got my first internship at a tech-service startup as a UI/UX developer when I was a
-                            second-year student. It's hard at first, but after that, I have learned and realized a lot.
+                            second-year student. It's hard at first, but after that, I have learned a lot.
                         </div>
                     </div>
                     <!-- 2 -->
                     <div class="item">
-                        <img src="../post-img/4.jpg">
+                        <img src="../post-img/2.png">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
                                 personal
@@ -132,15 +138,15 @@
                                 experience
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
-                                Normal life of a Computer Science student ~
-                                <!-- I accelerate my student life. And that's worth it. -->
+                                Good resources for self-study that I use the most
                             </h2>
                         </a>
                         <div class="preview">
                             Have you ever wonder what a computer science student's life looks like? Just a small talk
-                            about what I learn, what I do, how I set my ultimate goals, how I manage everything.
+                            about what I learn, what I do, how I set my goals and how I manage everything.
                         </div>
                     </div>
                     <!-- 3 -->
@@ -151,9 +157,10 @@
                                 ARTIFICIAL INTELLIGENCE
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
-                                We won the AI Hackathon RESET1010!
+                                We won the AI Hackathon RESET1010
                             </h2>
                         </a>
                         <div class="preview">
@@ -175,7 +182,9 @@
         </div>
     </div>
 
-
+    <div class="just-display-on-mobile">
+        <div style="height: calc(2*var(--top-nav-h) - 30px);"></div>
+    </div>
 
     <div class="left-latest-post-bar-wrap just-display-on-desktop">
         <div class="left-latest-post-bar">
@@ -190,6 +199,7 @@
         <div class="col-5">
             <div class="all-posts">
                 {% for post in site.posts %}
+                {% unless "lifelog" contains post.series %}
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/{{post.tags[0]}}" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
@@ -218,6 +228,8 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                {% endunless %}
+                <!-- end unless "lifelog" contains post.series -->
                 {% endfor %}
             </div>
         </div>

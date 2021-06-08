@@ -1,0 +1,97 @@
+I"�<h2 id="audio"><strong>Audio</strong></h2>
+<ul>
+  <li>Computers are good at recording, playing back, and generating audio</li>
+  <li>Uses different file formats
+    <ul>
+      <li>File formats are just a way of storing 0s and 1s on disk so that certain software knows how to interpret it</li>
+    </ul>
+  </li>
+  <li>MIDI
+    <ul>
+      <li>Way of storing musical notes for certain songs</li>
+      <li>Can do this for different instruments
+        <ul>
+          <li>Programs can render the notes for these instruments</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>GarageBand
+    <ul>
+      <li>Included with macOS</li>
+      <li>This is the Star Wars theme in MIDI
+        <ul>
+          <li>Doesn’t sound quite as good as the actual version</li>
+          <li>Computer synthesizes the notes
+            <ul>
+              <li>Not an actual recording</li>
+              <li>Computer interprets notes in the MIDI file</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>MIDI is common in the digital workspace among musicians who wish to share music with each other.</li>
+  <li>Humans typically like to hear music preformed and recorded by humans
+    <ul>
+      <li>File formats for recorded music include:
+        <ul>
+          <li>AAC</li>
+          <li>MIDI</li>
+          <li>MP3</li>
+          <li>WAV</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>WAV is an early sound format, but still used
+    <ul>
+      <li>Uncompressed data storage allowing high quality</li>
+    </ul>
+  </li>
+  <li>MP3
+    <ul>
+      <li>File format for audio that uses compression
+        <ul>
+          <li>Significantly reduce how many bits are necessary to store a song</li>
+          <li>Discards 0s and 1s that humans can’t necessarily hear
+            <ul>
+              <li>True audiophiles may disagree</li>
+            </ul>
+          </li>
+          <li>Trade off between optimizing storage space and sacrificing quality</li>
+          <li>This compression is said to be lossy
+            <ul>
+              <li>Losing the quality in the compression process</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>AAC
+    <ul>
+      <li>Similar to MP3</li>
+      <li>May see when you download a song from iTunes</li>
+    </ul>
+  </li>
+  <li>Streaming services such as Spotify don’t transfer a file to you but rather stream bits of information to you</li>
+  <li>How do we think about the quality of these formats?
+    <ul>
+      <li>Sampling frequency
+        <ul>
+          <li>Number of times per seconds we take a digital snapshot of what a person would hear</li>
+        </ul>
+      </li>
+      <li>Bit depth
+        <ul>
+          <li>Number of bits used for these individual snapshots</li>
+        </ul>
+      </li>
+      <li>Sampling frequency x bit depth = number of bits necessary to store one second of music</li>
+      <li>Audio file formats allow you to modify what these parameters are</li>
+    </ul>
+  </li>
+</ul>
+:ET

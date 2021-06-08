@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "Multimedia"
+title: "CS50T - Multimedia"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: cs50 lecture_notes
 series: CS50
 preview: "A graphic, what we see with multimedia, is really just a bunch of pixels both horizontal and vertical - All file formats are rectangular in nature, though transparent pixels can make images look to take on other shapes - In the simplest form, each of the dots or pixels is a bunch of 0s and 1s - To create a file format, we just need to determine a mapping."
 ---
-
-## **Introduction**
-- Odds are you use it everyday, but what is it?
 
 ## **Audio**
 - Computers are good at recording, playing back, and generating audio

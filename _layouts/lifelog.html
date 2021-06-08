@@ -1,0 +1,51 @@
+---
+
+---
+
+{% include head.html %}
+
+<body>
+    {% include scroll-to-top.html %}
+    {% include top-nav.html %}
+
+    <div>
+        <div style="height: calc(2*var(--top-nav-h) + 30px);"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-2">&nbsp;</div>
+        <div class="col-8">
+            <div class="all-lifelogs">
+                <div class="row">
+                    {% for post in site.posts %}
+                    <div class="col-4">
+                        {% if "lifelog" contains post.series %}
+                        <div class="lifelog">
+                            <img loading="lazy" src="../post-img/lifelog/{{post.photo}}" alt="" class="lifelog-img mdi">
+                            <div class="caption">
+                                {{ post.title }}
+                                <div class="date">
+                                    {{ post.date | date: "%B %-d, %Y" }}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-2">&nbsp;</div>
+    </div>
+
+
+
+
+
+
+
+    {% include scripts.html %}
+</body>
+
+</html>

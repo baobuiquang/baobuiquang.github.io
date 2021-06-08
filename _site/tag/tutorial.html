@@ -26,11 +26,18 @@
 
     <!-- Fonts -->
     <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+
+
+
     <!-- Stylesheet -->
     <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
     <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
@@ -49,6 +56,9 @@
     <div class="name">
         <a href="/" class="nav-link">
             BUI QUANG BAO</a>
+        <span style="font-size: 13px; color: gray; font-weight: 400; position: relative; top: -2px;">
+            ⚠ This site is in development.
+        </span>
     </div>
     <div class="nav-btn">
         <label for="modal-1" style="cursor: pointer;">
@@ -58,9 +68,9 @@
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
             Notebook</a>
+        <a href="/lifelog" class="nav-link">
+            LifeLog</a>
         <a href="/notebook" class="nav-link">
-            Showcase</a>
-        <a href="/" target="_blank" class="nav-link">
             SolidCoreJS</a>
     </div>
 </div>
@@ -81,7 +91,7 @@
             </div>
             <div class="modal-cta just-display-on-desktop" style="text-align: left;">
                 Powerful plugins library for your desired website.
-                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                <a target="_blank" href="/">
                     <button>
                         SOLID CORE JS
                     </button>
@@ -94,8 +104,8 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="/notebook">
-                        UI Showcase
+                    <a href="/">
+                        Showcase
                     </a>
                 </div>
                 <div class="a-wrap">
@@ -104,7 +114,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         Memory
                     </a>
                 </div>
@@ -114,7 +124,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         About this website
                     </a>
                 </div>
@@ -129,7 +139,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        14
+                        416
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -209,6 +219,26 @@
         <div class="col-5">
             <div class="all-posts">
                 
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/tutorial" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            tutorial
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        March 25, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/publish-your-package" class="title">
+                        How to publish your package to npm - Node.js Package Manager
+                    </a>
+                </h2>
+                <div class="preview">
+                    npm is a package manager for the JavaScript programming language. npm is the command line client that allows developers to install and publish packages - packaged modules of code. npm is an open source project and free to use. In this post, I will show you how to publish a package to the most popular package manager - npm.
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                
             </div>
         </div>
     </div>
@@ -241,6 +271,7 @@
 <!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
 <script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
 <script src="../scripts.js" defer></script>
+<script src="../mdi.js" defer></script>
 
 
 

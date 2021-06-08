@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "How to publish your package to the most popular package manager - npm"
+title: "How to publish your package to npm - Node.js Package Manager"
 date: 2021-03-25 20:00:00 +0700
 author: "Bui Quang Bao"
-tags: technology web npm
+tags: technology web npm tutorial
 series:
 preview: "npm is a package manager for the JavaScript programming language. npm is the command line client that allows developers to install and publish packages - packaged modules of code. npm is an open source project and free to use. In this post, I will show you how to publish a package to the most popular package manager - npm."
 ---
@@ -143,4 +143,4 @@ If there is any error, you should:
 * Check your folder's structure and `package.json` file.
 * Check your npm account.
 
-This is the end of this post, happy coding!
+This is the end of this post.

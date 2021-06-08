@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardware"
+title: "CS50T - Hardware"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: cs50 lecture_notes

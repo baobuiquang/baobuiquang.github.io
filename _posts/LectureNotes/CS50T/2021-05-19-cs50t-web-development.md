@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Development"
+title: "CS50T - Web Development"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: cs50 lecture_notes
@@ -309,13 +309,13 @@ preview: "Web development is about writing code - Specifically, HTML, which buil
     </head>
     <body>
         <header style="font-size: large; text-align: center;">
-            John Harvard
+            Bui Quang Bao
         </header>
         <main style="font-size: medium; text-align: center;">
             Welcome to my home page!
         </main>
         <footer style="font-size: small; text-align: center;">
-            Copyright &%169; John Harvard
+            Copyright &%169; Bui Quang Bao
         </footer>
     </body>
 </html>
@@ -351,13 +351,13 @@ preview: "Web development is about writing code - Specifically, HTML, which buil
     </head>
     <body style="text-align: center;">
         <header style="font-size: large;">
-            John Harvard
+            Bui Quang Bao
         </header>
         <main style="font-size: medium;">
             Welcome to my home page!
         </main>
         <footer style="font-size: small;">
-            Copyright &%169; John Harvard
+            Copyright &%169; Bui Quang Bao
         </footer>
     </body>
 </html>
@@ -404,13 +404,13 @@ preview: "Web development is about writing code - Specifically, HTML, which buil
         </head>
         <body class="centered">
             <header class="large">
-                John Harvard
+                Bui Quang Bao
             </header>
             <main class="medium">
                 Welcome to my home page!
             </main>
             <footer class="small">
-                Copyright &%169; John Harvard
+                Copyright &%169; Bui Quang Bao
             </footer>
         </body>
     </html>
@@ -456,13 +456,13 @@ preview: "Web development is about writing code - Specifically, HTML, which buil
     </head>
     <body>
         <header>
-            John Harvard
+            Bui Quang Bao
         </header>
         <main>
             Welcome to my home page!
         </main>
         <footer>
-            Copyright &%169; John Harvard
+            Copyright &%169; Bui Quang Bao
         </footer>
     </body>
 </html>
@@ -485,13 +485,13 @@ preview: "Web development is about writing code - Specifically, HTML, which buil
     </head>
     <body>
         <header>
-            John Harvard
+            Bui Quang Bao
         </header>
         <main>
             Welcome to my home page!
         </main>
         <footer>
-            Copyright &%169; John Harvard
+            Copyright &%169; Bui Quang Bao
         </footer>
     </body>
 </html>

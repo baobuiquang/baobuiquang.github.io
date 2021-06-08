@@ -8,11 +8,12 @@ series:
 preview: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It is widely used in blogging, instant messaging, online forums, collaborative software, documentation pages, and readme files. In this post, I will collect some of the most commonly-used markdown syntaxes."
 ---
 
+
 **Markdown** is a lightweight markup language for creating formatted text using a plain-text editor. **Markdown** is widely used in blogging, instant messaging, online forums, collaborative software, documentation pages, and readme files.
 
 In this post, I will collect some of the most commonly-used markdown syntaxes.
 
-```
+```markdown
 # This is an <h1> tag
 ## This is an <h2> tag
 ### This is an <h3> tag

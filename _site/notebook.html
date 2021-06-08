@@ -26,11 +26,18 @@
 
     <!-- Fonts -->
     <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+
+
+
     <!-- Stylesheet -->
     <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
     <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
@@ -49,6 +56,9 @@
     <div class="name">
         <a href="/" class="nav-link">
             BUI QUANG BAO</a>
+        <span style="font-size: 13px; color: gray; font-weight: 400; position: relative; top: -2px;">
+            ⚠ This site is in development.
+        </span>
     </div>
     <div class="nav-btn">
         <label for="modal-1" style="cursor: pointer;">
@@ -58,9 +68,9 @@
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
             Notebook</a>
+        <a href="/lifelog" class="nav-link">
+            LifeLog</a>
         <a href="/notebook" class="nav-link">
-            Showcase</a>
-        <a href="/" target="_blank" class="nav-link">
             SolidCoreJS</a>
     </div>
 </div>
@@ -81,7 +91,7 @@
             </div>
             <div class="modal-cta just-display-on-desktop" style="text-align: left;">
                 Powerful plugins library for your desired website.
-                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                <a target="_blank" href="/">
                     <button>
                         SOLID CORE JS
                     </button>
@@ -94,8 +104,8 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="/notebook">
-                        UI Showcase
+                    <a href="/">
+                        Showcase
                     </a>
                 </div>
                 <div class="a-wrap">
@@ -104,7 +114,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         Memory
                     </a>
                 </div>
@@ -114,7 +124,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         About this website
                     </a>
                 </div>
@@ -129,7 +139,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        14
+                        416
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -188,13 +198,13 @@
     </div>
 </div>
 
-    <div class="row">
+    <div class="row just-display-on-desktop">
         <div class="col-2">
             &nbsp;
         </div>
         <div class="col-8">
 
-            <div style="height: calc(2*var(--top-nav-h) - 36px);"></div>
+            <div style="height: calc(2*var(--top-nav-h) - 39px);"></div>
 
             <div class="sub-menu-bar">
                 <a href="#latest">Latest Posts</a>
@@ -214,7 +224,7 @@
             <div class="nav-link">
                 FEATURED POSTS
             </div> -->
-            <div style="height: calc(var(--top-nav-h) - 10px);"></div>
+            <div style="height: calc(var(--top-nav-h) - 0px);"></div>
 
             <div class="featured-post just-display-on-desktop">
                 <div style="margin: 0; display: flex; flex-direction: row; align-items: stretch;">
@@ -228,33 +238,38 @@
                                 ARTIFICIAL INTELLIGENCE
                             </mark>
                             <mark class="tag">
-                                DATA ANALYSIS
+                                DATA SCIENCE
                             </mark>
                             <mark class="tag">
                                 COVID-19
                             </mark>
                         </div>
-                        <a href="https://buiquangbao.github.io/notebook/covid-19">
+                        <a href="/notebook/covid-19">
                             <h2 class="title">
                                 COVID-19 (Sars CoV 2) virus spread analysis and diagnosis from radiography
                             </h2>
                         </a>
-                        <div style="margin-top: 12px; font-size: 14px;">
+                        <div style="margin-top: 10px; font-size: 14px;">
                             By <i>Bui Quang Bao</i>
                         </div>
                         <div class="preview" style="display: -webkit-box;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 7;
                         overflow: hidden;">
-                            Analysis, the process of turning raw data into insights, provide us with a view of how
+                            <!-- Analysis, the process of turning raw data into insights, provide us with a view of how
                             Coronavirus disease influences the communities, indicate if the development of a country
                             affects its virus spread as well as the infection rate, the death rate and the recovered
                             rate.
                             Diagnosis method is potential in preventing the spread of the pandemic. With the dataset
                             of chest X-ray, we can build a Machine Learning model to predict if a new X-ray image is
-                            from COVID-19 infected or non-infected.
+                            from COVID-19 infected or non-infected. -->
+                            Analysis, the process of turning raw data into insights, provide us with a view of how
+                            Coronavirus disease influences the communities, indicate if the development of a country
+                            affects its virus spread as well as the infection rate, the death rate and the recovered
+                            rate. With the dataset of chest X-ray, we can build a Machine Learning model to predict if a
+                            new X-ray image is from COVID-19 infected or non-infected.
                         </div>
-                        <div class="preview" style="margin-top: 12px; font-size: 14px;">
+                        <div class="preview" style="margin-top: 10px; font-size: 14px;">
                             &rtrif;
                             <a href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis/tree/master/dataset/dataset_radiography"
                                 target="_blank" style="margin-right: 20px; color: var(--text-2);">
@@ -291,19 +306,20 @@
                                 experience
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
                                 My first internship when I was a 2nd-year student
                             </h2>
                         </a>
                         <div class="preview">
                             I got my first internship at a tech-service startup as a UI/UX developer when I was a
-                            second-year student. It's hard at first, but after that, I have learned and realized a lot.
+                            second-year student. It's hard at first, but after that, I have learned a lot.
                         </div>
                     </div>
                     <!-- 2 -->
                     <div class="item">
-                        <img src="../post-img/4.jpg">
+                        <img src="../post-img/2.png">
                         <div class="just-display-on-desktop">
                             <mark class="tag">
                                 personal
@@ -312,15 +328,15 @@
                                 experience
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
-                                Normal life of a Computer Science student ~
-                                <!-- I accelerate my student life. And that's worth it. -->
+                                Good resources for self-study that I use the most
                             </h2>
                         </a>
                         <div class="preview">
                             Have you ever wonder what a computer science student's life looks like? Just a small talk
-                            about what I learn, what I do, how I set my ultimate goals, how I manage everything.
+                            about what I learn, what I do, how I set my goals and how I manage everything.
                         </div>
                     </div>
                     <!-- 3 -->
@@ -331,9 +347,10 @@
                                 ARTIFICIAL INTELLIGENCE
                             </mark>
                         </div>
-                        <a href="/">
+                        <a
+                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
-                                We won the AI Hackathon RESET1010!
+                                We won the AI Hackathon RESET1010
                             </h2>
                         </a>
                         <div class="preview">
@@ -355,7 +372,9 @@
         </div>
     </div>
 
-
+    <div class="just-display-on-mobile">
+        <div style="height: calc(2*var(--top-nav-h) - 30px);"></div>
+    </div>
 
     <div class="left-latest-post-bar-wrap just-display-on-desktop">
         <div class="left-latest-post-bar">
@@ -369,6 +388,10 @@
         </div>
         <div class="col-5">
             <div class="all-posts">
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/security" style="border: none;">
@@ -386,15 +409,18 @@
 
                 </div>
                 <h2 style="margin-bottom: 10px;">
-                    <a href="/notebook/ctf-crack-me" class="title">
-                        Crack Me (Hash Cracking)
+                    <a href="/notebook/ctf-aes-ecb" class="title">
+                        The weakness of Advanced Encryption Standard in Cryptography (AES-ECB Brute-force Attack)
                     </a>
                 </h2>
                 <div class="preview">
-                    With the start of `$6$` , we know this hash is SHA-512 encrypted (sha512crypt). We encode the plaintext to Base64. Look at the structure, we know that this is RSA private-key cryptosystem. It's funny that the author of this chall even didn't change the name of the file: `id_rda`. This is unique file name that tell us what to do! :))
+                    From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py) By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it's ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/security" style="border: none;">
@@ -412,15 +438,18 @@
 
                 </div>
                 <h2 style="margin-bottom: 10px;">
-                    <a href="/notebook/ctf-aes-ecb" class="title">
-                        The Chosen One (AES-ECB Attack)
+                    <a href="/notebook/ctf-crack-me" class="title">
+                        Hash Cracking Example - SHA512 decryption and RSA private-key cryptosystem
                     </a>
                 </h2>
                 <div class="preview">
-                    From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py) By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it's ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.
+                    With the start of `$6$`, we know this hash is SHA-512 encrypted (sha512crypt). We encode the plaintext to Base64. Look at the structure, we know that this is RSA private-key cryptosystem. It's funny that the author of this chall even didn't change the name of the file: `id_rda`. This is unique file name that tell us what to do! :))
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
@@ -439,7 +468,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/css-tips" class="title">
-                        CSS tips that every beginner should know in the web development
+                        CSS tips that every developer should know in the web development
                     </a>
                 </h2>
                 <div class="preview">
@@ -447,6 +476,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -465,7 +497,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-programming" class="title">
-                        Programming
+                        CS50T - Programming
                     </a>
                 </h2>
                 <div class="preview">
@@ -473,6 +505,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -491,7 +526,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-web-development" class="title">
-                        Web Development
+                        CS50T - Web Development
                     </a>
                 </h2>
                 <div class="preview">
@@ -499,6 +534,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -517,7 +555,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-security" class="title">
-                        Security
+                        CS50T - Security
                     </a>
                 </h2>
                 <div class="preview">
@@ -525,6 +563,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -543,7 +584,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-multimedia" class="title">
-                        Multimedia
+                        CS50T - Multimedia
                     </a>
                 </h2>
                 <div class="preview">
@@ -551,6 +592,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -569,7 +613,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-internet" class="title">
-                        Internet
+                        CS50T - Internet
                     </a>
                 </h2>
                 <div class="preview">
@@ -577,6 +621,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/cs50" style="border: none;">
@@ -595,7 +642,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/cs50t-hardware" class="title">
-                        Hardware
+                        CS50T - Hardware
                     </a>
                 </h2>
                 <div class="preview">
@@ -604,31 +651,32 @@
 
                 <div style="height: calc(var(--top-nav-h));"></div>
                 
-                <div style="margin-bottom: 10px;">
-                    <a href="/tag/personal" style="border: none;">
-                        <mark class="tag" style="top: -0.5px; position: relative;">
-                            personal
-                        </mark>
-                    </a>
-
-                    
-                    <span style="font-size: 13px; font-weight: 500;">
-                        April 12, 2021
-                    </span>
-                    
-
-
-                </div>
-                <h2 style="margin-bottom: 10px;">
-                    <a href="/notebook/kdrama-start-up" class="title">
-                        K-Drama "Start-up" - Brilliant minds and cutting-edge technology are not enough.
-                    </a>
-                </h2>
-                <div class="preview">
-                    Three SamsanTech members, Nam Do-san, Kim Yong-san, and Lee Chul-san, are working on computer vision - image recognition/classification, an artificial intelligence field. The concept of technology was the main theme of this drama. Isn't it intriguing?! (It's for this reason that I opted to watch this film, despite the fact that I'm not usually interested in K-Drama.)
-                </div>
-
-                <div style="height: calc(var(--top-nav-h));"></div>
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
@@ -647,7 +695,7 @@
                 </div>
                 <h2 style="margin-bottom: 10px;">
                     <a href="/notebook/publish-your-package" class="title">
-                        How to publish your package to the most popular package manager - npm
+                        How to publish your package to npm - Node.js Package Manager
                     </a>
                 </h2>
                 <div class="preview">
@@ -655,6 +703,9 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
                 
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
@@ -682,6 +733,177 @@
 
                 <div style="height: calc(var(--top-nav-h));"></div>
                 
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/technology" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
@@ -708,6 +930,189 @@
 
                 <div style="height: calc(var(--top-nav-h));"></div>
                 
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/personal" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
@@ -733,6 +1138,868 @@
                 </div>
 
                 <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <!-- end unless "lifelog" contains post.series -->
+                
+                
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/Đâylà1cáitag" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            Đâylà1cáitag
+                        </mark>
+                    </a>
+
+                    
+                    <span style="font-size: 13px; font-weight: 500;">
+                        January 1, 0404
+                    </span>
+                    
+
+
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah" class="title">
+                        Thực ra Pảu chưa viết post này, để tạm đây khi mô rảnh viết
+                    </a>
+                </h2>
+                <div class="preview">
+                    Oh yeah!
+                </div>
+
+                <div style="height: calc(var(--top-nav-h));"></div>
+                
+                <!-- end unless "lifelog" contains post.series -->
                 
             </div>
         </div>
@@ -766,6 +2033,7 @@
 <!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
 <script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
 <script src="../scripts.js" defer></script>
+<script src="../mdi.js" defer></script>
 
 
 

@@ -1,23 +1,12 @@
 ---
 layout: post
-title: "Internet"
+title: "CS50T - Internet"
 date: 2021-05-15 07:00:00 +0700
 author: "Bui Quang Bao"
 tags: cs50 lecture_notes
 series: CS50
 preview: "We use the internet on a daily basis and have constant access and connectivity - Home network - Cable modem, DSL modem, or FIOS device - Connects to the internet - Pay monthly for an ISP (Internet Service Provider) - Verizon, Comcast, etc. Could have built in wireless connectivity for your devices - May need an additional home router"
 ---
-
-## **Introduction**
-- We use the internet on a daily basis and have constant access and connectivity
-- Home network
-    - Cable modem, DSL modem, or FIOS device
-        - Connects to the internet
-        - Pay monthly for an ISP (Internet Service Provider)
-            - Verizon, Comcast, etc.
-        - Could have built in wireless connectivity for your devices
-            - May need an additional home router
-                - Devices connect to a router via cables or wifi
 
 ## **IP**
 - Every computer on the internet has an IP (Internet Protocol) address
@@ -185,10 +174,3 @@ preview: "We use the internet on a daily basis and have constant access and conn
 - Inside a network cable are 8 wires of different colors
     - Some are for transmitting data, others for receiving data
     - Others still are for insulation and cancellation of interference
-
-## **Closing Thoughts and Homework**
-- For homework, find a device that looks like a modem or router and take a look at the connectors on the back of it
-    - If brave, play around with unplugging cables
-        - Note: Your internet may go down in the process, but can be easily restarted with the cables properly reconnected!
-    - If you have a spare ethernet cable, take a look inside yourself
-        - These are a bit harder to put back together!

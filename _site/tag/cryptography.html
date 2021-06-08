@@ -26,11 +26,18 @@
 
     <!-- Fonts -->
     <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+
+
+
     <!-- Stylesheet -->
     <!-- <link href="../creatoper/creatoper.css" rel="stylesheet"> -->
     <link href="https://unpkg.com/creatoper@1.1.5/creatoper.css" rel="stylesheet">
@@ -49,6 +56,9 @@
     <div class="name">
         <a href="/" class="nav-link">
             BUI QUANG BAO</a>
+        <span style="font-size: 13px; color: gray; font-weight: 400; position: relative; top: -2px;">
+            ⚠ This site is in development.
+        </span>
     </div>
     <div class="nav-btn">
         <label for="modal-1" style="cursor: pointer;">
@@ -58,9 +68,9 @@
     <div class="nav-link-wrap just-display-on-desktop">
         <a href="/notebook" class="nav-link">
             Notebook</a>
+        <a href="/lifelog" class="nav-link">
+            LifeLog</a>
         <a href="/notebook" class="nav-link">
-            Showcase</a>
-        <a href="/" target="_blank" class="nav-link">
             SolidCoreJS</a>
     </div>
 </div>
@@ -81,7 +91,7 @@
             </div>
             <div class="modal-cta just-display-on-desktop" style="text-align: left;">
                 Powerful plugins library for your desired website.
-                <a target="_blank" href="https://github.com/buiquangbao/COVID-19-Virus-Analysis-and-Diagnosis">
+                <a target="_blank" href="/">
                     <button>
                         SOLID CORE JS
                     </button>
@@ -94,8 +104,8 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="/notebook">
-                        UI Showcase
+                    <a href="/">
+                        Showcase
                     </a>
                 </div>
                 <div class="a-wrap">
@@ -104,7 +114,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         Memory
                     </a>
                 </div>
@@ -114,7 +124,7 @@
                     </a>
                 </div>
                 <div class="a-wrap">
-                    <a href="https://buiquangbao.github.io/pixelax/" target="_blank">
+                    <a href="/" target="_blank">
                         About this website
                     </a>
                 </div>
@@ -129,7 +139,7 @@
                     </span>
                     TOTAL VIEWS |
                     <a style="font-weight: 500;" href="/">
-                        14
+                        416
                     </a>
                     POSTS | SINCE 2020
                 </div>
@@ -209,6 +219,46 @@
         <div class="col-5">
             <div class="all-posts">
                 
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/cryptography" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            cryptography
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        May 23, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/ctf-aes-ecb" class="title">
+                        The weakness of Advanced Encryption Standard in Cryptography (AES-ECB Brute-force Attack)
+                    </a>
+                </h2>
+                <div class="preview">
+                    From the description, we know that the encryption used here is AES - Advanced Encryption Standard, ECB mode. (Without description, we can determine the encryption type by the module imported in server.py) By looking at the script, we can see that the flag is 32 bytes long, as is the key. The encryption method works like this: Because it's ECB, the plaintext will be split into 16-byte blocks, with each block using the AES encryption function with the key provided in the file.
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                
+                <div style="margin-bottom: 10px;">
+                    <a href="/tag/cryptography" style="border: none;">
+                        <mark class="tag" style="top: -0.5px; position: relative;">
+                            cryptography
+                        </mark>
+                    </a>
+                    <span style="font-size: 13px; font-weight: 500;">
+                        May 22, 2021
+                    </span>
+                </div>
+                <h2 style="margin-bottom: 10px;">
+                    <a href="/notebook/ctf-crack-me" class="title">
+                        Hash Cracking Example - SHA512 decryption and RSA private-key cryptosystem
+                    </a>
+                </h2>
+                <div class="preview">
+                    With the start of `$6$`, we know this hash is SHA-512 encrypted (sha512crypt). We encode the plaintext to Base64. Look at the structure, we know that this is RSA private-key cryptosystem. It's funny that the author of this chall even didn't change the name of the file: `id_rda`. This is unique file name that tell us what to do! :))
+                </div>
+                <div style="height: calc(var(--top-nav-h) - 16px);"></div>
+                
             </div>
         </div>
     </div>
@@ -241,6 +291,7 @@
 <!-- <script src="https://kit.fontawesome.com/0422542145.js" crossorigin="anonymous"></script> -->
 <script src="https://unpkg.com/creatoper@1.1.5/creatoper.js" defer></script>
 <script src="../scripts.js" defer></script>
+<script src="../mdi.js" defer></script>
 
 
 
