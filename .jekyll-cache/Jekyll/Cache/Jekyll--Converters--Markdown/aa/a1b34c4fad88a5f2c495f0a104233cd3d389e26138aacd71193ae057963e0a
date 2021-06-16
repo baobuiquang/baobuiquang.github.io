@@ -1,0 +1,28 @@
+I"ã<style>
+	.content a,
+	.content a:hover {
+		text-decoration: none !important;
+		border: none;
+	}
+	.content img {
+		width: 48%;
+		filter: brightness(0.7);
+		transition: all ease 0.3s;
+	}
+	.content img:hover {
+		filter: brightness(1);
+	}
+</style>
+
+<h2 id="awesome-technology-in-a-nutshell">Awesome technology in a nutshell</h2>
+
+<p><a href="/notebook/what-is-bitcoin"><img src="../post-img/thumbnail/what-bitcoin.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-react"><img src="../post-img/thumbnail/what-react.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-vue"><img src="../post-img/thumbnail/what-vue.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-angular"><img src="../post-img/thumbnail/what-angular.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-docker"><img src="../post-img/thumbnail/what-docker.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-kubernetes"><img src="../post-img/thumbnail/what-kubernetes.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-flutter"><img src="../post-img/thumbnail/what-flutter.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-jquery"><img src="../post-img/thumbnail/what-jquery.png" alt="WHAT" /></a>
+<a href="/notebook/what-is-svg"><img src="../post-img/thumbnail/what-svg.png" alt="WHAT" /></a></p>
+:ET

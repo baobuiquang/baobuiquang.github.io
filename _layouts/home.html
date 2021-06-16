@@ -44,15 +44,21 @@
                     </div>
                     <div style="width: 50%; margin: 0 0 0 2vw;">
                         <div class="just-display-on-desktop">
-                            <mark class="tag">
-                                ARTIFICIAL INTELLIGENCE
-                            </mark>
-                            <mark class="tag">
-                                DATA SCIENCE
-                            </mark>
-                            <mark class="tag">
-                                COVID-19
-                            </mark>
+                            <a href="/tag/ai">
+                                <mark class="tag">
+                                    artificial intelligence
+                                </mark>
+                            </a>
+                            <a href="/tag/data_science">
+                                <mark class="tag">
+                                    data analysis
+                                </mark>
+                            </a>
+                            <a href="/tag/covid19">
+                                <mark class="tag">
+                                    covid-19
+                                </mark>
+                            </a>
                         </div>
                         <a href="/notebook/covid-19">
                             <h2 class="title">
@@ -107,58 +113,71 @@
                 <div class="flex">
                     <!-- 1 -->
                     <div class="item">
-                        <img src="../post-img/9.png">
+                        <a href="/notebook/what-series">
+                            <img src="../post-img/thumbnail/what-series.png">
+                        </a>
                         <div class="just-display-on-desktop">
-                            <mark class="tag">
-                                personal
-                            </mark>
-                            <mark class="tag">
-                                experience
-                            </mark>
+                            <a href="/tag/technology">
+                                <mark class="tag">
+                                    technology
+                                </mark>
+                            </a>
+                            <a href="/tag/what">
+                                <mark class="tag">
+                                    what
+                                </mark>
+                            </a>
                         </div>
-                        <a
-                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
+                        <a href="/notebook/what-series">
                             <h2 class="title">
-                                My first internship when I was a 2nd-year student
+                                WHAT Series - Awesome tech in a nutshell
                             </h2>
                         </a>
                         <div class="preview">
-                            I got my first internship at a tech-service startup as a UI/UX developer when I was a
-                            second-year student. It's hard at first, but after that, I have learned a lot.
+                            A series of posts answer the question "What is" in a simple way. We will go through some
+                            famous web framework like React and Vue, to tools like Docker or Kubernetes, etc.
                         </div>
                     </div>
                     <!-- 2 -->
                     <div class="item">
-                        <img src="../post-img/2.png">
+                        <a href="/notebook/solidcorejs-log">
+                            <img src="../post-img/thumbnail/solidcorejs.png">
+                        </a>
                         <div class="just-display-on-desktop">
-                            <mark class="tag">
-                                personal
-                            </mark>
-                            <mark class="tag">
-                                experience
-                            </mark>
+                            <a href="/tag/technology">
+                                <mark class="tag">
+                                    technology
+                                </mark>
+                            </a>
+                            <a href="/tag/web">
+                                <mark class="tag">
+                                    web
+                                </mark>
+                            </a>
                         </div>
-                        <a
-                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
+                        <a href="/notebook/solidcorejs-log">
                             <h2 class="title">
-                                Good resources for self-study that I use the most
+                                SolidCoreJS development log and latest updates
                             </h2>
                         </a>
                         <div class="preview">
-                            Have you ever wonder what a computer science student's life looks like? Just a small talk
-                            about what I learn, what I do, how I set my goals and how I manage everything.
+                            SolidCoreJS is a lightweight and easy-to-use Javascript library that handle the common task
+                            in web development. And here are the latest updates.
                         </div>
                     </div>
                     <!-- 3 -->
                     <div class="item">
-                        <img src="../post-img/3.jpg">
+                        <a href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
+                            <img src="../post-img/3.jpg">
+                        </a>
                         <div class="just-display-on-desktop">
-                            <mark class="tag">
-                                ARTIFICIAL INTELLIGENCE
-                            </mark>
+                            <a href="/tag/ai">
+                                <mark class="tag">
+                                    artificial intelligence
+                                </mark>
+                            </a>
                         </div>
-                        <a
-                            href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
+                        <a href="/notebook/ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah-ohyeah">
                             <h2 class="title">
                                 We won the AI Hackathon RESET1010
                             </h2>
@@ -200,34 +219,39 @@
             <div class="all-posts">
                 {% for post in site.posts %}
                 {% unless "lifelog" contains post.series %}
+
+
+
                 <div style="margin-bottom: 10px;">
                     <a href="/tag/{{post.tags[0]}}" style="border: none;">
                         <mark class="tag" style="top: -0.5px; position: relative;">
                             {{post.tags[0]}}
                         </mark>
                     </a>
-
-                    {% unless "learning_archive" contains post.tags[0]
-                    or "learning_archive" contains post.tags[1]
-                    or "learning_archive" contains post.tags[2]
-                    or "learning_archive" contains post.tags[3] %}
                     <span style="font-size: 13px; font-weight: 500;">
                         {{ post.date | date: "%B %-d, %Y" }}
                     </span>
-                    {% endunless %}
-
-
                 </div>
+
+                {% if post.thumbnail != undentified %}
+                <div style="height: 6px;">&nbsp;</div>
+                <a href="{{post.url}}">
+                    <img class="thumbnail" src="{{post.thumbnail}}" alt="{{post.title}}" loading="lazy">
+                </a>
+                <div style="height: 6px;">&nbsp;</div>
+                {% endif %}
+
                 <h2 style="margin-bottom: 10px;">
                     <a href="{{post.url}}" class="title">
                         {{ post.title }}
                     </a>
                 </h2>
+
                 <div class="preview">
                     {{post.preview}}
                 </div>
 
-                <div style="height: calc(var(--top-nav-h));"></div>
+                <div style="height: calc(var(--top-nav-h) + 10px);"></div>
                 {% endunless %}
                 <!-- end unless "lifelog" contains post.series -->
                 {% endfor %}

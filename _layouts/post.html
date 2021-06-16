@@ -92,6 +92,18 @@
                 {% endif%}
 
             </div>
+
+
+
+            <!-- Thumbnail -->
+            {% if page.thumbnail != undentified %}
+            <div style="height: 6px;">&nbsp;</div>
+            <img class="thumbnail" src="{{page.thumbnail}}" alt="{{post.title}}">
+            <div style="height: 18px;">&nbsp;</div>
+            {% endif %}
+
+
+
             <div class="content">
                 {{content}}
             </div>

@@ -238,7 +238,10 @@ a {
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
-
+.all-posts .thumbnail {
+    aspect-ratio: 21/9;
+    object-fit: cover;
+}
 
 
 
@@ -369,10 +372,11 @@ a {
     height: calc(100vh - 160px - 20vh);
     overflow-y: scroll;
 }
-.post-in-series-wrap ::-webkit-scrollbar { width: 3px; }
+.post-in-series-wrap ::-webkit-scrollbar { width: 10px; }
 .post-in-series-wrap ::-webkit-scrollbar-track { background: transparent; }
-.post-in-series-wrap ::-webkit-scrollbar-thumb { background: rgba(133, 133, 133, 0.096); }
-.post-in-series-wrap ::-webkit-scrollbar-thumb:hover { background: rgb(134, 134, 134); }
+.post-in-series-wrap ::-webkit-scrollbar-thumb { background: rgba(133, 133, 133, 0.06); }
+.post-in-series-wrap ::-webkit-scrollbar-thumb:hover { background: rgb(134, 134, 134, 0.3); }
+
 .post-in-series {
     font-size: 13px;
     color: var(--text-2);
@@ -990,7 +994,28 @@ body.darkmode {
 .language-javascript code .o {
     color: var(--grey);
 }
-
+/* JSX */
+.language-jsx code .nc,
+.language-jsx code .k {
+    color: var(--purple);
+}
+.language-jsx code .nx {
+    color: var(--dark-blue);
+}
+.language-jsx code .kd,
+.language-jsx code .nt {
+    color: var(--light-blue);
+}
+.language-jsx code .na,
+.language-jsx code .mi {
+    color: var(--green);
+}
+.language-jsx code .p,
+.language-jsx code .o,
+.language-jsx code .si,
+.language-jsx code .c1 {
+    color: var(--grey);
+} 
 /* Python */
 .language-python code .nb {
     color: var(--dark-blue);
@@ -1118,7 +1143,7 @@ body.darkmode {
 }
 .left-latest-post-bar {
     padding: 32px 42px; 
-    font-weight: 500;  
+    font-weight: 500;
     height: calc(100vh - 120px);
     width: 38vw; 
     background: #1d1d1d; 
@@ -1179,7 +1204,7 @@ body.darkmode {
 .lifelog:hover .lifelog-img {
     background: transparent;
     transition: all ease 0.5s;
-    filter: brightness(0.4) blur(0.3px);
+    filter: brightness(0.3) blur(0.5px);
 }
 .lifelog:hover .caption {
     bottom: 24px;

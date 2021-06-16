@@ -1,0 +1,98 @@
+I"�<p>In Vue, you can start simple and then progressively add in the tools and features that you need to build a complex web application. At its core, it provides a way to build components, that encapsulate data or state in your JavaScript and then connect that state reactively to a template in HTML.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+	<span class="c">&lt;!-- UI elements --&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+	<span class="o">&lt;!--</span> <span class="nx">data</span> <span class="o">&amp;</span> <span class="nx">logic</span> <span class="o">--&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>We call these components declarative Vue because the same data inputs will always produce the same output in the visual UI.</p>
+
+<p>When we declare data on this data object, it links or binds it to the HTML on the template above. When the value of the data changes, the component will automatically rerender, or in other words, it’s reactive.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+	<span class="nt">&lt;p&gt;</span>
+		This blog has <span class="ni">&amp;lcub;</span>{ views }} 👀
+	<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+	<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+		<span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="p">{</span>
+				<span class="na">views</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>And the framework does a ton of work under the hood to make sure that this process’s performance across a huge component tree.</p>
+
+<p>We can work with this data in the template thanks to Vue HTML-based template syntax. We can interpolate a value for expression using double braces. And we also have a variety of directives to control the behavior of the HTML based on the data.</p>
+
+<p>We can use v-if to only render an element when the value on the right side is truthy.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">"views &gt; 0"</span><span class="nt">&gt;</span>
+		This blog has <span class="ni">&amp;lcub;</span>{ views }} 👀
+	<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</code></pre></div></div>
+
+<p>And then we might have a fallback element after that’s only rendered when the values false with v-else.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">"views &gt; 0"</span><span class="nt">&gt;</span>
+		This blog has <span class="ni">&amp;lcub;</span>{ views }} 👀
+	<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">v-else</span><span class="nt">&gt;</span>
+		Oh no, whyyyy 😥
+	<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</code></pre></div></div>
+
+<p>We can make the app interactive by listening to events. Using the v-on directive, we can listen to an event on an element, then run some code to handle that event on the right side. We can do that directly in the template or define a custom method and the components methods object.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">"views &gt; 0"</span><span class="nt">&gt;</span>
+		This blog has <span class="ni">&amp;lcub;</span>{ views }} 👀
+	<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">v-else</span><span class="nt">&gt;</span>
+		Oh no, whyyyy 😥
+	<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">v-on:click=</span><span class="s">"nextBlog()"</span><span class="nt">&gt;</span>
+		Read more blog!
+	<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</code></pre></div></div>
+
+<p>The method has access to our reactive data, and that means all we have to do is change the value of the data and the component will automatically rerender.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+	<span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="p">{</span>
+			<span class="na">views</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+		<span class="p">}</span>
+	<span class="p">},</span>
+	<span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+		<span class="nx">nextBlog</span><span class="p">()</span> <span class="p">{</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">views</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And that’s all it takes to build an interactive reactive declarative UI component with Vue.</p>
+
+<p>The framework is loved by developers for its simplicity, but also its ability to scale up in complexity incrementally. Its plugin system allows you to easily drop in things like a router, state management, firebase support, and more.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueRouter</span><span class="p">)</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuesax</span><span class="p">)</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">firestorePlugin</span><span class="p">)</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

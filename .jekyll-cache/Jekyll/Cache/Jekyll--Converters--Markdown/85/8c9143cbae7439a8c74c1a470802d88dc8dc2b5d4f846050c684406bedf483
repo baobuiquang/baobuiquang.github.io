@@ -1,0 +1,57 @@
+I"�<p>React is a Javascript library for building user interfaces. Developed at Facebook and released in 2013 it’s safe to say React has been the most influential UI library in recent year.</p>
+
+<p>We use it to build components that represent logical reusable parts of the UI.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Header</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nc">Logo</span> <span class="na">icon</span><span class="p">=</span><span class="s">"😎"</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nc">Title</span> <span class="na">text</span><span class="p">=</span><span class="s">"React.js is awesome!"</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nc">Action</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">followMeOnGithub</span><span class="p">()</span> <span class="si">}</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nc">Header</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>The beauty of React is that the simplicity of building a component has been brought down to its theoretical minimum. It’s just a Javascript function. The return value from this function is your HTML or UI which is written in a special syntax called “JSX”, allowing you to easily combine Javascript with HTML markup.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Item</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi, my name is Bao!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="c1">//JSX</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you want to pass data into a component, you simply pass it a props argument, which you can then reference inside the function body or in the UI using braces. If the value changes, React will react to update the UI.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Item</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hi, my name is <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span>!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Item</span> <span class="na">text</span><span class="p">=</span><span class="s">"Bui Quang Bao"</span><span class="p">/&gt;</span>
+</code></pre></div></div>
+
+<p>If we want to give our component its own internal state, we can use the “state hook”. The “hook” is just a function that returns a value as well as a function to change the value.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">useState</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">Item</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="p">&lt;&gt;</span>
+		<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">count</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+			Add
+		<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+}
+</code></pre></div></div>
+
+<p>In this case, <code class="language-plaintext highlighter-rouge">count</code> is our reactive state and <code class="language-plaintext highlighter-rouge">setCount</code> will change the state. When used in the template, the <code class="language-plaintext highlighter-rouge">count</code> will always show the most recent value. Then we can bind <code class="language-plaintext highlighter-rouge">setCount</code> to a button click event, so the user can change the state.</p>
+
+<p>React provides a variety of other built-in hooks to handle common use cases.</p>
+
+<p>But the main reason you might want to use React is not the library itself, but the massive ecosystem that surrounds it. React itself doesn’t care about routing, state management, animation, or anything like that. Instead, it lets those concerns evolve naturally within the open-source community. No matter what you’re trying to do, there’s very likely a good supporting library to help you get it done.</p>
+
+<p>View the list <a href="https://github.com/buiquangbao/awesome-react">Awesome React</a> that I’ve forked from <a href="https://github.com/enaqx">enaqx</a>.</p>
+
+<p>Need a static site, you have <a href="https://www.gatsbyjs.com/">Gatsby</a>. Need server-side rendering, you have <a href="https://nextjs.org/">Next.js</a>. For animation, you have <a href="https://react-spring.io/">React-Spring</a>. For forums, you have <a href="https://formik.org/">Formik</a>. State management, you’ve got <a href="https://redux.js.org/">Redux</a>, <a href="https://mobx.js.org/">Mobx</a>, <a href="https://facebook.github.io/flux/">Flux</a>, <a href="https://recoiljs.org/">Recoil</a>, <a href="https://xstate.js.org/">Xstate</a>, and more.</p>
+
+<p>You have an endless supply of choices to get things done the way you like it.</p>
+
+<p>As an added bonus, once you have React down, you can easily jump into React Native and start building mobile apps. And it’s no surprise that knowing this little UI library is one of the most in-demand skills for front-end developers today.</p>
+:ET
