@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    transition: all ease 0.3s;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.4);
+}
+
+.desktop-only { 
+    display: block; 
+} @media only screen and (max-width: 1000px) { 
+    .desktop-only { 
+        display: none !important;
+    } 
+} 
+.mobile-only { 
+    display: block; 
+} @media only screen and (min-width: 1000px) { 
+    .mobile-only { 
+        display: none !important; 
+    } 
+}
+
+/* ================================ */
+* {
+    color: rgb(222, 222, 222);
+    font-size: 16px;
+}
+body {
+    background: rgb(22, 22, 22);
+}
+::selection {
+    color: rgb(0, 0, 0);
+    background: rgb(214, 214, 214);
+}
+#main {
+    position: relative;
+    left: 50vw;
+    width: 39vw;
+    margin: 15vh 0 20vh 0;
+} @media only screen and (max-width: 1000px) { 
+    #main { 
+        left: 0;
+        width: 100vw;
+        padding: 0 2rem;
+    } 
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    margin: 5.5rem 0 0 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+h3 {
+    font-size: 1.00rem;
+    font-weight: 500;
+    letter-spacing: 0.015rem;
+    line-height: 2;
+    text-align: justify;
+} @media only screen and (max-width: 1000px) { 
+    h3 { 
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    } 
+}
+
+p, s {
+    font-size: 0.90rem;
+    font-weight: 400;
+    letter-spacing: 0.015rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    margin: 1.8rem 0 0 0;
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.p-sub {
+    color: gray;
+}
+
+
+
+@media only screen and (max-width: 1000px) { 
+    h3, p, s, ul li { 
+        text-align: left;
+    }
+}
