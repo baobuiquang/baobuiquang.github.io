@@ -1,11 +1,14 @@
 function MDI() {
     let mdi = document.querySelectorAll(".mdi");
 
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 999; i++) {
         if (mdi[i] == undefined) { break };
         mdi[i].addEventListener("click", function () {
             let src = mdi[i].getAttribute("src");
             let title = mdi[i].getAttribute("text");
+            if (!title) {
+                title = ""
+            }
             document.body.insertAdjacentHTML(
                 "afterend",
                 "<div class='mdi-wrap' onclick='removemdi(this)'>" +

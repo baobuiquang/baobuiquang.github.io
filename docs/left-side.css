@@ -1,0 +1,51 @@
+.left-side {
+    padding: 0 calc(2.77vw*2) 0 2.77vw;
+    position: fixed;
+    top: 20vh;
+    left: calc(-22.23vw);
+
+    /* left: 0; */
+
+    height: calc(60vh + 55px);
+    width: calc(22.22vw + 2.77vw*2);
+    transition: all ease-in-out 0.8s;
+}
+
+.left-side:hover {
+    left: 0px;
+}
+
+.left-side:hover .swipe-bar {
+    opacity: 0.0;
+}
+
+.left-side .swipe-bar {
+    position: absolute;
+    top: 25vh;
+    right: 4.6vw;
+    background: rgba(255, 255, 255, 0.15);
+    height: 10vh;
+    border-radius: 100px;
+    opacity: 1.0;
+    width: 8px;
+}
+
+.left-side .div-to-hide-top {
+    position: absolute;
+    top: 4px;
+    right: calc(5.55vw + 4px);
+    background: hsl(0, 0%, 15%);
+    /* background: rgba(245, 222, 179, 0.5); */
+    width: 112px;
+    height: 50px;
+}
+
+.left-side .div-to-hide-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 2.7vw;
+    background: var(--color-bg);
+    /* background: rgba(245, 222, 179, 0.5); */
+    width: 19.6vw;
+    height: 57px;
+}

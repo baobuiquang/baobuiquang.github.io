@@ -1,4 +1,3 @@
-console.clear();
 // Utils
 const deg = a => Math.PI / 180 * a;
 const randomness = () => Math.floor(40 + Math.random() * 1080) * Math.round(Math.random());
@@ -10,7 +9,7 @@ let newRotation = Math.random() * 360;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     for (let i = 0; i < 180; i += 1) {
-        Points.push({ ox: 0, oy: 0, x: 0,y: 0 });
+        Points.push({ ox: 0, oy: 0, x: 0, y: 0 });
     }
     createLines();
 }
@@ -59,10 +58,10 @@ function drawLines(clock) {
         Points[i].oy = lerp(Points[i].oy, Points[i].y, smooth + i * stagger);
         Points[i + 1].ox = lerp(Points[i + 1].ox, Points[i + 1].x, smooth + i * stagger);
         Points[i + 1].oy = lerp(Points[i + 1].oy, Points[i + 1].y, smooth + i * stagger);
-        
+
         // Special
         // line(Points[i].ox, Points[i].oy, Points[i + 1].ox, Points[i + 1].oy)
-        
+
         const x = lerp(Points[i].ox, Points[i + 1].ox, .3);
         const y = lerp(Points[i].oy, Points[i + 1].oy, .7);
         bezier(Points[i].ox, Points[i].oy, y, x, x, y, Points[i + 1].ox, Points[i + 1].oy);

@@ -62,7 +62,18 @@ const phrases = [
     "ALGORITHM ART",
     "ALGORITHM ART",
     "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
+    "ALGORITHM ART",
     "aHR0cHM6Ly95b3V0dS5iZS9kUXc0dzlXZ1hjUQ==",
+    "It's a riddle, solve it!",
     "(¬‿¬)"
 ];
 const el = document.querySelector(".scrambletext");
