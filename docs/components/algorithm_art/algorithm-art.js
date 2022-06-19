@@ -51,6 +51,7 @@ function touchStarted() {
 // Draw Lines
 function drawLines(clock) {
     const smooth = 0.000001;
+    // const smooth = 0.01;
     const stagger = 0.0003;
     for (let i = 0; i < Points.length; i += 2) {
         stroke(255, i * 0.4);

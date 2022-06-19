@@ -2,11 +2,12 @@
     --ava-size: 66px;
     --media-border-radius: 12px;
     --name-date-nothing-mb: 17px;
+    --tt-padding: 24px;
 }
 
 @media only screen and (max-width: 1000px) {
     :root {
-        --ava-size: 48px;
+        --ava-size: 0px;
     }
 }
 
@@ -84,13 +85,20 @@
     color: gray;
 }
 
+@media only screen and (max-width: 1000px) {
+    .miniblog .post .date {
+        width: 100%;
+        font-size: 1rem;
+        float: left;
+    }
+}
+
 .miniblog .post .nothing {
     margin-bottom: var(--name-date-nothing-mb);
     font-size: 1rem;
     visibility: hidden;
     opacity: 0;
 }
-
 
 
 /* ===== Post Content ===== */
@@ -135,9 +143,9 @@
 
 /* ----- Twitter ----- */
 .miniblog .post .tt {
-    margin-bottom: 24px;
     position: relative;
-    padding: 24px;
+    margin-bottom: 24px;
+    padding: var(--tt-padding);
     border-radius: calc(8px + var(--media-border-radius));
     border: solid 2px rgba(255, 255, 255, 0.2);
 }
@@ -184,7 +192,7 @@
 .miniblog .post .tt .tt-logo {
     /* background: red; */
     position: absolute;
-    top: 30px;
+    top: 26px;
     right: 26px;
     height: 28px;
     width: 28px;
@@ -256,4 +264,39 @@
     padding: 0 0.8rem 0 0;
     height: 60vh;
     overflow-y: auto;
+}
+
+/* ----- Steam ----- */
+.tt-game {
+    padding-top: calc(-6px + var(--tt-padding)) !important;
+    padding-left: calc(6px + var(--tt-padding)) !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.tt-game img.game-banner {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    filter: grayscale(1.0) brightness(0.2);
+}
+
+.tt-game:hover img.game-banner {
+    opacity: 1.0;
+    filter: grayscale(0.0) brightness(0.3);
+}
+
+.tt-game p.game-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 0px 0;
+}
+
+.tt-game p.game-developer,
+.tt-game p.game-publisher {
+    font-size: 0.9rem;
+    color: gray;
+    margin: 0 0 0px 0;
 }
