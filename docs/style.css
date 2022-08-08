@@ -159,8 +159,8 @@ a {
 }
 
 h2 {
-    margin: 6rem 0 0 0;
-    font-size: 1.4rem;
+    margin: 7rem 0 0 0;
+    font-size: 1.5rem;
     font-weight: 600;
     /* text-transform: uppercase; */
 }
@@ -183,6 +183,8 @@ h3 {
 p,
 s,
 a,
+i,
+b,
 span {
     font-size: 0.9rem;
     font-weight: 400;
@@ -208,6 +210,10 @@ hr {
 
 .p-sub {
     color: gray;
+}
+
+.p-sub-bold {
+    color: rgb(200, 200, 200);
 }
 
 .just-a-link {
