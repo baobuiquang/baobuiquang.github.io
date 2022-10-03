@@ -71,3 +71,18 @@ p {
 .img-wrap:hover img {
     filter: brightness(1.0) grayscale(0.0);
 }
+
+#button-more {
+    background: var(--color-bg);
+    border: solid 2px white;
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+}
+
+#button-more:hover {
+    filter: invert(1.0);
+}

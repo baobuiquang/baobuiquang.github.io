@@ -1,10 +1,21 @@
+/* ================== Switch comment =================== */
+/* #maintenance {
+    display: none !important;
+} */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* ===================================================== */
+
 #maintenance {
-    z-index: 1001;
+    z-index: 9999;
     position: fixed;
     top: 0;
     width: 0;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -12,11 +23,27 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    font-size: 48px;
-    font-family: 'Libre Barcode 39 Extended';
     padding-bottom: 7vh;
 }
 
-/* #maintenance {
-    display: none !important;
-} */
+#mtn-content {
+    max-width: 700px;
+    text-align: justify;
+    padding: 2rem 4rem;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+#mtn-content p,
+#mtn-content a {
+    font-size: 1rem;
+    font-family: 'Flow Circular';
+    margin: 1rem 0 1rem 0;
+}
+
+video {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.05) grayscale(1.0);
+    cursor: crosshair;
+}
