@@ -1,0 +1,142 @@
+/* * {
+    font-family: 'Exo', 'Inter', 'Roboto', sans-serif;
+} */
+
+body {
+    counter-reset: step-count 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#a-content-wrap {
+    /* background: rgba(245, 222, 179, 0.137); */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    width: 100vw;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 3rem 0 3rem 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+h4 {
+    font-size: 3.0rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+b {
+    font-weight: 500;
+}
+
+.progress-bar {
+    /* background: rgba(245, 222, 179, 0.137); */
+    width: 100%;
+    max-width: 1195px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+
+.progress-bar * {
+    font-family: 'Exo', 'Inter', 'Roboto', sans-serif;
+}
+
+.progress-step {
+    text-align: center;
+    position: relative;
+}
+
+.progress-step:before,
+.progress-step:after {
+    background-color: #c0a359;
+    content: "";
+    height: 2px;
+    position: absolute;
+    z-index: -1;
+    top: 1.4rem;
+}
+
+.progress-step:after {
+    left: 50%;
+    width: 100%;
+}
+
+.progress-step:last-of-type.is-active:after {
+    background-color: #c0a359;
+}
+
+@media screen and (min-width: 640px) {
+    .progress-step:first-of-type:before {
+        right: 50%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .progress-step:first-of-type:before,
+    .progress-step:last-of-type:after {
+        background-color: white !important;
+    }
+}
+
+.progress-step:last-of-type:after {
+    left: 50%;
+    width: 50%;
+}
+
+.progress-step .step-count {
+    background-color: #c0a359;
+    height: 3.0rem;
+    width: 3.0rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: white;
+    z-index: 100;
+    border: 0.5rem solid var(--color-bg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-top: 0.35rem;
+}
+
+.progress-step .step-count:before {
+    counter-increment: step-count;
+    content: counter(step-count);
+}
+
+.progress-step.is-active:after {
+    background-color: #dad6ce;
+}
+
+.progress-step.is-active~.progress-step .step-count {
+    background-color: #dad6ce;
+}
+
+.progress-step.is-active~.progress-step:after {
+    background-color: #dad6ce;
+}
+
+.step-description {
+    font-size: 0.8rem;
+    color: rgb(168, 168, 168);
+}

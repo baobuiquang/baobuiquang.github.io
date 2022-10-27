@@ -1,0 +1,302 @@
+:root {
+    --ava-size: 66px;
+    --media-border-radius: 12px;
+    --name-date-nothing-mb: 17px;
+    --tt-padding: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+    :root {
+        --ava-size: 0px;
+    }
+}
+
+#main-miniblog {
+    position: relative;
+    left: calc(33.3vw - var(--ava-size) - 20px);
+    width: calc(33.3vw + var(--ava-size) + 20px);
+    margin: 15vh 0 20vh 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    #main-miniblog {
+        left: 0;
+        width: 100vw;
+        padding: 0 2rem 0 1.4rem;
+    }
+}
+
+.miniblog {
+    position: relative;
+}
+
+.miniblog .post {
+    position: relative;
+    padding-left: calc(20px + var(--ava-size));
+    /* Below: Post break line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 34px;
+    padding-bottom: 16px;
+}
+
+.miniblog .post .ava {
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+
+.miniblog .post .ava img {
+    height: var(--ava-size) !important;
+    width: var(--ava-size) !important;
+    object-fit: cover !important;
+    border-radius: 100px !important;
+    margin: 0 !important;
+}
+
+.miniblog .post .ava img:hover {
+    transform: rotate(-20deg);
+    filter: brightness(1.1);
+}
+
+.miniblog .post .name {
+    margin-bottom: var(--name-date-nothing-mb);
+    font-size: 1rem;
+    font-weight: 500;
+    float: left;
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+}
+
+.miniblog .post .name:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255);
+}
+
+.miniblog .post .status {
+    margin-bottom: var(--name-date-nothing-mb);
+    font-size: 1rem;
+    float: left;
+    color: gray;
+}
+
+.miniblog .post .date {
+    margin-bottom: var(--name-date-nothing-mb);
+    font-size: 0.9rem;
+    font-weight: 400;
+    float: right;
+    color: gray;
+}
+
+@media only screen and (max-width: 1000px) {
+    .miniblog .post .date {
+        width: 100%;
+        font-size: 1rem;
+        float: left;
+    }
+}
+
+.miniblog .post .nothing {
+    margin-bottom: var(--name-date-nothing-mb);
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* ===== Post Content ===== */
+
+.miniblog .post img {
+    margin: 0 0 20px 0;
+    width: 100%;
+    border-radius: var(--media-border-radius);
+}
+
+.miniblog .post p {
+    margin: 0 0 20px 0;
+}
+
+.miniblog .post p.p-end {
+    margin: 0 0 0px 0;
+}
+
+.miniblog .post p,
+.miniblog .post a,
+.miniblog .post span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.miniblog .post a {
+    color: white;
+    text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
+}
+
+.miniblog .post a:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255);
+}
+
+/* ----- Youtube ----- */
+.yt {
+    margin-bottom: 24px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--media-border-radius);
+}
+
+/* ----- Twitter ----- */
+.miniblog .post .tt {
+    position: relative;
+    margin-bottom: 24px;
+    padding: var(--tt-padding);
+    border-radius: calc(8px + var(--media-border-radius));
+    border: solid 2px rgba(255, 255, 255, 0.2);
+}
+
+.miniblog .post .tt .tt-ava {
+    margin-right: 12px;
+    float: left;
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    aspect-ratio: 1/1;
+}
+
+.miniblog .post .tt .tt-ava:hover {
+    filter: brightness(1.1);
+}
+
+.miniblog .post .tt a {
+    text-decoration: none;
+}
+
+.miniblog .post .tt .tt-name,
+.miniblog .post .tt .tt-user {
+    font-size: 0.9rem;
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+}
+
+.miniblog .post .tt .tt-name:hover,
+.miniblog .post .tt .tt-user:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255, 0.5);
+}
+
+
+.miniblog .post .tt .tt-user {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.miniblog .post .tt .br {
+    height: 14px;
+    /* background: red; */
+}
+
+.miniblog .post .tt .tt-logo {
+    /* background: red; */
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    height: 28px;
+    width: 28px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    filter: grayscale(100%);
+    border-radius: 0;
+}
+
+.miniblog .post .tt .tt-logo:hover {
+    filter: grayscale(0%);
+}
+
+.miniblog .post .tt img {
+    margin: 0;
+    padding: 0;
+}
+
+.miniblog .post .tt .tt-4 img {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 49.4%;
+}
+
+@media only screen and (max-width: 1750px) {
+    .miniblog .post .tt .tt-4 img {
+        width: 49.2%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .miniblog .post .tt .tt-4 img {
+        width: 48.9%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .miniblog .post .tt .tt-4 img {
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .miniblog .post .tt .tt-4 img {
+        width: 48%;
+    }
+}
+
+.miniblog .post .tt .tt-4 img:nth-child(1) {
+    border-radius: var(--media-border-radius) 0 0 0;
+}
+
+.miniblog .post .tt .tt-4 img:nth-child(2) {
+    border-radius: 0 var(--media-border-radius) 0 0;
+}
+
+.miniblog .post .tt .tt-4 img:nth-child(3) {
+    border-radius: 0 0 0 var(--media-border-radius);
+}
+
+.miniblog .post .tt .tt-4 img:nth-child(4) {
+    border-radius: 0 0 var(--media-border-radius) 0;
+}
+
+.miniblog .post .tt .long-content {
+    width: calc(100% + 14px);
+    padding: 0 0.8rem 0 0;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/* ----- Steam ----- */
+.tt-game {
+    padding-top: calc(-6px + var(--tt-padding)) !important;
+    padding-left: calc(6px + var(--tt-padding)) !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.tt-game img.game-banner {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    filter: grayscale(1.0) brightness(0.2);
+}
+
+.tt-game:hover img.game-banner {
+    opacity: 1.0;
+    filter: grayscale(0.0) brightness(0.3);
+}
+
+.tt-game p.game-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 0px 0;
+}
+
+.tt-game p.game-developer,
+.tt-game p.game-publisher {
+    font-size: 0.9rem;
+    color: gray;
+    margin: 0 0 0px 0;
+}

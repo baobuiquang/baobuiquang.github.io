@@ -1,0 +1,88 @@
+p {
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+#copyright-note {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 2rem;
+    width: 100vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(50, 50, 50);
+}
+
+#copyright-note:hover {
+    color: white;
+}
+
+#humanxai-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: calc(100vh - 60px);
+    height: 100vw;
+
+    transform-origin: top left;
+    transform: rotate(-90deg) scaleX(-1) translateX(calc(60px - 4px));
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#horizontal-scroll {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(calc(-100vh + 60px));
+}
+
+.img-wrap {
+    padding: 0 calc(100vw/18*2);
+    height: calc(100vh - 60px + 60px);
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.img-wrap img {
+    user-select: none;
+    cursor: crosshair;
+
+    position: relative;
+    height: 60vh;
+    border-radius: 8px;
+    filter: brightness(0.8) grayscale(0.9);
+    transition: all ease 1s;
+}
+
+.img-wrap:hover img {
+    filter: brightness(1.0) grayscale(0.0);
+}
+
+#button-more {
+    background: var(--color-bg);
+    border: solid 2px white;
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+}
+
+#button-more:hover {
+    filter: invert(1.0);
+}

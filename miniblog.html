@@ -1,0 +1,522 @@
+<!-- 
+|========================================|
+|⠄⠄⠄⠄⢠⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣯⢻⣿⣿⣿⣿⣆⠄⠄⠄|
+|⠄⠄⣼⢀⣿⣿⣿⣿⣏⡏⠄⠹⣿⣿⣿⣿⣿⣿⣿⣿⣧⢻⣿⣿⣿⣿⡆⠄⠄|
+|⠄⠄⡟⣼⣿⣿⣿⣿⣿⠄⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⣿⣇⢻⣿⣿⣿⣿⠄⠄|
+|⠄⢰⠃⣿⣿⠿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠙⠿⣿⣿⣿⣿⣿⠄⢿⣿⣿⣿⡄⠄|
+|⠄⢸⢠⣿⣿⣧⡙⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠈⠛⢿⣿⣿⡇⠸⣿⡿⣸⡇⠄|
+|⠄⠈⡆⣿⣿⣿⣿⣦⡙⠳⠄⠄⠄⠄⠄⠄⢀⣠⣤⣀⣈⠙⠃⠄⠿⢇⣿⡇⠄|
+|⠄⠄⡇⢿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⣠⣶⣿⣿⣿⣿⣿⣿⣷⣆⡀⣼⣿⡇⠄|
+|⠄⠄⢹⡘⣿⣿⣿⢿⣷⡀⠄⢀⣴⣾⣟⠉⠉⠉⠉⣽⣿⣿⣿⣿⠇⢹⣿⠃⠄|
+|⠄⠄⠄⢷⡘⢿⣿⣎⢻⣷⠰⣿⣿⣿⣿⣦⣀⣀⣴⣿⣿⣿⠟⢫⡾⢸⡟⠄⠄|
+|⠄⠄⠄⠄⠻⣦⡙⠿⣧⠙⢷⠙⠻⠿⢿⡿⠿⠿⠛⠋⠉⠄⠂⠘⠁⠞⠄⠄⠄|
+|⠄⠄⠄⠄⠄⠈⠙⠑⣠⣤⣴⡖⠄⠿⣋⣉⣉⡁⠄⢾⣦⠄⠄⠄⠄⠄⠄⠄⠄|
+|========================================|
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <title>Miniblog</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./miniblog.css">
+    <link rel="stylesheet" href="./maintenance.css">
+    <link rel="stylesheet" href="./left-side.css">
+</head>
+
+<body>
+
+    <!-- Soundcloud Music -->
+    <div class="left-side desktop-only">
+        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay"
+            style="border-radius: 4px; filter: invert(0.88) grayscale(100%);"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1174557856&color=000000&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&buying=false&sharing=false&download=false&show_artwork=false">
+        </iframe>
+        <div class="swipe-bar"></div>
+        <div class="div-to-hide-bottom"></div>
+        <div class="div-to-hide-top"></div>
+    </div>
+
+    <!-- ===== MINIBLOG ===== -->
+    <div id="main-miniblog">
+        <div class="miniblog">
+
+            <!-- Pinned -->
+            <div class="post" status="is testing Pinned Post" date="22/06/04 · Pinned Post 📌">
+                <p>
+                    Just a simple post that was pinned on the top.
+                </p>
+            </div>
+            <!-- Steam -->
+            <div class="post" status="is playing game" date="22/06/04">
+                <div class="tt tt-game">
+                    <img src="./postimg/st-0.jpg" class="game-banner">
+                    <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank">
+                        <img class="tt-logo" src="/assets/logo-st.png">
+                    </a>
+                    <p class="game-name">
+                        NieR:Automata™
+                    </p>
+                    <p class="game-developer">
+                        Developer: PlatinumGames Inc.
+                    </p>
+                    <p class="game-publisher">
+                        Publisher: Square Enix
+                    </p>
+                </div>
+            </div>
+            <!-- Simple Text -->
+            <div class="post" status="wrote something" date="22/06/04">
+                <p>
+                    Today is a hard working day.
+                </p>
+                <p>
+                    Morbi condimentum cursus massa, sed mollis est semper sed. Aliquam erat volutpat. Quisque tempus
+                    tortor scelerisque nisi consequat ultrices vitae id sem. In dapibus ipsum a erat rhoncus
+                    tincidunt. Donec et euismod dui. Phasellus mattis mi et ullamcorper aliquam. Suspendisse nec
+                    ante sit amet sapien hendrerit tempor. Aenean odio lectus, semper sed mollis et, ultrices et
+                    urna. Curabitur luctus tellus a metus aliquam porta.
+                </p>
+            </div>
+            <!-- Simple photos -->
+            <div class="post" status="shared a photo" date="22/06/04">
+                <p>
+                    Suspendisse mattis lectus libero, a ultricies nibh lacinia in. Nulla vel gravida massa, eget
+                    mattis diam. Sed auctor lacinia arcu sed malesuada. Vestibulum ex nunc, suscipit sed interdum
+                    sed, rutrum quis felis.
+                </p>
+                <img src="/assets/IYMC.png" class="mdi" text='test'>
+                <p>
+                    Phasellus mattis mi et ullamcorper aliquam. Suspendisse nec
+                    ante sit amet sapien hendrerit tempor. Aenean odio lectus, semper sed mollis et, ultrices et
+                    urna. Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <p>
+                    Maecenas consectetur mauris vel eros lacinia aliquam.
+                    Vestibulum ex nunc, suscipit sed interdum
+                    sed, rutrum quis felis.
+                </p>
+            </div>
+            <!-- Youtube -->
+            <div class="post" status="is embedding Youtube" date="22/06/04">
+                <iframe class="yt"
+                    src="https://www.youtube.com/embed/fzQ6gRAEoy0?rel=0&color=white&loop=1&modestbranding=1&showinfo=0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <!-- Twitter (normal) -->
+            <div class="post" status="is embedding Twitter (normal)" date="22/06/04">
+                <p>
+                    Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <div class="tt">
+                    <div>
+                        <a href="https://twitter.com/akinecoco987" target="_blank">
+                            <img class="tt-ava" src="/postimg/0.jpg">
+                            <div class="tt-name">Akine Coco</div>
+                            <div class="tt-user">@akinecoco987</div>
+                        </a>
+                        <div class="br"></div>
+                        <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank">
+                            <img class="tt-logo" src="/assets/logo-tt.png">
+                        </a>
+                    </div>
+                    <p>
+                        Phasellus eget lorem consequat,
+                        tincidunt diam ut, pretium metus. Maecenas consectetur mauris vel eros lacinia aliquam.
+                        Suspendisse mattis lectus libero, a ultricies nibh lacinia in. Nulla vel gravida massa, eget
+                        mattis diam. Sed auctor lacinia arcu sed malesuada. Vestibulum ex nunc, suscipit sed interdum
+                        sed, rutrum quis felis.
+                    </p>
+                    <img src="/postimg/4.jpg" class="mdi">
+                </div>
+            </div>
+            <!-- Twitter (4 photos) -->
+            <div class="post" status="is embedding Twitter (4 photos)" date="22/06/04">
+                <p>
+                    Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <div class="tt">
+                    <div>
+                        <a href="https://twitter.com/akinecoco987" target="_blank">
+                            <img class="tt-ava" src="/postimg/0.jpg">
+                            <div class="tt-name">Akine Coco</div>
+                            <div class="tt-user">@akinecoco987</div>
+                        </a>
+                        <div class="br"></div>
+                        <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank"><img
+                                class="tt-logo" src="/assets/logo-tt.png"></a>
+                    </div>
+                    <p>
+                        everyday things.
+                    </p>
+                    <div class="tt-4">
+                        <img src="/postimg/1.jpg" class="mdi">
+                        <img src="/postimg/2.jpg" class="mdi">
+                        <img src="/postimg/3.jpg" class="mdi">
+                        <img src="/postimg/4.jpg" class="mdi">
+                    </div>
+                </div>
+            </div>
+            <!-- Instagram -->
+            <div class="post" status="is embedding Instagram" date="22/06/04">
+                <p>
+                    Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <div class="tt">
+                    <div>
+                        <a href="https://twitter.com/akinecoco987" target="_blank">
+                            <img class="tt-ava" src="/postimg/0.jpg">
+                            <div class="tt-name">Akine Coco</div>
+                            <div class="tt-user">@akinecoco987</div>
+                        </a>
+                        <div class="br"></div>
+                        <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank">
+                            <img class="tt-logo" src="/assets/logo-in.png">
+                        </a>
+                    </div>
+                    <img src="/postimg/3.jpg" class="mdi">
+                </div>
+            </div>
+            <!-- ArtStation -->
+            <div class="post" status="is embedding ArtStation" date="22/06/04">
+                <p>
+                    Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <div class="tt">
+                    <div>
+                        <a href="https://twitter.com/akinecoco987" target="_blank">
+                            <img class="tt-ava" src="/postimg/0.jpg">
+                            <div class="tt-name">Akine Coco</div>
+                            <div class="tt-user">@akinecoco987</div>
+                        </a>
+                        <div class="br"></div>
+                        <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank">
+                            <img class="tt-logo" src="/assets/logo-as.png">
+                        </a>
+                    </div>
+                    <img src="/postimg/1.jpg" class="mdi">
+                </div>
+            </div>
+            <!-- Reddit -->
+            <div class="post" status="is embedding Reddit" date="22/06/04">
+                <p>
+                    Curabitur luctus tellus a metus aliquam porta.
+                </p>
+                <div class="tt">
+                    <div>
+                        <a href="https://twitter.com/akinecoco987" target="_blank">
+                            <img class="tt-ava" src="/postimg/0.jpg">
+                            <div class="tt-name">psycho_alpaca</div>
+                            <div class="tt-user">u/psycho_alpaca</div>
+                        </a>
+                        <div class="br"></div>
+                        <a href="https://twitter.com/akinecoco987/status/1503311860824567808" target="_blank">
+                            <img class="tt-logo" src="/assets/logo-rd.png">
+                        </a>
+                    </div>
+                    <div class="long-content">
+                        <p>
+                            I found the napkin in a box of old stuff, the kind you keep under the bed or in the closet.
+                            Mine
+                            was in the closet.
+                        </p>
+                        <p>
+                            It was a love letter from a crush. Or more like a love note. It said "You're cute", and then
+                            we
+                            held hands for a week. This was in the fifth grade. I kept the napkin because it was a nice
+                            memory. My first girlfriend, Mia.
+                        </p>
+                        <p>
+                            Plus, we stayed in touch. Me and Alice (that's my wife), we have dinner at Mia and Jason's,
+                            from
+                            time to time.
+                        </p>
+                        <p>
+                            Now I opened the napkin and it didn't say "You're cute". It said;
+                        </p>
+                        <p>
+                            Help me.
+                        </p>
+                        <p>
+                            Let's slide right past the part that I freaked the fuck out to when the napkin kept talking.
+                        </p>
+                        <p>
+                            It wrote on itself, under Help Me: *Please. *
+                        </p>
+                        <p>
+                            Right in front of my eyes like someone was writing with an invisible pen.
+                        </p>
+                        <p>
+                            I wrote What? Because, well, if I'm going insane, might as well roll with it.
+                        </p>
+                        <p>
+                            The Napkin erased itself, and now it said:
+                        </p>
+                        Go to Kennedy. Now.
+                        <br>
+                        Kennedy is my old school where I met Mia where she gave me the napkin originally.
+                        I went there. I went to Kennedy and it was recess and I walked in, and kids were playing, and
+                        something was off.
+                        <br>
+                        This is important. Listen to me. Do you know what was off?
+                        <br>
+                        It was my friends, playing there. Mia. Peter, the boy who ate boogers. Sarah and Clive and Jason
+                        and all my friends, all ten years old.
+                        <br>
+                        And then I saw myself, and I almost passed out. I was playing soccer. I was a goalkeeper. I
+                        remember that day, because I got this scar, on my knee.
+                        <br>
+                        You can't see it, but I have a scar on my knee from that day.
+                        <br>
+                        I look at the napkin and it says:
+                        <br>
+                        Throw a pebble at yourself.
+                        <br>
+                        And I say "What?" But the napkin can't hear me. I 'm pretty sure I'm going insane, but I go and
+                        I grab a pebble. I'm ready, and the napkin says;
+                        <br>
+                        not yet.
+                        <br>
+                        Then it erases itself and it says;
+                        <br>
+                        now.
+                        <br>
+                        And I throw and I hit myself on the head. I look.
+                        <br>
+                        This is when Clive kicks the ball towards the goal and scores. Goal. I'm looking at myself as he
+                        scores.
+                        <br>
+                        Jason is screaming, "What the hell is your problem, Eric?"
+                        <br>
+                        And the napkin says;
+                        <br>
+                        Hide. Now.
+                    </div>
+                </div>
+            </div>
+            <div class="post" status="wrote something" date="22/06/04">
+                <p>
+                    Ban đầu tính làm cái này giống như kiểu blog ngầu lòi các thứ mà sao giờ nó lại giống kiểu mấy cái
+                    post
+                    trên social media vậy
+                    ta
+                </p>
+                <p>
+                    Mà thôi kệ nhìn cũng hài phết
+                </p>
+            </div>
+        </div>
+        <script>
+            // Miniblog Scripts
+            let miniblog_post = document.querySelectorAll(".post");
+            for (let i = 0; i < 999; i++) {
+                if (miniblog_post[i] == undefined) { break };
+                let post_date = miniblog_post[i].getAttribute("date");
+                if (!post_date) {
+                    post_date = ""
+                }
+                let post_status = miniblog_post[i].getAttribute("status");
+                if (!post_status) {
+                    post_status = ""
+                }
+                miniblog_post[i].insertAdjacentHTML(
+                    "afterbegin",
+                    `
+                    <a href="/" target="_blank">
+                        <div class="ava">
+                            <img src="/assets/ava.jpg">
+                        </div>
+                    </a>
+                    <a href="/" target="_blank">
+                        <div class="name">
+                            Rice Ball
+                        </div>
+                    </a>
+                    <div class="status">
+                        &nbsp;`
+                    + post_status +
+                    `
+                    </div>
+                    <div class="date">
+                    `
+                    + post_date +
+                    `
+                    </div>
+                    <div class="nothing">.</div>
+                    `
+                );
+            }
+        </script>
+    </div>
+
+    <!-- JQuery -->
+    <script src="./lib/jquery.min.js"></script>
+    <!-- Component: Stripe-BG -->
+    <link rel="stylesheet" href="./components/stripe_bg/stripe-bg.css">
+    <div id="stripe-bg" class="desktop-only">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- Component: Algorithm Art -->
+    <!-- <link rel="stylesheet" href="./components/algorithm_art/algorithm-art.css">
+    <script src="./lib/p5.min.js"></script>
+    <script src="./components/algorithm_art/algorithm-art.js"></script> -->
+    <!-- Component: Scramble Text -->
+    <!-- <link rel="stylesheet" href="./components/scramble_text/scramble-text.css">
+    <div class="scrambletext-wrap desktop-only">
+        <div class="scrambletext"></div>
+    </div>
+    <script src="./components/scramble_text/scramble-text.js"></script> -->
+    <!-- Component: MDI -->
+    <script src="./components/mdi/mdi.js"></script>
+    <script>
+        MDI();
+        // MDI_Multi();
+    </script>
+    <!-- Component: STT -->
+    <script src="./components/stt/stt.js"></script>
+    <script>
+        STT();
+    </script>
+
+
+    <!-- Animated Favicon -->
+    <!-- <script>
+        var favicon_images = [
+            './assets/favicon/frame_00_delay-0.04s.gif',
+            './assets/favicon/frame_01_delay-0.04s.gif',
+            './assets/favicon/frame_02_delay-0.04s.gif',
+            './assets/favicon/frame_03_delay-0.04s.gif',
+            './assets/favicon/frame_04_delay-0.04s.gif',
+            './assets/favicon/frame_05_delay-0.04s.gif',
+            './assets/favicon/frame_06_delay-0.04s.gif',
+            './assets/favicon/frame_07_delay-0.04s.gif',
+            './assets/favicon/frame_08_delay-0.04s.gif',
+            './assets/favicon/frame_09_delay-0.04s.gif',
+            './assets/favicon/frame_10_delay-0.04s.gif',
+            './assets/favicon/frame_11_delay-0.04s.gif',
+            './assets/favicon/frame_12_delay-0.04s.gif',
+            './assets/favicon/frame_13_delay-0.04s.gif',
+            './assets/favicon/frame_14_delay-0.04s.gif',
+            './assets/favicon/frame_15_delay-0.04s.gif',
+            './assets/favicon/frame_16_delay-0.04s.gif',
+            './assets/favicon/frame_17_delay-0.04s.gif',
+            './assets/favicon/frame_18_delay-0.04s.gif',
+            './assets/favicon/frame_19_delay-0.04s.gif',
+            './assets/favicon/frame_20_delay-0.04s.gif',
+            './assets/favicon/frame_21_delay-0.04s.gif',
+            './assets/favicon/frame_22_delay-0.04s.gif',
+            './assets/favicon/frame_23_delay-0.04s.gif',
+        ],
+            image_counter = 0; // To keep track of the current image
+
+        setInterval(function () {
+            // remove current favicon
+            if (document.querySelector("link[rel='icon']") !== null)
+                document.querySelector("link[rel='icon']").remove();
+            if (document.querySelector("link[rel='shortcut icon']") !== null)
+                document.querySelector("link[rel='shortcut icon']").remove();
+
+            // add new favicon image
+            document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+            // If last image then goto first image
+            // Else go to next image    
+            if (image_counter == favicon_images.length - 1)
+                image_counter = 0;
+            else
+                image_counter++;
+        }, 40);
+    </script> -->
+
+    <!-- Why are you here?! :)) -->
+    <script language="JavaScript">
+        window.onload = function () {
+            // ===== Right Click ===== // Un-comment to disable right click okay
+            // document.addEventListener("contextmenu", function (e) {
+            //     e.preventDefault();
+            // }, false);
+            document.addEventListener("keydown", function (e) {
+                //document.onkeydown = function(e) {
+                // ===== "I" key =====
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // ===== "J" key =====
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // ===== "S" key + macOS =====
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // ===== "U" key =====
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // ===== "F12" key =====
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+    </script>
+
+    <!-- <img src="./assets/MLSA-2021.png" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/MLSA-2022.png" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/ai-hackathon-reset-1010.JPG" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/IYMC.png" style="width: 1px; opacity: 0.1;">
+
+    <img src="./assets/DesignITUS_1.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_2.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_3.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_4.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_5.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_6.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/DesignITUS_7.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/SAC.jpg" style="width: 1px; opacity: 0.1;">
+    <img src="./assets/AUNEEC.jpg" style="width: 1px; opacity: 0.1;"> -->
+
+</body>
+
+</html>
