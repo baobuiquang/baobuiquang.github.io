@@ -1,11 +1,11 @@
 /* ================== Switch comment =================== */
-/* #maintenance {
+#maintenance {
     display: none !important;
-} */
-
-::-webkit-scrollbar {
-    width: 0px;
 }
+
+/* ::-webkit-scrollbar {
+    width: 0px;
+} */
 
 /* ===================================================== */
 
