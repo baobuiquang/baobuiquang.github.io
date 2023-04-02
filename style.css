@@ -11,6 +11,26 @@
     color: hsl(0, 0%, 92%);
 }
 
+.desktop-only {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+.mobile-only {
+    display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
 html {
     font-size: 16px !important;
 }
@@ -65,6 +85,13 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 3.0rem;
+}
+
+@media screen and (max-width: 1000px) {
+    h2 {
+        font-weight: 600;
+        font-size: 2.0rem;
+    }
 }
 
 .mobile-padding {

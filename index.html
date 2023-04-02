@@ -26,6 +26,12 @@
 
 <body>
 
+  <div class="mobile-only"
+    style="padding: 1rem 1.2rem; margin: 1rem; background: hsla(0, 0%, 100%, 0.2); border-radius: 8px;">
+    ⚠️ I highly recommend that you should visit this website on desktop devices for the best experience.
+    Some information will be hidden, videos and animations may be disabled in some browsers on mobile devices.
+  </div>
+
   <div
     style="z-index: -3; position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; opacity: 0.02;">
     <div class="gradient-bg"></div>
@@ -37,7 +43,7 @@
   </div>
 
   <div class="row">
-    <div class="col-5" style="position: relative; height: 100vh; filter: grayscale(0.25);">
+    <div class="col-5 desktop-only" style="position: relative; height: 100vh; filter: grayscale(0.25);">
       <!-- The cube -->
       <div class="ui">
         <div class="ui__background"></div>
