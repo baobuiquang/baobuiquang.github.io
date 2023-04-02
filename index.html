@@ -1,27 +1,146 @@
+<!-- 
+    Please contact:
+    baobuiquang@outlook.com
+    if anything wrong happens.
+    Thank you!
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In maintenance</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OneLevelStudio/OneLevelJS/onelevel.min.css">
+  <meta charset="UTF-8">
+  <title>Bao Bui-Quang</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <meta name="viewport"
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./cube.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="center" style="height: 90vh;">
-        <p>
-            This page will be updated soon
-        </p>
+
+  <div
+    style="z-index: -3; position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; opacity: 0.02;">
+    <div class="gradient-bg"></div>
+  </div>
+
+  <div
+    style="z-index: -1; position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/bg.png" alt="" style="width: 100%; opacity: 0.5;">
+  </div>
+
+  <div class="row">
+    <div class="col-5" style="position: relative; height: 100vh; filter: grayscale(0.25);">
+      <!-- The cube -->
+      <div class="ui">
+        <div class="ui__background"></div>
+        <div class="ui__game"></div>
+        <div class="ui__texts">
+          <div class="text text--title"></div>
+          <div class="text text--note"></div>
+          <div class="text text--timer">
+            0:00
+          </div>
+          <div class="text text--complete">
+            <span>Complete!</span>
+          </div>
+          <div class="text text--best-time">
+            <icon trophy></icon>
+            <span>Best Time!</span>
+          </div>
+        </div>
+        <div class="ui__prefs">
+          <range name="size" title="Cube Size" list="2,3,4,5"></range>
+          <range name="flip" title="Flip Type" list="Swift&nbsp;,Smooth,Bounce"></range>
+          <range name="scramble" title="Scramble Length" list="20,25,30"></range>
+          <range name="fov" title="Camera Angle" list="Ortographic,Perspective"></range>
+          <range name="theme" title="Color Scheme" list="Cube,Erno,Dust,Camo,Rain"></range>
+        </div>
+        <div class="ui__theme">
+          <range name="hue" title="Hue" color></range>
+          <range name="saturation" title="Saturation" color></range>
+          <range name="lightness" title="Lightness" color></range>
+        </div>
+        <div class="ui__stats">
+          <div class="stats" name="cube-size">
+            <i>Cube:</i><b>3x3x3</b>
+          </div>
+          <div class="stats" name="total-solves">
+            <i>Total solves:</i><b>-</b>
+          </div>
+          <div class="stats" name="best-time">
+            <i>Best time:</i><b>-</b>
+          </div>
+          <div class="stats" name="worst-time">
+            <i>Worst time:</i><b>-</b>
+          </div>
+          <div class="stats" name="average-5">
+            <i>Average of 5:</i><b>-</b>
+          </div>
+          <div class="stats" name="average-12">
+            <i>Average of 12:</i><b>-</b>
+          </div>
+          <div class="stats" name="average-25">
+            <i>Average of 25:</i><b>-</b>
+          </div>
+        </div>
+        <div class="ui__buttons">
+          <button class="btn btn--bl btn--stats">
+            <icon trophy></icon>
+          </button>
+          <button class="btn btn--br btn--prefs">
+            <icon settings></icon>
+          </button>
+          <button class="btn btn--bl btn--back">
+            <icon back></icon>
+          </button>
+          <button class="btn btn--br btn--theme">
+            <icon theme></icon>
+          </button>
+          <button class="btn btn--br btn--reset">
+            <icon reset></icon>
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/gh/OneLevelStudio/OneLevelJS/onelevel.js"></script>
+    <div class="col-7" style="height: 100vh;">
+      <div style="height: 95%; display: flex; flex-direction: column; justify-content: center;" class="mobile-padding">
+        <h1>
+          Hi, my name is Bao.
+        </h1>
+        <h2 style="margin-top: 1.2rem;">
+          Final-year student at VNUHCM<span style="color: gray;">.</span>
+          <br>
+          Tech unicorn's ex-employee<span style="color: gray;">.</span>
+          <br>
+          Playing at
+          <a href="https://onelevel.studio" target="_blank">One Level Studio</a><span style="color: gray;">.</span>
+        </h2>
+        <div style="margin-top: 1.4rem; font-size: 1.1rem; color: hsl(0, 0%, 70%);">
+          Want to know more information about me? View my
+          <a href="https://baobuiquang.notion.site/d1da6359e44f45bf95e0dda9c410ca0a" target="_blank">
+            personal space</a>.
+          <br>
+          Have a crazy mindset & interested in tech + digital entertainment?
+          <a href="https://onelevelstudio.notion.site/One-Level-Studio-5c665e8cc9c14997b5f66559e300c18d"
+            target="_blank">
+            Join me</a>.
+          <br>
+          Being bored? Double click on the rubik 🤏👀🤌.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='./lib/three.min.js'></script>
+  <script src='./cube.js'></script>
 </body>
 
 </html>
