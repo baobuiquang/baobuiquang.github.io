@@ -2054,7 +2054,7 @@ class Storage {
       this.game.themes.setTheme(preferences.theme);
       return true;
     } catch (e) {
-      this.game.cube.size = 2;
+      this.game.cube.size = 5; // <---------- change this
       this.game.controls.flipConfig = 0;
       this.game.scrambler.dificulty = 1;
       this.game.world.fov = 10;
