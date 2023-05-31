@@ -1,0 +1,117 @@
+/* OneLevelJS Customization */
+*,
+*:before,
+*:after {
+    line-height: 2.0;
+    font-size: 14px;
+}
+
+ul {
+    list-style-position: outside;
+    margin-left: 1rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .mdi-img {
+        max-width: 960px;
+        margin-left: calc((100vw - 960px) / 2);
+    }
+}
+
+/* Style */
+.time {
+    margin-top: 8rem;
+}
+
+h2 {
+    margin-top: 8rem;
+}
+
+
+#main-col-for-content {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    #main-col-for-content {
+        width: 650px;
+        padding: 0;
+    }
+}
+
+span.tag {
+    background: wheat;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: -0.1rem;
+}
+
+.small-icon {
+    position: relative;
+    width: 24px;
+    top: 7px;
+}
+
+#nav {
+    background: rgba(22, 22, 22);
+    border-top: solid rgba(255, 255, 255, 0.1) 1px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 60px;
+    padding: 0 6rem;
+}
+
+#nav a {
+    float: left;
+    margin-left: 3rem;
+    border-bottom: none;
+}
+
+h1,
+#nav a * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav a:hover * {
+    color: gold;
+}
+
+
+#nav * {
+    color: var(--color-bg);
+    font-family: 'Josefin Sans';
+    height: 60px;
+}
+
+#header {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    background: rgb(22, 22, 22);
+    padding-left: 45vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    #header {
+        display: none;
+    }
+}
+
+#header,
+#header * {
+    color: var(--color-bg);
+    font-size: 4rem;
+    font-weight: 600;
+}

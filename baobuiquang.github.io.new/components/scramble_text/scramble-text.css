@@ -1,0 +1,17 @@
+.scrambletext-wrap {
+    position: fixed;
+    top: 45vh;
+    left: 0vw;
+    width: 49vw;
+}
+
+.scrambletext,
+.dud {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'Josefin Sans', 'Inter', 'Roboto', sans-serif;
+    text-align: center;
+    user-select: none;
+}

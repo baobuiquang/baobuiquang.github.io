@@ -1,0 +1,36 @@
+.expandable {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    margin-top: 1rem;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+}
+
+.expandable_active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.expandable:hover {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease 0.4s;
+}
+
+.expandable-content.have-padding {
+    padding: 0 1.5rem;
+}
+
+/* Icon */
+.expandable:after {
+    content: '+';
+    float: right;
+}
+
+.expandable_active:after {
+    content: '-';
+}
