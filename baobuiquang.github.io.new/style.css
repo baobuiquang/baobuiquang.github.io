@@ -74,7 +74,7 @@ span.tag {
 
 #nav a {
     float: left;
-    margin-left: 3rem;
+    margin-left: 3.0rem;
     border-bottom: none;
 }
 
@@ -100,18 +100,11 @@ h1,
     height: calc(100vh - 60px);
     width: 100vw;
     background: rgb(22, 22, 22);
-    padding-left: 45vw;
+    padding-left: 50vw;
 }
 
 @media only screen and (max-width: 1000px) {
     #header {
         display: none;
     }
-}
-
-#header,
-#header * {
-    color: var(--color-bg);
-    font-size: 4rem;
-    font-weight: 600;
 }
