@@ -22,7 +22,10 @@
     flex-direction: row;
     align-items: center;
     border-radius: 12px;
-    margin-top: 1rem;
+}
+
+.space-gap {
+    height: 1rem;
 }
 
 .link-box:hover {
