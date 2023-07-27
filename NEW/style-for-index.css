@@ -61,6 +61,7 @@ h2 {
 .text .main {
     color: var(--color-tx);
     margin-bottom: 0.3rem;
+    margin-right: 2.2rem;
 }
 
 .text .sub {
