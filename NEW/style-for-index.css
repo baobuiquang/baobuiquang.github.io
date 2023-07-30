@@ -8,37 +8,34 @@
 }
 
 .link-group {
-    padding: 1rem;
-    background-color: hsla(0, 0%, 50%, 0.1);
+    /* padding: 1rem;
+    background-color: hsla(0, 0%, 50%, 0.10); */
     border-radius: 16px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .link-box {
-    position: relative;
     padding: 1rem;
-    background-color: hsla(0, 0%, 50%, 0.1);
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 12px;
+    border: solid 2px hsla(0, 0%, 50%, 0.5);
+}
+
+.link-box:hover {
+    background-color: hsla(0, 0%, 50%, 0.10);
+    border: solid 2px hsla(0, 0%, 50%, 1.0);
 }
 
 .space-gap {
     height: 1rem;
 }
 
-.link-box:hover {
-    background-color: hsla(0, 0%, 50%, 0.3);
-}
-
-.link-box:hover .indicator {
-    right: 1.5rem;
-}
-
 h2 {
-    font-size: 1.5rem;
-    margin: 0.4rem 0 1.4rem 0;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .icon {
@@ -52,16 +49,22 @@ h2 {
     content: ">";
     position: absolute;
     top: 0;
-    right: 2.0rem;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     color: var(--color-tx);
-    /* background-color: rgba(255, 189, 65, 0.5); */
+    right: 2.0rem;
+    opacity: 0.5;
+}
+
+.link-box:hover .indicator {
+    right: 1.5rem;
+    opacity: 1.0;
 }
 
 .text .main {
+    font-weight: 500;
     color: var(--color-tx);
     margin-bottom: 0.3rem;
     margin-right: 2.2rem;
