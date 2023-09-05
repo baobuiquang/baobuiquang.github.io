@@ -9,493 +9,100 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&amp;display=swap"
-        rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OneLevelStudio/OneLevelJS/onelevel.min.css">
-    <link rel="stylesheet" href="./expandable.css">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <link rel="stylesheet" href="./style-for-index.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style-index.css">
 </head>
 
-<body style="padding: 0 1rem;">
+<body>
 
-    <div class="row">
-        <div class="col-5"></div>
-        <div class="col-4">
-
-            <div class="center" style="margin: 4rem 0; text-align: center;">
-                <img src="/assets/avatar.jpg" style="width: 100px; border-radius: 1000px;">
-                <div style="margin-top: 1rem;">
-                    <h1 style="font-size: 1.4rem; font-weight: 600; float: left;">
-                        Bao Bui-Quang
-                    </h1>
-                    <!-- <img style="margin-top: 0.25rem; margin-left: 0.3rem;"
-                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjUyNDcgMTUuMTIzNEM4LjIwMyAxNC45MjUxIDcuNzk3IDE0LjkyNTEgNy40NzUzIDE1LjEyMzRMNy4xNDg3MyAxNS4zMjQ3QzYuNjk0MiAxNS42MDQ4IDYuMDk5NzQgMTUuNDc4NSA1Ljc5ODQ1IDE1LjAzNzdMNS41ODE5OSAxNC43MjFDNS4zNjg3NSAxNC40MDkgNC45OTc4NSAxNC4yNDM4IDQuNjIzMzIgMTQuMjk0MUw0LjI0MzExIDE0LjM0NTJDMy43MTM5MiAxNC40MTYyIDMuMjIyMjYgMTQuMDU5IDMuMTI2MzEgMTMuNTMzOEwzLjA1NzM3IDEzLjE1NjRDMi45ODk0NyAxMi43ODQ3IDIuNzE3OCAxMi40ODMgMi4zNTUxOSAxMi4zNzY2TDEuOTg3MDkgMTIuMjY4NkMxLjQ3NDc1IDEyLjExODIgMS4xNzA4OCAxMS41OTE5IDEuMjk2ODcgMTEuMDczMUwxLjM4NzM4IDEwLjcwMDNDMS40NzY1NSAxMC4zMzMgMS4zNTEwOSA5Ljk0NjkyIDEuMDYzMSA5LjcwMjI0TDAuNzcwNzU3IDkuNDUzODVDMC4zNjM4NTIgOS4xMDgxMyAwLjMwMDMyNyA4LjUwMzczIDAuNjI2NDYyIDguMDgwOTZMMC44NjA3NzcgNy43NzcyMkMxLjA5MTYgNy40NzgwMSAxLjEzNDA0IDcuMDc0MjQgMC45NzA0NjggNi43MzM1OEwwLjgwNDQyNCA2LjM4Nzc2QzAuNTczMzE0IDUuOTA2NDMgMC43NjExMTQgNS4zMjg0NCAxLjIzMTAxIDUuMDc0ODhMMS41Njg2MSA0Ljg5MjdDMS45MDExNyA0LjcxMzI0IDIuMTA0MTcgNC4zNjE2NCAyLjA5MzMgMy45ODM5TDIuMDgyMjcgMy42MDA0NEMyLjA2NjkyIDMuMDY2NzIgMi40NzM1NyAyLjYxNTA5IDMuMDA1OTcgMi41NzQ1N0wzLjM4ODQ4IDIuNTQ1NDZDMy43NjUyOSAyLjUxNjc4IDQuMDkzNzUgMi4yNzgxNCA0LjIzNzQ2IDEuOTI4NjRMNC4zODMzNSAxLjU3Mzg1QzQuNTg2NCAxLjA4MDAyIDUuMTQxNiAwLjgzMjgzNiA1LjY0NDQ1IDEuMDEyMzdMNi4wMDU3MyAxLjE0MTM1QzYuMzYxNjMgMS4yNjg0MiA2Ljc1ODc1IDEuMTg0MDEgNy4wMzIxOSAwLjkyMzE3M0w3LjMwOTc4IDAuNjU4MzkxQzcuNjk2MTMgMC4yODk4NTIgOC4zMDM4NyAwLjI4OTg1MiA4LjY5MDIyIDAuNjU4MzkyTDguOTY3ODEgMC45MjMxNzNDOS4yNDEyNSAxLjE4NDAxIDkuNjM4MzcgMS4yNjg0MiA5Ljk5NDI3IDEuMTQxMzVMMTAuMzU1NSAxLjAxMjM3QzEwLjg1ODQgMC44MzI4MzYgMTEuNDEzNiAxLjA4MDAyIDExLjYxNjcgMS41NzM4NUwxMS43NjI1IDEuOTI4NjRDMTEuOTA2MyAyLjI3ODE0IDEyLjIzNDcgMi41MTY3OCAxMi42MTE1IDIuNTQ1NDZMMTIuOTk0IDIuNTc0NTdDMTMuNTI2NCAyLjYxNTA5IDEzLjkzMzEgMy4wNjY3MiAxMy45MTc3IDMuNjAwNDRMMTMuOTA2NyAzLjk4MzlDMTMuODk1OCA0LjM2MTY0IDE0LjA5ODggNC43MTMyNCAxNC40MzE0IDQuODkyN0wxNC43NjkgNS4wNzQ4OEMxNS4yMzg5IDUuMzI4NDQgMTUuNDI2NyA1LjkwNjQzIDE1LjE5NTYgNi4zODc3NkwxNS4wMjk1IDYuNzMzNThDMTQuODY2IDcuMDc0MjQgMTQuOTA4NCA3LjQ3ODAxIDE1LjEzOTIgNy43NzcyMkwxNS4zNzM1IDguMDgwOTZDMTUuNjk5NyA4LjUwMzczIDE1LjYzNjEgOS4xMDgxMyAxNS4yMjkyIDkuNDUzODVMMTQuOTM2OSA5LjcwMjI0QzE0LjY0ODkgOS45NDY5MiAxNC41MjM0IDEwLjMzMyAxNC42MTI2IDEwLjcwMDNMMTQuNzAzMSAxMS4wNzMxQzE0LjgyOTEgMTEuNTkxOSAxNC41MjUzIDEyLjExODIgMTQuMDEyOSAxMi4yNjg2TDEzLjY0NDggMTIuMzc2NkMxMy4yODIyIDEyLjQ4MyAxMy4wMTA1IDEyLjc4NDcgMTIuOTQyNiAxMy4xNTY0TDEyLjg3MzcgMTMuNTMzOEMxMi43Nzc3IDE0LjA1OSAxMi4yODYxIDE0LjQxNjIgMTEuNzU2OSAxNC4zNDUyTDExLjM3NjcgMTQuMjk0MUMxMS4wMDIxIDE0LjI0MzggMTAuNjMxMyAxNC40MDkgMTAuNDE4IDE0LjcyMUwxMC4yMDE1IDE1LjAzNzdDOS45MDAyNiAxNS40Nzg1IDkuMzA1OCAxNS42MDQ4IDguODUxMjcgMTUuMzI0N0w4LjUyNDcgMTUuMTIzNFoiIGZpbGw9IiMwMEI2RkYiLz4KPHBhdGggZD0iTTUuMDY5OTggNy41NjI2NUw3LjE5MTMgOS42ODM5N0wxMS40MzM5IDUuNDQxMzMiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K"> -->
-                </div>
-                <p style="font-size: 1.0rem; line-height: 1.5; opacity: 0.8; margin-top: 1rem;">
-                    <span id="yearsold">???</span> y/o. He/Him. INTP-T. BScCS. Studying MScFE.
-                </p>
-                <script>
-                    const currentYear = new Date().getFullYear();
-                    const yearsDifference = currentYear - 2001;
-                    document.getElementById("yearsold").textContent = `${yearsDifference}`;
-                </script>
-            </div>
-
-            <!-- About Me -->
-            <div class="link-group">
-                <h2>
-                    About Me
-                </h2>
-                <a href="/profile.html" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/website.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                My Profile
-                            </p>
-                            <p class="sub">
-                                /profile
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://onelevel.studio" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/onelevelstudio.png" class="icon"
-                            style="padding: 6px; border-radius: 12px;">
-                        <div class="text">
-                            <p class="main">
-                                My Team
-                            </p>
-                            <p class="sub">
-                                onelevel.studio
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Mailbox -->
-            <div class="link-group">
-                <h2>
-                    Mailbox
-                </h2>
-                <a href="mailto:baobuiquang@icloud.com" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/email.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Personal
-                            </p>
-                            <p class="sub">
-                                baobuiquang@icloud.com
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
+    <div id="nav" class="center-y"
+        style="height: 60px; padding: 0 1rem; border-bottom: hsla(0, 0%, 100%, 0.1) solid 1px;">
+        <div style="margin-top: 2px;">
+            <div style="float: left;">
                 <a href="mailto:baobuiquang@outlook.com" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/email.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Business
-                            </p>
-                            <p class="sub">
-                                baobuiquang@outlook.com
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="mailto:quangbao.dev@gmail.com" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/email.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Technical
-                            </p>
-                            <p class="sub">
-                                quangbao.dev@gmail.com
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Chat / Message -->
-            <div class="link-group">
-                <h2>
-                    Chat / Message
-                </h2>
-                <a href="https://www.instagram.com/bao_buiquang" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/instagram.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Instagram (Personal)
-                            </p>
-                            <p class="sub">
-                                @bao_buiquang
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <div class="link-box">
-                    <img src="/assets/icon/discord.png" class="icon">
-                    <div class="text">
-                        <p class="main">
-                            Discord (Personal)
-                        </p>
-                        <p class="sub">
-                            @liminal_night
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <img src="./assets/icon/email.png" style="margin-right: 0.6rem;">
+                        <p style="color: white; font-size: 0.8rem; margin-top: 1px;">
+                            Get in touch
                         </p>
                     </div>
-                </div>
-            </div>
-            <!-- Honors -->
-            <div class="link-group">
-                <h2>
-                    Honors
-                </h2>
-                <a href="https://www.most.gov.vn/vn/tin-tuc/18981/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020.aspx#:~:text=B%C3%B9i%20Quang%20B%E1%BA%A3o"
-                    target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/MOST.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Ministry of Science and Technology
-                            </p>
-                            <p class="sub">
-                                gov.vn
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://vnexpress.net/tri-tue-nhan-tao-bat-benh-cho-cay-vo-dich-ai-hackathon-2020-4198519.html#:~:text=B%C3%B9i%20Quang%20B%E1%BA%A3o"
-                    target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/vnexpress.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                VnExpress
-                            </p>
-                            <p class="sub">
-                                vnexpress.net
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
                 </a>
             </div>
-            <!-- Repositories -->
-            <div class="link-group">
-                <h2>
-                    Repositories
-                </h2>
-                <a href="https://github.com/baobuiquang/ParallelLSTM/blob/main/README.md" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/github.png" class="icon">
-                        <div class="text">
-                            <p class="main" style="line-height: 1.3; margin-top: 0.3rem;">
-                                Parallel LSTM Training for Sequence Prediction from Sequential Data
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
+            <div style="float: right;">
+                <a href="https://www.instagram.com/bryan.6s/" target="_blank">
+                    <img src="./assets/icon/instagram.png">
                 </a>
-                <div class="space-gap"></div>
-                <a href="https://github.com/baobuiquang/COVID-19-Virus-Analysis-and-Diagnosis/blob/master/README.md"
-                    target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/github.png" class="icon">
-                        <div class="text">
-                            <p class="main" style="line-height: 1.3; margin-top: 0.3rem;">
-                                COVID-19 (Sars Cov 2) Spread Analysis and Radiography Diagnosis
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://github.com/baobuiquang/automation-using-python/blob/master/README.md" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/github.png" class="icon">
-                        <div class="text">
-                            <p class="main" style="line-height: 1.3; margin-top: 0.3rem;">
-                                Automation using Python (Google's Professional Certificate Capstone)
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://www.kaggle.com/code/buiquangbao/vector-quantized-generative-adversarial-network"
-                    target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/kaggle.png" class="icon">
-                        <div class="text">
-                            <p class="main" style="line-height: 1.3; margin-top: 0.3rem;">
-                                Generative AI | Vector-Quantized Adversarial Network Implementation
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-            </div>
-            <!-- Content Managing -->
-            <div class="link-group">
-                <h2>
-                    Content Managing
-                </h2>
-                <a href="https://www.instagram.com/bryanverlice" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/instagram.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Reels (Lifestyle) <span class="followers-count">&lt; 100</span>
-                            </p>
-                            <p class="sub">
-                                @bryanverlice
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://www.tiktok.com/@bryanverlice" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/tiktok.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Tiktok (Lifestyle) <span class="followers-count">&lt; 100</span>
-                            </p>
-                            <p class="sub">
-                                @bryanverlice
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://www.instagram.com/liminal_night" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/instagram.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                Reels (Motorsport) <span class="followers-count">10K+</span>
-                            </p>
-                            <p class="sub">
-                                @liminal_night
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://www.youtube.com/@liminal_night" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/youtube.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                YouTube (Music) <span class="followers-count">500+</span>
-                            </p>
-                            <p class="sub">
-                                @liminal_night
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-                <a href="https://www.artstation.com/baobuiquang" target="_blank">
-                    <div class="link-box">
-                        <img src="/assets/icon/artstation.png" class="icon">
-                        <div class="text">
-                            <p class="main">
-                                ArtStation (Art) <span class="followers-count">1.2K+</span>
-                            </p>
-                            <p class="sub">
-                                @baobuiquang
-                            </p>
-                        </div>
-                        <div class="indicator">➤</div>
-                    </div>
-                </a>
-                <div class="space-gap"></div>
-
-                <div class="expandable">
-                    Hidden
-                </div>
-                <div class="expandable-content">
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/instagram.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Instagram (?) <span class="followers-count">&lt; 100</span>
-                                </p>
-                                <p class="sub">
-                                    @d*************
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/tiktok.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Tiktok (?) <span class="followers-count">&lt; 100</span>
-                                </p>
-                                <p class="sub">
-                                    @d*************
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/pixiv.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Pixiv (?) <span class="followers-count">25K+</span>
-                                </p>
-                                <p class="sub">
-                                    @n****
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/x.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Twitter/X (?) <span class="followers-count">700+</span>
-                                </p>
-                                <p class="sub">
-                                    @n*************
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/fanbox.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Fanbox (?) <span class="followers-count">?</span>
-                                </p>
-                                <p class="sub">
-                                    @n****
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/patreon.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Patreon (?) <span class="followers-count">?</span>
-                                </p>
-                                <p class="sub">
-                                    @n****
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/pixiv.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Pixiv (?) <span class="followers-count">500+</span>
-                                </p>
-                                <p class="sub">
-                                    @s********
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/x.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Twitter/X (?) <span class="followers-count">100+</span>
-                                </p>
-                                <p class="sub">
-                                    @s********
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                    <div class="space-gap"></div>
-                    <a target="_blank" style="cursor: not-allowed;">
-                        <div class="link-box">
-                            <img src="/assets/icon/patreon.png" class="icon">
-                            <div class="text">
-                                <p class="main">
-                                    Patreon (?) <span class="followers-count">?</span>
-                                </p>
-                                <p class="sub">
-                                    @s********
-                                </p>
-                            </div>
-                            <div class="indicator">Hidden</div>
-                        </div>
-                    </a>
-                </div>
-
             </div>
         </div>
-        <div class="col-5"></div>
     </div>
 
-    <!-- Copyright -->
-    <div style="text-align: center; color: gray; margin: 3rem 0 6rem 0; font-size: 0.9rem; line-height: 1.5;">
+    <div class="center-x" style="margin-top: 3rem;">
+        <a href="https://www.instagram.com/bryan.6s/" target="_blank">
+            <div class="center"
+                style="width: 116px; height: 116px; border-radius: 1000px; border: solid 2px hsla(0, 0%, 100%, 0.2);">
+                <img src="./assets/avatar.jpg" style="width: 100px; border-radius: 1000px;">
+            </div>
+        </a>
+        <h1 style="font-size: 1.8rem; font-weight: 500; margin-top: 1rem;">
+            Hi, I'm Bao
+        </h1>
+        <div style="text-align: center; color: hsl(0, 0%, 60%); margin-top: 1rem; line-height: 1.6;">
+            BScCS · studying MScFE
+            <br>
+            they call me
+            <a href="https://www.instagram.com/bryan.6s/" target="_blank" class="bio-link">BRYAN | 6 SHIFTS</a>
+            <br>
+            founder
+            <a href="https://onelevel.studio/" target="_blank" class="bio-link">ONELEVEL.STUDIO</a>
+            · crafting
+            <a href="https://1lv.me/" target="_blank" class="bio-link">1LV.ME</a>
+        </div>
+    </div>
+
+    <div class="center-x">
+        <div style="width: 100%; max-width: 600px;">
+            <div style="margin: 0 1rem; margin-top: 2rem;">
+                <a href="https://www.instagram.com/bryan.6s/" target="_blank">
+                    <div class="my-btn">
+                        <img src="./assets/icon/instagram.png">
+                        bryan.6s
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/bao_buiquang/" target="_blank">
+                    <div class="my-btn">
+                        <img src="./assets/icon/instagram.png">
+                        bao_buiquang
+                    </div>
+                </a>
+                <a href="https://1lv.me/" target="_blank">
+                    <div class="my-btn">
+                        ? (COMING SOON)
+                    </div>
+                </a>
+                <a href="https://onelevel.studio/" target="_blank">
+                    <div class="my-btn">
+                        JOIN MY TEAM
+                    </div>
+                </a>
+                <a href="/profile.html" target="_blank">
+                    <div class="my-btn">
+                        KNOW ME MORE
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: gray; margin: 0 1rem; font-size: 0.8rem; margin-top: 1.5rem;">
         Bao Bui-Quang &copy;
         <script>document.write(new Date().getFullYear())</script>.
-        <br>
-        Website developed by One Level Studio.
+        All Rights Reserved.
     </div>
 
-    <!-- JQuery -->
-    <script src="./lib/jquery.min.js"></script>
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/gh/OneLevelStudio/OneLevelJS/onelevel.js"></script>
-    <script src="./expandable.js"></script>
 </body>
 
 </html>

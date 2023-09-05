@@ -1,0 +1,55 @@
+/* ========================================== */
+:root {
+    --color-bg: hsl(0, 0%, 10%);
+    --color-tx: hsl(0, 0%, 95%);
+    --color-lk: hsl(0, 0%, 90%);
+    --color-lk-hover: gold;
+}
+
+a,
+a:hover {
+    border-bottom: none;
+}
+
+/* ========================================== */
+#nav img {
+    width: 24px;
+    filter: invert(1.0);
+}
+
+#nav a {
+    opacity: 0.5;
+    transition: all ease 0.0s !important;
+}
+
+#nav a:hover {
+    opacity: 1.0;
+}
+
+.bio-link {
+    font-style: italic;
+}
+
+.my-btn {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-lk);
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.my-btn:hover {
+    background: hsla(0, 0%, 100%, 0.2);
+}
+
+.my-btn img {
+    width: 30px;
+    margin-right: 4px;
+    filter: invert(1.0);
+}
