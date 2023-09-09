@@ -22,10 +22,6 @@ a:hover {
     transition: all ease 0.0s !important;
 }
 
-#nav a:hover {
-    opacity: 1.0;
-}
-
 .bio-link {
     font-style: italic;
 }
