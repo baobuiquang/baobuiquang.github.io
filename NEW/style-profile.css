@@ -16,7 +16,6 @@ img {
     border-radius: 8px;
 }
 
-
 @media only screen and (min-width: 1000px) {
     .mdi-img {
         max-width: 960px;
@@ -30,6 +29,7 @@ img {
 }
 
 h2 {
+    font-size: 2.5rem;
     margin-top: 8rem;
     text-transform: uppercase;
 }
@@ -42,7 +42,7 @@ h2 {
 
 @media only screen and (min-width: 1000px) {
     #main-col-for-content {
-        width: 650px;
+        width: 680px;
         padding: 0;
     }
 }
