@@ -1,0 +1,12 @@
+.feed-container .content .item .title {
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    line-height: 1.2 !important;
+    font-weight: 500 !important;
+}
+
+.feed-container .content .item .description {
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    line-height: 1.2 !important;
+    margin-top: 8px !important;
+    font-size: 14px !important;
+}

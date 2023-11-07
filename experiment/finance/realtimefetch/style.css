@@ -1,0 +1,193 @@
+/* ========== TradingView ========== */
+.tradingview-widget-copyright,
+.js-copyright-label,
+a[href^="https://www.tradingview.com"] {
+    opacity: 0.0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
+.tv-customize {
+    position: relative;
+    /* background: rgba(245, 222, 179, 0.6); */
+}
+
+.tv-customize .tv-hidebox-0 {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.0);
+    height: 40px;
+    width: 40px;
+}
+
+.tv-customize .tv-hidebox-1 {
+    z-index: 100;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.0);
+    height: 40px;
+    width: 40px;
+}
+
+.tv-customize .tv-hidebox-2 {
+    z-index: 100;
+    position: absolute;
+    bottom: 70px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.0);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+iframe {
+    user-select: none;
+}
+
+
+/* ========== Core Style ========== */
+
+:root {
+    --color-bg: rgb(19, 23, 34);
+    --color-text: hsl(0, 0%, 90%);
+    --color-link: hsl(133, 100%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    transition: all ease 0.3s;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    cursor: pointer;
+    background: transparent;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: hsla(0, 0%, 0%, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+@media screen and (min-width: 1000px) {
+    .row {
+        flex-wrap: nowrap;
+    }
+}
+
+.row [class^='col'] {
+    width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+    .row .col {
+        width: 100%;
+    }
+
+    .row .col-1 {
+        width: 8.33%;
+    }
+
+    .row .col-2 {
+        width: 16.66%;
+    }
+
+    .row .col-3 {
+        width: 25%;
+    }
+
+    .row .col-4 {
+        width: 33.33%;
+    }
+
+    .row .col-5 {
+        width: 41.66%;
+    }
+
+    .row .col-6 {
+        width: 50%;
+    }
+
+    .row .col-7 {
+        width: 58.33%;
+    }
+
+    .row .col-8 {
+        width: 66.66%;
+    }
+
+    .row .col-9 {
+        width: 75%;
+    }
+
+    .row .col-10 {
+        width: 83.33%;
+    }
+
+    .row .col-11 {
+        width: 91.66%;
+    }
+
+    .row .col-12 {
+        width: 100%;
+    }
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+.mobile-only {
+    display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* ================================ */
+* {
+    color: var(--color-text);
+    font-size: 16px;
+}
+
+body {
+    background: var(--color-bg);
+    overflow: hidden;
+}
+
+::selection {
+    color: rgb(0, 0, 0);
+    background: rgb(214, 214, 214);
+}
